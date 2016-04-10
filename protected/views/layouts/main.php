@@ -33,6 +33,10 @@
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
+				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit')),
+				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
+				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran')),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
