@@ -45,3 +45,139 @@ Stack trace:
 REQUEST_URI=/siadm/index.php?r=prestasi/create
 HTTP_REFERER=http://localhost/siadm/index.php?r=prestasi/create
 ---
+2016/04/10 14:02:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mata_pelajaran".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('mata_pelajaran')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php?r=mata_pelajaran
+HTTP_REFERER=http://localhost/siadm/index.php?r=pelanggaran/update&id=1
+---
+2016/04/10 14:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mata_pelajaran".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('mata_pelajaran')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php?r=mata_pelajaran
+HTTP_REFERER=http://localhost/siadm/index.php?r=pelanggaran/update&id=1
+---
+2016/04/10 14:03:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mata_pelajaran".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('mata_pelajaran')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php?r=mata_pelajaran
+HTTP_REFERER=http://localhost/siadm/index.php?r=pelanggaran/update&id=1
+---
+2016/04/10 14:07:14 [error] [exception.CException] exception 'CException' with message 'PelanggaranController cannot find the requested view "index".' in C:\xampp\htdocs\yii\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php(128): CController->render('index', Array)
+#2 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PelanggaranController->actionIndex()
+#3 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pelanggaran')
+#13 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/siadm/index.php?r=pelanggaran
+HTTP_REFERER=http://localhost/siadm/index.php?r=pelanggaran/create
+---
+2016/04/10 14:07:16 [error] [exception.CException] exception 'CException' with message 'PelanggaranController cannot find the requested view "create".' in C:\xampp\htdocs\yii\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#1 C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php(79): CController->render('create', Array)
+#2 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PelanggaranController->actionCreate()
+#3 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pelanggaran/cre...')
+#13 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/siadm/index.php?r=pelanggaran/create
+HTTP_REFERER=http://localhost/siadm/index.php?r=pelanggaran
+---
+2016/04/10 14:07:22 [error] [exception.CException] exception 'CException' with message 'PelanggaranController cannot find the requested view "index".' in C:\xampp\htdocs\yii\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php(128): CController->render('index', Array)
+#2 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PelanggaranController->actionIndex()
+#3 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pelanggaran')
+#13 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/siadm/index.php?r=pelanggaran
+HTTP_REFERER=http://localhost/siadm/index.php?r=pelanggaran
+---
+2016/04/10 14:07:49 [error] [exception.CException] exception 'CException' with message 'PelanggaranController cannot find the requested view "index".' in C:\xampp\htdocs\yii\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php(128): CController->render('index', Array)
+#2 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PelanggaranController->actionIndex()
+#3 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pelanggaran')
+#13 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/siadm/index.php?r=pelanggaran
+HTTP_REFERER=http://localhost/siadm/index.php?r=prestasi
+---
+2016/04/10 14:09:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`prestasi`, CONSTRAINT `fk_Log_Employee1` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `prestasi` (`deskripsi`, `jenis`, `tanggal`, `nip_santri`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (73)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/10 14:09:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`prestasi`, CONSTRAINT `fk_Log_Employee1` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `prestasi` (`deskripsi`, `jenis`, `tanggal`, `nip_santri`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PrestasiController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/create')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php?r=prestasi/create
+HTTP_REFERER=http://localhost/siadm/index.php?r=prestasi/create
+---

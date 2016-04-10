@@ -1,13 +1,13 @@
 <?php
-/* @var $this PelanggaranController */
-/* @var $model Pelanggaran */
+/* @var $this MataPelajaranController */
+/* @var $model MataPelajaran */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'pelanggaran-form',
+	'id'=>'mata-pelajaran-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -20,15 +20,21 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'no_pelanggaran'); ?>
-		<?php echo $form->textField($model,'no_pelanggaran'); ?>
-		<?php echo $form->error($model,'no_pelanggaran'); ?>
+		<?php echo $form->labelEx($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+		<?php echo $form->error($model,'id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'deskripsi'); ?>
-		<?php echo $form->textField($model,'deskripsi',array('size'=>25,'maxlength'=>25)); ?>
-		<?php echo $form->error($model,'deskripsi'); ?>
+		<?php echo $form->labelEx($model,'nama'); ?>
+		<?php echo $form->textField($model,'nama',array('size'=>25,'maxlength'=>25)); ?>
+		<?php echo $form->error($model,'nama'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'jenjang'); ?>
+		<?php echo $form->textField($model,'jenjang',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 
 	<div class="row buttons">
