@@ -1,0 +1,25 @@
+2016/04/10 16:36:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`riwayat_penyakit`, CONSTRAINT `fk_riwayatpenyakit_santri` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `riwayat_penyakit` (`nip_santri`, `nama_penyakit`, `tanggal`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\RiwayatPenyakitController.php (73)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/10 16:36:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`riwayat_penyakit`, CONSTRAINT `fk_riwayatpenyakit_santri` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `riwayat_penyakit` (`nip_santri`, `nama_penyakit`, `tanggal`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\RiwayatPenyakitController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): RiwayatPenyakitController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('riwayatPenyakit...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php?r=riwayatPenyakit/create
+HTTP_REFERER=http://localhost/siadm/index.php?r=riwayatPenyakit/create
+---
