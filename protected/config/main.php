@@ -7,8 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
-	'theme'=>'hebo',
+	'name'=>'SIAdm Al-Lathifah Mulia',
+	//'theme'=>'hebo',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
