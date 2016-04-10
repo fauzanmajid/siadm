@@ -1,2 +1,0 @@
-- xampp
-- sublime text
