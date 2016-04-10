@@ -1,23 +1,27 @@
 <?php
 
 /**
- * This is the model class for table "pelanggaran".
+ * This is the model class for table "mata_pelajaran".
  *
- * The followings are the available columns in table 'pelanggaran':
- * @property integer $no_pelanggaran
- * @property string $deskripsi
+ * The followings are the available columns in table 'mata_pelajaran':
+ * @property integer $id
+ * @property string $nama
+ * @property string $jenjang
  *
  * The followings are the available model relations:
- * @property PencatatanPelanggaran[] $pencatatanPelanggarans
+ * @property User[] $users
+ * @property Kelas[] $kelases
+ * @property Santri[] $santris
+ * @property TahunAjaran[] $tahunAjarans
  */
-class Pelanggaran extends CActiveRecord
+class MataPelajaran extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'pelanggaran';
+		return 'mata_pelajaran';
 	}
 
 	/**
@@ -28,12 +32,13 @@ class Pelanggaran extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_pelanggaran, deskripsi', 'required'),
-			array('no_pelanggaran', 'numerical', 'integerOnly'=>true),
-			array('deskripsi', 'length', 'max'=>25),
+			array('id, nama, jenjang', 'required'),
+			array('id', 'numerical', 'integerOnly'=>true),
+			array('nama', 'length', 'max'=>25),
+			array('jenjang', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('no_pelanggaran, deskripsi', 'safe', 'on'=>'search'),
+			array('id, nama, jenjang', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,7 +50,10 @@ class Pelanggaran extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pencatatanPelanggarans' => array(self::HAS_MANY, 'PencatatanPelanggaran', 'No_pelanggaran'),
+			'users' => array(self::MANY_MANY, 'User', 'enrolllment_guru(id_matpel, id_guru)'),
+			'kelases' => array(self::MANY_MANY, 'Kelas', 'enrollment_pelajaran(id_matpel, id_kelas)'),
+			'santris' => array(self::MANY_MANY, 'Santri', 'enrollment_santri(id_matpel, nip_santri)'),
+			'tahunAjarans' => array(self::HAS_MANY, 'TahunAjaran', 'id_matpel'),
 		);
 	}
 
@@ -55,8 +63,9 @@ class Pelanggaran extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'no_pelanggaran' => 'No Pelanggaran',
-			'deskripsi' => 'Deskripsi',
+			'id' => 'ID',
+			'nama' => 'Nama',
+			'jenjang' => 'Jenjang',
 		);
 	}
 
@@ -78,8 +87,9 @@ class Pelanggaran extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('no_pelanggaran',$this->no_pelanggaran);
-		$criteria->compare('deskripsi',$this->deskripsi,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('nama',$this->nama,true);
+		$criteria->compare('jenjang',$this->jenjang,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -90,7 +100,7 @@ class Pelanggaran extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Pelanggaran the static model class
+	 * @return MataPelajaran the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

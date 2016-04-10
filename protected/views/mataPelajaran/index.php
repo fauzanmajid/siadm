@@ -1,18 +1,18 @@
 <?php
-/* @var $this PelanggaranController */
+/* @var $this MataPelajaranController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Pelanggarans',
+	'Mata Pelajarans',
 );
 
 $this->menu=array(
-	array('label'=>'Create Pelanggaran', 'url'=>array('create')),
-	array('label'=>'Manage Pelanggaran', 'url'=>array('admin')),
+	array('label'=>'Create MataPelajaran', 'url'=>array('create')),
+	array('label'=>'Manage MataPelajaran', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Pelanggarans</h1>
+<h1>Mata Pelajarans</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
