@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 
-	'name'=>'SIAdm Al-Lathifah Mulia', 0fab77c6e8a5324d5e27d45b147e939de44c9537
+	'name'=>'SIAdm Al-Lathifah Mulia',
 	//'theme'=>'hebo',
 	// preloading 'log' component
 	'preload'=>array('log'),
