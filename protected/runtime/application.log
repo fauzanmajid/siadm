@@ -20,3 +20,12 @@ Stack trace:
 REQUEST_URI=/siadm/index.php?r=gii/model/index
 HTTP_REFERER=http://localhost/siadm/index.php?r=gii/default/index
 ---
+2016/04/10 14:21:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "prestasi/create".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/create')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php?r=prestasi/create
+HTTP_REFERER=http://localhost/siadm/index.php?r=prestasi
+---
