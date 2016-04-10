@@ -1,0 +1,16 @@
+2016/04/10 20:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "layouts/login.php".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('layouts/login.p...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/layouts/login.php
+---
+2016/04/10 20:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "yii".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('yii')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/yii
+---

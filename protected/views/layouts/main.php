@@ -20,11 +20,18 @@
 
 <body>
 
+
 <div class="container" id="page">
+<div id="logo3" align="right"><?php $this->widget('zii.widgets.CMenu',array(
+			'items'=>array(
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
+			),
+		)); ?></div>
 
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		<div id="logo"><?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> <?php echo CHtml::encode(Yii::app()->name); ?> </div>
 	</div><!-- header -->
+
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
@@ -37,7 +44,7 @@
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit')),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran')),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->
