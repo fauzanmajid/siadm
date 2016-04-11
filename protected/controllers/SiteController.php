@@ -65,7 +65,7 @@ class SiteController extends Controller
 					"Content-Type: text/plain; charset=UTF-8";
 
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				Yii::app()->user->setFlash('contact','Treima kasih telah menghubungi kami. Kami akan merespon masukkann anda secepatnya.');
 				$this->refresh();
 			}
 		}
@@ -77,15 +77,19 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+		if (!UserWeb::instance()->isGuest){
+			$this->redirect(array('index'));
+		}
+
 		$this->layout = 'login';
 		$model=new LoginForm;
 
 		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		/*if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
-		}
+		}*/
 
 		// collect user input data
 		if(isset($_POST['LoginForm']))
