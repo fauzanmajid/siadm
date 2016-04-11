@@ -27,10 +27,10 @@ class SantriController extends Controller
 	public function accessRules()
 	{
 		return array(
-			/*array('allow',  // allow all users to perform 'index' and 'view' actions
+			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
-			),*/
+			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
 				'users'=>array('@'),
@@ -39,7 +39,7 @@ class SantriController extends Controller
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
-                return $user->isAdmin();
+                return $user->isAdmin();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
