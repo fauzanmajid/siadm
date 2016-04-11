@@ -60,4 +60,8 @@ class UserIdentity extends CUserIdentity
     public function getName() {
         return $this->user->username;
     }
+
+    protected function afterLogin() {
+        Yii::app()->user->setState('role', $record->role);
+    }
 }
