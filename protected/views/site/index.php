@@ -4,6 +4,11 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
+<<<<<<< HEAD
+<h1>Welcome to  <i><?php echo CHtml::encode(Yii::app()->name); ?>, <?php echo CHtml::encode(Yii::app()->user->name) ?></i></h1>
+
+
+=======
 <h1>Selamat datang di Sistem Informasi Administrasi <?php echo CHtml::encode(Yii::app()->name); ?>!</h1>
 
 <p>Aplkasi ini dikhususkan dewan pembina, guru, kurikulum, kesiswaan, dan bendahara Pesantren Al-Lathifah Mulia.</p>
@@ -18,3 +23,4 @@ $this->pageTitle=Yii::app()->name;
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p> -->
+>>>>>>> parput
