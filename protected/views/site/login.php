@@ -6,7 +6,7 @@
 <?php $form = $this->beginWidget('CActiveForm', ['id' => 'login-form']); ?>
 <div id="upper">
     <p><label for="username"></p>
-    <label for="username">Sidm Al-Lathifa Mulia
+    <label for="username">Siadm Al-Lathifah Mulia
 
 </div>
 <?= ($model->getError('username')) ?>
