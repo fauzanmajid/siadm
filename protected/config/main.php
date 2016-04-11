@@ -9,6 +9,8 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 
 	'name'=>'SIAdm Al-Lathifah Mulia',
+
+    'defaultController' => 'site/login',
 	//'theme'=>'hebo',
 	// preloading 'log' component
 	'preload'=>array('log'),

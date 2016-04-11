@@ -32,7 +32,6 @@
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit')),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
