@@ -24,7 +24,8 @@
 <div class="container" id="page">
 <div id="logo3" align="right"><?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?></div>
 
@@ -37,11 +38,16 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit')),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
+				array('label'=>'Perizinan', 'url'=>array('/Perizinan')),
+				array('label'=>'Data Santri', 'url'=>array('/Santri')),
+				//array('label'=>'Site', 'url'=>array('/Site')),
+				array('label'=>'User', 'url'=>array('/User')),
+				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran')),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran')),
 				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
