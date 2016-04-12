@@ -20,18 +20,38 @@
 
 <body>
 
-
 <div class="container" id="page">
-<div id="logo3" align="right"><?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?></div>
+<div id="logo3" align="right">
+	<?php $this->widget('zii.widgets.CMenu',array(
+		'items'=>array(
+			array(
+				'label'=>'Logout ('.Yii::app()->user->role.')', 
+				'url'=>array('/site/logout'), 
+				'visible'=>!Yii::app()->user->isGuest
+			)
+		),
+	)); 
+	?>
+
+	<span>
+    <?php
+	    if (UserWeb::instance()->isAdmin()) {
+	        echo 'Administrator';
+	    }
+	    else {
+	        echo 'User';
+    	}
+    ?>
+    </span>
+</div>
 
 	<div id="header">
-		<div id="logo"><?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> <?php echo CHtml::encode(Yii::app()->name); ?> </div>
-	</div><!-- header -->
+		<div id="logo">
+			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> 
+			<?php echo CHtml::encode(Yii::app()->name); ?> 
+		</div>
+	</div>
+	<!-- header -->
 
 
 	<div id="mainmenu">
