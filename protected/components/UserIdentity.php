@@ -32,6 +32,7 @@ class UserIdentity extends CUserIdentity
              * you can also use hoauthAfterLogin()
              * @link https://github.com/SleepWalker/hoauth/wiki/Callbacks
              */
+            $this->beforeAuthentication();
             $this->errorCode = self::ERROR_NONE;
         }
     }
@@ -46,7 +47,8 @@ class UserIdentity extends CUserIdentity
                 $this->errorCode = self::ERROR_PASSWORD_INVALID;
             }
             else {
-                //$this->beforeAuthentication();
+                $this->beforeAuthentication();
+                $this->setState('role', $this->user->role);
                 $this->errorCode = self::ERROR_NONE;
             }
         }
@@ -61,7 +63,7 @@ class UserIdentity extends CUserIdentity
         return $this->user->username;
     }
 
-    protected function afterLogin() {
-        Yii::app()->user->setState('role', $record->role);
+    public function beforeAuthentication() {
+        // do before authenctiation work
     }
 }
