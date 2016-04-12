@@ -1,0 +1,75 @@
+2016/04/11 09:04:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`prestasi`, CONSTRAINT `fk_Log_Employee1` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `prestasi` (`deskripsi`, `jenis`, `tanggal`, `nip_santri`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (73)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 09:04:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`prestasi`, CONSTRAINT `fk_Log_Employee1` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `prestasi` (`deskripsi`, `jenis`, `tanggal`, `nip_santri`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PrestasiController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/create')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/prestasi/create
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi/create
+---
+2016/04/11 09:06:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`tahun_ajaran`, CONSTRAINT `fk_tajar_matpel` FOREIGN KEY (`id_matpel`) REFERENCES `mata_pelajaran` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `tahun_ajaran` (`id`, `tahun_ajaran`, `id_matpel`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\TahunAjaranController.php (73)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 09:06:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`tahun_ajaran`, CONSTRAINT `fk_tajar_matpel` FOREIGN KEY (`id_matpel`) REFERENCES `mata_pelajaran` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `tahun_ajaran` (`id`, `tahun_ajaran`, `id_matpel`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\TahunAjaranController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TahunAjaranController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('tahunAjaran/cre...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/tahunAjaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/tahunAjaran/create
+---
+2016/04/11 09:06:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`tahun_ajaran`, CONSTRAINT `fk_tajar_matpel` FOREIGN KEY (`id_matpel`) REFERENCES `mata_pelajaran` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `tahun_ajaran` (`id`, `tahun_ajaran`, `id_matpel`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\TahunAjaranController.php (73)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 09:06:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`tahun_ajaran`, CONSTRAINT `fk_tajar_matpel` FOREIGN KEY (`id_matpel`) REFERENCES `mata_pelajaran` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `tahun_ajaran` (`id`, `tahun_ajaran`, `id_matpel`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\TahunAjaranController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TahunAjaranController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('tahunAjaran/cre...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/tahunAjaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/tahunAjaran/create
+---
