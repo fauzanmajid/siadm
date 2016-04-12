@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Santris',
+	'Data Santri',
 );
 
 $this->menu=array(
-	array('label'=>'Create Santri', 'url'=>array('create')),
-	array('label'=>'Manage Santri', 'url'=>array('admin')),
+	array('label'=>'Buat Data Santri', 'url'=>array('create')),
+	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Santris</h1>
+<h1>Data Santri</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

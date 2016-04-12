@@ -3,16 +3,16 @@
 /* @var $model Santri */
 
 $this->breadcrumbs=array(
-	'Santris'=>array('index'),
-	'Create',
+	'Data Santri'=>array('index'),
+	'Buat Data Santri',
 );
 
 $this->menu=array(
-	array('label'=>'List Santri', 'url'=>array('index')),
-	array('label'=>'Manage Santri', 'url'=>array('admin')),
+	array('label'=>'Daftar Santri', 'url'=>array('index')),
+	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Santri</h1>
+<h1>Buat Data Santri</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

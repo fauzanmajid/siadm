@@ -2,14 +2,12 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
+/*$this->pageTitle=Yii::app()->name . ' - Halaman Muka';
+*/
 ?>
 
 
-<h1>Welcome to  <i><?php echo CHtml::encode(Yii::app()->name); ?>, <?php echo CHtml::encode(Yii::app()->user->name) ?></i></h1>
-
-
-=======
-<h1>Selamat datang di Sistem Informasi Administrasi <?php echo CHtml::encode(Yii::app()->name); ?>!</h1>
+<h1>Selamat datang di <?php echo CHtml::encode(Yii::app()->name); ?>, <?php echo CHtml::encode(Yii::app()->user->name) ?>!</h1>
 
 <p>Aplkasi ini dikhususkan dewan pembina, guru, kurikulum, kesiswaan, dan bendahara Pesantren Al-Lathifah Mulia.</p>
 
