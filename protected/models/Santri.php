@@ -49,8 +49,8 @@ class Santri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, Perwalian_nip_santri, Perwalian_status, Pemasukkan_santri_kode', 'required'),
-			array('anak_ke, jum_saudara, Perwalian_nip_santri', 'numerical', 'integerOnly'=>true),
+			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, Perwalian_nip_santri, Perwalian_status, Pemasukkan_santri_kode', 'required'),
+			array('nip, nis, nik, nisn, anak_ke, jum_saudara, Perwalian_nip_santri, Pemasukkan_santri_kode', 'numerical', 'integerOnly'=>true),
 			array('nip, nis, nik, nisn, status, tempat_lahir', 'length', 'max'=>15),
 			array('nama_lengkap', 'length', 'max'=>25),
 			array('nama_kecil, Pemasukkan_santri_kode', 'length', 'max'=>10),
@@ -86,10 +86,10 @@ class Santri extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nip' => 'Nip',
-			'nis' => 'Nis',
-			'nik' => 'Nik',
-			'nisn' => 'Nisn',
+			'nip' => 'NIP',
+			'nis' => 'NIS',
+			'nik' => 'NIK',
+			'nisn' => 'NISN',
 			'nama_lengkap' => 'Nama Lengkap',
 			'nama_kecil' => 'Nama Kecil',
 			'status' => 'Status',
@@ -99,10 +99,10 @@ class Santri extends CActiveRecord
 			'tanggal_lahir' => 'Tanggal Lahir',
 			'golongan_darah' => 'Golongan Darah',
 			'anak_ke' => 'Anak Ke',
-			'jum_saudara' => 'Jum Saudara',
-			'Perwalian_nip_santri' => 'Perwalian Nip Santri',
-			'Perwalian_status' => 'Perwalian Status',
-			'Pemasukkan_santri_kode' => 'Pemasukkan Santri Kode',
+			'jum_saudara' => 'Jumlah Saudara',
+			'Perwalian_nip_santri' => 'NIK Wali Santri',
+			'Perwalian_status' => 'Status Perwalian',
+			'Pemasukkan_santri_kode' => 'Kode Santri',
 		);
 	}
 
