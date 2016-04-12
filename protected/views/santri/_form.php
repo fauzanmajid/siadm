@@ -99,25 +99,25 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Jumlah Saudara'); ?>
+		<?php echo $form->labelEx($model,'jum_saudara'); ?>
 		<?php echo $form->textField($model,'jum_saudara',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'jum_saudara'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'NIK Wali Santri'); ?>
+		<?php echo $form->labelEx($model,'Perwalian_nip_santri'); ?>
 		<?php echo $form->textField($model,'Perwalian_nip_santri',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'Perwalian_nip_santri'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'Status Perwalian'); ?>
+	<div clasgit  s="row">
+		<?php echo $form->labelEx($model,'Perwalian_status'); ?>
 		<?php echo $form->textField($model,'Perwalian_status',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'Perwalian_status'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Kode Santri'); ?>
+		<?php echo $form->labelEx($model,'Pemasukkan_santri_kode'); ?>
 		<?php echo $form->textField($model,'Pemasukkan_santri_kode',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'Pemasukkan_santri_kode'); ?>
 	</div>
