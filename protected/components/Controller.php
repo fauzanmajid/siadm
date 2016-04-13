@@ -21,8 +21,10 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-	/*protected function beforeAction() {
-       	if (Yii::app()->user->isGuest)
-            $this->redirect(Yii::app()->createUrl('site/login'));
-	}*/
+	public function beforeAction($action) { 
+		if(!isset(Yii::app()->user->id) && !($action->controller->id == 'site' && $action->id == 'login')) {
+			$this->redirect(array('site/login')); 
+		}
+		return true;
+	}
 }
