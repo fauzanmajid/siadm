@@ -2,19 +2,20 @@
 /* @var $this PerizinanController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Perizinans',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'Create Perizinan', 'url'=>array('create')),
-	array('label'=>'Manage Perizinan', 'url'=>array('admin')),
+	array('label'=>'Tambah Perizinan Santri', 'url'=>array('create')),
+	array('label'=>'Atur Perizinan Santri', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Perizinans</h1>
+<h1>Perizinan Santri</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>

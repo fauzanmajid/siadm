@@ -2,14 +2,14 @@
 /* @var $this UserController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Users',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'Create User', 'url'=>array('create')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
+	array('label'=>'Tambah Pengguna', 'url'=>array('create')),
+	array('label'=>'Atur Pengguna', 'url'=>array('admin')),
+	/*array('label'=>'Manage User', 'url'=>array('admin')),*/
 );
 ?>
 
