@@ -6,10 +6,12 @@ $this->breadcrumbs=array(
 	'Mata Pelajarans',
 );
 
-$this->menu=array(
-	array('label'=>'Create MataPelajaran', 'url'=>array('create')),
-	array('label'=>'Manage MataPelajaran', 'url'=>array('admin')),
-);
+if (UserWeb::instance()->isKurikulum()) {
+    $this->menu=array(
+    	array('label'=>'Tambah Mata Pelajaran', 'url'=>array('create')),
+    	//array('label'=>'Manage MataPelajaran', 'url'=>array('admin')),
+    );
+}
 ?>
 
 <h1>Mata Pelajaran</h1>
@@ -21,30 +23,10 @@ $this->menu=array(
 )); ?>
 </div><!-- search-form -->
 
-<?php /*$this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-));*/ ?>
-
-<?php /*$this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'mata-pelajaran-grid',
-	'dataProvider'=>$model->search(),
-	'columns'=>array(
-		'id',
-		'nama',
-		'jenjang',
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-));*/ ?>
-
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'mata-pelajaran-grid',
     'dataProvider' => $model->search(),
-    /*'pager' => array(
-        'header' => '',*/
     'columns' => array(
         array(
             'header' => 'No',
@@ -69,6 +51,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'htmlOptions' => array('style' => 'text-align: center;')
         ),
         array(
+            'header' => 'Action',
 			'class'=>'CButtonColumn',
 			'template'=>'{update}{delete}',
 			'deleteConfirmation'=>"js:'Anda yakin?'",
