@@ -124,23 +124,23 @@ class Santri extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('nip',$this->nip,true);
+		$criteria->compare('nip',$this->nip);
 		$criteria->compare('nis',$this->nis,true);
-		$criteria->compare('nik',$this->nik,true);
-		$criteria->compare('nisn',$this->nisn,true);
+		$criteria->compare('nik',$this->nik);
+		$criteria->compare('nisn',$this->nisn);
 		$criteria->compare('nama_lengkap',$this->nama_lengkap,true);
-		$criteria->compare('nama_kecil',$this->nama_kecil,true);
-		$criteria->compare('status',$this->status,true);
-		$criteria->compare('alamat',$this->alamat,true);
-		$criteria->compare('jenjang',$this->jenjang,true);
-		$criteria->compare('tempat_lahir',$this->tempat_lahir,true);
-		$criteria->compare('tanggal_lahir',$this->tanggal_lahir,true);
-		$criteria->compare('golongan_darah',$this->golongan_darah,true);
+		$criteria->compare('nama_kecil',$this->nama_kecil);
+		$criteria->compare('status',$this->status);
+		$criteria->compare('alamat',$this->alamat);
+		$criteria->compare('jenjang',$this->jenjang);
+		$criteria->compare('tempat_lahir',$this->tempat_lahir);
+		$criteria->compare('tanggal_lahir',$this->tanggal_lahir);
+		$criteria->compare('golongan_darah',$this->golongan_darah);
 		$criteria->compare('anak_ke',$this->anak_ke);
 		$criteria->compare('jum_saudara',$this->jum_saudara);
 		$criteria->compare('Perwalian_nip_santri',$this->Perwalian_nip_santri);
-		$criteria->compare('Perwalian_status',$this->Perwalian_status,true);
-		$criteria->compare('Pemasukkan_santri_kode',$this->Pemasukkan_santri_kode,true);
+		$criteria->compare('Perwalian_status',$this->Perwalian_status);
+		$criteria->compare('Pemasukkan_santri_kode',$this->Pemasukkan_santri_kode);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
