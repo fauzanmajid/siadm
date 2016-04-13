@@ -21,20 +21,21 @@
 <body>
 
 <div class="container" id="page">
-<div id="logo3" align="right">
-	<?php $this->widget('zii.widgets.CMenu',array(
-		'items'=>array(
-			array(
-				'label'=>'Logout ('.Yii::app()->user->role.')', 
-				'url'=>array('/site/logout'), 
-				'visible'=>!Yii::app()->user->isGuest
-			)
-		),
-	)); 
-	?>
 
-	<span>
-    <?php
+
+	<div id="header">
+		<div id="logo">
+			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> 
+			<?php echo CHtml::encode(Yii::app()->name); ?> 
+		</div>
+	</div>
+	<!-- header -->
+
+	<div id="mainmenu">
+		<div id="anakan2">		
+	<!--Ini Role Area Ya! -->
+		<?php
+		echo 'Role : ';
 	    if (UserWeb::instance()->isAdmin()) {
 	        echo 'Administrator';
 	    }
@@ -45,19 +46,20 @@
 	        echo 'User';
     	}
     ?>
-    </span>
-</div>
+    <!-- End Of Role Area -->
+		</div>	
 
-	<div id="header">
-		<div id="logo">
-			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> 
-			<?php echo CHtml::encode(Yii::app()->name); ?> 
+		<div id="anakan">
+		<?php $this->widget('zii.widgets.CMenu',array(
+			'items'=>array(
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
+			),
+		)); ?>
+
 		</div>
 	</div>
-	<!-- header -->
-
-
-	<div id="mainmenu">
+	<div id="cssmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Halaman Muka', 'url'=>array('/site/index')),
@@ -73,6 +75,45 @@
 			),
 		)); ?>
 	</div><!-- mainmenu -->
+	
+	<!--<?php if(isset($this->breadcrumbs)):?> 
+		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+			'links'=>$this->breadcrumbs,
+		)); ?><!-- breadcrumbs 
+	<?php endif?>-->
+	
+
+	<!--<div id="newbar"> 
+		<div id='cssmenu'>
+<ul>
+
+   <li><a href='/site/index'><span>Home</span></a></li>
+   <li class='active has-sub'><a href='#'><span>Products</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+</ul>
+</div>
+
+
+
+	</div>-->
+
+	<div class="scroll" id="newbar2">
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
@@ -80,6 +121,8 @@
 	<?php endif?>
 
 	<?php echo $content; ?>
+	</div>
+	
 
 	<div class="clear"></div>
 
