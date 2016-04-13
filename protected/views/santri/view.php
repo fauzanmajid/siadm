@@ -3,7 +3,7 @@
 /* @var $model Santri */
 
 $this->breadcrumbs=array(
-	'Santris'=>array('index'),
+	'Santri'=>array('index'),
 	$model->nip,
 );
 

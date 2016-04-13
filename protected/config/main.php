@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 
-	'name'=>'SIAdm Al-Lathifah Mulia',
+	'name'=>'Sistem Informasi Administrasi Al-Lathifah Mulia',
 
     'defaultController' => 'site/login',
 	//'theme'=>'hebo',
