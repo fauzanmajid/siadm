@@ -38,6 +38,9 @@
 	    if (UserWeb::instance()->isAdmin()) {
 	        echo 'Administrator';
 	    }
+	    elseif (UserWeb::instance()->isKurikulum()) {
+	     	echo 'Kurikulum';
+	     } 
 	    else {
 	        echo 'User';
     	}
