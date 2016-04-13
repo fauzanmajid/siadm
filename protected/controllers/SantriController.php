@@ -125,8 +125,17 @@ class SantriController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Santri');
+
+		$model=new Santri('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Santri']))
+			$model->attributes=$_GET['Santri'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+
+
 		));
 	}
 
