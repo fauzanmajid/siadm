@@ -22,32 +22,6 @@
 
 <div class="container" id="page">
 
-<div id="logo3" align="right">
-	<?php $this->widget('zii.widgets.CMenu',array(
-		'items'=>array(
-			array(
-				'label'=>'Logout ('.Yii::app()->user->role.')', 
-				'url'=>array('/site/logout'), 
-				'visible'=>!Yii::app()->user->isGuest
-			)
-		),
-	)); 
-	?>
-
-	<span>
-    <?php
-	    if (UserWeb::instance()->isAdmin()) {
-	        echo 'Administrator';
-	    }
-	    elseif (UserWeb::instance()->isKurikulum()) {
-	     	echo 'Kurikulum';
-	     } 
-	    else {
-	        echo 'User';
-    	}
-    ?>
-    </span>
-</div>
 
 	<div id="header">
 		<div id="logo">
@@ -58,6 +32,23 @@
 	<!-- header -->
 
 	<div id="mainmenu">
+		<div id="anakan2">		
+	<!--Ini Role Area Ya! -->
+		<?php
+		echo 'Role : ';
+	    if (UserWeb::instance()->isAdmin()) {
+	        echo 'Administrator';
+	    }
+	    elseif (UserWeb::instance()->isKurikulum()) {
+	     	echo 'Kurikulum';
+	     } 
+	    else {
+	        echo 'User';
+    	}
+    ?>
+    <!-- End Of Role Area -->
+		</div>	
+
 		<div id="anakan">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
