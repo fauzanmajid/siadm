@@ -31,10 +31,6 @@ class MataPelajaranController extends Controller
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
@@ -129,8 +125,14 @@ class MataPelajaranController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('MataPelajaran');
+		$model=new MataPelajaran('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['MataPelajaran']))
+			$model->attributes=$_GET['MataPelajaran'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 
