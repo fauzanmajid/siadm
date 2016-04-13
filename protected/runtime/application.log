@@ -1511,3 +1511,266 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/MataPelajaran
 HTTP_REFERER=http://localhost/siadm/index.php/site/index
 ---
+2016/04/13 15:57:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/admin')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/santri/admin
+HTTP_REFERER=http://localhost/siadm/index.php/santri/create
+---
+2016/04/13 16:04:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/admin')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/santri/admin
+HTTP_REFERER=http://localhost/siadm/index.php/santri/index
+---
+2016/04/13 16:28:29 [error] [exception.CException] exception 'CException' with message 'Property "CListView.emtyText" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWidgetFactory.php(161): CComponent->__set('emtyText', 'Tidak ada data ...')
+#1 C:\xampp\htdocs\yii\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SantriController), 'zii.widgets.CLi...', Array)
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#3 C:\xampp\htdocs\siadm\protected\views\santri\index.php(21): CBaseController->widget('zii.widgets.CLi...', Array)
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(130): CController->render('index', Array)
+#9 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SantriController->actionIndex()
+#10 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Santri')
+#20 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/siadm/index.php/Santri
+HTTP_REFERER=http://localhost/siadm/index.php/User
+---
+2016/04/13 16:30:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/admin')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/santri/admin
+HTTP_REFERER=http://localhost/siadm/index.php/santri/index
+---
+2016/04/13 16:44:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/admin')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/prestasi/admin
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi/index
+---
+2016/04/13 16:48:20 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.0" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CValidator.php(177): CComponent->__set('0', 'required')
+#1 C:\xampp\htdocs\yii\base\CModel.php(287): CValidator::createValidator('length', Object(Prestasi), 'deskripsi', Array)
+#2 C:\xampp\htdocs\yii\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\yii\base\CModel.php(304): CModel->getValidators('deskripsi')
+#4 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1514): CModel->isAttributeRequired('deskripsi')
+#5 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(Prestasi), 'deskripsi', Array)
+#6 C:\xampp\htdocs\siadm\protected\views\prestasi\_form.php(23): CActiveForm->labelEx(Object(Prestasi), 'deskripsi')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\siadm\protected\views\prestasi\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#15 C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php(79): CController->render('create', Array)
+#16 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PrestasiController->actionCreate()
+#17 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#26 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/create')
+#27 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/siadm/index.php/prestasi/create
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi
+---
+2016/04/13 16:49:04 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.0" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CValidator.php(177): CComponent->__set('0', 'required')
+#1 C:\xampp\htdocs\yii\base\CModel.php(287): CValidator::createValidator('length', Object(Prestasi), 'deskripsi', Array)
+#2 C:\xampp\htdocs\yii\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\yii\base\CModel.php(304): CModel->getValidators('deskripsi')
+#4 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1514): CModel->isAttributeRequired('deskripsi')
+#5 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(Prestasi), 'deskripsi', Array)
+#6 C:\xampp\htdocs\siadm\protected\views\prestasi\_form.php(23): CActiveForm->labelEx(Object(Prestasi), 'deskripsi')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\siadm\protected\views\prestasi\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#15 C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php(79): CController->render('create', Array)
+#16 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PrestasiController->actionCreate()
+#17 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#26 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/create')
+#27 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/siadm/index.php/prestasi/create
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi
+---
+2016/04/13 16:58:15 [error] [exception.CException] exception 'CException' with message 'Property "CRequiredValidator.0" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CValidator.php(177): CComponent->__set('0', 'length')
+#1 C:\xampp\htdocs\yii\base\CModel.php(287): CValidator::createValidator('required', Object(Prestasi), 'deskripsi', Array)
+#2 C:\xampp\htdocs\yii\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\yii\base\CModel.php(304): CModel->getValidators('deskripsi')
+#4 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1514): CModel->isAttributeRequired('deskripsi')
+#5 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(Prestasi), 'deskripsi', Array)
+#6 C:\xampp\htdocs\siadm\protected\views\prestasi\_form.php(23): CActiveForm->labelEx(Object(Prestasi), 'deskripsi')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\siadm\protected\views\prestasi\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#15 C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php(79): CController->render('create', Array)
+#16 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PrestasiController->actionCreate()
+#17 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#26 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/create')
+#27 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/siadm/index.php/prestasi/create
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi
+---
+2016/04/13 16:58:34 [error] [exception.CException] exception 'CException' with message 'Property "CRequiredValidator.0" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CValidator.php(177): CComponent->__set('0', 'length')
+#1 C:\xampp\htdocs\yii\base\CModel.php(287): CValidator::createValidator('required', Object(Prestasi), 'jenis', Array)
+#2 C:\xampp\htdocs\yii\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\yii\base\CModel.php(304): CModel->getValidators('deskripsi')
+#4 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1514): CModel->isAttributeRequired('deskripsi')
+#5 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(600): CHtml::activeLabelEx(Object(Prestasi), 'deskripsi', Array)
+#6 C:\xampp\htdocs\siadm\protected\views\prestasi\_form.php(23): CActiveForm->labelEx(Object(Prestasi), 'deskripsi')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\siadm\protected\views\prestasi\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#15 C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php(79): CController->render('create', Array)
+#16 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PrestasiController->actionCreate()
+#17 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#26 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/create')
+#27 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/siadm/index.php/prestasi/create
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi
+---
+2016/04/13 17:14:23 [error] [php] Missing argument 3 for CHtml::listData(), called in C:\xampp\htdocs\siadm\protected\views\prestasi\_form.php on line 45 and defined (C:\xampp\htdocs\yii\web\helpers\CHtml.php:2271)
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CBaseController.php(95): PrestasiController->renderInternal()
+#1 C:\xampp\htdocs\yii\web\CController.php(869): PrestasiController->renderFile()
+#2 C:\xampp\htdocs\siadm\protected\views\prestasi\create.php(18): PrestasiController->renderPartial()
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(95): PrestasiController->renderInternal()
+#5 C:\xampp\htdocs\yii\web\CController.php(869): PrestasiController->renderFile()
+#6 C:\xampp\htdocs\yii\web\CController.php(782): PrestasiController->renderPartial()
+#7 C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php(79): PrestasiController->render()
+#8 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PrestasiController->actionCreate()
+#9 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): PrestasiController->runAction()
+#11 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): PrestasiController->filterAccessControl()
+#14 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\web\CController.php(265): PrestasiController->runActionWithFilters()
+#17 C:\xampp\htdocs\yii\web\CWebApplication.php(282): PrestasiController->run()
+#18 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\siadm\index.php(13): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/prestasi/create
+in C:\xampp\htdocs\siadm\protected\views\prestasi\_form.php (45)
+in C:\xampp\htdocs\siadm\protected\views\prestasi\create.php (18)
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (79)
