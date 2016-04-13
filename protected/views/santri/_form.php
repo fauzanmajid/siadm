@@ -81,14 +81,28 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'tanggal_lahir'); ?>
-		<?php echo $form->textField($model,'tanggal_lahir',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'tanggal_lahir'); ?>
+		<?php echo $form->labelEx($model, 'tanggal_lahir'); ?>
+        <?php
+	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+	            'model' => $model,
+	            'attribute' => 'tanggal_lahir',
+	            'options' => array(
+	                'showAnim' => 'fadeIn',
+	                'dateFormat' => 'yy-mm-dd',
+	                'changeMonth' => true,
+	                'changeYear' => true,
+	                'yearRange' => '-200:+0',
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	        ));
+        ?>
+        <?php echo $form->error($model, 'tanggal_lahir'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'golongan_darah'); ?>
-		<?php echo $form->textField($model,'golongan_darah',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->dropDownList($model,'golongan_darah',array('A'=>'A', 'B'=>'B', 'AB'=>'AB', 'O'=>'O')); ?>
 		<?php echo $form->error($model,'golongan_darah'); ?>
 	</div>
 
