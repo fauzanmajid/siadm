@@ -1774,3 +1774,144 @@ REQUEST_URI=/siadm/index.php/prestasi/create
 in C:\xampp\htdocs\siadm\protected\views\prestasi\_form.php (45)
 in C:\xampp\htdocs\siadm\protected\views\prestasi\create.php (18)
 in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (79)
+2016/04/14 06:24:06 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "Cari".' in C:\xampp\htdocs\yii\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\siadm\protected\views\user\admin.php(40): CController->renderPartial('Cari', Array)
+#1 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#5 C:\xampp\htdocs\siadm\protected\controllers\UserController.php(149): CController->render('admin', Array)
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/user/admin
+HTTP_REFERER=http://localhost/siadm/index.php/user/index
+---
+2016/04/14 06:49:41 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php:412
+Stack trace:
+#0 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(383): CGridView->createDataColumn('Tidak ada data ...')
+#1 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\siadm\protected\views\santri\admin.php(71): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(145): CController->render('admin', Array)
+#10 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SantriController->actionAdmin()
+#11 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#20 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/admin')
+#21 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/siadm/index.php/santri/admin
+HTTP_REFERER=http://localhost/siadm/index.php/santri/create
+---
+2016/04/14 06:49:43 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php:412
+Stack trace:
+#0 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(383): CGridView->createDataColumn('Tidak ada data ...')
+#1 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\siadm\protected\views\santri\admin.php(71): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(145): CController->render('admin', Array)
+#10 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SantriController->actionAdmin()
+#11 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#20 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/admin')
+#21 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/siadm/index.php/santri/admin
+HTTP_REFERER=http://localhost/siadm/index.php/santri/create
+---
+2016/04/14 07:08:34 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php:412
+Stack trace:
+#0 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(383): CGridView->createDataColumn('Tidak ada data ...')
+#1 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\siadm\protected\views\pencatatanPelanggaran\admin.php(57): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php(143): CController->render('admin', Array)
+#10 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPelanggaranController->actionAdmin()
+#11 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#20 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pencatatanPelan...')
+#21 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/siadm/index.php/pencatatanPelanggaran/admin
+HTTP_REFERER=http://localhost/siadm/index.php/pencatatanPelanggaran/index
+---
+2016/04/14 07:08:39 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php:412
+Stack trace:
+#0 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(383): CGridView->createDataColumn('Tidak ada data ...')
+#1 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\siadm\protected\views\pencatatanPelanggaran\admin.php(57): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php(143): CController->render('admin', Array)
+#10 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPelanggaranController->actionAdmin()
+#11 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#20 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pencatatanPelan...')
+#21 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/siadm/index.php/pencatatanPelanggaran/admin
+HTTP_REFERER=http://localhost/siadm/index.php/pencatatanPelanggaran/index
+---
