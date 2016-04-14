@@ -2,10 +2,6 @@
 /* @var $this SantriController */
 /* @var $model Santri */
 
-/*$this->breadcrumbs=array(
-	'Santri'=>array('index'),
-	$model->nip,
-);*/
 
 $this->menu=array(
 	array('label'=>'Daftar Santri', 'url'=>array('index')),
