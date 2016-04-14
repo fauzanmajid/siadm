@@ -32,10 +32,13 @@ class Prestasi extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nip_santri', 'required'),
+			array('deskripsi', 'required'),
 			array('deskripsi', 'length', 'max'=>50),
 			array('jenis', 'length', 'max'=>25),
+			array('jenis', 'required'),
 			array('nip_santri', 'length', 'max'=>15),
 			array('tanggal', 'safe'),
+			array('tanggal', 'required'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('no_pencatatan, deskripsi, jenis, tanggal, nip_santri', 'safe', 'on'=>'search'),
@@ -64,7 +67,7 @@ class Prestasi extends CActiveRecord
 			'deskripsi' => 'Deskripsi',
 			'jenis' => 'Jenis',
 			'tanggal' => 'Tanggal',
-			'nip_santri' => 'Nip Santri',
+			'nip_santri' => 'NIS',
 		);
 	}
 
