@@ -62,9 +62,9 @@ class PencatatanPelanggaran extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'No_pelanggaran' => 'No Pelanggaran',
-			'nip_santri' => 'Nip Santri',
-			'id_kesiswaan' => 'Id Kesiswaan',
+			'No_pelanggaran' => 'ID Pelanggaran',
+			'nip_santri' => 'NIS',
+			'id_kesiswaan' => 'ID Kesiswaan',
 		);
 	}
 

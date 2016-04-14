@@ -45,8 +45,13 @@ body
 
 #logo
 {
+<<<<<<< HEAD
 	padding: 25px 0.5px;
 	font-size: 300%;
+=======
+	padding: 39px 0.5px;
+	font-size: 250%;
+>>>>>>> dfe1f6a035285843cae34273fb4653b1404ebf28
 	width: 100%;
 
 
@@ -230,9 +235,9 @@ div.search-form
 
 .portlet-decoration
 {
-	padding: 3px 8px;
+	padding: 3px 16px;
 	background: #006400;
-	border-left: 5px solid #333333;
+	border-left: 0px solid #333333;
 }
 
 .portlet-title

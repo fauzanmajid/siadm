@@ -7,14 +7,15 @@
 );*/
 
 $this->menu=array(
-	array('label'=>'Create PencatatanPelanggaran', 'url'=>array('create')),
-	array('label'=>'Manage PencatatanPelanggaran', 'url'=>array('admin')),
+	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
+	array('label'=>'Atur Pelanggaran Santri', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Pencatatan Pelanggaran</h1>
+<h1>Catatan Pelanggaran Santri</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
