@@ -3,8 +3,8 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->id,
+	'Pengguna'=>array('index'),
+	$model->username,
 );
 
 $this->menu=array(
@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View User #<?php echo $model->id; ?></h1>
+<h1> <?php echo $model->username; ?> (<?php echo $model->role; ?>)</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -25,5 +25,6 @@ $this->menu=array(
 		'username',
 		'password',
 		'role',
+
 	),
 )); ?>

@@ -35,15 +35,15 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
-		echo 'Role : ';
+		echo 'Login as '.Yii::app()->user->name.' ';
 	    if (UserWeb::instance()->isAdmin()) {
-	        echo 'Administrator';
+	        echo '(Administrator)';
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
-	     	echo 'Kurikulum';
+	     	echo '(Kurikulum)';
 	     } 
 	    else {
-	        echo 'User';
+	        echo '(User)';
     	}
     ?>
     <!-- End Of Role Area -->
@@ -52,7 +52,7 @@
 		<div id="anakan">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
@@ -62,9 +62,15 @@
 	<div id="cssmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Halaman Muka', 'url'=>array('/site/index')),
+				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User')),
-				array('label'=>'Data Santri', 'url'=>array('/Santri')),
+				array('label'=>'Data Santri', 
+					  'url'=>array('/Santri'),
+					  'items'=>array(
+					  	array('label'=>'Tambah Data Santri','url'=>array('/Santri/create')),
+					  	array('label'=>'Manajemen Data Santri','url'=>array('/Santri/admin')),
+					  	),
+					  ), 	
 				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
 				array('label'=>'Perizinan', 'url'=>array('/Perizinan')),

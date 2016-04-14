@@ -3,15 +3,17 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Users',
+	'Pengguna',
 );
 
 $this->menu=array(
 	array('label'=>'Create User', 'url'=>array('create')),
 	array('label'=>'Manage User', 'url'=>array('admin')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
+
 );
+
 ?>
+
 
 <h1>Daftar Pengguna</h1>
 
