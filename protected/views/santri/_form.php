@@ -58,7 +58,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->dropDownList($model,'status',array( 'Yatim'=>'Yatim','Piatu'=>'Piatu','Yatimpiatu'=>'Yatimpiatu','Duafa'=>'Duafa','Mampu'=>'Mampu',)); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
@@ -70,7 +70,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->textField($model,'jenjang',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array('SMP'=>'SMP','SMK'=>'SMK')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 
@@ -126,7 +126,7 @@
 
 	<div clasgit  s="row">
 		<?php echo $form->labelEx($model,'Perwalian_status'); ?>
-		<?php echo $form->textField($model,'Perwalian_status',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->dropDownList($model,'Perwalian_status',array('Orang tua'=>'Orang tua','Wali'=>'Wali')); ?>
 		<?php echo $form->error($model,'Perwalian_status'); ?>
 	</div>
 

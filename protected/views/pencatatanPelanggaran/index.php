@@ -2,9 +2,9 @@
 /* @var $this PencatatanPelanggaranController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Pencatatan Pelanggaran',
-);
+);*/
 
 $this->menu=array(
 	array('label'=>'Create PencatatanPelanggaran', 'url'=>array('create')),

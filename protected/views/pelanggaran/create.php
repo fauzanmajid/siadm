@@ -2,10 +2,10 @@
 /* @var $this PelanggaranController */
 /* @var $model Pelanggaran */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Pelanggarans'=>array('index'),
 	'Create',
-);
+);*/
 
 $this->menu=array(
 	array('label'=>'List Pelanggaran', 'url'=>array('index')),
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Pelanggaran</h1>
+<h1>Tambah Pelanggaran</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
