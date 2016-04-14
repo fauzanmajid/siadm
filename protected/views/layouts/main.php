@@ -63,14 +63,14 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Halaman Muka', 'url'=>array('/site/index')),
-				array('label'=>'Pengguna', 'url'=>array('/User')),
-				array('label'=>'Data Santri ', 'url'=>array('/Santri')),
-				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
-				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
-				array('label'=>'Perizinan', 'url'=>array('/Perizinan')),
-				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran')),
-				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran')),
-				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit')),
+				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Perizinan', 'url'=>array('/Perizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
