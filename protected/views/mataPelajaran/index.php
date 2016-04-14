@@ -2,13 +2,9 @@
 /* @var $this MataPelajaranController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Mata Pelajarans',
-);
-
 if (UserWeb::instance()->isKurikulum()) {
     $this->menu=array(
-    	array('label'=>'Tambah Mata Pelajaran', 'url'=>array('create')),
+    	array('label'=>'Buat Mata Pelajaran', 'url'=>array('create')),
     	//array('label'=>'Manage MataPelajaran', 'url'=>array('admin')),
     );
 }
