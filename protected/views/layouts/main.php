@@ -64,7 +64,7 @@
 			'items'=>array(
 				array('label'=>'Halaman Muka', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User')),
-				array('label'=>'Data Santri', 'url'=>array('/Santri')),
+				array('label'=>'Data Santri ', 'url'=>array('/Santri')),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
 				array('label'=>'Perizinan', 'url'=>array('/Perizinan')),
