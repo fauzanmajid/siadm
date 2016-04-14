@@ -21,20 +21,21 @@
 <body>
 
 <div class="container" id="page">
-<div id="logo3" align="right">
-	<?php $this->widget('zii.widgets.CMenu',array(
-		'items'=>array(
-			array(
-				'label'=>'Logout ('.Yii::app()->user->role.')', 
-				'url'=>array('/site/logout'), 
-				'visible'=>!Yii::app()->user->isGuest
-			)
-		),
-	)); 
-	?>
 
-	<span>
-    <?php
+
+	<div id="header">
+		<div id="logo">
+			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> 
+			<?php echo CHtml::encode(Yii::app()->name); ?> 
+		</div>
+	</div>
+	<!-- header -->
+
+	<div id="mainmenu">
+		<div id="anakan2">		
+	<!--Ini Role Area Ya! -->
+		<?php
+		echo 'Jabatan : ';
 	    if (UserWeb::instance()->isAdmin()) {
 	        echo 'Administrator';
 	    }
@@ -45,34 +46,74 @@
 	        echo 'User';
     	}
     ?>
-    </span>
-</div>
+    <!-- End Of Role Area -->
+		</div>	
 
-	<div id="header">
-		<div id="logo">
-			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> 
-			<?php echo CHtml::encode(Yii::app()->name); ?> 
+		<div id="anakan">
+		<?php $this->widget('zii.widgets.CMenu',array(
+			'items'=>array(
+				array('label'=>'Keluar ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
+			),
+		)); ?>
+
 		</div>
 	</div>
-	<!-- header -->
-
-
-	<div id="mainmenu">
+	<div id="cssmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Halaman Muka', 'url'=>array('/site/index')),
-				array('label'=>'Pengguna', 'url'=>array('/User')),
-				array('label'=>'Data Santri', 'url'=>array('/Santri')),
-				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
-				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
-				array('label'=>'Perizinan', 'url'=>array('/Perizinan')),
-				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran')),
-				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran')),
-				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit')),
+				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Perizinan', 'url'=>array('/Perizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->
+	
+	<!--<?php if(isset($this->breadcrumbs)):?> 
+		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+			'links'=>$this->breadcrumbs,
+		)); ?><!-- breadcrumbs 
+	<?php endif?>-->
+	
+
+	<!--<div id="newbar"> 
+		<div id='cssmenu'>
+<ul>
+
+   <li><a href='/site/index'><span>Home</span></a></li>
+   <li class='active has-sub'><a href='#'><span>Products</span></a>
+      <ul>
+         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+            <ul>
+               <li><a href='#'><span>Sub Product</span></a></li>
+               <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'><span>About</span></a></li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+</ul>
+</div>
+
+
+
+	</div>-->
+
+	<div class="scroll" id="newbar2">
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
@@ -80,12 +121,14 @@
 	<?php endif?>
 
 	<?php echo $content; ?>
+	</div>
+	
 
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by Propensi A03.<br/>
-		All Rights Reserved.<br/>
+		Hak Cipta &copy; <?php echo date('Y'); ?> oleh Propensi A03.<br/>
+		Seluruh Hak Cipta Dilindungi Undang-Undang.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 

@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -27,6 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
+		<br><p style='font-size: 75%'>Nomor Induk Santri</p>
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nip_santri'); ?>
 	</div>
@@ -38,7 +39,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
