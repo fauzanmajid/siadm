@@ -23,6 +23,7 @@ class User extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	public $repeat_password;
 	public function tableName()
 	{
 		return 'user';
@@ -37,12 +38,14 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 
-			array('username, password, role', 'required'),
+			array('username, password, role, repeat_password', 'required'),
 			array('username, role', 'length', 'max'=>12),
 			array('password', 'length', 'max'=>25),
+			array('username', 'unique', 'className'=>'User'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, password, role', 'safe', 'on'=>'search'),
+			array('repeat_password', 'compare', 'compareAttribute' => 'password', 'on' => 'insert'),
 		);
 	}
 

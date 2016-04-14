@@ -128,9 +128,32 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
+
+		$model=new User;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			if($model->save())
+				$this->redirect(array('index','id'=>$model->id));
+		}
+
+		$data=new User('search');
+		$data->unsetAttributes();  // clear any default values
+		if(isset($_GET['User']))
+			$data->attributes=$_GET['User'];
+
+
+
+
 		$dataProvider=new CActiveDataProvider('User');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+			'data'=>$data,
 		));
 	}
 
