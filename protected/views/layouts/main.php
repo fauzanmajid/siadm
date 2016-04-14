@@ -35,7 +35,7 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
-		echo 'Role : ';
+		echo 'Jabatan : ';
 	    if (UserWeb::instance()->isAdmin()) {
 	        echo 'Administrator';
 	    }
@@ -52,7 +52,7 @@
 		<div id="anakan">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Keluar ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
@@ -64,7 +64,7 @@
 			'items'=>array(
 				array('label'=>'Halaman Muka', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User')),
-				array('label'=>'Data Santri', 'url'=>array('/Santri')),
+				array('label'=>'Data Santri ', 'url'=>array('/Santri')),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
 				array('label'=>'Perizinan', 'url'=>array('/Perizinan')),
@@ -127,8 +127,8 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by Propensi A03.<br/>
-		All Rights Reserved.<br/>
+		Hak Cipta &copy; <?php echo date('Y'); ?> oleh Propensi A03.<br/>
+		Seluruh Hak Cipta Dilindungi Undang-Undang.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 

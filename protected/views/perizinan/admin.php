@@ -2,14 +2,14 @@
 /* @var $this PerizinanController */
 /* @var $model Perizinan */
 
-$this->breadcrumbs=array(
-	'Perizinans'=>array('index'),
-	'Manage',
-);
+// $this->breadcrumbs=array(
+// 	'Perizinans'=>array('index'),
+// 	'Manage',
+// );
 
 $this->menu=array(
-	array('label'=>'List Perizinan', 'url'=>array('index')),
-	array('label'=>'Create Perizinan', 'url'=>array('create')),
+	array('label'=>'Daftar Perizinan Santri', 'url'=>array('index')),
+	array('label'=>'Tambah Perizinan Santri', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
