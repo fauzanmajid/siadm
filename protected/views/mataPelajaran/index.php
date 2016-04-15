@@ -5,7 +5,6 @@
 if (UserWeb::instance()->isKurikulum()) {
     $this->menu=array(
     	array('label'=>'Buat Mata Pelajaran', 'url'=>array('create')),
-    	//array('label'=>'Manage MataPelajaran', 'url'=>array('admin')),
     );
 }
 ?>
