@@ -2,10 +2,10 @@
 /* @var $this PelanggaranController */
 /* @var $model Pelanggaran */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Pelanggarans'=>array('index'),
 	$model->no_pelanggaran,
-);
+);*/
 
 $this->menu=array(
 	array('label'=>'List Pelanggaran', 'url'=>array('index')),
@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Pelanggaran #<?php echo $model->no_pelanggaran; ?></h1>
+<h1>Lihat Pelanggaran #<?php echo $model->no_pelanggaran; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
