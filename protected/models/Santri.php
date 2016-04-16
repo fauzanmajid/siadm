@@ -18,15 +18,17 @@
  * @property string $golongan_darah
  * @property integer $anak_ke
  * @property integer $jum_saudara
- * @property integer $Perwalian_nip_santri
- * @property string $Perwalian_status
- * @property string $Pemasukkan_santri_kode
+ *Bagian yang dihapus :
+ *  integer $Perwalian_nip_santri
+ *  string $Perwalian_status
+ *  string $Pemasukkan_santri_kode
  *
  * The followings are the available model relations:
  * @property MataPelajaran[] $mataPelajarans
  * @property PemasukkanSantri[] $pemasukkanSantris
  * @property PencatatanPelanggaran[] $pencatatanPelanggarans
  * @property PencatatanPerizinan[] $pencatatanPerizinans
+ 
  * @property Perwalian[] $perwalians
  * @property Prestasi[] $prestasis
  * @property RiwayatPenyakit[] $riwayatPenyakits
@@ -49,16 +51,19 @@ class Santri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, Perwalian_nip_santri, Perwalian_status, Pemasukkan_santri_kode', 'required'),
-			array('nip, nis, nik, nisn, anak_ke, jum_saudara, Perwalian_nip_santri, Pemasukkan_santri_kode', 'numerical', 'integerOnly'=>true),
+			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara', 'required'),
+			array('nip, nis, nik, nisn, anak_ke, jum_saudara', 'numerical', 'integerOnly'=>true),
 			array('nip, nis, nik, nisn, status, tempat_lahir', 'length', 'max'=>15),
 			array('nama_lengkap', 'length', 'max'=>25),
-			array('nama_kecil, Pemasukkan_santri_kode', 'length', 'max'=>10),
+			array('nama_kecil', 'length', 'max'=>10),
 			array('alamat', 'length', 'max'=>50),
 			array('jenjang, golongan_darah', 'length', 'max'=>5),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, Perwalian_nip_santri, Perwalian_status, Pemasukkan_santri_kode', 'safe', 'on'=>'search'),
+			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, timestamp,foto_url', 'safe', 'on'=>'search'),
+			 
+			// this will allow empty field when page is update (remember here i create scenario update)
+
 		);
 	}
 
@@ -100,10 +105,9 @@ class Santri extends CActiveRecord
 			'golongan_darah' => 'Golongan Darah',
 			'anak_ke' => 'Anak Ke',
 			'jum_saudara' => 'Jumlah Saudara',
-			'Perwalian_nip_santri' => 'NIK Wali Santri',
-			'Perwalian_status' => 'Status Perwalian',
-			'Pemasukkan_santri_kode' => 'Kode Santri',
-		);
+			'timestamp' => 'timestamp',
+			'foto_url' => 'foto_url',
+			);
 	}
 
 	/**
@@ -138,10 +142,10 @@ class Santri extends CActiveRecord
 		$criteria->compare('golongan_darah',$this->golongan_darah);
 		$criteria->compare('anak_ke',$this->anak_ke);
 		$criteria->compare('jum_saudara',$this->jum_saudara);
-		$criteria->compare('Perwalian_nip_santri',$this->Perwalian_nip_santri);
-		$criteria->compare('Perwalian_status',$this->Perwalian_status);
-		$criteria->compare('Pemasukkan_santri_kode',$this->Pemasukkan_santri_kode);
-
+		$criteria->compare('timestamp',$this->timestamp);
+		$criteria->compare('foto_url',$this->timestamp);
+		
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

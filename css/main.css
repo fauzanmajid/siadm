@@ -45,13 +45,8 @@ body
 
 #logo
 {
-<<<<<<< HEAD
 	padding: 25px 0.5px;
 	font-size: 300%;
-=======
-	padding: 39px 0.5px;
-	font-size: 250%;
->>>>>>> dfe1f6a035285843cae34273fb4653b1404ebf28
 	width: 100%;
 
 
@@ -77,6 +72,16 @@ body
   overflow-y:scroll;
   margin-top:1px;  
 }
+#begron
+{
+    width: 18.7%;
+    float: left;
+    background: #333333;
+    height: 390px;
+    border-right: 4px solid #006400;
+}
+
+
 
 div.scroll
 {
@@ -235,9 +240,9 @@ div.search-form
 
 .portlet-decoration
 {
-	padding: 3px 16px;
+	padding: 3px 8px;
 	background: #006400;
-	border-left: 0px solid #333333;
+	border-left: 5px solid #333333;
 }
 
 .portlet-title

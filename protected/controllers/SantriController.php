@@ -72,8 +72,20 @@ class SantriController extends Controller
 		if(isset($_POST['Santri']))
 		{
 			$model->attributes=$_POST['Santri'];
+			/*
+		
+			$fileSource = Yii::getPathOfAlias('webroot').'/img/';
+			$imgTem = CUploadedFile::getInstance($model,'foto_url');
+			$imgTem->saveAs($fileSource.$imgTem);
+			$model->foto_url = $imgTem;
+			*/		
 			if($model->save())
+				{
+			
+
+
 				$this->redirect(array('view','id'=>$model->nip));
+				}
 		}
 
 		$this->render('create',array(
@@ -95,9 +107,13 @@ class SantriController extends Controller
 
 		if(isset($_POST['Santri']))
 		{
+			 
 			$model->attributes=$_POST['Santri'];
+			
 			if($model->save())
+			
 				$this->redirect(array('view','id'=>$model->nip));
+			
 		}
 
 		$this->render('update',array(
