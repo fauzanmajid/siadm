@@ -2,17 +2,16 @@
 /* @var $this MataPelajaranController */
 /* @var $model MataPelajaran */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Mata Pelajarans'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'List MataPelajaran', 'url'=>array('index')),
-	array('label'=>'Create MataPelajaran', 'url'=>array('create')),
-	array('label'=>'View MataPelajaran', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage MataPelajaran', 'url'=>array('admin')),
+	array('label'=>'Daftar Mata Pelajaran', 'url'=>array('index')),
+	array('label'=>'Buat Mata Pelajaran', 'url'=>array('create')),
+	array('label'=>'Lihat Mata Pelajaran', 'url'=>array('view', 'id'=>$model->id)),
 );
 ?>
 

@@ -23,11 +23,11 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'jenjang'); ?>
-		<?php echo $form->textField($model,'jenjang',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array('SMP'=>'SMP','SMA'=>'SMA'), array('empty'=>'--pilih jenjang--')); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Cari'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
