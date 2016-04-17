@@ -8,14 +8,31 @@
 
 $this->menu=array(
 	array('label'=>'Tambah Prestasi Santri', 'url'=>array('create')),
-	array('label'=>'Atur Prestasi Santri', 'url'=>array('admin')),
+	
 );
 ?>
 
 <h1>Catatan Prestasi Santri</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-	'emptyText'=>'Tidak ada data yang ditemukan.'
+<div class="search-form">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'prestasi-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		'no_pencatatan',
+		'deskripsi',
+		'jenis',
+		'tanggal',
+		'nip_santri',
+		array(
+			'class'=>'CButtonColumn',
+		),
+		
+	),
 )); ?>

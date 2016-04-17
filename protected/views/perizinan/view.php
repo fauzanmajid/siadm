@@ -12,7 +12,7 @@ $this->menu=array(
 	array('label'=>'Tambah Perizinan Santri', 'url'=>array('create')),
 	array('label'=>'Atur Perizinan Santri', 'url'=>array('update', 'id'=>$model->no_izin)),
 	array('label'=>'Hapus Perizinan Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->no_izin),'confirm'=>'Apakah anda yakin ingin menghapus perizinan santri ini?')),
-	array('label'=>'Manage Perizinan', 'url'=>array('admin')),
+	
 );
 ?>
 
