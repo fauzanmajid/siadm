@@ -12,7 +12,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Santri #<?php echo $model->nip; ?></h1>
+<h1>View Santri <?php echo $model->nama_lengkap; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -31,8 +31,7 @@ $this->menu=array(
 		'golongan_darah',
 		'anak_ke',
 		'jum_saudara',
-		'Perwalian_nip_santri',
-		'Perwalian_status',
-		'Pemasukkan_santri_kode',
+		'timestamp',
+		//'foto_url'
 	),
 )); ?>
