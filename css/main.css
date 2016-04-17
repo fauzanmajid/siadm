@@ -19,7 +19,7 @@ body
 {
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+	border-top: 3px solid #333333;
 	width:100%;
 }
 
@@ -45,8 +45,8 @@ body
 
 #logo
 {
-	padding: 39px 0.5px;
-	font-size: 250%;
+	padding: 25px 0.5px;
+	font-size: 300%;
 	width: 100%;
 
 
@@ -70,13 +70,23 @@ body
 	width:80%;
 	float:right;
   overflow-y:scroll;
-   
+  margin-top:1px;  
 }
+#begron
+{
+    width: 18.7%;
+    float: left;
+    background: #333333;
+    height: 390px;
+    border-right: 4px solid #006400;
+}
+
+
 
 div.scroll
 {
 overflow-y:scroll;
-height:378px;
+height:390px;
 
 }
 
@@ -111,8 +121,10 @@ height:378px;
 #anakan2
 {
   float:left;
-  font-weight:bold; 
+  font-weight:bold;
+  font-style:italic; 
   padding: 6px 20px 5px 20px; 
+  font-size:12px;
 }
 
 #mainmenu ul li
@@ -120,6 +132,17 @@ height:378px;
 	display: inline;
 }
 
+#sizehome
+{
+  width:17%;
+  height:17%;
+  /*margin-top:3px;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0px;
+
+}
 #mainmenu ul li a
 {
 	color:#ffffff;
@@ -127,7 +150,7 @@ height:378px;
 	font-size:12px;
 	font-weight:bold;
 	text-decoration:none;
-	padding:5px 8px;
+	/*padding:5px 8px;*/
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
@@ -217,9 +240,9 @@ div.search-form
 
 .portlet-decoration
 {
-	padding: 3px 16px;
+	padding: 3px 8px;
 	background: #006400;
-	border-left: 0px solid #333333;
+	border-left: 5px solid #333333;
 }
 
 .portlet-title
@@ -299,6 +322,7 @@ div.search-form
   line-height: 2;
   float:left;
   width:20%;
+   
 }
 #cssmenu ul,
 #cssmenu ul li,

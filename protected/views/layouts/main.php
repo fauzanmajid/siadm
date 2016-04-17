@@ -35,47 +35,58 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
+
 		echo 'Jabatan : ';
 	    if (UserWeb::instance()->isAdmin()) {
-	        echo 'Administrator';
+	        echo '(Administrator)';
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
-	     	echo 'Kurikulum';
+	     	echo '(Kurikulum)';
 	     } 
 	    else {
-	        echo 'User';
+	        echo '(User)';
     	}
     ?>
     <!-- End Of Role Area -->
 		</div>	
 
 		<div id="anakan">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Keluar ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
-			),
+		<?php $this->widget('zii.widgets.CMenu',array('items'=>array(
+				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)),
+			
 		)); ?>
 
 		</div>
 	</div>
+	<div id="begron">
 	<div id="cssmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Halaman Muka', 'url'=>array('/site/index')),
+				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
+						'items'=>array(
+					  	array('label'=>'Tambah Data Santri','url'=>array('/Santri/create')),
+					  	array('label'=>'Manajemen Data Santri','url'=>array('/Santri/admin')),
+				  	),
+						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Perizinan', 'url'=>array('/Perizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+
+				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKurikulum()),
+
+
+
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+
 				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->
-	
+	</div>
 	<!--<?php if(isset($this->breadcrumbs)):?> 
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
