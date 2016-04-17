@@ -76,7 +76,7 @@
 				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 
-				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				//array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKurikulum()),
 
 
 

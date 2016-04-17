@@ -9,7 +9,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Perizinan Santri', 'url'=>array('index')),
-	array('label'=>'Atur Perizinan Santri', 'url'=>array('admin')),
+	
 );
 ?>
 

@@ -12,7 +12,7 @@ $this->menu=array(
 	array('label'=>'Tambah Prestasi Santri', 'url'=>array('create')),
 	array('label'=>'Atur Prestasi Santri', 'url'=>array('update', 'id'=>$model->no_pencatatan)),
 	array('label'=>'Hapus Prestasi Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->no_pencatatan),'confirm'=>'Apakah anda yakin ingin menghapus prestasi santri ini?')),
-	array('label'=>'Atur Prestasi', 'url'=>array('admin')),
+	
 );
 ?>
 

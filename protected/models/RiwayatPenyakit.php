@@ -14,6 +14,8 @@
  */
 class RiwayatPenyakit extends CActiveRecord
 {
+	public $nama_lengkap;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -36,7 +38,7 @@ class RiwayatPenyakit extends CActiveRecord
 			array('tanggal', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('no_pencatatan, nip_santri, nama_penyakit, tanggal', 'safe', 'on'=>'search'),
+			array('no_pencatatan, nip_santri, nama_penyakit, tanggal, nama_lengkap', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,6 +64,7 @@ class RiwayatPenyakit extends CActiveRecord
 			'nip_santri' => 'Nip Santri',
 			'nama_penyakit' => 'Nama Penyakit',
 			'tanggal' => 'Tanggal',
+			'nama_lengkap' => 'Nama Santri'
 		);
 	}
 
@@ -87,6 +90,8 @@ class RiwayatPenyakit extends CActiveRecord
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('nama_penyakit',$this->nama_penyakit,true);
 		$criteria->compare('tanggal',$this->tanggal,true);
+		$criteria->compare('nipSantri.nama_lengkap',$this->nama_lengkap, true);
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -8,14 +8,30 @@
 
 $this->menu=array(
 	array('label'=>'Tambah Perizinan Santri', 'url'=>array('create')),
-	array('label'=>'Atur Perizinan Santri', 'url'=>array('admin')),
+	
 );
 ?>
 
 <h1>Perizinan Santri</h1>
+<div class="search-form">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-	'emptyText'=>'Tidak ada data yang ditemukan.'
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'perizinan-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		'no_izin',
+		'deskripsi',
+		'durasi',
+		'tanggal_awal',
+		'tanggal_akhir',
+		'kategori',
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
 )); ?>
