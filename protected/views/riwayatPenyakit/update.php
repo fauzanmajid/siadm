@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List RiwayatPenyakit', 'url'=>array('index')),
-	array('label'=>'Create RiwayatPenyakit', 'url'=>array('create')),
-	array('label'=>'View RiwayatPenyakit', 'url'=>array('view', 'id'=>$model->no_pencatatan)),
-	array('label'=>'Manage RiwayatPenyakit', 'url'=>array('admin')),
+	array('label'=>'Daftar Riwayat Penyakit', 'url'=>array('index')),
+	array('label'=>'Buat Riwayat Penyakit', 'url'=>array('create')),
+	array('label'=>'Ubah Riwayat Penyakit', 'url'=>array('update', 'id'=>$model->no_pencatatan)),
+	
 );
 ?>
 

@@ -33,19 +33,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tanggal'); ?>
-		<?php echo $form->textField($model,'tanggal', array('size'=>50,'maxlength'=>25)); ?>
+		<?php
+	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+	            'model' => $model,
+	            'attribute' => 'tanggal',
+	            'options' => array(
+	                'showAnim' => 'fadeIn',
+	                'dateFormat' => 'yy-mm-dd',
+	                'changeMonth' => true,
+	                'changeYear' => true,
+	                'yearRange' => '-200:+0',
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	        ));
+        ?>
 		<?php echo $form->error($model,'tanggal'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nip_santri'); ?>
-		<br><p style='font-size: 75%'>Nomor Induk Santri</p>
-		<?php
-			$dropDownSantri = CHtml::listData(Santri::model()->findAll(), 'nip', 'nis');
-			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);
-		?>
-		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>
-	</div>
+	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Tambah' : 'Save'); ?>
