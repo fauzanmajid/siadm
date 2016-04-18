@@ -26,11 +26,8 @@
 		<?php
 			$dropDownSantri = CHtml::listData(Santri::model()->findAll(), 'nip', 'nis');
 			$coba = CHtml::listData(Santri::model()->findAll(), 'nip','nis');
-			
-			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);
-		  	
-
-		      
+			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);	
+  
 		?>
 
 		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>

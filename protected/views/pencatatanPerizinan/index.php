@@ -15,6 +15,8 @@ $this->menu=array(
 )); ?>
 </div><!-- search-form -->
 
+
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-perizinan-grid',
 	'dataProvider'=>$model->search(),
@@ -40,3 +42,4 @@ $this->menu=array(
 		),
 	),
 )); ?>
+
