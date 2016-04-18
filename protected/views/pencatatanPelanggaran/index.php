@@ -16,15 +16,14 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-pelanggaran-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'No_pelanggaran',
 		'nip_santri',
 		'id_kesiswaan',
+		'deskripsi',
 		array(
 			'class'=>'CButtonColumn',
 		),
-	'emptyText'=>'Tidak ada data yang ditemukan.'
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
