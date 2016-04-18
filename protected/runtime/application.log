@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 2016/04/11 09:04:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`prestasi`, CONSTRAINT `fk_Log_Employee1` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `prestasi` (`deskripsi`, `jenis`, `tanggal`, `nip_santri`) VALUES (:yp0, :yp1, :yp2, :yp3).
 in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (73)
 in C:\xampp\htdocs\siadm\index.php (13)
@@ -2651,3 +2652,5 @@ REQUEST_URI=/siadm/index.php/TahunAjaran
 HTTP_REFERER=http://localhost/siadm/index.php/MataPelajaran/112
 ---
 >>>>>>> b9333c5b6bac389c00f05a201ee073f95777c09a
+=======
+>>>>>>> 37f4dba4827e9061b4a8f4551ed54a9831012c73
