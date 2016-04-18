@@ -79,11 +79,6 @@
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 
-
-				array('label'=>'Jenis Pelanggaran', 'url'=>array('/pelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
-
-
-				array('label'=>'Perizinan', 'url'=>array('/Perizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),

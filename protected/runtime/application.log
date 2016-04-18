@@ -1415,3 +1415,39 @@ REQUEST_URI=/siadm/index.php/PencatatanPelanggaran
 HTTP_REFERER=http://localhost/siadm/index.php/pencatatanPerizinan/create
 ---
 >>>>>>> azza
+2016/04/18 07:54:52 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Perizinan". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Perizinan')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/Perizinan
+HTTP_REFERER=http://localhost/siadm/index.php/RiwayatPenyakit
+---
+2016/04/18 07:55:54 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Perizinan". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Perizinan')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/Perizinan
+HTTP_REFERER=http://localhost/siadm/index.php/RiwayatPenyakit
+---
+2016/04/18 07:56:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Perizinan". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Perizinan')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/Perizinan
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan
+---
+2016/04/18 07:56:36 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "Perizinan". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Perizinan')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/Perizinan
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan
+---
