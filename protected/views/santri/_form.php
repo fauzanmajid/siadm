@@ -117,24 +117,15 @@
 		<?php echo $form->textField($model,'jum_saudara',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'jum_saudara'); ?>
 	</div>
-
+<!--
 	<div class="row">
-		<?php echo $form->labelEx($model,'Perwalian_nip_santri'); ?>
-		<?php echo $form->textField($model,'Perwalian_nip_santri',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'Perwalian_nip_santri'); ?>
+        <?php echo $form->labelEx($model,'foto_url'); ?>
+        <?php echo CHtml::activeFileField($model, 'foto_url'); ?>  
+        //by this we can upload image 
+        <?php echo $form->error($model,'foto_url'); ?>
 	</div>
+-->
 
-	<div clasgit  s="row">
-		<?php echo $form->labelEx($model,'Perwalian_status'); ?>
-		<?php echo $form->dropDownList($model,'Perwalian_status',array('Orang tua'=>'Orang tua','Wali'=>'Wali')); ?>
-		<?php echo $form->error($model,'Perwalian_status'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'Pemasukkan_santri_kode'); ?>
-		<?php echo $form->textField($model,'Pemasukkan_santri_kode',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'Pemasukkan_santri_kode'); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>

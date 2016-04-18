@@ -19,11 +19,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nip_santri'); ?>
-	</div>
+	</div> -->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nama_penyakit'); ?>
@@ -33,7 +33,21 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tanggal'); ?>
-		<?php echo $form->textField($model,'tanggal'); ?>
+		<?php
+	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+	            'model' => $model,
+	            'attribute' => 'tanggal',
+	            'options' => array(
+	                'showAnim' => 'fadeIn',
+	                'dateFormat' => 'yy-mm-dd',
+	                'changeMonth' => true,
+	                'changeYear' => true,
+	                'yearRange' => '-200:+0',
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	        ));
+        ?>
 		<?php echo $form->error($model,'tanggal'); ?>
 	</div>
 

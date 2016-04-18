@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2016/04/11 09:04:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`prestasi`, CONSTRAINT `fk_Log_Employee1` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `prestasi` (`deskripsi`, `jenis`, `tanggal`, `nip_santri`) VALUES (:yp0, :yp1, :yp2, :yp3).
 in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (73)
 in C:\xampp\htdocs\siadm\index.php (13)
@@ -2112,3 +2113,73 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/User
 HTTP_REFERER=http://localhost/siadm/index.php/User
 ---
+2016/04/14 19:20:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/admin')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/prestasi/admin
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi/create
+---
+2016/04/14 19:20:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi/admin')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/prestasi/admin
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi/create
+---
+2016/04/14 19:20:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pencatatanPelan...')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/pencatatanPelanggaran/admin
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPelanggaran
+---
+2016/04/14 19:20:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('perizinan/admin')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/perizinan/admin
+HTTP_REFERER=http://localhost/siadm/index.php/Perizinan
+---
+=======
+>>>>>>> b59aa09534de0e27da543a6f42f815a167d3b8f8
