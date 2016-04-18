@@ -129,8 +129,16 @@ class PencatatanPelanggaranController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('PencatatanPelanggaran');
+		
+		$model=new PencatatanPelanggaran('search');
+		$model->unsetAttributes();  // clear any default values
+		
+		if(isset($_GET['PencatatanPelanggaran']))
+			$model->attributes=$_GET['PencatatanPelanggaran'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 
