@@ -22,8 +22,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'No_pelanggaran',
 		'nip_santri',
 		'id_kesiswaan',
+		'deskripsi',
 	),
 )); ?>
