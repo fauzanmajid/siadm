@@ -42,7 +42,19 @@
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
 	     	echo '(Kurikulum)';
-	     } 
+	    }
+	    elseif (UserWeb::instance()->isGuru()) {
+	      	echo '(Guru)';
+	    }
+	    elseif (UserWeb::instance()->isKesiswaan()) {
+	     	echo '(Kesiswaan)';
+	    }
+	    elseif (UserWeb::instance()->isDewanPembina()) {
+	     	echo '(Dewan Pembina)';
+	    } 
+	    elseif (UserWeb::instance()->isBendahara()) {
+	    	echo '(Bendahara)';
+	    }
 	    else {
 	        echo '(User)';
     	}
@@ -52,7 +64,7 @@
 
 		<div id="anakan">
 		<?php $this->widget('zii.widgets.CMenu',array('items'=>array(
-				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)),
+				array('label'=>'Keluar', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)),
 			
 		)); ?>
 
@@ -66,8 +78,8 @@
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
 						'items'=>array(
-					  	array('label'=>'Tambah Data Santri','url'=>array('/Santri/create')),
-					  	array('label'=>'Manajemen Data Santri','url'=>array('/Santri/admin')),
+					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
+					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
 				  	),
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),

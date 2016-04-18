@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Catatan Prestasi Santri', 'url'=>array('index')),
-	array('label'=>'Tambah Prestasi Santri', 'url'=>array('create')),
+	array('label'=>'Buat Prestasi Santri', 'url'=>array('create')),
 	array('label'=>'Lihat Prestasi Santri', 'url'=>array('view', 'id'=>$model->no_pencatatan)),
 	
 );

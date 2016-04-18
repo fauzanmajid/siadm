@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Tambah Perizinan Santri</h1>
+<h1>Buat Perizinan Santri</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

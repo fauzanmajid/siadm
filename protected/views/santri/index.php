@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->menu=array(
-	array('label'=>'Tambah Data Santri', 'url'=>array('create')),
+	array('label'=>'Buat Data Santri', 'url'=>array('create')),
 //	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
 ?>

@@ -10,7 +10,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Santri', 'url'=>array('index')),
-	array('label'=>'Tambah Data Santri', 'url'=>array('create')),
+	array('label'=>'Buat Data Santri', 'url'=>array('create')),
 	array('label'=>'Lihat Data Santri', 'url'=>array('view', 'id'=>$model->nip)),
 	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );

@@ -5,10 +5,10 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Santri', 'url'=>array('index')),
-	array('label'=>'Tambah Santri', 'url'=>array('create')),
-	array('label'=>'Atur Santri', 'url'=>array('update', 'id'=>$model->nip)),
-	array('label'=>'Hapus Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->nip),'confirm'=>'Apakah ada yakin ingin menghapus santri ini?')),
-	array('label'=>'Atur Santri', 'url'=>array('admin')),
+	array('label'=>'Buat Data Santri', 'url'=>array('create')),
+	array('label'=>'Atur Data Santri', 'url'=>array('update', 'id'=>$model->nip)),
+	array('label'=>'Hapus Data Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->nip),'confirm'=>'Apakah ada yakin ingin menghapus santri ini?')),
+	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
 ?>
 

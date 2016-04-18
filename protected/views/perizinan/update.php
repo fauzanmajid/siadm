@@ -10,7 +10,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Perizinan Santri', 'url'=>array('index')),
-	array('label'=>'Tambah Perizinan Santri', 'url'=>array('create')),
+	array('label'=>'Buat Perizinan Santri', 'url'=>array('create')),
 	array('label'=>'Lihat Perizinan Santri', 'url'=>array('view', 'id'=>$model->no_izin)),
 	
 );
