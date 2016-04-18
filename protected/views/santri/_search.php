@@ -14,8 +14,8 @@
 	
 
 	<div class="row">
-		<?php echo $form->label($model,'nis'); ?>
-		<?php echo $form->textField($model,'nis',array('size'=>15,'maxlength'=>15)); ?>
+		<?php echo $form->label($model,'nip'); ?>
+		<?php echo $form->textField($model,'nip',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
 
 
