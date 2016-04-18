@@ -10,7 +10,7 @@
 $this->menu=array(
 	array('label'=>'Daftar Mata Pelajaran', 'url'=>array('index')),
 	array('label'=>'Buat Mata Pelajaran', 'url'=>array('create')),
-	array('label'=>'Ubah Mata Pelajaran', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Atur Mata Pelajaran', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Hapus Mata Pelajaran', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Anda yakin ingin menghapus data ini?')),
 );
 ?>

@@ -41,17 +41,43 @@
 	        echo 'Administrator';
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
+<<<<<<< HEAD
 	     	echo 'Kurikulum';
 	    }
+=======
+	     	echo '(Kurikulum)';
+<<<<<<< HEAD
+	    }
+	    elseif (UserWeb::instance()->isGuru()) {
+	      	echo '(Guru)';
+	    }
+	    elseif (UserWeb::instance()->isKesiswaan()) {
+	     	echo '(Kesiswaan)';
+	    }
+	    elseif (UserWeb::instance()->isDewanPembina()) {
+	     	echo '(Dewan Pembina)';
+	    } 
+	    elseif (UserWeb::instance()->isBendahara()) {
+	    	echo '(Bendahara)';
+	    }
+=======
+	     }
+>>>>>>> parput
 	     elseif (UserWeb::instance()->isKesiswaan()) {
 	     	echo 'Kesiswaan';
 	    } 
 	    elseif (UserWeb::instance()->isBendahara()) {
+<<<<<<< HEAD
 	     	echo 'Bendahara';
 	    }
 	    elseif (UserWeb::instance()->isGuru()) {
 	    	echo 'Guru';
 	    }
+=======
+	     	echo '(Bendahara)';
+	     }
+>>>>>>> master
+>>>>>>> parput
 	    else {
 	        echo 'User';
     	}
@@ -75,8 +101,8 @@
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
 						'items'=>array(
-					  	array('label'=>'Tambah Data Santri','url'=>array('/Santri/create')),
-					  	array('label'=>'Manajemen Data Santri','url'=>array('/Santri/admin')),
+					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
+					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
 				  	),
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
