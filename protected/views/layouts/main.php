@@ -25,7 +25,7 @@
 
 	<div id="header">
 		<div id="logo">
-			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> 
+			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo'); ?> 
 			<?php echo CHtml::encode(Yii::app()->name); ?> 
 		</div>
 	</div>
@@ -42,6 +42,7 @@
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
 	     	echo '(Kurikulum)';
+<<<<<<< HEAD
 	    }
 	    elseif (UserWeb::instance()->isGuru()) {
 	      	echo '(Guru)';
@@ -55,6 +56,15 @@
 	    elseif (UserWeb::instance()->isBendahara()) {
 	    	echo '(Bendahara)';
 	    }
+=======
+	     }
+	     elseif (UserWeb::instance()->isKesiswaan()) {
+	     	echo '(Kesiswaan)';
+	     } 
+	    elseif (UserWeb::instance()->isBendahara()) {
+	     	echo '(Bendahara)';
+	     }
+>>>>>>> master
 	    else {
 	        echo '(User)';
     	}
@@ -84,14 +94,15 @@
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+
+
+				array('label'=>'Jenis Pelanggaran', 'url'=>array('/pelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+
+
 				array('label'=>'Perizinan', 'url'=>array('/Perizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
-
-				//array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKurikulum()),
-
-
-
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 			),
 		)); ?>

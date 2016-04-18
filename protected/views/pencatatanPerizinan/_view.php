@@ -1,12 +1,20 @@
 <?php
-/* @var $this PerizinanController */
-/* @var $data Perizinan */
+/* @var $this PencatatanPerizinanController */
+/* @var $data PencatatanPerizinan */
 ?>
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('no_izin')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->no_izin), array('view', 'id'=>$data->no_izin)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pencatatan_perizinan')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->pencatatan_perizinan), array('view', 'id'=>$data->pencatatan_perizinan)); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nip_santri')); ?>:</b>
+	<?php echo CHtml::encode($data->nip_santri); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id_kesiswaan')); ?>:</b>
+	<?php echo CHtml::encode($data->id_kesiswaan); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('deskripsi')); ?>:</b>
@@ -25,9 +33,11 @@
 	<?php echo CHtml::encode($data->tanggal_akhir); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('kategori')); ?>:</b>
 	<?php echo CHtml::encode($data->kategori); ?>
 	<br />
 
+	*/ ?>
 
 </div>
