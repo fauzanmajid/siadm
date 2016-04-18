@@ -35,25 +35,23 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
-			echo 'Jabatan : ';
-		    if (UserWeb::instance()->isAdmin()) {
-		        echo '(Administrator)';
-		    }
-		    elseif (UserWeb::instance()->isKurikulum()) {
-		     	echo '(Kurikulum)';
-		    }
-		    elseif (UserWeb::instance()->isKesiswaan()) {
-		     	echo '(Kesiswaan)';
-		    }
-		    elseif (UserWeb::instance()->isGuru()) {
-		     	echo '(Guru)';
-		    }
-		    elseif (UserWeb::instance()->isBendahara()) {
-		     	echo '(Bendahara)';
-		    } 
-		    else {
-		        echo '(User)';
-	    	}
+
+		echo 'Jabatan : ';
+	    if (UserWeb::instance()->isAdmin()) {
+	        echo '(Administrator)';
+	    }
+	    elseif (UserWeb::instance()->isKurikulum()) {
+	     	echo '(Kurikulum)';
+	     }
+	     elseif (UserWeb::instance()->isKesiswaan()) {
+	     	echo '(Kesiswaan)';
+	     } 
+	    elseif (UserWeb::instance()->isBendahara()) {
+	     	echo '(Bendahara)';
+	     }
+	    else {
+	        echo '(User)';
+    	}
     	?>
     <!-- End Of Role Area -->
 		</div>	
@@ -80,6 +78,12 @@
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+
+
+				array('label'=>'Jenis Pelanggaran', 'url'=>array('/pelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+
+
+				array('label'=>'Perizinan', 'url'=>array('/Perizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),

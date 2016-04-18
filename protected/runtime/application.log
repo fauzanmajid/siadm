@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 2016/04/17 17:53:30 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nipSantri.nama_lengkap' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `riwayat_penyakit` `t` WHERE nipSantri.nama_lengkap LIKE :ycp0.
 in C:\xampp\htdocs\siadm\protected\views\riwayatPenyakit\index.php (36)
 in C:\xampp\htdocs\siadm\protected\controllers\RiwayatPenyakitController.php (140)
@@ -1108,6 +1110,9 @@ REQUEST_URI=/siadm/index.php/PencatatanPelanggaran
 in C:\xampp\htdocs\siadm\protected\views\pencatatanPelanggaran\index.php (18)
 in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (133)
 in C:\xampp\htdocs\siadm\index.php (13)
+<<<<<<< HEAD
+>>>>>>> azza
+=======
 2016/04/18 07:29:29 [error] [php] Undefined variable: model (C:\xampp\htdocs\siadm\protected\views\pencatatanPelanggaran\index.php:18)
 Stack trace:
 #0 C:\xampp\htdocs\yii\web\CController.php(869): PencatatanPelanggaranController->renderFile()
@@ -1409,3 +1414,4 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/PencatatanPelanggaran
 HTTP_REFERER=http://localhost/siadm/index.php/pencatatanPerizinan/create
 ---
+>>>>>>> azza

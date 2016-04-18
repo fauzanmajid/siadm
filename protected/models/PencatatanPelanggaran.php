@@ -35,6 +35,7 @@ class PencatatanPelanggaran extends CActiveRecord
 			array('nip_santri, id_kesiswaan, deskripsi', 'required'),
 			array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
+			array('nip_santri', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, deskripsi, nip_santri, id_kesiswaan', 'safe', 'on'=>'search'),
@@ -64,6 +65,8 @@ class PencatatanPelanggaran extends CActiveRecord
 			'deskripsi' => 'Deskripsi',
 			'nip_santri' => 'NIP',
 			'id_kesiswaan' => 'ID Kesiswaan',
+			'deskripsi' => 'deskripsi',
+				
 		);
 	}
 
@@ -89,6 +92,7 @@ class PencatatanPelanggaran extends CActiveRecord
 		$criteria->compare('deskripsi',$this->deskripsi);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
+		$criteria->compare('deskripsi',$this->deskripsi);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
