@@ -38,19 +38,22 @@
 
 		echo 'Jabatan : ';
 	    if (UserWeb::instance()->isAdmin()) {
-	        echo '(Administrator)';
+	        echo 'Administrator';
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
-	     	echo '(Kurikulum)';
-	     }
+	     	echo 'Kurikulum';
+	    }
 	     elseif (UserWeb::instance()->isKesiswaan()) {
-	     	echo '(Kesiswaan)';
-	     } 
+	     	echo 'Kesiswaan';
+	    } 
 	    elseif (UserWeb::instance()->isBendahara()) {
-	     	echo '(Bendahara)';
-	     }
+	     	echo 'Bendahara';
+	    }
+	    elseif (UserWeb::instance()->isGuru()) {
+	    	echo 'Guru';
+	    }
 	    else {
-	        echo '(User)';
+	        echo 'User';
     	}
     	?>
     <!-- End Of Role Area -->
@@ -58,7 +61,7 @@
 
 		<div id="anakan">
 		<?php $this->widget('zii.widgets.CMenu',array('items'=>array(
-				array('label'=>'Logout', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)),
+				array('label'=>'Keluar', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)),
 			
 		)); ?>
 

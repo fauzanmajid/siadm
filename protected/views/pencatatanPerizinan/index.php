@@ -3,11 +3,11 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->menu=array(
-	array('label'=>'Buat Pencatatan Perizinan', 'url'=>array('create')),
+	array('label'=>'Buat Catatan Perizinan', 'url'=>array('create')),
 );
 ?>
 
-<h1>Pencatatan Perizinan</h1>
+<h1>Catatan Perizinan</h1>
 
 <div class="search-form">
 <?php $this->renderPartial('_search',array(

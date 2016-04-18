@@ -7,7 +7,7 @@
 );*/
 
 $this->menu=array(
-	array('label'=>'Tambah Prestasi Santri', 'url'=>array('create')),
+	array('label'=>'Buat Prestasi Santri', 'url'=>array('create')),
 	
 );
 ?>

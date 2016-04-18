@@ -3852,3 +3852,66 @@ REQUEST_URI=/siadm/index.php/Perizinan
 HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan
 ---
 >>>>>>> 62bb5b3c2768d0fa6909f0ef0006728fbd30e892
+2016/04/18 09:52:44 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.Ingat Saya" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CComponent->__get('Ingat Saya')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1923): CHtml::resolveValue(Object(LoginForm), 'Ingat Saya')
+#2 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(898): CHtml::activeCheckBox(Object(LoginForm), 'Ingat Saya', Array)
+#3 C:\xampp\htdocs\siadm\protected\views\site\login.php(21): CActiveForm->checkBox(Object(LoginForm), 'Ingat Saya')
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('login', Array, true)
+#8 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(103): CController->render('login', Array)
+#9 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#14 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/siadm/index.php
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi
+---
+2016/04/18 09:52:47 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.Ingat Saya" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CComponent->__get('Ingat Saya')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1923): CHtml::resolveValue(Object(LoginForm), 'Ingat Saya')
+#2 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(898): CHtml::activeCheckBox(Object(LoginForm), 'Ingat Saya', Array)
+#3 C:\xampp\htdocs\siadm\protected\views\site\login.php(21): CActiveForm->checkBox(Object(LoginForm), 'Ingat Saya')
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('login', Array, true)
+#8 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(103): CController->render('login', Array)
+#9 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#14 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/siadm/index.php/site/login
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/index
+---
+2016/04/18 10:05:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('prestasi')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/prestasi
+HTTP_REFERER=http://localhost/siadm/index.php/site/login
+---
