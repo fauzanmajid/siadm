@@ -35,20 +35,20 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'riwayat-penyakit-grid',
 	'dataProvider'=>$model->search(),
-	
 	'columns'=>array(
 		'no_pencatatan',
 		'nip_santri',
 		array(
             'class' => 'CLinkColumn',
-            'labelExpression' => '$data->nama_penyakit',
+            'labelExpression' => '$data->nipSantri->nama_lengkap',
             'urlExpression' => 'Yii::app()->createUrl("RiwayatPenyakit/view",array("id"=>$data->no_pencatatan))',
-            'header' => 'Nama Penyakit',
+            'header' => 'Nama Santri',
             'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
         ),
+		'nama_penyakit',
 		'tanggal',
 		array(
-            'header' => 'Action',
+            'header' => 'Menu',
 			'class'=>'CButtonColumn',
 			'template'=>'{update}{delete}',
 			'deleteConfirmation'=>"js:'Anda yakin?'",
