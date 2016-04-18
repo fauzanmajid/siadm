@@ -41,43 +41,20 @@
 	        echo 'Administrator';
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
-<<<<<<< HEAD
 	     	echo 'Kurikulum';
 	    }
-=======
-	     	echo '(Kurikulum)';
-<<<<<<< HEAD
-	    }
 	    elseif (UserWeb::instance()->isGuru()) {
-	      	echo '(Guru)';
+	      	echo 'Guru';
 	    }
 	    elseif (UserWeb::instance()->isKesiswaan()) {
-	     	echo '(Kesiswaan)';
+	     	echo 'Kesiswaan';
 	    }
 	    elseif (UserWeb::instance()->isDewanPembina()) {
-	     	echo '(Dewan Pembina)';
+	     	echo 'Dewan Pembina';
 	    } 
 	    elseif (UserWeb::instance()->isBendahara()) {
-	    	echo '(Bendahara)';
+	    	echo 'Bendahara';
 	    }
-=======
-	     }
->>>>>>> parput
-	     elseif (UserWeb::instance()->isKesiswaan()) {
-	     	echo 'Kesiswaan';
-	    } 
-	    elseif (UserWeb::instance()->isBendahara()) {
-<<<<<<< HEAD
-	     	echo 'Bendahara';
-	    }
-	    elseif (UserWeb::instance()->isGuru()) {
-	    	echo 'Guru';
-	    }
-=======
-	     	echo '(Bendahara)';
-	     }
->>>>>>> master
->>>>>>> parput
 	    else {
 	        echo 'User';
     	}
