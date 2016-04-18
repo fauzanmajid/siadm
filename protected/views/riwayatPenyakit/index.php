@@ -48,7 +48,7 @@ $('.search-form form').submit(function(){
 		'nama_penyakit',
 		'tanggal',
 		array(
-            'header' => 'Action',
+            'header' => 'Menu',
 			'class'=>'CButtonColumn',
 			'template'=>'{update}{delete}',
 			'deleteConfirmation'=>"js:'Anda yakin?'",

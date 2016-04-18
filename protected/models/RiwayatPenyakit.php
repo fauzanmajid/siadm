@@ -85,6 +85,7 @@ class RiwayatPenyakit extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		$criteria->with = array( 'nipSantri' );
 
 		$criteria->compare('no_pencatatan',$this->no_pencatatan);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
@@ -95,6 +96,15 @@ class RiwayatPenyakit extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort'=>array(
+	        'attributes'=>array(
+	            'nama_lengkap'=>array(
+	                'asc'=>'nipSantri.nama_lengkap',
+	                'desc'=>'nipSantri.nama_lengkap DESC',
+	            ),
+	            '*',
+	        ),
+	    ),
 		));
 	}
 
