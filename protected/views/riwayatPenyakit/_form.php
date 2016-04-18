@@ -19,11 +19,11 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<!-- <div class="row">
+	<div class="row">
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nip_santri'); ?>
-	</div> -->
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nama_penyakit'); ?>
