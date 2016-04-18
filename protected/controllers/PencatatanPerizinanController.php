@@ -27,7 +27,7 @@ class PencatatanPerizinanController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			/*array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -38,6 +38,12 @@ class PencatatanPerizinanController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
+			),*/
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isKesiswaan();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
