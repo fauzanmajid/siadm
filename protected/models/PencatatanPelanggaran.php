@@ -107,4 +107,12 @@ class PencatatanPelanggaran extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function beforeSave() {
+	    if ($this->isNewRecord) {
+	        $this->id_kesiswaan = UserWeb::instance()->ID;
+	    }
+	 
+	    return parent::beforeSave();
+	}
 }
