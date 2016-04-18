@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Ubah Data Santri<?php echo $model->nip; ?></h1>
+<h1>Atur Data Santri<?php echo $model->nip; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

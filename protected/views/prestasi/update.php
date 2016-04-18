@@ -2,11 +2,11 @@
 /* @var $this PrestasiController */
 /* @var $model Prestasi */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Prestasis'=>array('index'),
 	$model->no_pencatatan=>array('view','id'=>$model->no_pencatatan),
 	'Update',
-);
+);*/
 
 $this->menu=array(
 	array('label'=>'Catatan Prestasi Santri', 'url'=>array('index')),

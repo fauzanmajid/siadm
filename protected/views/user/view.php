@@ -3,10 +3,10 @@
 /* @var $model User */
 
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Pengguna'=>array('index'),
 	$model->username,
-);
+);*/
 
 /*$this->breadcrumbs=array(
 	'Users'=>array('index'),

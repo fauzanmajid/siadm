@@ -18,11 +18,8 @@ $this->menu=array(
 	'id'=>'santri-grid',
 	'dataProvider'=>$model->search(),
 	'columns'=>array(
-
-		'nis',
-	
+		'nip',
 		'nama_lengkap',
-	
 		'jenjang',
 		/*
 		'status',

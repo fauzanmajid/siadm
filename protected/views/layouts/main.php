@@ -38,37 +38,27 @@
 
 		echo 'Jabatan : ';
 	    if (UserWeb::instance()->isAdmin()) {
-	        echo '(Administrator)';
+	        echo 'Administrator';
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
-	     	echo '(Kurikulum)';
-<<<<<<< HEAD
+	     	echo 'Kurikulum';
 	    }
 	    elseif (UserWeb::instance()->isGuru()) {
-	      	echo '(Guru)';
+	      	echo 'Guru';
 	    }
 	    elseif (UserWeb::instance()->isKesiswaan()) {
-	     	echo '(Kesiswaan)';
+	     	echo 'Kesiswaan';
 	    }
 	    elseif (UserWeb::instance()->isDewanPembina()) {
-	     	echo '(Dewan Pembina)';
+	     	echo 'Dewan Pembina';
 	    } 
 	    elseif (UserWeb::instance()->isBendahara()) {
-	    	echo '(Bendahara)';
+	    	echo 'Bendahara';
 	    }
-=======
-	     }
-	     elseif (UserWeb::instance()->isKesiswaan()) {
-	     	echo '(Kesiswaan)';
-	     } 
-	    elseif (UserWeb::instance()->isBendahara()) {
-	     	echo '(Bendahara)';
-	     }
->>>>>>> master
 	    else {
-	        echo '(User)';
+	        echo 'User';
     	}
-    ?>
+    	?>
     <!-- End Of Role Area -->
 		</div>	
 
@@ -95,15 +85,11 @@
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 
-
-				array('label'=>'Jenis Pelanggaran', 'url'=>array('/pelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
-
-
-				array('label'=>'Perizinan', 'url'=>array('/Perizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
-				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Data Santri', 'url'=>array('/Santri/index'), 'visible'=>UserWeb::instance()->isKesiswaan())
 			),
 		)); ?>
 	</div><!-- mainmenu -->

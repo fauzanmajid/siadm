@@ -2,10 +2,10 @@
 /* @var $this MataPelajaranController */
 /* @var $model MataPelajaran */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Mata Pelajarans'=>array('index'),
 	$model->id,
-);
+);*/
 
 $this->menu=array(
 	array('label'=>'Daftar Mata Pelajaran', 'url'=>array('index')),
@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Lihat MataPelajaran #<?php echo $model->id; ?></h1>
+<h1>Lihat Mata Pelajaran #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

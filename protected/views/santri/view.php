@@ -12,7 +12,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Santri <?php echo $model->nama_lengkap; ?></h1>
+<h1>Lihat Santri <?php echo $model->nama_lengkap; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
