@@ -2,13 +2,11 @@
 /* @var $this RiwayatPenyakitController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Riwayat Penyakits',
-);
+
 
 $this->menu=array(
-	array('label'=>'Create RiwayatPenyakit', 'url'=>array('create')),
-	array('label'=>'Manage RiwayatPenyakit', 'url'=>array('admin')),
+	array('label'=>'Buat Riwayat Penyakit', 'url'=>array('create')),
+	
 );
 
 /*Yii::app()->clientScript->registerScript('search', "
@@ -34,7 +32,26 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'riwayat-penyakit-grid',
+	'dataProvider'=>$model->search(),
+	'columns'=>array(
+		'no_pencatatan',
+		'nip_santri',
+		array(
+            'class' => 'CLinkColumn',
+            'labelExpression' => '$data->nipSantri->nama_lengkap',
+            'urlExpression' => 'Yii::app()->createUrl("RiwayatPenyakit/view",array("id"=>$data->no_pencatatan))',
+            'header' => 'Nama Santri',
+            'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+        ),
+		'nama_penyakit',
+		'tanggal',
+		array(
+            'header' => 'Menu',
+			'class'=>'CButtonColumn',
+			'template'=>'{update}{delete}',
+			'deleteConfirmation'=>"js:'Anda yakin?'",
+		),
+	),
 )); ?>

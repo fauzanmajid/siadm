@@ -1,10 +1,12 @@
 <?php
 
 /**
- * This is the model class for table "Perizinan".
+ * This is the model class for table "pencatatan_perizinan".
  *
- * The followings are the available columns in table 'Perizinan':
- * @property integer $no_izin
+ * The followings are the available columns in table 'pencatatan_perizinan':
+ * @property integer $pencatatan_perizinan
+ * @property string $nip_santri
+ * @property integer $id_kesiswaan
  * @property string $deskripsi
  * @property integer $durasi
  * @property string $tanggal_awal
@@ -12,16 +14,19 @@
  * @property string $kategori
  *
  * The followings are the available model relations:
- * @property PencatatanPerizinan[] $pencatatanPerizinans
+ * @property User $idKesiswaan
+ * @property Santri $nipSantri
  */
-class Perizinan extends CActiveRecord
+class PencatatanPerizinan extends CActiveRecord
 {
+	public $nama_lengkap;
+
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'Perizinan';
+		return 'pencatatan_perizinan';
 	}
 
 	/**
@@ -32,13 +37,14 @@ class Perizinan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('no_izin, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori', 'required'),
-			array('no_izin, durasi', 'numerical', 'integerOnly'=>true),
+			array('nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori', 'required'),
+			array('id_kesiswaan, durasi', 'numerical', 'integerOnly'=>true),
+			array('nip_santri', 'length', 'max'=>15),
 			array('deskripsi', 'length', 'max'=>25),
-			array('kategori', 'length', 'max'=>5),
+			array('kategori', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('no_izin, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori', 'safe', 'on'=>'search'),
+			array('nama_lengkap, pencatatan_perizinan, nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +56,8 @@ class Perizinan extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pencatatanPerizinans' => array(self::HAS_MANY, 'PencatatanPerizinan', 'no_izin'),
+			'idKesiswaan' => array(self::BELONGS_TO, 'User', 'id_kesiswaan'),
+			'nipSantri' => array(self::BELONGS_TO, 'Santri', 'nip_santri'),
 		);
 	}
 
@@ -60,12 +67,15 @@ class Perizinan extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'no_izin' => 'No Izin',
+			'pencatatan_perizinan' => 'Pencatatan Perizinan',
+			'nip_santri' => 'Nip Santri',
+			'id_kesiswaan' => 'Id Kesiswaan',
 			'deskripsi' => 'Deskripsi',
 			'durasi' => 'Durasi',
 			'tanggal_awal' => 'Tanggal Awal',
 			'tanggal_akhir' => 'Tanggal Akhir',
 			'kategori' => 'Kategori',
+			'nama_lengkap' => 'Nama Santri',
 		);
 	}
 
@@ -86,16 +96,30 @@ class Perizinan extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
-		$criteria->compare('no_izin',$this->no_izin);
+		$criteria->with = array( 'nipSantri' );
+		
+		$criteria->compare('pencatatan_perizinan',$this->pencatatan_perizinan);
+		$criteria->compare('nip_santri',$this->nip_santri,true);
+		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
 		$criteria->compare('deskripsi',$this->deskripsi,true);
 		$criteria->compare('durasi',$this->durasi);
 		$criteria->compare('tanggal_awal',$this->tanggal_awal,true);
 		$criteria->compare('tanggal_akhir',$this->tanggal_akhir,true);
 		$criteria->compare('kategori',$this->kategori,true);
+		$criteria->compare('nipSantri.nama_lengkap',$this->nama_lengkap, true);
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'sort'=>array(
+	        'attributes'=>array(
+	            'nama_lengkap'=>array(
+	                'asc'=>'nipSantri.nama_lengkap',
+	                'desc'=>'nipSantri.nama_lengkap DESC',
+	            ),
+	            '*',
+	        ),
+	    ),
 		));
 	}
 
@@ -103,7 +127,7 @@ class Perizinan extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Perizinan the static model class
+	 * @return PencatatanPerizinan the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

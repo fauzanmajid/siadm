@@ -9,7 +9,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Prestasi Santri', 'url'=>array('index')),
-	array('label'=>'Atur Prestasi Santri', 'url'=>array('admin')),
+	
 );
 ?>
 
