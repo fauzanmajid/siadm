@@ -2,20 +2,20 @@
 /* @var $this SantriController */
 /* @var $model Santri */
 
-$this->breadcrumbs=array(
-	'Santris'=>array('index'),
+/*$this->breadcrumbs=array(
+	'Data Santri'=>array('index'),
 	$model->nip=>array('view','id'=>$model->nip),
 	'Update',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'List Santri', 'url'=>array('index')),
-	array('label'=>'Create Santri', 'url'=>array('create')),
-	array('label'=>'View Santri', 'url'=>array('view', 'id'=>$model->nip)),
-	array('label'=>'Manage Santri', 'url'=>array('admin')),
+	array('label'=>'Daftar Santri', 'url'=>array('index')),
+	array('label'=>'Tambah Data Santri', 'url'=>array('create')),
+	array('label'=>'Lihat Data Santri', 'url'=>array('view', 'id'=>$model->nip)),
+	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Santri <?php echo $model->nip; ?></h1>
+<h1>Ubah Data Santri<?php echo $model->nip; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

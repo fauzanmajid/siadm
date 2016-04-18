@@ -5,8 +5,8 @@
 
 <?php $form = $this->beginWidget('CActiveForm', ['id' => 'login-form']); ?>
 <div id="upper">
-    <p><label for="username">Sign in - Bytemeup!</p>
-    <label for="username">Sistem Kepegawaian
+    <p><label for="username"></p>
+    <label for="username">Siadm Al-Lathifah Mulia
 
 </div>
 <?= ($model->getError('username')) ?>
@@ -23,8 +23,7 @@
     <?php echo $form->error($model, 'rememberMe'); ?>
 
     <input type="submit" name="yt0" value="Login" />
-    <ul>
-        <a href="<?php echo Yii::app()->createUrl('site/forgotpassword'); ?>">Forgot Password</a>
-    </ul>
+       
+        
 </div><!--/ lower-->
 <?php $this->endWidget() ?>

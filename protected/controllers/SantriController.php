@@ -36,8 +36,10 @@ class SantriController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isAdmin();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -70,8 +72,20 @@ class SantriController extends Controller
 		if(isset($_POST['Santri']))
 		{
 			$model->attributes=$_POST['Santri'];
+			/*
+		
+			$fileSource = Yii::getPathOfAlias('webroot').'/img/';
+			$imgTem = CUploadedFile::getInstance($model,'foto_url');
+			$imgTem->saveAs($fileSource.$imgTem);
+			$model->foto_url = $imgTem;
+			*/		
 			if($model->save())
+				{
+			
+
+
 				$this->redirect(array('view','id'=>$model->nip));
+				}
 		}
 
 		$this->render('create',array(
@@ -93,9 +107,13 @@ class SantriController extends Controller
 
 		if(isset($_POST['Santri']))
 		{
+			 
 			$model->attributes=$_POST['Santri'];
+			
 			if($model->save())
+			
 				$this->redirect(array('view','id'=>$model->nip));
+			
 		}
 
 		$this->render('update',array(
@@ -123,8 +141,17 @@ class SantriController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Santri');
+
+		$model=new Santri('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Santri']))
+			$model->attributes=$_GET['Santri'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+
+
 		));
 	}
 

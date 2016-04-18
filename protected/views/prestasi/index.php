@@ -2,19 +2,37 @@
 /* @var $this PrestasiController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Prestasis',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'Create Prestasi', 'url'=>array('create')),
-	array('label'=>'Manage Prestasi', 'url'=>array('admin')),
+	array('label'=>'Tambah Prestasi Santri', 'url'=>array('create')),
+	
 );
 ?>
 
-<h1>Prestasis</h1>
+<h1>Catatan Prestasi Santri</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+<div class="search-form">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'prestasi-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		'no_pencatatan',
+		'deskripsi',
+		'jenis',
+		'tanggal',
+		'nip_santri',
+		array(
+			'class'=>'CButtonColumn',
+		),
+		
+	),
 )); ?>

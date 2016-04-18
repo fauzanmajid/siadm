@@ -8,7 +8,9 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 
-	'name'=>'SIAdm Al-Lathifah Mulia',
+	'name'=>'Sistem Informasi Administrasi Al-Lathifah Mulia',
+
+    'defaultController' => 'site/login',
 	//'theme'=>'hebo',
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -37,6 +39,8 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			'class'=>'UserWeb',
+			'loginUrl'=> array('site/login'),
 		),
 
 		// uncomment the following to enable URLs in path-format

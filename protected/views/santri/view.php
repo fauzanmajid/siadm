@@ -2,21 +2,17 @@
 /* @var $this SantriController */
 /* @var $model Santri */
 
-$this->breadcrumbs=array(
-	'Santris'=>array('index'),
-	$model->nip,
-);
 
 $this->menu=array(
-	array('label'=>'List Santri', 'url'=>array('index')),
-	array('label'=>'Create Santri', 'url'=>array('create')),
-	array('label'=>'Update Santri', 'url'=>array('update', 'id'=>$model->nip)),
-	array('label'=>'Delete Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->nip),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Santri', 'url'=>array('admin')),
+	array('label'=>'Daftar Santri', 'url'=>array('index')),
+	array('label'=>'Tambah Santri', 'url'=>array('create')),
+	array('label'=>'Atur Santri', 'url'=>array('update', 'id'=>$model->nip)),
+	array('label'=>'Hapus Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->nip),'confirm'=>'Apakah ada yakin ingin menghapus santri ini?')),
+	array('label'=>'Atur Santri', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Santri #<?php echo $model->nip; ?></h1>
+<h1>View Santri <?php echo $model->nama_lengkap; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -35,8 +31,7 @@ $this->menu=array(
 		'golongan_darah',
 		'anak_ke',
 		'jum_saudara',
-		'Perwalian_nip_santri',
-		'Perwalian_status',
-		'Pemasukkan_santri_kode',
+		'timestamp',
+		//'foto_url'
 	),
 )); ?>
