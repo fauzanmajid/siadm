@@ -27,7 +27,7 @@ class PencatatanPelanggaranController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			/*array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -131,11 +131,15 @@ class PencatatanPelanggaranController extends Controller
 		$dataProvider=new CActiveDataProvider('PencatatanPelanggaran');
 		$model=new PencatatanPelanggaran('search');
 		$model->unsetAttributes();  // clear any default values
+
+		
+	
 		if(isset($_GET['PencatatanPelanggaran']))
 			$model->attributes=$_GET['PencatatanPelanggaran'];
 
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

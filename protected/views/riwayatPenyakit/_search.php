@@ -23,14 +23,7 @@
 		<?php echo $form->textField($model,'nama_lengkap',array('size'=>30,'maxlength'=>30)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'nama_penyakit'); ?>
-		<?php echo $form->textField($model,'nama_penyakit',array('size'=>25,'maxlength'=>25)); ?>
-	</div>
-
-	
-
-	<div class="row buttons">
+	<div class="row buttons search-button">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>
 

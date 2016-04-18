@@ -1,6 +1,6 @@
 <?php
 
-class PrestasiController extends Controller
+class PelanggaranController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -68,16 +68,16 @@ class PrestasiController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Prestasi;
+		$model=new Pelanggaran;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Prestasi']))
+		if(isset($_POST['Pelanggaran']))
 		{
-			$model->attributes=$_POST['Prestasi'];
+			$model->attributes=$_POST['Pelanggaran'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->no_pencatatan));
+				$this->redirect(array('view','id'=>$model->no_pelanggaran));
 		}
 
 		$this->render('create',array(
@@ -97,11 +97,11 @@ class PrestasiController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Prestasi']))
+		if(isset($_POST['Pelanggaran']))
 		{
-			$model->attributes=$_POST['Prestasi'];
+			$model->attributes=$_POST['Pelanggaran'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->no_pencatatan));
+				$this->redirect(array('view','id'=>$model->no_pelanggaran));
 		}
 
 		$this->render('update',array(
@@ -128,16 +128,9 @@ class PrestasiController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Prestasi');
-
-		$model=new Prestasi('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Prestasi']))
-			$model->attributes=$_GET['Prestasi'];
-
+		$dataProvider=new CActiveDataProvider('Pelanggaran');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-			'model'=>$model,
 		));
 	}
 
@@ -146,10 +139,10 @@ class PrestasiController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Prestasi('search');
+		$model=new Pelanggaran('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Prestasi']))
-			$model->attributes=$_GET['Prestasi'];
+		if(isset($_GET['Pelanggaran']))
+			$model->attributes=$_GET['Pelanggaran'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -160,12 +153,12 @@ class PrestasiController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Prestasi the loaded model
+	 * @return Pelanggaran the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Prestasi::model()->findByPk($id);
+		$model=Pelanggaran::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -173,11 +166,11 @@ class PrestasiController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Prestasi $model the model to be validated
+	 * @param Pelanggaran $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='prestasi-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='pelanggaran-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
