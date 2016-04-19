@@ -1,10 +1,10 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name . ' - About';
+/*$this->pageTitle=Yii::app()->name . ' - About';
 $this->breadcrumbs=array(
 	'About',
-);
+);*/
 ?>
 <h1>Sekilas mengenai SIAdm Al-Lathifah Mulia</h1>
 

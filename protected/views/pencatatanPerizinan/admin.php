@@ -1,15 +1,25 @@
 <?php
-/* @var $this PerizinanController */
-/* @var $model Perizinan */
+/* @var $this PencatatanPerizinanController */
+/* @var $model PencatatanPerizinan */
 
-// $this->breadcrumbs=array(
-// 	'Perizinans'=>array('index'),
-// 	'Manage',
-// );
+/*$this->breadcrumbs=array(
+	'Pencatatan Perizinans'=>array('index'),
+	'Manage',
+);*/
 
 $this->menu=array(
+<<<<<<< HEAD
+	array('label'=>'Daftar Catatan Perizinan', 'url'=>array('index')),
+	array('label'=>'Buat Catatan Perizinan', 'url'=>array('create')),
+=======
+<<<<<<< HEAD:protected/views/perizinan/admin.php
 	array('label'=>'Daftar Perizinan Santri', 'url'=>array('index')),
-	array('label'=>'Tambah Perizinan Santri', 'url'=>array('create')),
+	array('label'=>'Buat Perizinan Santri', 'url'=>array('create')),
+=======
+	array('label'=>'List PencatatanPerizinan', 'url'=>array('index')),
+	array('label'=>'Create PencatatanPerizinan', 'url'=>array('create')),
+>>>>>>> master:protected/views/pencatatanPerizinan/admin.php
+>>>>>>> parput
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +28,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#perizinan-grid').yiiGridView('update', {
+	$('#pencatatan-perizinan-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,14 +36,14 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Perizinans</h1>
+<h1>Atur Catatan Perizinan</h1>
 
-<p>
+<!-- <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+</p> -->
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -41,16 +51,20 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'perizinan-grid',
+	'id'=>'pencatatan-perizinan-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'no_izin',
+		'pencatatan_perizinan',
+		'nip_santri',
+		'id_kesiswaan',
 		'deskripsi',
 		'durasi',
 		'tanggal_awal',
+		/*
 		'tanggal_akhir',
 		'kategori',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

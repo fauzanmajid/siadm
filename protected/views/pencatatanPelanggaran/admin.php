@@ -9,7 +9,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Pelanggaran Santri', 'url'=>array('index')),
-	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
+	array('label'=>'Buat Pelanggaran Santri', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -46,12 +46,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'No_pelanggaran',
 		'nip_santri',
 		'id_kesiswaan',
+		'deskripsi',
 		array(
 			'class'=>'CButtonColumn',
 		),
-	'emptyText'=>'Tidak ada data yang ditemukan.'
+	
+	
+
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
+
+

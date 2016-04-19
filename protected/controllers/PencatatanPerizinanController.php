@@ -1,6 +1,6 @@
 <?php
 
-class PerizinanController extends Controller
+class PencatatanPerizinanController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -27,7 +27,7 @@ class PerizinanController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			/*array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -38,7 +38,7 @@ class PerizinanController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
-			),
+			),*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
                 'expression' => function(UserWeb $user) {
@@ -68,16 +68,16 @@ class PerizinanController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Perizinan;
+		$model=new PencatatanPerizinan;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Perizinan']))
+		if(isset($_POST['PencatatanPerizinan']))
 		{
-			$model->attributes=$_POST['Perizinan'];
+			$model->attributes=$_POST['PencatatanPerizinan'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->no_izin));
+				$this->redirect(array('view','id'=>$model->pencatatan_perizinan));
 		}
 
 		$this->render('create',array(
@@ -97,11 +97,11 @@ class PerizinanController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Perizinan']))
+		if(isset($_POST['PencatatanPerizinan']))
 		{
-			$model->attributes=$_POST['Perizinan'];
+			$model->attributes=$_POST['PencatatanPerizinan'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->no_izin));
+				$this->redirect(array('view','id'=>$model->pencatatan_perizinan));
 		}
 
 		$this->render('update',array(
@@ -128,12 +128,11 @@ class PerizinanController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Perizinan');
-
-		$model=new Perizinan('search');
+		$dataProvider=new CActiveDataProvider('PencatatanPerizinan');
+		$model=new PencatatanPerizinan('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Perizinan']))
-			$model->attributes=$_GET['Perizinan'];
+		if(isset($_GET['PencatatanPerizinan']))
+			$model->attributes=$_GET['PencatatanPerizinan'];
 
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
@@ -146,10 +145,10 @@ class PerizinanController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Perizinan('search');
+		$model=new PencatatanPerizinan('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Perizinan']))
-			$model->attributes=$_GET['Perizinan'];
+		if(isset($_GET['PencatatanPerizinan']))
+			$model->attributes=$_GET['PencatatanPerizinan'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -160,12 +159,12 @@ class PerizinanController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Perizinan the loaded model
+	 * @return PencatatanPerizinan the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Perizinan::model()->findByPk($id);
+		$model=PencatatanPerizinan::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -173,11 +172,11 @@ class PerizinanController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Perizinan $model the model to be validated
+	 * @param PencatatanPerizinan $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='perizinan-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='pencatatan-perizinan-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
