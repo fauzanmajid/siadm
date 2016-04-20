@@ -35,52 +35,28 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
-
-		echo 'Jabatan : ';
-	    if (UserWeb::instance()->isAdmin()) {
-	        echo 'Administrator';
-	    }
-	    elseif (UserWeb::instance()->isKurikulum()) {
-<<<<<<< HEAD
-	     	echo 'Kurikulum';
-	    }
-=======
-	     	echo '(Kurikulum)';
-<<<<<<< HEAD
-	    }
-	    elseif (UserWeb::instance()->isGuru()) {
-	      	echo '(Guru)';
-	    }
-	    elseif (UserWeb::instance()->isKesiswaan()) {
-	     	echo '(Kesiswaan)';
-	    }
-	    elseif (UserWeb::instance()->isDewanPembina()) {
-	     	echo '(Dewan Pembina)';
-	    } 
-	    elseif (UserWeb::instance()->isBendahara()) {
-	    	echo '(Bendahara)';
-	    }
-=======
-	     }
->>>>>>> parput
-	     elseif (UserWeb::instance()->isKesiswaan()) {
-	     	echo 'Kesiswaan';
-	    } 
-	    elseif (UserWeb::instance()->isBendahara()) {
-<<<<<<< HEAD
-	     	echo 'Bendahara';
-	    }
-	    elseif (UserWeb::instance()->isGuru()) {
-	    	echo 'Guru';
-	    }
-=======
-	     	echo '(Bendahara)';
-	     }
->>>>>>> master
->>>>>>> parput
-	    else {
-	        echo 'User';
-    	}
+			echo 'Jabatan : ';
+		    if (UserWeb::instance()->isAdmin()) {
+		        echo 'Administrator';
+		    }
+		    elseif (UserWeb::instance()->isKurikulum()) {
+		     	echo '(Kurikulum)';
+		    }
+		    elseif (UserWeb::instance()->isGuru()) {
+		      	echo '(Guru)';
+		    }
+		    elseif (UserWeb::instance()->isKesiswaan()) {
+		     	echo '(Kesiswaan)';
+		    }
+		    elseif (UserWeb::instance()->isDewanPembina()) {
+		     	echo '(Dewan Pembina)';
+		    } 
+		    elseif (UserWeb::instance()->isBendahara()) {
+		    	echo '(Bendahara)';
+		    }
+		    else {
+		        echo 'User';
+	    	}
     	?>
     <!-- End Of Role Area -->
 		</div>	
