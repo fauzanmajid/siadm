@@ -226,15 +226,16 @@ class SantriController extends Controller
 		));
 	}
 
-<<<<<<< HEAD
 	public function actionPelanggaran($id)
 	{
 		$this->render('pelanggaran',array(
-=======
+			'model'=>$this->loadModel($id),
+		));
+	}
+
 	public function actionPrestasi($id)
 	{
 		$this->render('prestasi',array(
->>>>>>> riandy
 			'model'=>$this->loadModel($id),
 		));
 	}
