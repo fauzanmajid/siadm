@@ -10,7 +10,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Pengguna', 'url'=>array('index')),
-	array('label'=>'Tambah Pengguna', 'url'=>array('create')),
+	array('label'=>'Buat Pengguna', 'url'=>array('create')),
 	array('label'=>'Lihat Pengguna', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Atur Pengguna', 'url'=>array('admin')),
 );

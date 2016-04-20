@@ -16,6 +16,8 @@
  */
 class PencatatanPelanggaran extends CActiveRecord
 {
+	public $nama_lengkap;
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -32,7 +34,7 @@ class PencatatanPelanggaran extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, id_kesiswaan, deskripsi', 'required'),
+			array('nip_santri, deskripsi', 'required'),
 			array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			array('nip_santri', 'length', 'max'=>45),
@@ -66,6 +68,7 @@ class PencatatanPelanggaran extends CActiveRecord
 			'nip_santri' => 'NIP',
 			'id_kesiswaan' => 'ID Kesiswaan',
 			'deskripsi' => 'deskripsi',
+			'nama_lengkap' => 'Nama Santri',
 				
 		);
 	}
@@ -92,7 +95,7 @@ class PencatatanPelanggaran extends CActiveRecord
 		$criteria->compare('deskripsi',$this->deskripsi);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
-		$criteria->compare('deskripsi',$this->deskripsi);
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

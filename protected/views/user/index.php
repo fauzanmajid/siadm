@@ -3,9 +3,9 @@
 /* @var $dataProvider CActiveDataProvider */
 
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Pengguna',
-);
+);*/
 
 $this->menu=array(
 	array('label'=>'Buat Pengguna', 'url'=>array('create')),

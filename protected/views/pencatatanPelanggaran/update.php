@@ -10,7 +10,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Pelanggaran Santri', 'url'=>array('index')),
-	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
+	array('label'=>'Buat Pelanggaran Santri', 'url'=>array('create')),
 	array('label'=>'Lihat Pelanggaran Santri', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Atur Pelanggaran Santri', 'url'=>array('admin')),
 );
