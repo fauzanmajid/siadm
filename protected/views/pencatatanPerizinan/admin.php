@@ -8,18 +8,10 @@
 );*/
 
 $this->menu=array(
-<<<<<<< HEAD
+
 	array('label'=>'Daftar Catatan Perizinan', 'url'=>array('index')),
 	array('label'=>'Buat Catatan Perizinan', 'url'=>array('create')),
-=======
-<<<<<<< HEAD:protected/views/perizinan/admin.php
-	array('label'=>'Daftar Perizinan Santri', 'url'=>array('index')),
-	array('label'=>'Buat Perizinan Santri', 'url'=>array('create')),
-=======
-	array('label'=>'List PencatatanPerizinan', 'url'=>array('index')),
-	array('label'=>'Create PencatatanPerizinan', 'url'=>array('create')),
->>>>>>> master:protected/views/pencatatanPerizinan/admin.php
->>>>>>> parput
+
 );
 
 Yii::app()->clientScript->registerScript('search', "
