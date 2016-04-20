@@ -24,12 +24,11 @@
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
 		<br><p style='font-size: 75%'>Nomor Induk Santri</p>
 		<?php
-<<<<<<< HEAD
 			$dropDownSantri = CHtml::listData(Santri::model()->findAll(), 'nip', 'nis');
 			$coba = CHtml::listData(Santri::model()->findAll(), 'nip','nis');
 			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);	
   
-=======
+
 			$dropDownSantri = CHtml::listData(Santri::model()->findAll(), 'nip', 'nip');
 			$coba = CHtml::listData(Santri::model()->findAll(), 'nip','nip');
 			
@@ -37,7 +36,6 @@
 		  	
 
 		      
->>>>>>> e7e30270b2b9733345d5010c93d51a74689101a1
 		?>
 
 		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>
