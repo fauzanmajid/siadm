@@ -58,7 +58,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',array( 'Yatim'=>'Yatim','Piatu'=>'Piatu','Yatimpiatu'=>'Yatimpiatu','Duafa'=>'Duafa','Mampu'=>'Mampu',)); ?>
+		<?php echo $form->dropDownList($model,'status',array( 'Yatim'=>'Yatim','Piatu'=>'Piatu','Yatimpiatu'=>'Yatim Piatu','Duafa'=>'Dhuafa','Mampu'=>'Mampu',)); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 

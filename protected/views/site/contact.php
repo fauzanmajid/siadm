@@ -3,13 +3,13 @@
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
 
-$this->pageTitle=Yii::app()->name . ' - Contact Us';
+/*$this->pageTitle=Yii::app()->name . ' - Contact Us';
 $this->breadcrumbs=array(
 	'Contact',
-);
+);*/
 ?>
 
-<h1>Hubungi Admin</h1>
+<h1>Hubungi Administrator</h1>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
@@ -20,7 +20,7 @@ $this->breadcrumbs=array(
 <?php else: ?>
 
 <p>
-Jika ada pertanyaan atau keluhan, silakan isi <i>form</i> berikut:
+Jika ada pertanyaan atau keluhan, silakan isi formulir berikut:
 </p>
 
 <div class="form">
@@ -75,7 +75,7 @@ Jika ada pertanyaan atau keluhan, silakan isi <i>form</i> berikut:
 	<?php endif; ?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

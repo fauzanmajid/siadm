@@ -42,7 +42,7 @@ class SantriController extends Controller
                 return $user->isAdmin();}
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('index','view','riwayatPenyakit'),
+                'actions' => array('riwayatPenyakit', 'perizinan'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isKesiswaan();}
@@ -211,6 +211,17 @@ class SantriController extends Controller
 	public function actionRiwayatPenyakit($id)
 	{
 		$this->render('riwayat-penyakit',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionPerizinan($id)
+	{
+		$this->render('perizinan',array(
 			'model'=>$this->loadModel($id),
 		));
 	}

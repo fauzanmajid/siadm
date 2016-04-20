@@ -3,11 +3,21 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->menu=array(
-	array('label'=>'Buat Pencatatan Perizinan', 'url'=>array('create')),
+	array('label'=>'Buat Catatan Perizinan', 'url'=>array('create')),
 );
+
+Yii::app()->clientScript->registerScript('search', "
+$('.search-form form').submit(function(){
+	$('#riwayat-penyakit-grid').yiiGridView('update', {
+		data: $(this).serialize()
+	});
+	$('.search-result').show();
+	return false;
+});
+");
 ?>
 
-<h1>Pencatatan Perizinan</h1>
+<h1>Catatan Perizinan</h1>
 
 <div class="search-form">
 <?php $this->renderPartial('_search',array(
@@ -15,28 +25,29 @@ $this->menu=array(
 )); ?>
 </div><!-- search-form -->
 
+<div class='search-result' style="display:none">
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'pencatatan-perizinan-grid',
-	'dataProvider'=>$model->search(),
-	'columns'=>array(
-		'pencatatan_perizinan',
-		array(
-            'class' => 'CLinkColumn',
-            'labelExpression' => '$data->nipSantri->nama_lengkap',
-            'urlExpression' => 'Yii::app()->createUrl("RiwayatPenyakit/view",array("id"=>$data->no_pencatatan))',
-            'header' => 'Nama Santri',
-            'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
-        ),
-        'id_kesiswaan',
-		'deskripsi',
-		'durasi',
-		'tanggal_awal',
-		/*
-		'tanggal_akhir',
-		'kategori',
-		*/
-		array(
-			'class'=>'CButtonColumn',
+		'id'=>'perizinan-grid',
+		'dataProvider'=>$model->search(),
+		'columns'=>array(
+			'nip_santri',
+			array(
+	            'class' => 'CLinkColumn',
+	            'labelExpression' => '$data->nipSantri->nama_lengkap',
+	            'urlExpression' => 'Yii::app()->createUrl("santri/perizinan",array("id"=>$data->nip_santri))',
+	            'header' => 'Nama Santri',
+	            'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+	        ),
+			'deskripsi',
+			'tanggal_awal',
+			'tanggal_akhir',
+			'kategori',
+			array(
+	            'header' => 'Menu',
+				'class'=>'CButtonColumn',
+				'template'=>'{update}{delete}',
+				'deleteConfirmation'=>"js:'Anda yakin?'",
+			),
 		),
-	),
-)); ?>
+	)); ?>
+</div>
