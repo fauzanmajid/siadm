@@ -12,8 +12,8 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'nama_lengkap'); ?>
-		<?php echo $form->textField($model,'nama_lengkap'); ?>
+		<?php echo $form->label($model,'nip_santri'); ?>
+		<?php echo $form->textField($model,'nip_santri'); ?>
 	</div>
 	
 	<!-- <div class="row">
@@ -22,8 +22,8 @@
 	</div>
  -->
 	<div class="row">
-		<?php echo $form->label($model,'deskripsi'); ?>
-		<?php echo $form->textField($model,'deskripsi',array('size'=>25,'maxlength'=>25)); ?>
+		<?php echo $form->label($model,'nama_lengkap'); ?>
+		<?php echo $form->textField($model,'nama_lengkap',array('size'=>25,'maxlength'=>25)); ?>
 	</div>
 
 	<div class="row buttons">
