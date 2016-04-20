@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->menu=array(
-	array('label'=>'Tambah Data Santri', 'url'=>array('create')),
+	array('label'=>'Buat Data Santri', 'url'=>array('create')),
 //	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
 ?>
@@ -18,11 +18,8 @@ $this->menu=array(
 	'id'=>'santri-grid',
 	'dataProvider'=>$model->search(),
 	'columns'=>array(
-
-		'nis',
-	
+		'nip',
 		'nama_lengkap',
-	
 		'jenjang',
 		/*
 		'status',

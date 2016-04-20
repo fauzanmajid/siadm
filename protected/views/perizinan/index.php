@@ -1,11 +1,13 @@
 <?php
-/* @var $this RiwayatPenyakitController */
+/* @var $this PerizinanController */
 /* @var $dataProvider CActiveDataProvider */
 
-
+/*$this->breadcrumbs=array(
+	'Perizinans',
+);*/
 
 $this->menu=array(
-	array('label'=>'Buat Riwayat Penyakit', 'url'=>array('create')),
+	array('label'=>'Buat Perizinan Santri', 'url'=>array('create')),
 	
 );
 
@@ -20,10 +22,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Riwayat Penyakit</h1>
+<h1>Perizinan Santri</h1>
 
-<?php /*echo CHtml::link('Advanced Search','#',array('class'=>'search-button'));*/ ?>
-<div class="search-form" >
+<div class="search-form">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
@@ -31,19 +32,15 @@ $('.search-form form').submit(function(){
 
 <div class='search-result' style="display:none">
 	<?php $this->widget('zii.widgets.grid.CGridView', array(
-		'id'=>'riwayat-penyakit-grid',
+		'id'=>'perizinan-grid',
 		'dataProvider'=>$model->search(),
 		'columns'=>array(
+			'no_izin',
 			'nip_santri',
-			array(
-	            'class' => 'CLinkColumn',
-	            'labelExpression' => '$data->nipSantri->nama_lengkap',
-	            'urlExpression' => 'Yii::app()->createUrl("santri/riwayatPenyakit",array("id"=>$data->nip_santri))',
-	            'header' => 'Nama Santri',
-	            'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
-	        ),
-			'nama_penyakit',
-			'tanggal',
+			'deskripsi',
+			'tanggal_awal',
+			'tanggal_akhir',
+			'kategori',
 			array(
 	            'header' => 'Menu',
 				'class'=>'CButtonColumn',
@@ -51,6 +48,5 @@ $('.search-form form').submit(function(){
 				'deleteConfirmation'=>"js:'Anda yakin?'",
 			),
 		),
-	));
-	?>
+	)); ?>
 </div>

@@ -3,10 +3,10 @@
 /* @var $model User */
 
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Pengguna'=>array('index'),
 	$model->username,
-);
+);*/
 
 /*$this->breadcrumbs=array(
 	'Users'=>array('index'),
@@ -15,7 +15,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Daftar Pengguna', 'url'=>array('index')),
-	array('label'=>'Tambah Pengguna', 'url'=>array('create')),
+	array('label'=>'Buat Pengguna', 'url'=>array('create')),
 	array('label'=>'Atur Pengguna', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Hapus Pengguna', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Apakah anda yakin ingin menghapus pengguna ini?')),
 	/*array('label'=>'Atur Pengguna', 'url'=>array('admin')),*/

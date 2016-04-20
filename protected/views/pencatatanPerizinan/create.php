@@ -3,10 +3,10 @@
 /* @var $model PencatatanPerizinan */
 
 $this->menu=array(
-	array('label'=>'Daftar Pencatatan Perizinan', 'url'=>array('index')),
+	array('label'=>'Daftar Perizinan', 'url'=>array('index')),
 );
 ?>
 
-<h1>Buat Pencatatan Perizinan</h1>
+<h1>Buat Catatan Perizinan</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

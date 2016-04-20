@@ -38,7 +38,12 @@ class PencatatanPelanggaranController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('@'),
+<<<<<<< HEAD
 			),
+
+=======
+			),*/
+>>>>>>> e7e30270b2b9733345d5010c93d51a74689101a1
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
                 'expression' => function(UserWeb $user) {
@@ -90,9 +95,11 @@ class PencatatanPelanggaranController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate($id=null)
 	{
 		$model=$this->loadModel($id);
+		if ($id!=null)
+			$model->nip_santri = $id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -129,11 +136,21 @@ class PencatatanPelanggaranController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('PencatatanPelanggaran');
+		$model=new PencatatanPelanggaran('search');
+		$model->unsetAttributes();  // clear any default values
+
+		
+	
+		if(isset($_GET['PencatatanPelanggaran']))
+			$model->attributes=$_GET['PencatatanPelanggaran'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 
+	
 	/**
 	 * Manages all models.
 	 */

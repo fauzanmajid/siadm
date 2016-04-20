@@ -9,7 +9,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Pengguna', 'url'=>array('index')),
-	array('label'=>'Tambah Pengguna', 'url'=>array('create')),
+	array('label'=>'Buat Pengguna', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
