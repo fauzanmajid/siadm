@@ -20,6 +20,12 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'nip_santri'); ?>
+		<?php echo $form->textField($model,'nip_santri',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'nip_santri'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'deskripsi'); ?>
 		<?php echo $form->textField($model,'deskripsi',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'deskripsi'); ?>
@@ -27,7 +33,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenis'); ?>
-		<?php echo $form->textField($model,'jenis',array('size'=>50,'maxlength'=>25)); ?>
+		<?php echo $form->dropDownList($model,'jenis',array('Olahraga'=>'Olahraga','Akademik'=>'Akademik','Kesenian'=>'Kesenian')); ?>
 		<?php echo $form->error($model,'jenis'); ?>
 	</div>
 
