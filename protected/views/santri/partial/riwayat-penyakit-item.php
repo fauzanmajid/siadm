@@ -7,7 +7,7 @@ $this->widget('zii.widgets.CDetailView', array(
     'attributes' => array(
         'nipSantri.nama_lengkap',
         'nama_penyakit',
-        'tanggal'
+        
     ),
 ));
 if (UserWeb::instance()->isKesiswaan()) {
