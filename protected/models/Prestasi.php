@@ -15,6 +15,8 @@
  */
 class Prestasi extends CActiveRecord
 {
+
+	public $nama_lengkap;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -63,11 +65,13 @@ class Prestasi extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+
+			'nama_lengkap' => "Nama Santri",
 			'no_pencatatan' => 'No Pencatatan',
 			'deskripsi' => 'Deskripsi',
 			'jenis' => 'Jenis',
 			'tanggal' => 'Tanggal',
-			'nip_santri' => 'NIS',
+			'nip_santri' => 'NIP',
 		);
 	}
 
