@@ -34,7 +34,6 @@ $('.search-form form').submit(function(){
 		'id'=>'riwayat-penyakit-grid',
 		'dataProvider'=>$model->search(),
 		'columns'=>array(
-			'no_pencatatan',
 			'nip_santri',
 			array(
 	            'class' => 'CLinkColumn',

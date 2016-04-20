@@ -7,16 +7,7 @@
 );*/
 
 $this->menu=array(
-<<<<<<< HEAD
-	array('label'=>'Buat Pelanggaran Santri', 'url'=>array('create')),
-=======
-<<<<<<< HEAD
-	array('label'=>'Buat Pelanggaran Santri', 'url'=>array('create')),
-	array('label'=>'Atur Pelanggaran Santri', 'url'=>array('admin')),
-=======
 	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
->>>>>>> master
->>>>>>> parput
 );
 ?>
 
