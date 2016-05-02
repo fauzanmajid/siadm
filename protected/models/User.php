@@ -39,7 +39,7 @@ class User extends CActiveRecord
 		return array(
 
 			array('username, password, role, repeat_password', 'required'),
-			array('username, role', 'length', 'max'=>12),
+			array('username, role', 'length', 'max'=>15),
 			array('password', 'length', 'max'=>25),
 			array('username', 'unique', 'className'=>'User'),
 			// The following rule is used by search().
