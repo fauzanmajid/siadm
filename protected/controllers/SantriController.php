@@ -27,7 +27,11 @@ class SantriController extends Controller
 	public function accessRules()
 	{
 		return array(
+<<<<<<< HEAD
 			/*array('allow',  // allow all users to perform 'index' and 'view' actions
+=======
+	/*		array('allow',  // allow all users to perform 'index' and 'view' actions
+>>>>>>> master
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -41,14 +45,22 @@ class SantriController extends Controller
                 /* @var $user UserWeb */
                 return $user->isAdmin();}
 			),
+<<<<<<< HEAD
 
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('index','view'),
+=======
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('riwayatPenyakit', 'perizinan', 'pelanggaran', 'prestasi'),
+>>>>>>> master
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isKesiswaan();}
 			),
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -204,5 +216,41 @@ class SantriController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionRiwayatPenyakit($id)
+	{
+		$this->render('riwayat-penyakit',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionPerizinan($id)
+	{
+		$this->render('perizinan',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	public function actionPelanggaran($id)
+	{
+		$this->render('pelanggaran',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	public function actionPrestasi($id)
+	{
+		$this->render('prestasi',array(
+			'model'=>$this->loadModel($id),
+		));
 	}
 }

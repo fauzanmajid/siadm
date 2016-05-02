@@ -12,15 +12,15 @@
 <?= ($model->getError('username')) ?>
 <?= ($model->getError('password')) ?>
 <!--<label for="username">Username:</label>-->
-<input name="LoginForm[username]" id="LoginForm_username" type="text" placeholder="Username"/>
+<input name="LoginForm[username]" id="LoginForm_username" type="text" placeholder="Nama Pengguna"/>
 <!--<label for="password">Password:</label>-->
-<input name="LoginForm[password]" id="LoginForm_password" type="password" placeholder="Password"/>
+<input name="LoginForm[password]" id="LoginForm_password" type="password" placeholder="Kata Sandi"/>
 
 <div id="lower">
 
     
 
-    <input type="submit" name="yt0" value="Login" />
+    <input type="submit" name="yt0" value="Masuk" />
        
         
 </div><!--/ lower-->

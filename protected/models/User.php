@@ -78,6 +78,7 @@ class User extends CActiveRecord
 			'username' => 'Nama Pengguna',
 			'password' => 'Kata Sandi',
 			'role' => 'Jabatan',
+			'repeat_password' => 'Ulang Kata Sandi',
 		);
 	}
 

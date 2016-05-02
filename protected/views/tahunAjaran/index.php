@@ -2,17 +2,17 @@
 /* @var $this TahunAjaranController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Tahun Ajarans',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'Create TahunAjaran', 'url'=>array('create')),
-	array('label'=>'Manage TahunAjaran', 'url'=>array('admin')),
+	array('label'=>'Buat Tahun Ajaran', 'url'=>array('create')),
+	array('label'=>'Atur Tahun Ajaran', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Tahun Ajarans</h1>
+<h1>Tahun Ajaran</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

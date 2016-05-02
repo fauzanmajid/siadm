@@ -9,7 +9,7 @@
 
 $this->menu=array(
 	array('label'=>'Daftar Pelanggaran Santri', 'url'=>array('index')),
-	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
+	array('label'=>'Buat Pelanggaran Santri', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

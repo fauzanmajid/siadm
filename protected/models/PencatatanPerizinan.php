@@ -37,7 +37,7 @@ class PencatatanPerizinan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori', 'required'),
+			array('nip_santri, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori', 'required'),
 			array('id_kesiswaan, durasi', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			array('deskripsi', 'length', 'max'=>25),
@@ -132,5 +132,13 @@ class PencatatanPerizinan extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function beforeSave() {
+	    if ($this->isNewRecord) {
+	        $this->id_kesiswaan = UserWeb::instance()->ID;
+	    }
+	 
+	    return parent::beforeSave();
 	}
 }

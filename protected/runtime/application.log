@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2016/04/10 16:36:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`riwayat_penyakit`, CONSTRAINT `fk_riwayatpenyakit_santri` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `riwayat_penyakit` (`nip_santri`, `nama_penyakit`, `tanggal`) VALUES (:yp0, :yp1, :yp2).
 in C:\xampp\htdocs\siadm\protected\controllers\RiwayatPenyakitController.php (73)
 in C:\xampp\htdocs\siadm\index.php (13)
@@ -396,4 +397,32 @@ Stack trace:
 #16 C:\xampp\htdocs\siadm\index.php(13): CWebApplication->run()
 REQUEST_URI=/siadm/index.php/pelanggaran
 in C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php (131)
+=======
+2016/04/20 07:22:39 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 07:22:57 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:00:49 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:00:53 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:06:06 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:06:47 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:11:22 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (138)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:17:43 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "PencatatanPelanggaran".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (139)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:17:58 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "PencatatanPelanggaran".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (139)
+>>>>>>> master
 in C:\xampp\htdocs\siadm\index.php (13)

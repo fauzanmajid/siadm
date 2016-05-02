@@ -200,7 +200,7 @@ class UserWeb extends CWebUser {
     /**
      * @return boolean true if user is Common User, false otherwise
      */
-    public function isPembina() {
+    public function isDewanPembina() {
         $user = $this->loadUser();
         return $user && !UserWeb::instance()->isGuest && $user->role == 'Dewan Pembina';
     }
