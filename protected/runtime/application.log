@@ -25,3 +25,15 @@ in C:\xampp\htdocs\siadm\index.php (13)
 2016/04/20 08:17:58 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "PencatatanPelanggaran".
 in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (139)
 in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/21 20:55:39 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (138)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/21 20:56:01 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (138)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/21 20:56:35 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (138)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/21 20:59:05 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (138)
+in C:\xampp\htdocs\siadm\index.php (13)
