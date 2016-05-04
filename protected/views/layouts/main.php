@@ -57,7 +57,7 @@
 	    	echo 'Bendahara';
 	    }
 	    else {
-	        echo 'User';
+	        echo 'Pengguna';
     	}
     	?>
     <!-- End Of Role Area -->
@@ -81,6 +81,7 @@
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
 					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
+					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh')),
 				  	),
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
