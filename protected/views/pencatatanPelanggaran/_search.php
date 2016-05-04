@@ -11,10 +11,7 @@
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-	</div>
+	
 
 		<div class="row">
 		<?php echo $form->label($model,'nip_santri'); ?>
@@ -22,14 +19,11 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_kesiswaan'); ?>
-		<?php echo $form->textField($model,'id_kesiswaan'); ?>
+		<?php echo $form->label($model,'nama_lengkap'); ?>
+		<?php echo $form->textField($model,'nama_lengkap'); ?>
 	</div>
 
-<div class="row">
-		<?php echo $form->label($model,'deskripsi'); ?>
-		<?php echo $form->textField($model,'deskripsi'); ?>
-	</div>
+	
 
 
 	<div class="row buttons">
