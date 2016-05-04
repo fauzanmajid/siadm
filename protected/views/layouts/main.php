@@ -35,28 +35,30 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
-			echo 'Jabatan : ';
-		    if (UserWeb::instance()->isAdmin()) {
-		        echo 'Administrator';
-		    }
-		    elseif (UserWeb::instance()->isKurikulum()) {
-		     	echo '(Kurikulum)';
-		    }
-		    elseif (UserWeb::instance()->isGuru()) {
-		      	echo '(Guru)';
-		    }
-		    elseif (UserWeb::instance()->isKesiswaan()) {
-		     	echo '(Kesiswaan)';
-		    }
-		    elseif (UserWeb::instance()->isDewanPembina()) {
-		     	echo '(Dewan Pembina)';
-		    } 
-		    elseif (UserWeb::instance()->isBendahara()) {
-		    	echo '(Bendahara)';
-		    }
-		    else {
-		        echo 'User';
-	    	}
+
+
+		echo 'Jabatan : ';
+	    if (UserWeb::instance()->isAdmin()) {
+	        echo 'Administrator';
+	    }
+	    elseif (UserWeb::instance()->isKurikulum()) {
+	     	echo 'Kurikulum';
+	    }
+	    elseif (UserWeb::instance()->isGuru()) {
+	      	echo 'Guru';
+	    }
+	    elseif (UserWeb::instance()->isKesiswaan()) {
+	     	echo 'Kesiswaan';
+	    }
+	    elseif (UserWeb::instance()->isDewanPembina()) {
+	     	echo 'Dewan Pembina';
+	    } 
+	    elseif (UserWeb::instance()->isBendahara()) {
+	    	echo 'Bendahara';
+	    }
+	    else {
+	        echo 'User';
+    	}
     	?>
     <!-- End Of Role Area -->
 		</div>	
