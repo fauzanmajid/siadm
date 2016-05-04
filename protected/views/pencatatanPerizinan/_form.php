@@ -25,11 +25,11 @@
 		<?php echo $form->error($model,'nip_santri'); ?>
 	</div>
 
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->labelEx($model,'id_kesiswaan'); ?>
 		<?php echo $form->textField($model,'id_kesiswaan'); ?>
 		<?php echo $form->error($model,'id_kesiswaan'); ?>
-	</div>
+	</div> -->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'deskripsi'); ?>
@@ -45,19 +45,48 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tanggal_awal'); ?>
-		<?php echo $form->textField($model,'tanggal_awal'); ?>
+		 <?php
+	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+	            'model' => $model,
+	            'attribute' => 'tanggal_awal',
+	            'options' => array(
+	                'showAnim' => 'fadeIn',
+	                'dateFormat' => 'yy-mm-dd',
+	                'changeMonth' => true,
+	                'changeYear' => true,
+	                'yearRange' => '-200:+0',
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	        ));
+        ?>
+		
 		<?php echo $form->error($model,'tanggal_awal'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tanggal_akhir'); ?>
-		<?php echo $form->textField($model,'tanggal_akhir'); ?>
+		 <?php
+	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+	            'model' => $model,
+	            'attribute' => 'tanggal_akhir',
+	            'options' => array(
+	                'showAnim' => 'fadeIn',
+	                'dateFormat' => 'yy-mm-dd',
+	                'changeMonth' => true,
+	                'changeYear' => true,
+	                'yearRange' => '-200:+0',
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	        ));
+        ?>
 		<?php echo $form->error($model,'tanggal_akhir'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'kategori'); ?>
-		<?php echo $form->textField($model,'kategori',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'kategori',array('UMUM'=>'UMUM','SAKIT'=>'SAKIT')); ?>
 		<?php echo $form->error($model,'kategori'); ?>
 	</div>
 

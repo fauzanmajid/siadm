@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2016/04/18 11:19:53 [error] [exception.CException] exception 'CException' with message 'Property "PencatatanPerizinan.no_pencatatan" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
 Stack trace:
 #0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('no_pencatatan')
@@ -78,6 +79,7 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/PencatatanPerizinan
 HTTP_REFERER=http://localhost/siadm/index.php/pencatatanPerizinan/create
 ---
+<<<<<<< HEAD
 2016/04/18 17:35:24 [error] [exception.CException] exception 'CException' with message 'Property "PencatatanPerizinan.no_pencatatan" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
 Stack trace:
 #0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('no_pencatatan')
@@ -118,3 +120,34 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/PencatatanPerizinan
 HTTP_REFERER=http://localhost/siadm/index.php/prestasi
 ---
+=======
+=======
+2016/04/20 07:22:39 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 07:22:57 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:00:49 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:00:53 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:06:06 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:06:47 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:11:22 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (138)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:17:43 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "PencatatanPelanggaran".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (139)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/20 08:17:58 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "PencatatanPelanggaran".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (139)
+in C:\xampp\htdocs\siadm\index.php (13)
+>>>>>>> e7e30270b2b9733345d5010c93d51a74689101a1
+>>>>>>> master

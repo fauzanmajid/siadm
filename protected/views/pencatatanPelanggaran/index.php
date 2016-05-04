@@ -7,32 +7,49 @@
 );*/
 
 $this->menu=array(
-<<<<<<< HEAD
-	array('label'=>'Buat Pelanggaran Santri', 'url'=>array('create')),
-=======
-<<<<<<< HEAD
-	array('label'=>'Buat Pelanggaran Santri', 'url'=>array('create')),
-	array('label'=>'Atur Pelanggaran Santri', 'url'=>array('admin')),
-=======
 	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
->>>>>>> master
->>>>>>> parput
 );
+Yii::app()->clientScript->registerScript('search', "
+$('.search-form form').submit(function(){
+	$('#pencatatan-pelanggaran-grid').yiiGridView('update', {
+		data: $(this).serialize()
+	});
+	$('.search-result').show();
+	return false;
+});
+");
 ?>
+
 
 <h1>Catatan Pelanggaran Santri</h1>
 
+<div class="search-form">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
+
+<div class='search-result' style="display:none">
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-pelanggaran-grid',
 	'dataProvider'=>$model->search(),
 	'columns'=>array(
-		'id',
 		'nip_santri',
+		array(
+	            'class' => 'CLinkColumn',
+	            'labelExpression' => '$data->nipSantri->nama_lengkap',
+	            'urlExpression' => 'Yii::app()->createUrl("santri/pelanggaran",array("id"=>$data->nip_santri))',
+	            'header' => 'Nama Santri',
+	            'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+	        ),
 		'id_kesiswaan',
 		'deskripsi',
 		array(
-			'class'=>'CButtonColumn',
+			       'header' => 'Menu',
+				'class'=>'CButtonColumn',
+				'template'=>'{update}{delete}',
+				'deleteConfirmation'=>"js:'Anda yakin?'",
+			),
 		),
-	),
-	'emptyText'=>'Tidak ada data yang ditemukan.'
-)); ?>
+	)); ?>
+</div>

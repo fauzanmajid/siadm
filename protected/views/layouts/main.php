@@ -36,6 +36,7 @@
 	<!--Ini Role Area Ya! -->
 		<?php
 
+
 		echo 'Jabatan : ';
 	    if (UserWeb::instance()->isAdmin()) {
 	        echo 'Administrator';
@@ -89,7 +90,6 @@
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
-				array('label'=>'Data Santri', 'url'=>array('/Santri/index'), 'visible'=>UserWeb::instance()->isKesiswaan())
 			),
 		)); ?>
 	</div><!-- mainmenu -->
