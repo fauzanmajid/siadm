@@ -35,28 +35,30 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
-			echo 'Jabatan : ';
-		    if (UserWeb::instance()->isAdmin()) {
-		        echo 'Administrator';
-		    }
-		    elseif (UserWeb::instance()->isKurikulum()) {
-		     	echo '(Kurikulum)';
-		    }
-		    elseif (UserWeb::instance()->isGuru()) {
-		      	echo '(Guru)';
-		    }
-		    elseif (UserWeb::instance()->isKesiswaan()) {
-		     	echo '(Kesiswaan)';
-		    }
-		    elseif (UserWeb::instance()->isDewanPembina()) {
-		     	echo '(Dewan Pembina)';
-		    } 
-		    elseif (UserWeb::instance()->isBendahara()) {
-		    	echo '(Bendahara)';
-		    }
-		    else {
-		        echo 'User';
-	    	}
+
+
+		echo 'Jabatan : ';
+	    if (UserWeb::instance()->isAdmin()) {
+	        echo 'Administrator';
+	    }
+	    elseif (UserWeb::instance()->isKurikulum()) {
+	     	echo 'Kurikulum';
+	    }
+	    elseif (UserWeb::instance()->isGuru()) {
+	      	echo 'Guru';
+	    }
+	    elseif (UserWeb::instance()->isKesiswaan()) {
+	     	echo 'Kesiswaan';
+	    }
+	    elseif (UserWeb::instance()->isDewanPembina()) {
+	     	echo 'Dewan Pembina';
+	    } 
+	    elseif (UserWeb::instance()->isBendahara()) {
+	    	echo 'Bendahara';
+	    }
+	    else {
+	        echo 'Pengguna';
+    	}
     	?>
     <!-- End Of Role Area -->
 		</div>	
@@ -79,6 +81,7 @@
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
 					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
+					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh')),
 				  	),
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),

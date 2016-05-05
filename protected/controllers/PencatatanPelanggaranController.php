@@ -39,10 +39,10 @@ class PencatatanPelanggaranController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('@'),
 			),*/
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+			/*array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
-                'expression' => function(UserWeb $user) {
-                /* @var $user UserWeb */
+                'expression' => function(UserWeb $user) {*/
+                /* @var $user UserWeb 
                 return $user->isKesiswaan();}
 			),
 			array('deny',  // deny all users

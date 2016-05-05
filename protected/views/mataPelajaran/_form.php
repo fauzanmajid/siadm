@@ -15,7 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Kolom dengan <span class="required">*</span> harus diisi.</p>
+	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -33,12 +33,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMA'), array('empty'=>'--pilih jenjang--')); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
