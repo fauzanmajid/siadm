@@ -36,7 +36,7 @@ class SantriController extends Controller
 				'users'=>array('@'),
 			),*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isAdmin();}
@@ -173,6 +173,18 @@ class SantriController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+
+	public function actionUnduh()
+	{
+		$model=new Santri('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Santri']))
+			$model->attributes=$_GET['Santri'];
+
+		$this->render('/unduh/index',array(
+			'model' => $model,
 		));
 	}
 
