@@ -77,6 +77,7 @@
 			'items'=>array(
 				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Kelas', 'url'=>array('/Kelas'),'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
@@ -91,6 +92,15 @@
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				
+				array('label'=>'Keuangan ',  'url'=>array(''),
+						'items'=>array(
+					  	array('label'=>'Laporan Pemasukan','url'=>array('/transaksiPemasukan')),
+					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
+					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
+				  	),
+						'visible'=>UserWeb::instance()->isBendahara()),
+
 			),
 		)); ?>
 	</div><!-- mainmenu -->
