@@ -85,8 +85,19 @@
 					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh')),
 				  	),
 						'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
-				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
+						'items'=>array(
+					  	array('label'=>'Buat Prestasi','url'=>array('/Prestasi/create')),
+					  	),
+						'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 
+					'items'=>array(
+					  	array('label'=>'Buat Pelanggaran','url'=>array('/PencatatanPelanggaran/create')),
+					  	array('label'=>'Atur Pelanggaran','url'=>array('/PencatatanPelanggaran/admin')),
+					  	
+					  	),
+
+					'visible'=>UserWeb::instance()->isKesiswaan()),
 
 				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),

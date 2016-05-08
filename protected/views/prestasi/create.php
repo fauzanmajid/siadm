@@ -1,3 +1,4 @@
+
 <?php
 /* @var $this PrestasiController */
 /* @var $model Prestasi */
@@ -6,11 +7,12 @@
 	'Prestasis'=>array('index'),
 	'Create',
 );*/
-
+/*
 $this->menu=array(
 	array('label'=>'Daftar Prestasi Santri', 'url'=>array('index')),
 	
 );
+*/
 ?>
 
 <h1>Buat Prestasi Santri</h1>

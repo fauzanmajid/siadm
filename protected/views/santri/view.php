@@ -2,7 +2,7 @@
 /* @var $this SantriController */
 /* @var $model Santri */
 
-
+/*
 $this->menu=array(
 	array('label'=>'Daftar Santri', 'url'=>array('index')),
 	array('label'=>'Buat Data Santri', 'url'=>array('create')),
@@ -10,6 +10,7 @@ $this->menu=array(
 	array('label'=>'Hapus Data Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->nip),'confirm'=>'Apakah ada yakin ingin menghapus santri ini?')),
 	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
+*/
 ?>
 
 <h1>Lihat Santri <?php echo $model->nama_lengkap; ?></h1>

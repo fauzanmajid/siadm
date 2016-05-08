@@ -37,6 +37,8 @@ class SantriController extends Controller
 			),*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh', 'excel'),
+                //'deniedCallback' => array($this,'gotoLogin'),             
+                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isAdmin();}
@@ -49,8 +51,15 @@ class SantriController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+				'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 		);
+	}
+
+	public function gotoLogin()
+	{
+		$this->redirect('/site/index');
+
 	}
 
 	/**
