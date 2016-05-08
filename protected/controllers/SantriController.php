@@ -40,6 +40,9 @@ class SantriController extends Controller
                 
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
                 'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh', 'excel'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh', 'excel'),
+                //'deniedCallback' => array($this,'gotoLogin'),             
+                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isAdmin();}
