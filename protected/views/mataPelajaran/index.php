@@ -49,7 +49,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'header' => 'Action',
 			'class'=>'CButtonColumn',
 			'template'=>'{update}{delete}',
-			'deleteConfirmation'=>"js:'Anda yakin?'",
+			'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus mata pelajaran ini?'",
 		),
     ),
 ));
