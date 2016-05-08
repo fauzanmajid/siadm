@@ -6,10 +6,6 @@
 	'Prestasis',
 );*/
 
-$this->menu=array(
-	array('label'=>'Buat Prestasi Santri', 'url'=>array('create')),
-	
-);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){

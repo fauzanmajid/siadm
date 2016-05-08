@@ -27,6 +27,8 @@ class PencatatanPelanggaranController extends Controller
 	public function accessRules()
 	{
 		return array(
+			
+			/*
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
@@ -38,13 +40,12 @@ class PencatatanPelanggaranController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('@'),
-<<<<<<< HEAD
+
 			),
 
-=======
-			),*/
->>>>>>> e7e30270b2b9733345d5010c93d51a74689101a1
+			*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                //'deniedCallback'=> array($this,'gotoLogin'),
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -52,9 +53,13 @@ class PencatatanPelanggaranController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+				'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 		);
 	}
+
+
+	
 
 	/**
 	 * Displays a particular model.

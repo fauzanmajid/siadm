@@ -37,6 +37,13 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
+		/*
+		$error = Yii::app()->errorHandler->error;
+		if($error)
+			$this->render('error', array('error'=>$error));
+		else
+			throw new CHTTPException(404, 'Page not Found.');
+		*/
 		if($error=Yii::app()->errorHandler->error)
 		{
 			if(Yii::app()->request->isAjaxRequest)
@@ -44,6 +51,7 @@ class SiteController extends Controller
 			else
 				$this->render('error', $error);
 		}
+		
 	}
 
 	/**
