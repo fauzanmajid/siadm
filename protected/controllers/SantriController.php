@@ -39,6 +39,7 @@ class SantriController extends Controller
                 //'deniedCallback' => array($this,'gotoLogin'),
                 
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh', 'excel'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isAdmin();}
@@ -80,7 +81,7 @@ class SantriController extends Controller
 	public function actionCreate()
 	{
 		$model=new Santri;
-
+		$model->scenario = 'create';
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -96,9 +97,7 @@ class SantriController extends Controller
 			*/		
 			if($model->save())
 				{
-			
-
-
+		
 				$this->redirect(array('view','id'=>$model->nip));
 				}
 		}
@@ -116,7 +115,7 @@ class SantriController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$model->scenario = 'update';
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -248,4 +247,73 @@ class SantriController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+
+	public function actionUnduh()
+	{
+		$model = new Santri;
+		$model->scenario = 'unduh';
+
+		if(isset($_POST['Santri'])) {
+		
+			$tanggal_awal = $_POST['Santri']['tanggal_awal'];
+			$tanggal_akhir = $_POST['Santri']['tanggal_akhir'];
+			$jenjang = $_POST['Santri']['jenjang'];
+
+			$this->redirect(Yii::app()->createUrl('/santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));
+		}
+
+		$this->render('/unduh/index',array(
+			'model' => $model,
+		));
+	}
+
+	public function actionExcel($awal = null, $akhir = null, $jenjang = null){
+        
+        //Some data
+
+        $criteria = new CDbCriteria();
+        if ($awal != null){
+			$criteria->addCondition("timestamp >= :awal");
+			$criteria->params = array(':awal' => $awal);	
+		}
+
+		if ($akhir != null){
+			$criteria->addCondition("timestamp <= :akhir");	
+			$criteria->params = array(':akhir' => $akhir);
+		}
+		
+		if ($jenjang != null){
+			$criteria->addCondition("jenjang = :jenjang");	
+			$criteria->params = array(':jenjang' => $jenjang);
+		}
+		
+		$models = Santri::model()->findAll($criteria);
+		
+		foreach($models as $model) {
+		    $santri[$model->nip] = $model->attributes;
+		}
+
+        $report = new YiiReport(array('template'=> 'santri.xls'));
+        
+        $report->load(array(
+                array(
+                    'id' => 'judul',
+                    'data' => array(
+                        'name' => 'Data SANTRI POPNPES AL-LATHIFA MULIA'
+                    )
+                ),
+                array(
+                    'id'=>'kode',
+                    'repeat'=>true,
+                    'data'=>$santri,
+                    'minRows'=>2
+                ),
+            )
+        );
+        
+         echo $report->render('excel5', 'Students');
+        // echo $report->render('excel2007', 'Students');
+        // echo $report->render('pdf', 'daftar santri');
+        
+    }//actionExcel method end
 }
