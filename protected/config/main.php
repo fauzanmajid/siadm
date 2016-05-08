@@ -19,6 +19,10 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.vendors.phpexcel.PHPExcel',
+		'application.extensions.*',
+		'application.vendors.*',
+		'ext.yiireport.*',
 	),
 
 	'modules'=>array(

@@ -24,13 +24,8 @@
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
 		<br><p style='font-size: 75%'>Nomor Induk Santri</p>
 		<?php
-			$dropDownSantri = CHtml::listData(Santri::model()->findAll(), 'nip', 'nip');
-			$coba = CHtml::listData(Santri::model()->findAll(), 'nip','nip');
-			
-			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);
-		  	
-
-		      
+			$dropDownSantri = CHtml::listData(Santri::model()->findAll(),'nip','concatened');
+			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);			      
 		?>
 
 		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>

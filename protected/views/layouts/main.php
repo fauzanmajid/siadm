@@ -35,28 +35,30 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
-			echo 'Jabatan : ';
-		    if (UserWeb::instance()->isAdmin()) {
-		        echo 'Administrator';
-		    }
-		    elseif (UserWeb::instance()->isKurikulum()) {
-		     	echo '(Kurikulum)';
-		    }
-		    elseif (UserWeb::instance()->isGuru()) {
-		      	echo '(Guru)';
-		    }
-		    elseif (UserWeb::instance()->isKesiswaan()) {
-		     	echo '(Kesiswaan)';
-		    }
-		    elseif (UserWeb::instance()->isDewanPembina()) {
-		     	echo '(Dewan Pembina)';
-		    } 
-		    elseif (UserWeb::instance()->isBendahara()) {
-		    	echo '(Bendahara)';
-		    }
-		    else {
-		        echo 'User';
-	    	}
+
+
+		echo 'Jabatan : ';
+	    if (UserWeb::instance()->isAdmin()) {
+	        echo 'Administrator';
+	    }
+	    elseif (UserWeb::instance()->isKurikulum()) {
+	     	echo 'Kurikulum';
+	    }
+	    elseif (UserWeb::instance()->isGuru()) {
+	      	echo 'Guru';
+	    }
+	    elseif (UserWeb::instance()->isKesiswaan()) {
+	     	echo 'Kesiswaan';
+	    }
+	    elseif (UserWeb::instance()->isDewanPembina()) {
+	     	echo 'Dewan Pembina';
+	    } 
+	    elseif (UserWeb::instance()->isBendahara()) {
+	    	echo 'Bendahara';
+	    }
+	    else {
+	        echo 'Pengguna';
+    	}
     	?>
     <!-- End Of Role Area -->
 		</div>	
@@ -75,20 +77,45 @@
 			'items'=>array(
 				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Kelas', 'url'=>array('/Kelas'),'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
 					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
+					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh')),
 				  	),
 						'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 'visible'=>UserWeb::instance()->isKesiswaan()),
-				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
+						'items'=>array(
+					  	array('label'=>'Buat Prestasi','url'=>array('/Prestasi/create')),
+					  	),
+						'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 
+					'items'=>array(
+					  	array('label'=>'Buat Pelanggaran','url'=>array('/PencatatanPelanggaran/create')),
+					  	array('label'=>'Atur Pelanggaran','url'=>array('/PencatatanPelanggaran/admin')),
+					  	
+					  	),
+
+					'visible'=>UserWeb::instance()->isKesiswaan()),
 
 				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+<<<<<<< HEAD
 				array('label'=>'Data Santri', 'url'=>array('/Santri/index'), 'visible'=>UserWeb::instance()->isKesiswaan())
+=======
+				
+				array('label'=>'Keuangan ',  'url'=>array(''),
+						'items'=>array(
+					  	array('label'=>'Laporan Pemasukan','url'=>array('/transaksiPemasukan')),
+					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
+					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
+				  	),
+						'visible'=>UserWeb::instance()->isBendahara()),
+
+>>>>>>> master
 			),
 		)); ?>
 	</div><!-- mainmenu -->

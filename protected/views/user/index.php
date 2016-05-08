@@ -6,11 +6,17 @@
 /*$this->breadcrumbs=array(
 	'Pengguna',
 );*/
-
+/*
 $this->menu=array(
+<<<<<<< HEAD
 	//array('label'=>'Buat Pengguna', 'url'=>array('create')),
 	//array('label'=>'Atur Pengguna', 'url'=>array('admin')),
 );
+=======
+	array('label'=>'Buat Pengguna', 'url'=>array('create')),
+	array('label'=>'Atur Pengguna', 'url'=>array('admin')),
+);*/
+>>>>>>> master
 ?>
 
 <h1>Daftar Pengguna</h1>

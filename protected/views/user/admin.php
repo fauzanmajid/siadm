@@ -6,12 +6,12 @@
 	'Users'=>array('index'),
 	'Manage',
 );*/
-
+/*
 $this->menu=array(
 	array('label'=>'Daftar Pengguna', 'url'=>array('index')),
 	array('label'=>'Buat Pengguna', 'url'=>array('create')),
 );
-
+*/
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Atur Pengguna</h1>
+<h1>Atur Pengguna <?php echo $model->username; ?> (<?php echo $model->role; ?>)</h1>
 
 <!-- <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

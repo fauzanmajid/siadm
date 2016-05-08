@@ -35,6 +35,9 @@
  */
 class Santri extends CActiveRecord
 {
+	public $tanggal_awal;
+	public $tanggal_akhir;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -54,6 +57,7 @@ class Santri extends CActiveRecord
 			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara', 'required'),
 			array('nip, nis, nik, nisn, anak_ke, jum_saudara', 'numerical', 'integerOnly'=>true),
 			array('nip, nis, nik, nisn, status, tempat_lahir', 'length', 'max'=>15),
+			/*array('tanggal_awal, tanggal_akhir, jenjang', 'required', 'on'=>'unduh'),*/
 			array('nama_lengkap', 'length', 'max'=>25),
 			array('nama_kecil', 'length', 'max'=>10),
 			array('alamat', 'length', 'max'=>50),
@@ -107,6 +111,8 @@ class Santri extends CActiveRecord
 			'jum_saudara' => 'Jumlah Saudara',
 			'timestamp' => 'timestamp',
 			'foto_url' => 'foto_url',
+			'tanggal_awal' => 'Tanggal Awal',
+			'tanggal_akhir' => 'Tanggal Akhir',
 			);
 	}
 
@@ -161,4 +167,9 @@ class Santri extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function getConcatened()
+    {
+	    return $this->nip.' ('.$this->nama_lengkap.')';
+    }
 }
