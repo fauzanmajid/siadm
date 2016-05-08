@@ -27,7 +27,7 @@ class PrestasiController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			/*array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -38,9 +38,16 @@ class PrestasiController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
+			),*/
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isKesiswaan();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+				'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 		);
 	}
@@ -60,9 +67,11 @@ class PrestasiController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id=null)
 	{
 		$model=new Prestasi;
+		if ($id!=null)
+			$model->nip_santri = $id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -123,8 +132,15 @@ class PrestasiController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Prestasi');
+
+		$model=new Prestasi('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Prestasi']))
+			$model->attributes=$_GET['Prestasi'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

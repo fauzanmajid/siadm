@@ -25,7 +25,7 @@
 
 	<div id="header">
 		<div id="logo">
-			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo') ?> 
+			<?= CHtml::image(Yii::app()->request->baseUrl . '/img/logo2.png', 'Logo'); ?> 
 			<?php echo CHtml::encode(Yii::app()->name); ?> 
 		</div>
 	</div>
@@ -35,47 +35,87 @@
 		<div id="anakan2">		
 	<!--Ini Role Area Ya! -->
 		<?php
-		echo 'Role : ';
+
+
+		echo 'Jabatan : ';
 	    if (UserWeb::instance()->isAdmin()) {
 	        echo 'Administrator';
 	    }
 	    elseif (UserWeb::instance()->isKurikulum()) {
 	     	echo 'Kurikulum';
-	     } 
+	    }
+	    elseif (UserWeb::instance()->isGuru()) {
+	      	echo 'Guru';
+	    }
+	    elseif (UserWeb::instance()->isKesiswaan()) {
+	     	echo 'Kesiswaan';
+	    }
+	    elseif (UserWeb::instance()->isDewanPembina()) {
+	     	echo 'Dewan Pembina';
+	    } 
+	    elseif (UserWeb::instance()->isBendahara()) {
+	    	echo 'Bendahara';
+	    }
 	    else {
-	        echo 'User';
+	        echo 'Pengguna';
     	}
-    ?>
+    	?>
     <!-- End Of Role Area -->
 		</div>	
 
 		<div id="anakan">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/login'), 'visible'=>!Yii::app()->user->isGuest)
-			),
+		<?php $this->widget('zii.widgets.CMenu',array('items'=>array(
+				array('label'=>'Keluar', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)),
+			
 		)); ?>
 
 		</div>
 	</div>
+	<div id="begron">
 	<div id="cssmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Halaman Muka', 'url'=>array('/site/index')),
-				array('label'=>'Pengguna', 'url'=>array('/User')),
-				array('label'=>'Data Santri', 'url'=>array('/Santri')),
-				array('label'=>'Prestasi', 'url'=>array('/prestasi')),
-				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran')),
-				array('label'=>'Perizinan', 'url'=>array('/Perizinan')),
-				array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran')),
-				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran')),
-				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit')),
-				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
+				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Kelas', 'url'=>array('/Kelas'),'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
+						'items'=>array(
+					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
+					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
+					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh')),
+				  	),
+						'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
+						'items'=>array(
+					  	array('label'=>'Buat Prestasi','url'=>array('/Prestasi/create')),
+					  	),
+						'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 
+					'items'=>array(
+					  	array('label'=>'Buat Pelanggaran','url'=>array('/PencatatanPelanggaran/create')),
+					  	array('label'=>'Atur Pelanggaran','url'=>array('/PencatatanPelanggaran/admin')),
+					  	
+					  	),
+
+					'visible'=>UserWeb::instance()->isKesiswaan()),
+
+				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				
+				array('label'=>'Keuangan ',  'url'=>array(''),
+						'items'=>array(
+					  	array('label'=>'Laporan Pemasukan','url'=>array('/transaksiPemasukan')),
+					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
+					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
+				  	),
+						'visible'=>UserWeb::instance()->isBendahara()),
+
 			),
 		)); ?>
 	</div><!-- mainmenu -->
-	
+	</div>
 	<!--<?php if(isset($this->breadcrumbs)):?> 
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
@@ -127,8 +167,8 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by Propensi A03.<br/>
-		All Rights Reserved.<br/>
+		Hak Cipta &copy; <?php echo date('Y'); ?> oleh Propensi A03.<br/>
+		Seluruh Hak Cipta Dilindungi Undang-Undang.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 

@@ -15,30 +15,40 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'No_pelanggaran'); ?>
-		<?php echo $form->textField($model,'No_pelanggaran'); ?>
-		<?php echo $form->error($model,'No_pelanggaran'); ?>
-	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
-		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'nip_santri'); ?>
+		<br><p style='font-size: 75%'>Nomor Induk Santri</p>
+		<?php
+			$dropDownSantri = CHtml::listData(Santri::model()->findAll(),'nip','concatened');
+			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);			      
+		?>
+
+		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>
 	</div>
 
-	<div class="row">
+
+
+
+	<!-- <div class="row">
 		<?php echo $form->labelEx($model,'id_kesiswaan'); ?>
 		<?php echo $form->textField($model,'id_kesiswaan'); ?>
 		<?php echo $form->error($model,'id_kesiswaan'); ?>
+	</div> -->
+
+<div class="row">
+		<?php echo $form->labelEx($model,'deskripsi'); ?>
+		<?php echo $form->textField($model,'deskripsi'); ?>
+		<?php echo $form->error($model,'deskripsi'); ?>
 	</div>
 
+
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -1,14 +1,13 @@
 <?php
 /* @var $this SantriController */
 /* @var $dataProvider CActiveDataProvider */
-
-
+/*
 $this->menu=array(
 	array('label'=>'Buat Data Santri', 'url'=>array('create')),
-	//array('label'=>'Atur Data Santri', 'url'=>array('admin')),
+//	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
+*/
 ?>
-
 
 <div class="search-form" >
 <?php $this->renderPartial('_search',array(
@@ -20,11 +19,8 @@ $this->menu=array(
 	'id'=>'santri-grid',
 	'dataProvider'=>$model->search(),
 	'columns'=>array(
-
-		'nis',
-	
+		'nip',
 		'nama_lengkap',
-	
 		'jenjang',
 		/*
 		'status',

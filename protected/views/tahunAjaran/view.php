@@ -2,21 +2,21 @@
 /* @var $this TahunAjaranController */
 /* @var $model TahunAjaran */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Tahun Ajarans'=>array('index'),
 	$model->id,
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'List TahunAjaran', 'url'=>array('index')),
-	array('label'=>'Create TahunAjaran', 'url'=>array('create')),
-	array('label'=>'Update TahunAjaran', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete TahunAjaran', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage TahunAjaran', 'url'=>array('admin')),
+	array('label'=>'Daftar Tahun Ajaran', 'url'=>array('index')),
+	array('label'=>'Buat Tahun Ajaran', 'url'=>array('create')),
+	array('label'=>'Atur Tahun Ajaran', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Hapus Tahun Ajaran', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Apakah anda yakin ingin menghapus tahun ajaran ini?')),
+	/*array('label'=>'Manage TahunAjaran', 'url'=>array('admin')),*/
 );
 ?>
 
-<h1>View TahunAjaran #<?php echo $model->id; ?></h1>
+<h1>Lihat Tahun Ajaran #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

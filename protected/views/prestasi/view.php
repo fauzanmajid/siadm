@@ -2,21 +2,21 @@
 /* @var $this PrestasiController */
 /* @var $model Prestasi */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Prestasis'=>array('index'),
 	$model->no_pencatatan,
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'List Prestasi', 'url'=>array('index')),
-	array('label'=>'Create Prestasi', 'url'=>array('create')),
-	array('label'=>'Update Prestasi', 'url'=>array('update', 'id'=>$model->no_pencatatan)),
-	array('label'=>'Delete Prestasi', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->no_pencatatan),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Prestasi', 'url'=>array('admin')),
+	array('label'=>'Catatan Prestasi Santri', 'url'=>array('index')),
+	array('label'=>'Buat Prestasi Santri', 'url'=>array('create')),
+	array('label'=>'Atur Prestasi Santri', 'url'=>array('update', 'id'=>$model->no_pencatatan)),
+	array('label'=>'Hapus Prestasi Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->no_pencatatan),'confirm'=>'Apakah anda yakin ingin menghapus prestasi santri ini?')),
+	
 );
 ?>
 
-<h1>View Prestasi #<?php echo $model->no_pencatatan; ?></h1>
+<h1>Lihat Prestasi Santri   #<?php echo $model->no_pencatatan; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

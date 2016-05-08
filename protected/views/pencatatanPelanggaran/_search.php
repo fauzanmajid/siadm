@@ -11,28 +11,23 @@
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-	</div>
+	
 
-	<div class="row">
-		<?php echo $form->label($model,'No_pelanggaran'); ?>
-		<?php echo $form->textField($model,'No_pelanggaran'); ?>
-	</div>
-
-	<div class="row">
+		<div class="row">
 		<?php echo $form->label($model,'nip_santri'); ?>
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_kesiswaan'); ?>
-		<?php echo $form->textField($model,'id_kesiswaan'); ?>
+		<?php echo $form->label($model,'nama_lengkap'); ?>
+		<?php echo $form->textField($model,'nama_lengkap'); ?>
 	</div>
 
+	
+
+
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Cari'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

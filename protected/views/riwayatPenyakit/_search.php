@@ -11,10 +11,7 @@
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'no_pencatatan'); ?>
-		<?php echo $form->textField($model,'no_pencatatan'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->label($model,'nip_santri'); ?>
@@ -22,17 +19,12 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'nama_penyakit'); ?>
-		<?php echo $form->textField($model,'nama_penyakit',array('size'=>25,'maxlength'=>25)); ?>
+		<?php echo $form->label($model,'nama_lengkap'); ?>
+		<?php echo $form->textField($model,'nama_lengkap',array('size'=>30,'maxlength'=>30)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'tanggal'); ?>
-		<?php echo $form->textField($model,'tanggal'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<div class="row buttons search-button">
+		<?php echo CHtml::submitButton('Cari'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

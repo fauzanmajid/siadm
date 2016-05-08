@@ -16,6 +16,8 @@
  */
 class PencatatanPelanggaran extends CActiveRecord
 {
+	public $nama_lengkap;
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -32,12 +34,13 @@ class PencatatanPelanggaran extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('No_pelanggaran, nip_santri, id_kesiswaan', 'required'),
-			array('No_pelanggaran, id_kesiswaan', 'numerical', 'integerOnly'=>true),
+			array('nip_santri, deskripsi', 'required'),
+			array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
+			array('nip_santri', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, No_pelanggaran, nip_santri, id_kesiswaan', 'safe', 'on'=>'search'),
+			array('id, deskripsi, nip_santri, id_kesiswaan', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +53,6 @@ class PencatatanPelanggaran extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idKesiswaan' => array(self::BELONGS_TO, 'User', 'id_kesiswaan'),
-			'noPelanggaran' => array(self::BELONGS_TO, 'Pelanggaran', 'No_pelanggaran'),
 			'nipSantri' => array(self::BELONGS_TO, 'Santri', 'nip_santri'),
 		);
 	}
@@ -62,9 +64,12 @@ class PencatatanPelanggaran extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'No_pelanggaran' => 'No Pelanggaran',
-			'nip_santri' => 'Nip Santri',
-			'id_kesiswaan' => 'Id Kesiswaan',
+			'deskripsi' => 'Deskripsi',
+			'nip_santri' => 'NIP',
+			'id_kesiswaan' => 'ID Kesiswaan',
+			'deskripsi' => 'deskripsi',
+			'nama_lengkap' => 'Nama Santri',
+				
 		);
 	}
 
@@ -87,9 +92,10 @@ class PencatatanPelanggaran extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('No_pelanggaran',$this->No_pelanggaran);
+		$criteria->compare('deskripsi',$this->deskripsi);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
+		
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -105,5 +111,13 @@ class PencatatanPelanggaran extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function beforeSave() {
+	    if ($this->isNewRecord) {
+	        $this->id_kesiswaan = UserWeb::instance()->ID;
+	    }
+	 
+	    return parent::beforeSave();
 	}
 }

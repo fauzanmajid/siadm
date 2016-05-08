@@ -15,9 +15,28 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
+	<!--
+	<div class="row">
+		<?php echo $form->labelEx($model,'nip_santri'); ?>
+		<?php echo $form->textField($model,'nip_santri',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'nip_santri'); ?>
+	</div>
+	-->
+	<div class="row">
+		<?php echo $form->labelEx($model,'nip_santri'); ?>
+		<br><p style='font-size: 75%'>Nomor Induk Pesantren</p>
+		<?php
+			$dropDownSantri = CHtml::listData(Santri::model()->findAll(),'nip','concatened');
+			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);			      
+		?>
+
+		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>
+	</div>
+
+
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'deskripsi'); ?>
@@ -27,24 +46,34 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenis'); ?>
-		<?php echo $form->textField($model,'jenis',array('size'=>25,'maxlength'=>25)); ?>
+		<?php echo $form->dropDownList($model,'jenis',array('Olahraga'=>'Olahraga','Akademik'=>'Akademik','Kesenian'=>'Kesenian')); ?>
 		<?php echo $form->error($model,'jenis'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tanggal'); ?>
-		<?php echo $form->textField($model,'tanggal'); ?>
+		<?php
+	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+	            'model' => $model,
+	            'attribute' => 'tanggal',
+	            'options' => array(
+	                'showAnim' => 'fadeIn',
+	                'dateFormat' => 'yy-mm-dd',
+	                'changeMonth' => true,
+	                'changeYear' => true,
+	                'yearRange' => '-200:+0',
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	        ));
+        ?>
 		<?php echo $form->error($model,'tanggal'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nip_santri'); ?>
-		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'nip_santri'); ?>
-	</div>
+	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

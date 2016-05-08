@@ -2,17 +2,17 @@
 /* @var $this PerizinanController */
 /* @var $model Perizinan */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Perizinans'=>array('index'),
 	'Create',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'List Perizinan', 'url'=>array('index')),
-	array('label'=>'Manage Perizinan', 'url'=>array('admin')),
+	array('label'=>'Daftar Perizinan Santri', 'url'=>array('index')),
+	
 );
 ?>
 
-<h1>Create Perizinan</h1>
+<h1>Buat Perizinan Santri</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
