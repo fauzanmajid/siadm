@@ -62,7 +62,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'jenjang'); ?>
+		<?php echo $form->labelEx($model,'Jenjang Pendidikan'); ?>
 		<?php echo $form->dropDownList($model,'jenjang',array('SMP'=>'SMP', 'SMK'=>'SMK')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
