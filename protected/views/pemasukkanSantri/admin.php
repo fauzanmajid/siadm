@@ -1,15 +1,15 @@
 <?php
-/* @var $this KelasController */
-/* @var $model Kelas */
+/* @var $this PemasukkanSantriController */
+/* @var $model PemasukkanSantri */
 
 $this->breadcrumbs=array(
-	'Kelas'=>array('index'),
-	'Sunting',
+	'Pemasukkan Santris'=>array('index'),
+	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'Daftar Kelas', 'url'=>array('index')),
-	array('label'=>'Buat Kelas', 'url'=>array('create')),
+	array('label'=>'List PemasukkanSantri', 'url'=>array('index')),
+	array('label'=>'Create PemasukkanSantri', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#kelas-grid').yiiGridView('update', {
+	$('#pemasukkan-santri-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,8 +26,12 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Sunting Kelas</h1>
+<h1>Manage Pemasukkan Santris</h1>
 
+<p>
+You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+</p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -37,13 +41,15 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'kelas-grid',
+	'id'=>'pemasukkan-santri-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'nama',
-		'jenjang',
+		'kode',
+		'id_bendahara',
+		'nip_santri',
+		'nominal',
+		'timestamp',
 		array(
 			'class'=>'CButtonColumn',
 		),

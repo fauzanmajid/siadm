@@ -1,18 +1,18 @@
 <?php
-/* @var $this TransaksiPengeluaranController */
+/* @var $this PemasukkanBosController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Pengeluaran',
+	'Pemasukkan Boses',
 );
 
 $this->menu=array(
-	array('label'=>'Buat Pengeluaran', 'url'=>array('create')),
-	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
+	array('label'=>'Create PemasukkanBos', 'url'=>array('create')),
+	array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Pengeluaran</h1>
+<h1>Pemasukkan Boses</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

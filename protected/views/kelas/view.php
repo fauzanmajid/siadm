@@ -3,20 +3,20 @@
 /* @var $model Kelas */
 
 $this->breadcrumbs=array(
-	'Kelases'=>array('index'),
+	'Kelas'=>array('index'),
 	$model->id,
 );
 
 $this->menu=array(
-	array('label'=>'List Kelas', 'url'=>array('index')),
-	array('label'=>'Create Kelas', 'url'=>array('create')),
-	array('label'=>'Update Kelas', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Kelas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Kelas', 'url'=>array('admin')),
+	array('label'=>'Daftar Kelas', 'url'=>array('index')),
+	array('label'=>'Buat Kelas', 'url'=>array('create')),
+	array('label'=>'Sunting Kelas', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Hapus Kelas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Kelola Kelas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Kelas #<?php echo $model->id; ?></h1>
+<h1>Lihat Kelas <?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
