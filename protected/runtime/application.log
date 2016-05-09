@@ -1470,3 +1470,69 @@ in C:\xampp\htdocs\siadm\protected\views\prestasi\view.php (19)
 in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (63)
 in C:\xampp\htdocs\siadm\index.php (13)
 >>>>>>> hakim
+2016/05/09 05:26:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "LaporanTotal".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('LaporanTotal')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/LaporanTotal
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran/create
+---
+2016/05/09 05:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in C:\xampp\htdocs\yii\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(270): CController->missingAction('gii')
+#1 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('gii')
+#2 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/gii')
+#3 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/siadm/index.php/site/gii
+---
+2016/05/09 05:33:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'siadmdb.pemasuka' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `pemasuka`.
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/09 05:44:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "transaksiPemasukan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPemasu...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/transaksiPemasukan
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 05:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "transaksiPemasukan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPemasu...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/transaksiPemasukan
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 06:45:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "LaporanTotal".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('LaporanTotal')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/LaporanTotal
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanDonatur/create
+---
+2016/05/09 06:46:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "LaporanTotal".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('LaporanTotal')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/LaporanTotal
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanDonatur/create
+---
+2016/05/09 06:46:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "LaporanTotal".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('LaporanTotal')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/LaporanTotal
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanDonatur/create
+---

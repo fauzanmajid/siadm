@@ -106,7 +106,12 @@
 				
 				array('label'=>'Keuangan ',  'url'=>array(''),
 						'items'=>array(
-					  	array('label'=>'Laporan Pemasukan','url'=>array('/transaksiPemasukan')),
+					  	array('label'=>'Laporan Pemasukan','url'=>array(''),
+					  		'items'=>array(
+						  	array('label'=>'Pemasukan Bos','url'=>array('/PemasukkanBos')),
+						  	array('label'=>'Pemasukan Donatur','url'=>array('/PemasukkanDonatur')),
+						  	array('label'=>'Pemasukan Santri','url'=>array('/PemasukkanSantri')),
+						  	)),
 					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
 					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
 				  	),
