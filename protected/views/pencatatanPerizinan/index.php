@@ -25,7 +25,10 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
+
 <div class='search-result' style="display:none">
+
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'perizinan-grid',
 		'dataProvider'=>$model->search(),
@@ -49,5 +52,7 @@ $('.search-form form').submit(function(){
 				'deleteConfirmation'=>"js:'Anda yakin?'",
 			),
 		),
-	)); ?>
+	
+
+)); ?>
 </div>

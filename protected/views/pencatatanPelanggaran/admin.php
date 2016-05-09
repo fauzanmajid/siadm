@@ -6,12 +6,12 @@
 	'Pencatatan Pelanggarans'=>array('index'),
 	'Manage',
 );*/
-
+/*
 $this->menu=array(
 	array('label'=>'Daftar Pelanggaran Santri', 'url'=>array('index')),
 	array('label'=>'Buat Pelanggaran Santri', 'url'=>array('create')),
 );
-
+*/
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();

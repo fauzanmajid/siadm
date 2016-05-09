@@ -167,4 +167,9 @@ class Santri extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function getConcatened()
+    {
+	    return $this->nip.' ('.$this->nama_lengkap.')';
+    }
 }

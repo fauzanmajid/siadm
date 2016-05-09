@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2016/05/05 04:48:41 [error] [php] Cannot use a scalar value as an array (C:\xampp\htdocs\yii\zii\widgets\CMenu.php:273)
 Stack trace:
 #0 C:\xampp\htdocs\yii\web\CBaseController.php(180): SiteController->createWidget()
@@ -1109,3 +1110,5 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/unduhNilai
 HTTP_REFERER=http://localhost/siadm/index.php/site/index
 ---
+=======
+>>>>>>> 215d39fa7dc4724fb270c5fe70e48a7187742c7a

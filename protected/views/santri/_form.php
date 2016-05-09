@@ -21,26 +21,26 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nip'); ?><br><p style="font-size: 75%;">Nomor Induk Pesantren</p>
-		<?php echo $form->textField($model,'nip',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'nip',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nip'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nis'); ?><br><p style="font-size: 75%;">Nomor Induk Santri</p>
-		<?php echo $form->textField($model,'nis',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'nis',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nis'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nik'); ?>
 		<br><p style="font-size: 75%;">Nomor Induk Kependudukan</p>
-		<?php echo $form->textField($model,'nik',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'nik',array('size'=>16,'maxlength'=>16)); ?>
 		<?php echo $form->error($model,'nik'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nisn'); ?><br><p style="font-size: 75%;">Nomor Induk Siswa Nasional</p>
-		<?php echo $form->textField($model,'nisn',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'nisn',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nisn'); ?>
 	</div>
 
@@ -64,7 +64,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'alamat'); ?>
-		<?php echo $form->textField($model,'alamat',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'alamat',array('size'=>50,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'alamat'); ?>
 	</div>
 
