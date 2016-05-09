@@ -18,9 +18,7 @@
 
 <div id="lower">
 
-    <?php echo $form->checkBox($model, 'rememberMe'); ?>
-    <?php echo $form->label($model, 'rememberMe'); ?>
-    <?php echo $form->error($model, 'rememberMe'); ?>
+    
 
     <input type="submit" name="yt0" value="Masuk" />
        

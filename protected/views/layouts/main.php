@@ -82,7 +82,7 @@
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
 					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
-					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh')),
+					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh/index')),
 				  	),
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
@@ -103,9 +103,14 @@
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
-				
+
+							
 				array('label'=>'Keuangan ',  'url'=>array(''),
 						'items'=>array(
+
+					  	array('label'=>'Pemasukan','url'=>array('/transaksiPemasukan')),
+					  	array('label'=>'Pengeluaran','url'=>array('/transaksiPengeluaran')),
+
 					  	array('label'=>'Laporan Pemasukan','url'=>array(''),
 					  		'items'=>array(
 						  	array('label'=>'Pemasukan Bos','url'=>array('/PemasukkanBos')),
@@ -113,50 +118,19 @@
 						  	array('label'=>'Pemasukan Santri','url'=>array('/PemasukkanSantri')),
 						  	)),
 					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
+
 					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
 				  	),
 						'visible'=>UserWeb::instance()->isBendahara()),
 
 			),
 		)); ?>
-	</div><!-- mainmenu -->
 	</div>
-	<!--<?php if(isset($this->breadcrumbs)):?> 
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs 
-	<?php endif?>-->
+	</div>
+	
 	
 
-	<!--<div id="newbar"> 
-		<div id='cssmenu'>
-<ul>
 
-   <li><a href='/site/index'><span>Home</span></a></li>
-   <li class='active has-sub'><a href='#'><span>Products</span></a>
-      <ul>
-         <li class='has-sub'><a href='#'><span>Product 1</span></a>
-            <ul>
-               <li><a href='#'><span>Sub Product</span></a></li>
-               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-            </ul>
-         </li>
-         <li class='has-sub'><a href='#'><span>Product 2</span></a>
-            <ul>
-               <li><a href='#'><span>Sub Product</span></a></li>
-               <li class='last'><a href='#'><span>Sub Product</span></a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   <li><a href='#'><span>About</span></a></li>
-   <li class='last'><a href='#'><span>Contact</span></a></li>
-</ul>
-</div>
-
-
-
-	</div>-->
 
 	<div class="scroll" id="newbar2">
 	<?php if(isset($this->breadcrumbs)):?>

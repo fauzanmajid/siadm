@@ -1,15 +1,15 @@
 <?php
-/* @var $this KelasController */
-/* @var $model Kelas */
+/* @var $this Enrollment_PelajaranController */
+/* @var $model Enrollment_Pelajaran */
 
 $this->breadcrumbs=array(
-	'Kelas'=>array('index'),
+	'Enrollment  Pelajarans'=>array('index'),
 	'Sunting',
 );
 
 $this->menu=array(
-	array('label'=>'Daftar Kelas', 'url'=>array('index')),
-	array('label'=>'Buat Kelas', 'url'=>array('create')),
+	array('label'=>'Daftar Enrollment Pelajaran', 'url'=>array('index')),
+	array('label'=>'Buat Enrollment Pelajaran', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#kelas-grid').yiiGridView('update', {
+	$('#enrollment--pelajaran-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Sunting Kelas</h1>
+<h1>Sunting Enrollment  Pelajaran</h1>
 
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
@@ -37,13 +37,13 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'kelas-grid',
+	'id'=>'enrollment--pelajaran-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'nama',
-		'jenjang',
+		'id_kelas',
+		'id_matpel',
 		array(
 			'class'=>'CButtonColumn',
 		),

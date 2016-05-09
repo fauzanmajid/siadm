@@ -1,32 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "enrollment_pelajaran".
  *
- * The followings are the available columns in table 'user':
+ * The followings are the available columns in table 'enrollment_pelajaran':
  * @property integer $id
- * @property string $username
- * @property string $password
- * @property string $role
+ * @property integer $id_kelas
+ * @property integer $id_matpel
  *
  * The followings are the available model relations:
- * @property EnrolllmentGuru[] $enrolllmentGurus
- * @property PemasukkanBos[] $pemasukkanBoses
- * @property PemasukkanDonatur[] $pemasukkanDonaturs
- * @property PemasukkanSantri[] $pemasukkanSantris
- * @property PencatatanPelanggaran[] $pencatatanPelanggarans
- * @property PencatatanPerizinan[] $pencatatanPerizinans
- * @property TransaksiPengeluaran[] $transaksiPengeluarans
+ * @property Kelas $idKelas
+ * @property MataPelajaran $idMatpel
  */
-class User extends CActiveRecord
+class Enrollment_Pelajaran extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
-	public $repeat_password;
 	public function tableName()
 	{
-		return 'user';
+		return 'enrollment_pelajaran';
 	}
 
 	/**
@@ -37,15 +30,11 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-
-			array('username, password, role, repeat_password', 'required'),
-			array('username, role', 'length', 'max'=>15),
-			array('password', 'length', 'max'=>25),
-			array('username', 'unique', 'className'=>'User'),
+			array('id_kelas, id_matpel', 'required'),
+			array('id_kelas, id_matpel', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, role', 'safe', 'on'=>'search'),
-			array('repeat_password', 'compare', 'compareAttribute' => 'password', 'on' => 'insert'),
+			array('id, id_kelas, id_matpel', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,14 +46,8 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-
-			'enrolllmentGurus' => array(self::HAS_MANY, 'EnrolllmentGuru', 'id_guru'),
-			'pemasukkanBoses' => array(self::HAS_MANY, 'PemasukkanBos', 'id_bendahara'),
-			'pemasukkanDonaturs' => array(self::HAS_MANY, 'PemasukkanDonatur', 'id_bendahara'),
-			'pemasukkanSantris' => array(self::HAS_MANY, 'PemasukkanSantri', 'id_bendahara'),
-			'pencatatanPelanggarans' => array(self::HAS_MANY, 'PencatatanPelanggaran', 'id_kesiswaan'),
-			'pencatatanPerizinans' => array(self::HAS_MANY, 'PencatatanPerizinan', 'id_kesiswaan'),
-			'transaksiPengeluarans' => array(self::HAS_MANY, 'TransaksiPengeluaran', 'id_bendahara'),
+			'idKelas' => array(self::BELONGS_TO, 'Kelas', 'id_kelas'),
+			'idMatpel' => array(self::BELONGS_TO, 'MataPelajaran', 'id_matpel'),
 		);
 	}
 
@@ -75,10 +58,8 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Nama Pengguna',
-			'password' => 'Kata Sandi',
-			'role' => 'Jabatan',
-			'repeat_password' => 'Ulang Kata Sandi',
+			'id_kelas' => 'Id Kelas',
+			'id_matpel' => 'Id Matpel',
 		);
 	}
 
@@ -101,9 +82,8 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('role',$this->role,true);
+		$criteria->compare('id_kelas',$this->id_kelas);
+		$criteria->compare('id_matpel',$this->id_matpel);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -114,7 +94,7 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Enrollment_Pelajaran the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
