@@ -1,11 +1,12 @@
 <?php
 /* @var $this SantriController */
 /* @var $dataProvider CActiveDataProvider */
-
+/*
 $this->menu=array(
 	array('label'=>'Buat Data Santri', 'url'=>array('create')),
 //	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
+*/
 ?>
 
 <div class="search-form" >

@@ -56,6 +56,7 @@ class Prestasi extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'nipSantri' => array(self::BELONGS_TO, 'Santri', 'nip_santri'),
+			
 		);
 	}
 
