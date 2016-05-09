@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-Halooo
-=======
+
 <?php
 /* @var $this UserController */
 /* @var $dataProvider CActiveDataProvider */
@@ -74,4 +72,3 @@ Halooo
 	</div>
 </div>
 <?php $this->endWidget(); ?>
->>>>>>> master
