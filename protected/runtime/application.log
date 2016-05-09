@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+2016/04/10 16:36:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`riwayat_penyakit`, CONSTRAINT `fk_riwayatpenyakit_santri` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `riwayat_penyakit` (`nip_santri`, `nama_penyakit`, `tanggal`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\RiwayatPenyakitController.php (73)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/10 16:36:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`riwayat_penyakit`, CONSTRAINT `fk_riwayatpenyakit_santri` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `riwayat_penyakit` (`nip_santri`, `nama_penyakit`, `tanggal`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\RiwayatPenyakitController.php(73): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): RiwayatPenyakitController->actionCreate()
+=======
 =======
 2016/04/20 10:08:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\siadm\protected\controllers\MataPelajaranController.php:165
 Stack trace:
@@ -6,6 +18,7 @@ Stack trace:
 #1 [internal function]: MataPelajaranController->actionView('975')
 #2 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(MataPelajaranController), Array)
 #3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(MataPelajaranController), Object(ReflectionMethod), Array)
+>>>>>>> master
 #4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
 #5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
 #6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
@@ -14,6 +27,221 @@ Stack trace:
 #9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
 #10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
 #11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+<<<<<<< HEAD
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('riwayatPenyakit...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php?r=riwayatPenyakit/create
+HTTP_REFERER=http://localhost/siadm/index.php?r=riwayatPenyakit/create
+---
+2016/04/10 14:01:17 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.Nama Pengguna" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CComponent->__get('Nama Pengguna')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(LoginForm), 'Nama Pengguna')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(LoginForm), 'Nama Pengguna', Array)
+#3 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(LoginForm), 'Nama Pengguna', Array)
+#4 C:\xampp\htdocs\siadm\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'Nama Pengguna')
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('login', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#11 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#16 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/siadm/index.php?r=site/login
+---
+2016/04/11 01:39:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('login')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/login
+---
+2016/04/11 01:39:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "UserLogin".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('UserLogin')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/UserLogin
+---
+2016/04/11 01:40:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('login')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/login
+---
+2016/04/11 01:40:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "loginform".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('loginform')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/loginform
+---
+2016/04/11 01:48:15 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in C:\xampp\htdocs\siadm\protected\controllers\SiteController.php (93)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 01:48:15 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.namapengguna" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CRequiredValidator.php(58): CComponent->__get('namapengguna')
+#1 C:\xampp\htdocs\yii\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'namapengguna')
+#2 C:\xampp\htdocs\yii\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(95): CModel->validate()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/site/login
+HTTP_REFERER=http://localhost/siadm/index.php/site/login
+---
+2016/04/11 01:48:19 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in C:\xampp\htdocs\siadm\protected\controllers\SiteController.php (93)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 01:48:19 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.namapengguna" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CRequiredValidator.php(58): CComponent->__get('namapengguna')
+#1 C:\xampp\htdocs\yii\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'namapengguna')
+#2 C:\xampp\htdocs\yii\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(95): CModel->validate()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/site/login
+HTTP_REFERER=http://localhost/siadm/index.php/site/login
+---
+2016/04/11 01:48:25 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in C:\xampp\htdocs\siadm\protected\controllers\SiteController.php (93)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 01:48:25 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.namapengguna" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CRequiredValidator.php(58): CComponent->__get('namapengguna')
+#1 C:\xampp\htdocs\yii\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'namapengguna')
+#2 C:\xampp\htdocs\yii\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(95): CModel->validate()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/site/login
+HTTP_REFERER=http://localhost/siadm/index.php/site/login
+---
+2016/04/11 01:49:23 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in C:\xampp\htdocs\siadm\protected\controllers\SiteController.php (93)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 01:49:23 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.namapengguna" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CRequiredValidator.php(58): CComponent->__get('namapengguna')
+#1 C:\xampp\htdocs\yii\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'namapengguna')
+#2 C:\xampp\htdocs\yii\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(95): CModel->validate()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/site/login
+HTTP_REFERER=http://localhost/siadm/index.php/site/login
+---
+2016/04/11 01:49:31 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in C:\xampp\htdocs\siadm\protected\controllers\SiteController.php (93)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 01:49:31 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.namapengguna" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CRequiredValidator.php(58): CComponent->__get('namapengguna')
+#1 C:\xampp\htdocs\yii\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'namapengguna')
+#2 C:\xampp\htdocs\yii\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(95): CModel->validate()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/site/login
+HTTP_REFERER=http://localhost/siadm/index.php/site/login
+---
+2016/04/11 03:30:43 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in C:\xampp\htdocs\siadm\protected\controllers\SiteController.php (93)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 03:30:43 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.namapengguna" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CRequiredValidator.php(58): CComponent->__get('namapengguna')
+#1 C:\xampp\htdocs\yii\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'namapengguna')
+#2 C:\xampp\htdocs\yii\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(95): CModel->validate()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/site/login
+HTTP_REFERER=http://localhost/siadm/index.php/site/login
+---
+2016/04/11 03:31:05 [warning] [application] Failed to set unsafe attribute "username" of "LoginForm".
+in C:\xampp\htdocs\siadm\protected\controllers\SiteController.php (93)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/11 03:31:05 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.namapengguna" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\validators\CRequiredValidator.php(58): CComponent->__get('namapengguna')
+#1 C:\xampp\htdocs\yii\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(LoginForm), 'namapengguna')
+#2 C:\xampp\htdocs\yii\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SiteController.php(95): CModel->validate()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('login')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/site/login
+HTTP_REFERER=http://localhost/siadm/index.php/site/login
+---
+=======
+>>>>>>> master
+2016/04/18 06:22:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+=======
 #12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('view')
 #13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('MataPelajaran/v...')
 #14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
@@ -39,6 +267,7 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/PencatatanPerizinan
 ---
 2016/04/20 10:23:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+>>>>>>> master
 Stack trace:
 #0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
 #1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
@@ -47,6 +276,17 @@ Stack trace:
 #4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
 #5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
 #6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+<<<<<<< HEAD
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/delete')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/santri/delete/?ajax=santri-grid
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/index
+---
+2016/04/18 06:22:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+=======
 #7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
 #8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('MataPelajaran')
 #9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
@@ -56,6 +296,7 @@ REQUEST_URI=/siadm/index.php/MataPelajaran
 HTTP_REFERER=http://localhost/siadm/index.php/mataPelajaran/admin
 ---
 2016/04/20 10:24:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+>>>>>>> master
 Stack trace:
 #0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
 #1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
@@ -64,6 +305,17 @@ Stack trace:
 #4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
 #5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
 #6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+<<<<<<< HEAD
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/create')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/santri/create
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/index
+---
+2016/04/18 06:23:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+=======
 #7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
 #8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('MataPelajaran')
 #9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
@@ -72,6 +324,7 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/MataPelajaran
 ---
 2016/04/20 10:28:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+>>>>>>> master
 Stack trace:
 #0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
 #1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
@@ -80,6 +333,136 @@ Stack trace:
 #4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
 #5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
 #6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+<<<<<<< HEAD
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/create')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/santri/create
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/index
+---
+2016/04/18 06:23:12 [error] [php] Undefined variable: model (C:\xampp\htdocs\siadm\protected\views\pencatatanPelanggaran\index.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(869): PencatatanPelanggaranController->renderFile()
+#1 C:\xampp\htdocs\yii\web\CController.php(782): PencatatanPelanggaranController->renderPartial()
+#2 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php(134): PencatatanPelanggaranController->render()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPelanggaranController->actionIndex()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): PencatatanPelanggaranController->runAction()
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): PencatatanPelanggaranController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): PencatatanPelanggaranController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): PencatatanPelanggaranController->run()
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(13): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/PencatatanPelanggaran
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPelanggaran\index.php (18)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (134)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/18 06:23:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Perizinan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Perizinan')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/Perizinan
+HTTP_REFERER=http://localhost/siadm/index.php/prestasi
+---
+2016/04/18 06:23:21 [error] [php] include(Pelanggaran.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(165): model()
+#2 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php(131): CActiveDataProvider->__construct()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PelanggaranController->actionIndex()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): PelanggaranController->runAction()
+#7 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): PelanggaranController->filterAccessControl()
+#10 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\web\CController.php(265): PelanggaranController->runActionWithFilters()
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(282): PelanggaranController->run()
+#14 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\siadm\index.php(13): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/pelanggaran
+in C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php (131)
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/04/18 06:26:07 [error] [exception.CException] exception 'CException' with message 'Property "PencatatanPerizinan.deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(PencatatanPerizinan), 'deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(PencatatanPerizinan), 'deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(PencatatanPerizinan), 'deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\_search.php(26): CActiveForm->textField(Object(PencatatanPerizinan), 'deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\index.php(15): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('index', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(134): CController->render('index', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionIndex()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan
+HTTP_REFERER=http://localhost/siadm/index.php/RiwayatPenyakit
+---
+2016/04/18 06:26:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Perizinan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Perizinan')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/Perizinan
+HTTP_REFERER=http://localhost/siadm/index.php/RiwayatPenyakit
+---
+2016/04/18 06:26:11 [error] [php] include(Pelanggaran.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\YiiBase.php:432)
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(165): model()
+#2 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php(131): CActiveDataProvider->__construct()
+#4 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PelanggaranController->actionIndex()
+#5 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): PelanggaranController->runAction()
+#7 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): PelanggaranController->filterAccessControl()
+#10 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\web\CController.php(265): PelanggaranController->runActionWithFilters()
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(282): PelanggaranController->run()
+#14 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\siadm\index.php(13): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/pelanggaran
+in C:\xampp\htdocs\siadm\protected\controllers\PelanggaranController.php (131)
+=======
+2016/04/20 07:22:39 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
+in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (136)
+=======
 #7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
 #8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('MataPelajaran')
 #9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
@@ -108,6 +491,7 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/MataPelajaran
 in C:\xampp\htdocs\siadm\protected\views\mataPelajaran\index.php (24)
 in C:\xampp\htdocs\siadm\protected\controllers\MataPelajaranController.php (143)
+>>>>>>> master
 in C:\xampp\htdocs\siadm\index.php (13)
 2016/04/20 10:31:29 [error] [php] Undefined variable: data (C:\xampp\htdocs\siadm\protected\views\mataPelajaran\index.php:24)
 Stack trace:
@@ -987,6 +1371,137 @@ in C:\xampp\htdocs\siadm\index.php (13)
 2016/05/04 18:46:16 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
 in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (139)
 in C:\xampp\htdocs\siadm\index.php (13)
+<<<<<<< HEAD
+2016/04/20 08:17:58 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "PencatatanPelanggaran".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (139)
+>>>>>>> master
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/05/02 16:49:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Santri/create')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/Santri/create
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/02 16:49:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Santri/create')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/Santri/create
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/02 16:56:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Santri/create')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/Santri/create
+---
+2016/05/02 16:56:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('Santri/create')
+#9 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/siadm/index.php/Santri/create
+HTTP_REFERER=http://localhost/siadm/index.php/Santri
+---
+2016/05/02 16:57:40 [error] [php] strtolower() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): SantriController->filterAccessControl()
+#2 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\web\CController.php(265): SantriController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii\web\CWebApplication.php(282): SantriController->run()
+#6 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\siadm\index.php(13): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/Santri/create
+in C:\xampp\htdocs\siadm\index.php (13)
+2016/05/02 17:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh
+---
+2016/05/02 17:21:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh
+---
+2016/05/02 17:21:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh
+---
+2016/05/02 17:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact.php".' in C:\xampp\htdocs\yii\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(270): CController->missingAction('contact.php')
+#1 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('contact.php')
+#2 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/contact.ph...')
+#3 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/siadm/index.php/site/contact.php
+---
+2016/05/02 17:23:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pages".' in C:\xampp\htdocs\yii\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(270): CController->missingAction('pages')
+#1 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('pages')
+#2 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/pages')
+#3 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/siadm/index.php/site/pages
+---
+2016/05/02 17:26:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+=======
 2016/05/04 18:46:17 [warning] [application] Failed to set unsafe attribute "nama_lengkap" of "Prestasi".
 in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (139)
 in C:\xampp\htdocs\siadm\index.php (13)
@@ -1110,6 +1625,7 @@ in C:\xampp\htdocs\siadm\protected\views\PencatatanPelanggaran\_form.php (27)
 in C:\xampp\htdocs\siadm\protected\views\PencatatanPelanggaran\create.php (18)
 in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (95)
 2016/05/04 20:16:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:182
+>>>>>>> master
 Stack trace:
 #0 C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(UserWeb), 'You are not aut...')
 #1 C:\xampp\htdocs\yii\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
@@ -1125,6 +1641,47 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/siadm/index.php/pelanggaran
 ---
+<<<<<<< HEAD
+2016/05/02 17:41:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\web\CController.php(1116): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('delete')
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/delete')
+#13 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/siadm/index.php/santri/delete/?ajax=santri-grid
+HTTP_REFERER=http://localhost/siadm/index.php/santri/
+---
+2016/05/02 17:41:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/update')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/santri/update/
+HTTP_REFERER=http://localhost/siadm/index.php/santri/
+---
+=======
 2016/05/04 20:29:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pencatatan_pelanggaran`, CONSTRAINT `fk_pp_santri` FOREIGN KEY (`nip_santri`) REFERENCES `santri` (`nip`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pencatatan_pelanggaran` (`nip_santri`, `deskripsi`, `id_kesiswaan`) VALUES (:yp0, :yp1, :yp2).
 in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPelanggaranController.php (89)
 in C:\xampp\htdocs\siadm\index.php (13)
@@ -1470,3 +2027,749 @@ in C:\xampp\htdocs\siadm\protected\views\prestasi\view.php (19)
 in C:\xampp\htdocs\siadm\protected\controllers\PrestasiController.php (63)
 in C:\xampp\htdocs\siadm\index.php (13)
 >>>>>>> hakim
+>>>>>>> master
+2016/05/08 18:47:04 [error] [php] strtolower() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): SantriController->filterAccessControl()
+#2 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\web\CController.php(265): SantriController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii\web\CWebApplication.php(282): SantriController->run()
+#6 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\siadm\index.php(33): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/Santri/unduh
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/08 18:49:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh
+---
+2016/05/08 19:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:02:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:03:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:03:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:03:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:03:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:03:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:03:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:03:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:04:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:04:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:04:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:04:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduh/index".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduh/index')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduh/index
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/08 19:04:51 [error] [php] strtolower() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii\web\auth\CAccessControlFilter.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(1144): CAccessControlFilter->setRules()
+#1 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): SantriController->filterAccessControl()
+#2 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#3 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\web\CController.php(265): SantriController->runActionWithFilters()
+#5 C:\xampp\htdocs\yii\web\CWebApplication.php(282): SantriController->run()
+#6 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\siadm\index.php(33): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/Santri/unduh/index
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/08 19:28:36 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/08 19:28:38 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_search.php(31): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(145): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionAdmin()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/admin
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/08 19:28:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "transaksiPemasukan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPemasu...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/transaksiPemasukan
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran/index
+---
+2016/05/09 03:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "enrollment_pelajaran".' in C:\xampp\htdocs\yii\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(270): CController->missingAction('enrollment_pela...')
+#1 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('enrollment_pela...')
+#2 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('site/enrollment...')
+#3 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/siadm/index.php/site/enrollment_pelajaran
+---
+2016/05/09 03:01:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "enrollment_santri".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('enrollment_sant...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/enrollment_santri
+---
+2016/05/09 03:07:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "enrolllment_pelajaran".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('enrolllment_pel...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/enrolllment_pelajaran
+---
+2016/05/09 03:56:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE ((timestamp >= :awal) AND (timestamp <= :akhir)) AND (jenjang = :jenjang).
+in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (282)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/09 03:56:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE ((timestamp >= :awal) AND (timestamp <= :akhir)) AND (jenjang = :jenjang)' in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(282): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: SantriController->actionExcel('2016-05-02', '2016-05-08', 'SMP')
+#5 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('excel')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/excel')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/santri/excel?awal=2016-05-02&akhir=2016-05-08&jenjang=SMP
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduh/index
+---
+2016/05/09 03:56:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE ((timestamp >= :awal) AND (timestamp <= :akhir)) AND (jenjang = :jenjang).
+in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (282)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/09 03:56:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE ((timestamp >= :awal) AND (timestamp <= :akhir)) AND (jenjang = :jenjang)' in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(282): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: SantriController->actionExcel('2016-05-02', '2016-05-08', 'SMP')
+#5 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('excel')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/excel')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/santri/excel?awal=2016-05-02&akhir=2016-05-08&jenjang=SMP
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduh/index
+---
+2016/05/09 04:55:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "transaksiPemasukan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPemasu...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/transaksiPemasukan
+HTTP_REFERER=http://localhost/siadm/index.php/site/index
+---
+2016/05/09 04:55:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "LaporanTotal".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('LaporanTotal')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/LaporanTotal
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 04:59:07 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 04:59:14 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_search.php(31): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(145): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionAdmin()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/admin
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 04:59:35 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 04:59:39 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_search.php(31): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(145): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionAdmin()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/admin
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 04:59:43 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 04:59:49 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 04:59:51 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_search.php(31): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\admin.php(40): CController->renderPartial('_search', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(145): CController->render('admin', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionAdmin()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('admin')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/admin
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 05:01:01 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 05:01:08 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 05:01:08 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 05:01:10 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/09 05:07:15 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.Deskripsi" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('Deskripsi')
+#1 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2729): CActiveRecord->__get('Deskripsi')
+#2 C:\xampp\htdocs\yii\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(TransaksiPengeluaran), 'Deskripsi')
+#3 C:\xampp\htdocs\yii\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#4 C:\xampp\htdocs\yii\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\_form.php(36): CActiveForm->textField(Object(TransaksiPengeluaran), 'Deskripsi', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\siadm\protected\views\transaksiPengeluaran\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(81): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#16 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#25 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#26 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#28 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
