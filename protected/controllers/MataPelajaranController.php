@@ -43,6 +43,7 @@ class MataPelajaranController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+				'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 		);
 	}
@@ -129,11 +130,22 @@ class MataPelajaranController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['MataPelajaran']))
 			$model->attributes=$_GET['MataPelajaran'];
+			
+		$data=new MataPelajaran('search');
+		$data->unsetAttributes();  // clear any default values
+		if(isset($_GET['MataPelajaran']))
+			$data->attributes=$_GET['MataPelajaran'];
+
 
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			'model'=>$model,
+
 		));
+		
+
+
+
 	}
 
 	/**

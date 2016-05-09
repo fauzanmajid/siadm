@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Transaksi Pengeluarans',
+	'Pengeluaran',
 );
 
 $this->menu=array(
-	array('label'=>'Create TransaksiPengeluaran', 'url'=>array('create')),
-	array('label'=>'Manage TransaksiPengeluaran', 'url'=>array('admin')),
+	array('label'=>'Buat Pengeluaran', 'url'=>array('create')),
+	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Transaksi Pengeluarans</h1>
+<h1>Pengeluaran</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

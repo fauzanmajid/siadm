@@ -5,13 +5,13 @@
 /*$this->breadcrumbs=array(
 	'Data Santri'=>array('index'),
 	'Atur Data Santri',
-);*/
+);
 
 $this->menu=array(
 	array('label'=>'Daftar Santri', 'url'=>array('index')),
 	array('label'=>'Buat Data Santri', 'url'=>array('create')),
 );
-
+*/
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
