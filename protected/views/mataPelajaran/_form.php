@@ -33,12 +33,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMK'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

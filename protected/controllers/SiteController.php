@@ -37,6 +37,13 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
+		/*
+		$error = Yii::app()->errorHandler->error;
+		if($error)
+			$this->render('error', array('error'=>$error));
+		else
+			throw new CHTTPException(404, 'Page not Found.');
+		*/
 		if($error=Yii::app()->errorHandler->error)
 		{
 			if(Yii::app()->request->isAjaxRequest)
@@ -44,6 +51,7 @@ class SiteController extends Controller
 			else
 				$this->render('error', $error);
 		}
+		
 	}
 
 	/**
@@ -111,4 +119,39 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	public function actionExcel(){
+        
+        //Some data
+        $models = Santri::model()->findAll();
+		$students = array();
+		
+		foreach($models as $model) {
+		    $students[$model->nip] = $model->attributes;
+		}
+
+        $report = new YiiReport(array('template'=> 'students.xls'));
+        
+        $report->load(array(
+                array(
+                    'id' => 'ong',
+                    'data' => array(
+                        'name' => 'Data SANTRI POPNPES AL-LATHIFA MULIA'
+                    )
+                ),
+                array(
+                    'id'=>'estu',
+                    'repeat'=>true,
+                    'data'=>$students,
+                    'minRows'=>5
+                )
+            )
+        );
+        
+         // echo $report->render('excel5', 'Students');
+        // echo $report->render('excel2007', 'Students');
+        echo $report->render('pdf', 'santri');
+        
+    }//actionExcel method end
+
 }

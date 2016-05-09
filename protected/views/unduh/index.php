@@ -19,14 +19,13 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 <div class="form">
-
-
+<?php echo $form->errorSummary($model); ?>
 	<div class="row">
 		<?php echo "Tanggal Awal"; ?>
         <?php
 	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 	            'model' => $model,
-	            'attribute' => 'timestamp',
+	            'attribute' => 'tanggal_awal',
 	            'options' => array(
 	                'showAnim' => 'fadeIn',
 	                'dateFormat' => 'yy-mm-dd',
@@ -38,7 +37,7 @@
 	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
 	        ));
         ?>
-        <?php echo $form->error($model, 'timestamp'); ?>
+        <?php echo $form->error($model, 'tanggal_awal'); ?>
 	</div>
 
 	<div class="row">
@@ -46,7 +45,7 @@
         <?php
 	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
 	            'model' => $model,
-	            'attribute' => 'timestamp',
+	            'attribute' => 'tanggal_akhir',
 	            'options' => array(
 	                'showAnim' => 'fadeIn',
 	                'dateFormat' => 'yy-mm-dd',
@@ -58,17 +57,17 @@
 	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
 	        ));
         ?>
-        <?php echo $form->error($model, 'timestamp'); ?>
+        <?php echo $form->error($model, 'tanggal_akhir'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->dropDownList($model,'jenjang',array('SMP'=>'SMP', 'SMK'=>'SMK')); ?>
+		<?php echo 'Jenjang'; ?>
+		<?php echo $form->dropDownList($model,'jenjang',array('SMP'=>'SMP', 'SMK'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Unduh' : 'Save'); ?>
+		<?php echo CHtml::submitButton('Unduh'); ?>
 	</div>
 </div>
 <?php $this->endWidget(); ?>
