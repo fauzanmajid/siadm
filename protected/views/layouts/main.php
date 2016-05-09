@@ -109,6 +109,7 @@
 					  	array('label'=>'Laporan Pemasukan','url'=>array('/transaksiPemasukan')),
 					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
 					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
+				  		
 				  	),
 						'visible'=>UserWeb::instance()->isBendahara()),
 
