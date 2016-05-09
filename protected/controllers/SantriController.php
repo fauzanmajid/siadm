@@ -249,7 +249,7 @@ class SantriController extends Controller
 			$tanggal_akhir = $_POST['Santri']['tanggal_akhir'];
 			$jenjang = $_POST['Santri']['jenjang'];
 
-			$this->redirect(Yii::app()->createUrl('/santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));
+			$this->redirect(Yii::app()->createUrl('santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));
 		}
 
 		$this->render('/unduh/index',array(

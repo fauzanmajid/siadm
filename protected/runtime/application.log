@@ -956,3 +956,48 @@ in C:\xampp\htdocs\siadm\index.php (13)
 in C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php (74)
 in C:\xampp\htdocs\siadm\index.php (13)
 >>>>>>> e3b3921fbc627a7ea88f165b76b1123637838fec
+2016/05/09 19:23:34 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "excel/awal/2016-01-01/akhir/2016-05-04/jenjang/SMP". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('excel/awal/2016...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/excel/awal/2016-01-01/akhir/2016-05-04/jenjang/SMP
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduh
+---
+2016/05/09 19:23:44 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "excel/awal/2016-01-01/akhir/2016-05-04/jenjang/SMK". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('excel/awal/2016...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/excel/awal/2016-01-01/akhir/2016-05-04/jenjang/SMK
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduh
+---
+2016/05/09 19:24:28 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "excel/awal//akhir//jenjang". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('excel/awal//akh...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/excel/awal//akhir//jenjang
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduh
+---
+2016/05/09 19:24:33 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "excel/awal//akhir//jenjang". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('excel/awal//akh...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/excel/awal//akhir//jenjang
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduh
+---
+2016/05/09 19:27:48 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "excel/awal//akhir//jenjang". in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('excel/awal//akh...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/excel/awal//akhir//jenjang
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduh
+---
