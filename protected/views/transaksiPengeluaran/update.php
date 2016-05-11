@@ -8,12 +8,12 @@ $this->breadcrumbs=array(
 	'Sunting',
 );
 
-$this->menu=array(
-	array('label'=>'Daftar Pengeluaran', 'url'=>array('index')),
-	array('label'=>'Buat Pengeluaran', 'url'=>array('create')),
-	array('label'=>'Lihat Pengeluaran', 'url'=>array('view', 'id'=>$model->kode)),
-	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
-);
+// $this->menu=array(
+// 	array('label'=>'Daftar Pengeluaran', 'url'=>array('index')),
+// 	array('label'=>'Buat Pengeluaran', 'url'=>array('create')),
+// 	array('label'=>'Lihat Pengeluaran', 'url'=>array('view', 'id'=>$model->kode)),
+// 	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
+// );
 ?>
 
 <h1>Sunting Pengeluaran <?php echo $model->kode; ?></h1>

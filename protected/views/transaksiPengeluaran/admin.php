@@ -2,15 +2,15 @@
 /* @var $this TransaksiPengeluaranController */
 /* @var $model TransaksiPengeluaran */
 
-$this->breadcrumbs=array(
-	'Pengeluaran'=>array('index'),
-	'Kelola',
-);
+// $this->breadcrumbs=array(
+// 	'Pengeluaran'=>array('index'),
+// 	'Kelola',
+// );
 
-$this->menu=array(
-	array('label'=>'Daftar Pengeluaran', 'url'=>array('index')),
-	array('label'=>'Buat Pengeluaran', 'url'=>array('create')),
-);
+// $this->menu=array(
+// 	array('label'=>'Daftar Pengeluaran', 'url'=>array('index')),
+// 	array('label'=>'Buat Pengeluaran', 'url'=>array('create')),
+// );
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -28,13 +28,6 @@ $('.search-form form').submit(function(){
 
 <h1>Kelola Pengeluaran</h1>
 
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'transaksi-pengeluaran-grid',

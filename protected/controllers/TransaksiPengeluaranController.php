@@ -125,8 +125,14 @@ class TransaksiPengeluaranController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('TransaksiPengeluaran');
+		$model=new TransaksiPengeluaran('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['TransaksiPengeluaran']))
+			$model->attributes=$_GET['TransaksiPengeluaran'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

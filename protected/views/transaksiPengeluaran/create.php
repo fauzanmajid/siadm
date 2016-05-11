@@ -7,10 +7,10 @@ $this->breadcrumbs=array(
 	'Buat',
 );
 
-$this->menu=array(
-	array('label'=>'Daftar Pengeluaran', 'url'=>array('index')),
-	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
-);
+// $this->menu=array(
+// 	array('label'=>'Daftar Pengeluaran', 'url'=>array('index')),
+// 	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
+// );
 ?>
 
 <h1>Buat Pengeluaran</h1>

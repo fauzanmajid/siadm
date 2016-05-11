@@ -30,7 +30,7 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nominal, timestamp', 'required'),
+			array('nominal', 'required'),
 			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -100,5 +100,17 @@ class PemasukkanBos extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function beforeSave ()
+	{
+		if(parent::beforeSave()){
+			if($this->isNewRecord){
+				$this->timestamp=date('Y-m-d H:i:s');
+			}
+			return true;
+		}
+		return false;
+
 	}
 }

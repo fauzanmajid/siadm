@@ -3,16 +3,16 @@
 /* @var $model PemasukkanBos */
 
 $this->breadcrumbs=array(
-	'Pemasukkan Boses'=>array('index'),
+	'Pemasukkan Bos'=>array('index'),
 	'Create',
 );
 
-$this->menu=array(
-	array('label'=>'List PemasukkanBos', 'url'=>array('index')),
-	array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
-);
+// $this->menu=array(
+// 	array('label'=>'List PemasukkanBos', 'url'=>array('index')),
+// 	array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
+// );
 ?>
 
-<h1>Create PemasukkanBos</h1>
+<h1>Buat Pemasukkan Bos</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
