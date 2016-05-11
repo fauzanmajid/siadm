@@ -3,16 +3,16 @@
 /* @var $model TransaksiPengeluaran */
 
 $this->breadcrumbs=array(
-	'Transaksi Pengeluarans'=>array('index'),
-	'Create',
+	'Pengeluaran'=>array('index'),
+	'Buat',
 );
 
 $this->menu=array(
-	array('label'=>'List TransaksiPengeluaran', 'url'=>array('index')),
-	array('label'=>'Manage TransaksiPengeluaran', 'url'=>array('admin')),
+	array('label'=>'Daftar Pengeluaran', 'url'=>array('index')),
+	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create TransaksiPengeluaran</h1>
+<h1>Buat Pengeluaran</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
