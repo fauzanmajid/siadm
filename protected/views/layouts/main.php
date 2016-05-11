@@ -101,28 +101,37 @@
 
 				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
-				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'),
+						'items'=>array(
+						array('label'=>'Unduh Laporan Nilai Santri','url'=>array('/unduhNilai')),
+						array('label'=>'Unduh Rapor Santri','url'=>array('/unduhRapor')),
+
+					), 
+						'visible'=>UserWeb::instance()->isKurikulum()), 
+
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
 
-							
 				array('label'=>'Keuangan ',  'url'=>array(''),
 						'items'=>array(
 
-					  	array('label'=>'Pemasukan','url'=>array('/transaksiPemasukan')),
-					  	array('label'=>'Pengeluaran','url'=>array('/transaksiPengeluaran')),
 
 					  	array('label'=>'Laporan Pemasukan','url'=>array(''),
+
 					  		'items'=>array(
 						  	array('label'=>'Pemasukan Bos','url'=>array('/PemasukkanBos')),
 						  	array('label'=>'Pemasukan Donatur','url'=>array('/PemasukkanDonatur')),
 						  	array('label'=>'Pemasukan Santri','url'=>array('/PemasukkanSantri')),
+							array('label'=>'Unduh Laporan Pemasukan','url'=>array('/UnduhTransaksiPemasukan')),
 						  	)),
+
 					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
+						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/UnduhTransaksiPengeluaran')),
+
 
 					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
+						array('label'=>'Unduh Laporan Keuangan','url'=>array('/UnduhLaporanTotal')),
 				  	),
 						'visible'=>UserWeb::instance()->isBendahara()),
-
 			),
 		)); ?>
 	</div>
