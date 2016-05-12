@@ -78,12 +78,15 @@
 				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Kelas', 'url'=>array('/Kelas'),'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
+				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 	
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
 					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
 					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh/index')),
+					  	array('label'=>'Wali Santri','url'=>array('/perwalian/admin')),
+					  	
 				  	),
+
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
 						'items'=>array(
