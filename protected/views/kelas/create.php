@@ -3,16 +3,16 @@
 /* @var $model Kelas */
 
 $this->breadcrumbs=array(
-	'Kelases'=>array('index'),
-	'Create',
+	'Kelas'=>array('index'),
+	'Buat',
 );
 
 $this->menu=array(
-	array('label'=>'List Kelas', 'url'=>array('index')),
-	array('label'=>'Manage Kelas', 'url'=>array('admin')),
+	array('label'=>'Daftar Kelas', 'url'=>array('index')),
+	array('label'=>'Sunting Kelas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Kelas</h1>
+<h1>Buat Kelas</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

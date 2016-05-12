@@ -26,23 +26,16 @@ class SantriController extends Controller
 	 */
 	public function accessRules()
 	{
-		return array(
-	/*		array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),*/
+		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+
                 'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh', 'excel'),
                 //'deniedCallback' => array($this,'gotoLogin'),             
-                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isAdmin();}
 			),
+
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('riwayatPenyakit', 'perizinan', 'pelanggaran', 'prestasi'),
                 'expression' => function(UserWeb $user) {
@@ -258,7 +251,7 @@ class SantriController extends Controller
 			$tanggal_akhir = $_POST['Santri']['tanggal_akhir'];
 			$jenjang = $_POST['Santri']['jenjang'];
 
-			$this->redirect(Yii::app()->createUrl('/santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));
+			$this->redirect(Yii::app()->createUrl('santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));
 		}
 
 		$this->render('/unduh/index',array(
