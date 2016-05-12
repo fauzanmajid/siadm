@@ -73,6 +73,7 @@ class SantriController extends Controller
 	public function actionCreate()
 	{
 		$model=new Santri;
+		$modelwali=new Perwalian;
 		$model->scenario = 'create';
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -80,6 +81,8 @@ class SantriController extends Controller
 		if(isset($_POST['Santri']))
 		{
 			$model->attributes=$_POST['Santri'];
+			$modelwali->attributes=$_POST['Perwalian'];
+			$modelwali->nip_santri=$model->nip;
 			/*
 		
 			$fileSource = Yii::getPathOfAlias('webroot').'/img/';
@@ -87,15 +90,17 @@ class SantriController extends Controller
 			$imgTem->saveAs($fileSource.$imgTem);
 			$model->foto_url = $imgTem;
 			*/		
-			if($model->save())
+			if($model->validate() && $modelwali->validate() )
 				{
-		
+				$model->save();
+				$modelwali->save();
 				$this->redirect(array('view','id'=>$model->nip));
 				}
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'modelwali'=>$modelwali,
 		));
 	}
 
@@ -135,7 +140,7 @@ class SantriController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
-
+		Perwalian::loadModel($id)->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
