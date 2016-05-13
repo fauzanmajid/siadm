@@ -7,10 +7,10 @@
 	'Create',
 );*/
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Daftar Tahun Ajaran', 'url'=>array('index')),
 	array('label'=>'Atur Tahun Ajaran', 'url'=>array('admin')),
-);
+);*/
 ?>
 
 <h1>Buat Tahun Ajaran</h1>

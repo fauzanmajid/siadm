@@ -26,13 +26,13 @@
 		<?php echo $form->textField($model,'nominal'); ?>
 	</div>
 
-	<div class="row">
+<!-- 	<div class="row">
 		<?php echo $form->label($model,'timestamp'); ?>
 		<?php echo $form->textField($model,'timestamp'); ?>
-	</div>
+	</div> -->
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Cari'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

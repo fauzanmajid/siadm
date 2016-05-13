@@ -6,10 +6,10 @@
 	'Perizinans',
 );*/
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Buat Perizinan Santri', 'url'=>array('create')),
 	
-);
+);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
@@ -45,8 +45,9 @@ $('.search-form form').submit(function(){
 	            'header' => 'Menu',
 				'class'=>'CButtonColumn',
 				'template'=>'{update}{delete}',
-				'deleteConfirmation'=>"js:'Anda yakin?'",
+				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus perizinan santri ini?'",
 			),
 		),
+		'emptyText'=>'Tidak ada data yang ditemukan.'
 	)); ?>
 </div>

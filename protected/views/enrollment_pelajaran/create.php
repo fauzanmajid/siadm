@@ -2,7 +2,7 @@
 /* @var $this Enrollment_PelajaranController */
 /* @var $model Enrollment_Pelajaran */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Enrollment  Pelajaran'=>array('index'),
 	'Buat',
 );
@@ -10,9 +10,9 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Daftar Enrollment Pelajaran', 'url'=>array('index')),
 	array('label'=>'Sunting Enrollment Pelajaran', 'url'=>array('admin')),
-);
+);*/
 ?>
 
-<h1>Buat Enrollment Pelajaran</h1>
+<h1>Buat Alokasi Pelajaran</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
