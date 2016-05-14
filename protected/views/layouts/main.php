@@ -82,7 +82,7 @@
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
 					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
-					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh/index')),
+					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduhDataSantri')),
 				  	),
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
@@ -128,8 +128,8 @@
 						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/UnduhTransaksiPengeluaran')),
 
 
-					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
-						array('label'=>'Unduh Laporan Keuangan','url'=>array('/UnduhLaporanTotal')),
+					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanKeuangan')),
+						array('label'=>'Unduh Laporan Keuangan','url'=>array('Site/UnduhLaporanKeuangan')),
 				  	),
 						'visible'=>UserWeb::instance()->isBendahara()),
 			),

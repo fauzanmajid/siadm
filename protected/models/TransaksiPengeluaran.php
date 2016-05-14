@@ -16,6 +16,9 @@
  */
 class TransaksiPengeluaran extends CActiveRecord
 {
+	public $tanggal_awal;
+	public $tanggal_akhir;
+	public $jenis;
 	/**
 	 * @return string the associated database table name
 	 */

@@ -154,4 +154,22 @@ class SiteController extends Controller
         
     }//actionExcel method end
 
+    public function actionUnduhLaporanKeuangan()
+	{
+		$model = new TransaksiPengeluaran;
+		$model->scenario = 'unduh-laporan-keuangan';
+
+		if(isset($_POST['TransaksiPengeluaran'])) {
+		
+			$tanggal_awal = $_POST['TransaksiPengeluaran']['tanggal_awal'];
+			$tanggal_akhir = $_POST['TransaksiPengeluaran']['tanggal_akhir'];
+			$jenjang = $_POST['TransaksiPengeluaran']['jenis'];
+
+			/*$this->redirect(Yii::app()->createUrl('santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));*/
+		}
+
+		$this->render('/unduh/unduh-laporan-keuangan',array(
+			'model' => $model,
+		));
+	}
 }
