@@ -31,11 +31,11 @@
 		<?php echo $form->error($model,'nominal'); ?>
 	</div>
 
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->labelEx($model,'timestamp'); ?>
 		<?php echo $form->textField($model,'timestamp'); ?>
 		<?php echo $form->error($model,'timestamp'); ?>
-	</div>
+	</div> -->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_donatur'); ?>

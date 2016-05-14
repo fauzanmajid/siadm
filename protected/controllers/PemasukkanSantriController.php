@@ -125,8 +125,14 @@ class PemasukkanSantriController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('PemasukkanSantri');
+		$model=new PemasukkanSantri('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['PemasukkanSantri']))
+			$model->attributes=$_GET['PemasukkanSantri'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

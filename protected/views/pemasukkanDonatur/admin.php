@@ -3,14 +3,14 @@
 /* @var $model PemasukkanDonatur */
 
 $this->breadcrumbs=array(
-	'Pemasukkan Donaturs'=>array('index'),
+	'Pemasukkan Donatur'=>array('index'),
 	'Manage',
 );
 
-$this->menu=array(
-	array('label'=>'List PemasukkanDonatur', 'url'=>array('index')),
-	array('label'=>'Create PemasukkanDonatur', 'url'=>array('create')),
-);
+// $this->menu=array(
+// 	array('label'=>'List PemasukkanDonatur', 'url'=>array('index')),
+// 	array('label'=>'Create PemasukkanDonatur', 'url'=>array('create')),
+// );
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Pemasukkan Donaturs</h1>
+<h1>Kelola Pemasukkan Donatur</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

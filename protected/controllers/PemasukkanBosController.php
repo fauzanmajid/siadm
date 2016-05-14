@@ -125,8 +125,14 @@ class PemasukkanBosController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('PemasukkanBos');
+		$model=new PemasukkanBos('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['PemasukkanBos']))
+			$model->attributes=$_GET['PemasukkanBos'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

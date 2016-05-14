@@ -32,7 +32,7 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <div class='search-result' style="display:none">
->>>>>>> e7e30270b2b9733345d5010c93d51a74689101a1
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-pelanggaran-grid',
 	'dataProvider'=>$model->search(),
