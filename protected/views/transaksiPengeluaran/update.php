@@ -5,9 +5,10 @@
 /*$this->breadcrumbs=array(
 	'Transaksi Pengeluarans'=>array('index'),
 	$model->kode=>array('view','id'=>$model->kode),
-	'Update',
+	'Sunting',
 );
 
+<h1>Sunting Pengeluaran <?php echo $model->kode; ?></h1>
 $this->menu=array(
 	array('label'=>'List TransaksiPengeluaran', 'url'=>array('index')),
 	array('label'=>'Create TransaksiPengeluaran', 'url'=>array('create')),

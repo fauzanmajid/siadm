@@ -1,20 +1,44 @@
 <?php
-/* @var $this TransaksiPengeluaranController */
-/* @var $dataProvider CActiveDataProvider */
-
-/*$this->breadcrumbs=array(
-	'Pengeluaran',
-);
+Yii::app()->clientScript->registerScript('search', "
+$('.search-form form').submit(function(){
+	$('#transaksi-pengeluaran-grid').yiiGridView('update', {
+		data: $(this).serialize()
+	});
+	$('.search-result').show();
+	return false;
+});
+");
 
 $this->menu=array(
 	array('label'=>'Buat Pengeluaran', 'url'=>array('create')),
-	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
-);*/
+	// array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
+);
 ?>
 
 <h1>Transaksi Pengeluaran</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+<div class="search-form">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
 )); ?>
+</div><!-- search-form -->
+
+<div class='search-result' style="display:none">
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'transaksi-pengeluaran-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>array(
+		'kode',
+		'id_bendahara',
+		'nominal',
+		'Deskripsi',
+		'tanggal_pengeluaran',
+		'timestamp',
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
+)); ?>
+</div>

@@ -2,12 +2,12 @@
 /* @var $this PemasukkanDonaturController */
 /* @var $model PemasukkanDonatur */
 
-/*$this->breadcrumbs=array(
-	'Pemasukkan Donaturs'=>array('index'),
+$this->breadcrumbs=array(
+	'Pemasukkan Donatur'=>array('index'),
 	$model->kode,
 );
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'List PemasukkanDonatur', 'url'=>array('index')),
 	array('label'=>'Create PemasukkanDonatur', 'url'=>array('create')),
 	array('label'=>'Update PemasukkanDonatur', 'url'=>array('update', 'id'=>$model->kode)),

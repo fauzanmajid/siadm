@@ -2,6 +2,7 @@
 /* @var $this PemasukkanBosController */
 /* @var $model PemasukkanBos */
 
+
 /*$this->breadcrumbs=array(
 	'Pemasukkan Boses'=>array('index'),
 	'Create',

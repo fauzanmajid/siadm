@@ -2,6 +2,7 @@
 /* @var $this PemasukkanBosController */
 /* @var $model PemasukkanBos */
 
+
 /*$this->breadcrumbs=array(
 	'Pemasukkan Boses'=>array('index'),
 	'Manage',
@@ -11,7 +12,6 @@
 	array('label'=>'List PemasukkanBos', 'url'=>array('index')),
 	array('label'=>'Create PemasukkanBos', 'url'=>array('create')),
 );*/
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -26,7 +26,11 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
+<<<<<<< HEAD
+<h1>Manage Pemasukkan Bos</h1>
+=======
 <h1>Atur Pemasukan BOS</h1>
+>>>>>>> parput
 
 <!-- <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

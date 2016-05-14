@@ -2,8 +2,10 @@
 /* @var $this PemasukkanSantriController */
 /* @var $model PemasukkanSantri */
 
+
 /*$this->breadcrumbs=array(
 	'Pemasukkan Santris'=>array('index'),
+>>>>>>> parput
 	$model->kode,
 );
 

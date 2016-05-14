@@ -112,8 +112,11 @@ class TransaksiPengeluaran extends CActiveRecord
 	public function beforeSave ()
 	{
 		if(parent::beforeSave()){
+
+
 			if($this->isNewRecord){
 				$this->timestamp=date('Y-m-d H:i:s');
+				$this->id_bendahara = UserWeb::instance()->ID;
 			}
 			return true;
 		}

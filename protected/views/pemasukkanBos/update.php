@@ -2,12 +2,11 @@
 /* @var $this PemasukkanBosController */
 /* @var $model PemasukkanBos */
 
+
 /*$this->breadcrumbs=array(
 	'Pemasukkan Boses'=>array('index'),
-	$model->kode=>array('view','id'=>$model->kode),
-	'Update',
-);
 
+=======
 $this->menu=array(
 	array('label'=>'List PemasukkanBos', 'url'=>array('index')),
 	array('label'=>'Create PemasukkanBos', 'url'=>array('create')),

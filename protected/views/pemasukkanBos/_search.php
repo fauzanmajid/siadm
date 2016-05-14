@@ -11,10 +11,10 @@
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
+	<!-- <div class="row">
 		<?php echo $form->label($model,'kode'); ?>
 		<?php echo $form->textField($model,'kode'); ?>
-	</div>
+	</div> -->
 
 	<div class="row">
 		<?php echo $form->label($model,'id_bendahara'); ?>
@@ -26,7 +26,8 @@
 		<?php echo $form->textField($model,'nominal'); ?>
 	</div>
 
-<!-- 	<div class="row">
+
+	<!-- <div class="row">
 		<?php echo $form->label($model,'timestamp'); ?>
 		<?php echo $form->textField($model,'timestamp'); ?>
 	</div> -->

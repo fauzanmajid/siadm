@@ -4,6 +4,7 @@
 
 /*$this->breadcrumbs=array(
 	'Pemasukkan Santris'=>array('index'),
+>>>>>>> parput
 	$model->kode=>array('view','id'=>$model->kode),
 	'Update',
 );

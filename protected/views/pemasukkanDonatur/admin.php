@@ -2,15 +2,15 @@
 /* @var $this PemasukkanDonaturController */
 /* @var $model PemasukkanDonatur */
 
-/*$this->breadcrumbs=array(
-	'Pemasukkan Donaturs'=>array('index'),
+$this->breadcrumbs=array(
+	'Pemasukkan Donatur'=>array('index'),
 	'Manage',
 );
 
-$this->menu=array(
-	array('label'=>'List PemasukkanDonatur', 'url'=>array('index')),
-	array('label'=>'Create PemasukkanDonatur', 'url'=>array('create')),
-);*/
+// $this->menu=array(
+// 	array('label'=>'List PemasukkanDonatur', 'url'=>array('index')),
+// 	array('label'=>'Create PemasukkanDonatur', 'url'=>array('create')),
+// );
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
