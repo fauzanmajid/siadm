@@ -244,3 +244,238 @@ REQUEST_URI=/siadm/index.php/PemasukkanBos
 in C:\xampp\htdocs\siadm\protected\views\pemasukkanBos\index.php (20)
 in C:\xampp\htdocs\siadm\protected\controllers\PemasukkanBosController.php (130)
 in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/14 07:13:30 [error] [exception.CException] exception 'CException' with message 'Property "TransaksiPengeluaran.id_kesiswaan" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(161): CComponent->__set('id_kesiswaan', '14')
+#1 C:\xampp\htdocs\siadm\protected\models\TransaksiPengeluaran.php(117): CActiveRecord->__set('id_kesiswaan', '14')
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1074): TransaksiPengeluaran->beforeSave()
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#4 C:\xampp\htdocs\siadm\protected\controllers\TransaksiPengeluaranController.php(75): CActiveRecord->save()
+#5 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): TransaksiPengeluaranController->actionCreate()
+#6 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('transaksiPengel...')
+#16 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran/create
+---
+2016/05/14 07:32:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php (75)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/14 07:32:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php(75): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PemasukkanSantriController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanSantr...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanSantri/create
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanSantri/create
+---
+2016/05/14 07:34:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php (75)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/14 07:34:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php(75): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PemasukkanSantriController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanSantr...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanSantri/create
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanSantri/create
+---
+2016/05/14 07:35:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanBos/v...')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanBos/view
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanBos/4
+---
+2016/05/14 07:35:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanBos/v...')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanBos/view
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanBos/4
+---
+2016/05/14 07:37:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php (75)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/14 07:37:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php(75): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PemasukkanSantriController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanSantr...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanSantri/create
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanSantri/create
+---
+2016/05/14 07:42:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php (75)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/14 07:42:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php(75): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PemasukkanSantriController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanSantr...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanSantri/create
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanSantri/create
+---
+2016/05/14 08:50:53 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php (75)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/14 08:50:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php(75): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PemasukkanSantriController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanSantr...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanSantri/create
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanSantri/create
+---
+2016/05/14 08:55:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_donatur`, CONSTRAINT `fk_pd_donatur` FOREIGN KEY (`id_donatur`) REFERENCES `donatur` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `pemasukkan_donatur` (`nominal`, `id_donatur`, `timestamp`, `id_bendahara`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\siadm\protected\controllers\PemasukkanDonaturController.php (75)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/14 08:55:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_donatur`, CONSTRAINT `fk_pd_donatur` FOREIGN KEY (`id_donatur`) REFERENCES `donatur` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `pemasukkan_donatur` (`nominal`, `id_donatur`, `timestamp`, `id_bendahara`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PemasukkanDonaturController.php(75): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PemasukkanDonaturController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanDonat...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanDonatur/create
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanDonatur/create
+---
+2016/05/14 08:59:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php (75)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/14 08:59:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`siadmdb`.`pemasukkan_santri`, CONSTRAINT `fk_ps_bendahara` FOREIGN KEY (`id_bendahara`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `pemasukkan_santri` (`nip_santri`, `nominal`, `timestamp`) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\yii\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1080): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\siadm\protected\controllers\PemasukkanSantriController.php(75): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PemasukkanSantriController->actionCreate()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('pemasukkanSantr...')
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#16 {main}
+REQUEST_URI=/siadm/index.php/pemasukkanSantri/create
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanSantri/create
+---
