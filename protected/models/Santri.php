@@ -65,6 +65,7 @@ class Santri extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, timestamp,foto_url', 'safe', 'on'=>'search'),
+			
 			 
 			// this will allow empty field when page is update (remember here i create scenario update)
 
