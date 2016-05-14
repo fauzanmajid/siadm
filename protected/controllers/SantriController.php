@@ -29,7 +29,7 @@ class SantriController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
-                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh', 'excel'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel'),
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -240,10 +240,10 @@ class SantriController extends Controller
 		));
 	}
 
-	public function actionUnduh()
+	public function actionUnduhDataSantri()
 	{
 		$model = new Santri;
-		$model->scenario = 'unduh';
+		$model->scenario = 'unduh-data-santri';
 
 		if(isset($_POST['Santri'])) {
 		
@@ -254,7 +254,7 @@ class SantriController extends Controller
 			$this->redirect(Yii::app()->createUrl('santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));
 		}
 
-		$this->render('/unduh/index',array(
+		$this->render('/unduh/unduh-data-santri',array(
 			'model' => $model,
 		));
 	}
