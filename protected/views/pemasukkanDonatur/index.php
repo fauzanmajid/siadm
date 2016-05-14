@@ -20,6 +20,7 @@ $this->menu=array(
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
+
 </div><!-- search-form -->
 
 <div class='search-result' style="display:none">

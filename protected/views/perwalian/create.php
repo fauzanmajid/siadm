@@ -2,7 +2,7 @@
 /* @var $this PerwalianController */
 /* @var $model Perwalian */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Perwalians'=>array('index'),
 	'Create',
 );
@@ -10,9 +10,9 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Perwalian', 'url'=>array('index')),
 	array('label'=>'Manage Perwalian', 'url'=>array('admin')),
-);
+);*/
 ?>
 
-<h1>Create Perwalian</h1>
+<h1>Buat Perwalian Santri</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

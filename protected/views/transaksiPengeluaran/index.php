@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Pengeluaran</h1>
+<h1>Transaksi Pengeluaran</h1>
 
 <div class="search-form">
 <?php $this->renderPartial('_search',array(

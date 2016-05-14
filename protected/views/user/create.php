@@ -7,10 +7,10 @@
 	'Create',
 );*/
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Daftar Pengguna', 'url'=>array('index')),
 	array('label'=>'Atur Pengguna', 'url'=>array('admin')),
-);
+);*/
 ?>
 
 <h1>Buat Pengguna</h1>

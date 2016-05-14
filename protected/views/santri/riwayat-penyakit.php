@@ -1,7 +1,8 @@
 <?php
     $riwayatPenyakit = RiwayatPenyakit::model()->findAllByAttributes(array('nip_santri' => $model->nip));
     if (empty($riwayatPenyakit)) {
-        echo 'No Entry';
+        echo 'Tidak ada riwayat penyakit santri.';
+        /*echo 'No Entry';*/
         ?>
         <?php /*if (UserWeb::instance()->isHRD() && UserWeb::instance()->ID != $model->ID ) { ?>
             <br />
@@ -19,7 +20,7 @@
             ?>
             <br/>
                 <button style="float: right">
-                    <?php echo CHtml::link('Buat', array('riwayatPenyakit/create', 'id' => $model->nip)) ?>
+                    <?php echo CHtml::link('Simpan', array('riwayatPenyakit/create', 'id' => $model->nip)) ?>
                 </button>
             <?php
         }
