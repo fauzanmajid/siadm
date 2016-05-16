@@ -7,10 +7,10 @@
 	'Manage',
 );*/
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Catatan Prestasi Santri', 'url'=>array('index')),
 	array('label'=>'Buat Prestasi Santri', 'url'=>array('create')),
-);
+);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -54,4 +54,5 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 			'class'=>'CButtonColumn',
 		),
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>

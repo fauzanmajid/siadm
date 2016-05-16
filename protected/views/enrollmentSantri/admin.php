@@ -2,7 +2,7 @@
 /* @var $this EnrollmentSantriController */
 /* @var $model EnrollmentSantri */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Enrollment Santri'=>array('index'),
 	'Sunting',
 );
@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Daftar EnrollmentSantri', 'url'=>array('index')),
 	array('label'=>'Buat EnrollmentSantri', 'url'=>array('create')),
-);
+);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -26,11 +26,11 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Sunting Enrollment Santri</h1>
+<h1>Atur Alokasi Santri</h1>
 
 
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -55,4 +55,5 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>

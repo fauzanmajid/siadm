@@ -2,7 +2,7 @@
 /* @var $this EnrollmentSantriController */
 /* @var $model EnrollmentSantri */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Enrollment Santri'=>array('index'),
 	$model->id,
 );
@@ -13,10 +13,10 @@ $this->menu=array(
 	array('label'=>'Sunting Enrollment Santri', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Hapus Enrollment Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Kelola Enrollment Santri', 'url'=>array('admin')),
-);
+);*/
 ?>
 
-<h1>Lihat Enrollment Santri <?php echo $model->id; ?></h1>
+<h1>Lihat Alokasi Santri <?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

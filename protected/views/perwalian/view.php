@@ -1,19 +1,6 @@
 <?php
 /* @var $this PerwalianController */
 /* @var $model Perwalian */
-
-// $this->breadcrumbs=array(
-// 	'Wali Santri'=>array('index'),
-// 	$model->id,
-// );
-
-// $this->menu=array(
-// 	array('label'=>'List Perwalian', 'url'=>array('index')),
-// 	array('label'=>'Create Perwalian', 'url'=>array('create')),
-// 	array('label'=>'Update Perwalian', 'url'=>array('update', 'id'=>$model->id)),
-// 	array('label'=>'Delete Perwalian', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-// 	array('label'=>'Manage Perwalian', 'url'=>array('admin')),
-// );
 ?>
 
 <h1>Lihat Wali Santri <?php echo $model->id; ?></h1>

@@ -2,9 +2,9 @@
 /* @var $this PencatatanPerizinanController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Buat Catatan Perizinan', 'url'=>array('create')),
-);
+);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
@@ -17,7 +17,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Catatan Perizinan</h1>
+<h1>Perizinan Santri</h1>
 
 <div class="search-form">
 <?php $this->renderPartial('_search',array(
@@ -49,7 +49,7 @@ $('.search-form form').submit(function(){
 	            'header' => 'Menu',
 				'class'=>'CButtonColumn',
 				'template'=>'{update}{delete}',
-				'deleteConfirmation'=>"js:'Anda yakin?'",
+				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus perizinan santri ini?'",
 			),
 		),
 	

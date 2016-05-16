@@ -1,7 +1,8 @@
 <?php
     $prestasi = Prestasi::model()->findAllByAttributes(array('nip_santri' => $model->nip));
     if (empty($prestasi)) {
-        echo 'No Entry';
+        echo 'Tidak ada prestasi santri.';
+        /*echo 'No Entry';*/
         ?>
         <?php /*if (UserWeb::instance()->isHRD() && UserWeb::instance()->ID != $model->ID ) { ?>
             <br />
@@ -19,7 +20,7 @@
             ?>
             <br/>
                 <button style="float: right">
-                    <?php echo CHtml::link('Tambah', array('prestasi/create', 'id' => $model->nip)) ?>
+                    <?php echo CHtml::link('Simpan', array('prestasi/create', 'id' => $model->nip)) ?>
                 </button>
             <?php
         }

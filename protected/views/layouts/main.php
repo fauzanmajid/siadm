@@ -82,9 +82,8 @@
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
 					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
-					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh/index')),
-					  	array('label'=>'Wali Santri','url'=>array('/perwalian/admin')),
-					  	
+					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduhDataSantri')),
+						array('label'=>'Wali Santri','url'=>array('/perwalian/admin')),
 				  	),
 
 						'visible'=>UserWeb::instance()->isAdmin()),
@@ -117,18 +116,22 @@
 				array('label'=>'Keuangan ',  'url'=>array(''),
 						'items'=>array(
 
+
 					  	array('label'=>'Laporan Pemasukan','url'=>array(''),
+
 					  		'items'=>array(
 						  	array('label'=>'Pemasukan Bos','url'=>array('/PemasukkanBos')),
 						  	array('label'=>'Pemasukan Donatur','url'=>array('/PemasukkanDonatur')),
 						  	array('label'=>'Pemasukan Santri','url'=>array('/PemasukkanSantri')),
 							array('label'=>'Unduh Laporan Pemasukan','url'=>array('/UnduhTransaksiPemasukan')),
 						  	)),
+
 					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
 						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/UnduhTransaksiPengeluaran')),
 
-					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
-						array('label'=>'Unduh Laporan Keuangan','url'=>array('/UnduhLaporanTotal')),
+
+					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanKeuangan')),
+						array('label'=>'Unduh Laporan Keuangan','url'=>array('Site/UnduhLaporanKeuangan')),
 				  	),
 						'visible'=>UserWeb::instance()->isBendahara()),
 			),
