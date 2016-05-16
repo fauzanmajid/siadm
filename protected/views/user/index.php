@@ -8,13 +8,6 @@
 
 <h1>Daftar Pengguna</h1>
 
-<<<<<<< HEAD
-
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
-=======
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
 
 <hr style="height:20px;border:none;color:#333;background-color:#333;" />

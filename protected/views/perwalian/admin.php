@@ -2,10 +2,10 @@
 /* @var $this PerwalianController */
 /* @var $model Perwalian */
 
-$this->breadcrumbs=array(
-	'Perwalians'=>array('index'),
-	'Manage',
-);
+// $this->breadcrumbs=array(
+// 	'Perwalian'=>array('index'),
+// 	'',
+// );
 
 
 Yii::app()->clientScript->registerScript('search', "
@@ -25,7 +25,7 @@ $('.search-form form').submit(function(){
 <h1>Kelola Wali Santri</h1>
 
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -39,10 +39,10 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'id',
 		'nip_santri',
-		'status',
+		// 'status',
 		'nama',
-		'tempat_lahir',
-		'tanggal_lahir',
+		// 'tempat_lahir',
+		// 'tanggal_lahir',
 		/*
 		'agama',
 		'alamat',
@@ -53,6 +53,8 @@ $('.search-form form').submit(function(){
 		*/
 		array(
 			'class'=>'CButtonColumn',
+			 'template'=>'{view}{update}',
 		),
 	),
 )); ?>
+<!--  -->

@@ -113,6 +113,7 @@ class SantriController extends Controller
 	{
 		$model=$this->loadModel($id);
 		$model->scenario = 'update';
+		$modelwali=Perwalian::model()->findByAttributes(array('nip_santri'=>$model->nip));
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -120,15 +121,21 @@ class SantriController extends Controller
 		{
 			 
 			$model->attributes=$_POST['Santri'];
+			$modelwali->attributes=$_POST['Perwalian'];
+			$modelwali->nip_santri=$model->nip;
 			
-			if($model->save())
 			
+			if($model->validate() && $modelwali->validate() )
+			{
+				$model->save();
+				$modelwali->save();
 				$this->redirect(array('view','id'=>$model->nip));
-			
+			}
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+			'modelwali'=>$modelwali,
 		));
 	}
 
@@ -139,8 +146,12 @@ class SantriController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-		Perwalian::loadModel($id)->delete();
+		//$this->loadModel($id)->delete();
+		$model=santri::model()->findByPk($id);
+		$modelwali = Perwalian::model()->findByAttributes(array('nip_santri'=>$model->nip));
+		$model->delete();
+		$modelwali->delete();		
+
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
