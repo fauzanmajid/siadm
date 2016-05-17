@@ -76,3 +76,27 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/UnduhLaporanKeuangan
 HTTP_REFERER=http://localhost/siadm/index.php/site/index
 ---
+2016/05/17 07:01:17 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:17 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:18 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:18 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:22 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:22 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:02:23 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:02:23 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)

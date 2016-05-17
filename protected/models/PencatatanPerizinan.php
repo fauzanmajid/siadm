@@ -20,6 +20,8 @@
 class PencatatanPerizinan extends CActiveRecord
 {
 	public $nama_lengkap;
+	public $cari_tanggal_awal;
+	public $cari_tanggal_akhir;
 
 	/**
 	 * @return string the associated database table name
@@ -44,7 +46,7 @@ class PencatatanPerizinan extends CActiveRecord
 			array('kategori', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('nama_lengkap, pencatatan_perizinan, nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori', 'safe', 'on'=>'search'),
+			array('nama_lengkap, pencatatan_perizinan, nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori, cari_tanggal_awal, cari_tanggal_akhir', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -140,5 +142,50 @@ class PencatatanPerizinan extends CActiveRecord
 	    }
 	 
 	    return parent::beforeSave();
+	}
+
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 *
+	 * Typical usecase:
+	 * - Initialize the model fields with values from filter form.
+	 * - Execute this method to get CActiveDataProvider instance which will filter
+	 * models according to data in model fields.
+	 * - Pass data provider to CGridView, CListView or any similar widget.
+	 *
+	 * @return CActiveDataProvider the data provider that can return the models
+	 * based on the search/filter conditions.
+	 */
+	public function searchIzin()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+		$criteria->with = array( 'nipSantri' );
+		
+		$criteria->compare('pencatatan_perizinan',$this->pencatatan_perizinan);
+		$criteria->compare('nip_santri',$this->nip_santri,true);
+		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
+		$criteria->compare('deskripsi',$this->deskripsi,true);
+		$criteria->compare('durasi',$this->durasi);
+		$criteria->compare('tanggal_awal',$this->tanggal_awal,true);
+		$criteria->compare('tanggal_akhir',$this->tanggal_akhir,true);
+		$criteria->compare('kategori',$this->kategori,true);
+		$criteria->compare('nipSantri.nama_lengkap',$this->nama_lengkap, true);
+		$criteria->compare('cari_tanggal_awal',$this->cari_tanggal_awal,true);
+		$criteria->compare('cari_tanggal_akhir',$this->cari_tanggal_akhir,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'sort'=>array(
+	        'attributes'=>array(
+	            'nama_lengkap'=>array(
+	                'asc'=>'nipSantri.nama_lengkap',
+	                'desc'=>'nipSantri.nama_lengkap DESC',
+	            ),
+	            '*',
+	        ),
+	    ),
+		));
 	}
 }
