@@ -6,9 +6,9 @@
 	array('label'=>'Buat Catatan Perizinan', 'url'=>array('create')),
 );*/
 
-Yii::app()->clientScript->registerScript('search', "
+Yii::app()->clientScript->registerScript('searchIzin', "
 $('.search-form form').submit(function(){
-	$('#perizinan-grid').yiiGridView('update', {
+	$('#cari-absensi-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	$('.search-result').show();
@@ -20,7 +20,7 @@ $('.search-form form').submit(function(){
 <h1>Perizinan Santri</h1>
 
 <div class="search-form">
-<?php $this->renderPartial('_search',array(
+<?php $this->renderPartial('form-cari-absensi',array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
@@ -30,8 +30,8 @@ $('.search-form form').submit(function(){
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-		'id'=>'perizinan-grid',
-		'dataProvider'=>$model->search(),
+		'id'=>'cari-absensi-grid',
+		'dataProvider'=>$model->searchIzin(),
 		'columns'=>array(
 			'nip_santri',
 			array(

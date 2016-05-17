@@ -101,7 +101,12 @@
 
 					'visible'=>UserWeb::instance()->isKesiswaan()),
 
-				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'),
+					'items'=>array(
+					  	array('label'=>'Buat Perizinan','url'=>array('/PencatatanPerizinan/create')),
+					  	array('label'=>'Cari Perizinan','url'=>array('/PencatatanPerizinan/absensi')),
+					),
+				 	'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'),
 						'items'=>array(
