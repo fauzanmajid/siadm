@@ -1,20 +1,41 @@
 <?php
 /* @var $this SantriController */
 /* @var $dataProvider CActiveDataProvider */
-
-$this->breadcrumbs=array(
-	'Santris',
-);
-
+/*
 $this->menu=array(
-	array('label'=>'Create Santri', 'url'=>array('create')),
-	array('label'=>'Manage Santri', 'url'=>array('admin')),
+	array('label'=>'Buat Data Santri', 'url'=>array('create')),
+//	array('label'=>'Atur Data Santri', 'url'=>array('admin')),
 );
+*/
 ?>
 
-<h1>Santris</h1>
+<div class="search-form" >
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'santri-grid',
+	'dataProvider'=>$model->search(),
+	'columns'=>array(
+		'nip',
+		'nama_lengkap',
+		'jenjang',
+		/*
+		'status',
+		'alamat',
+		'tempat_lahir',
+		'tanggal_lahir',
+		'golongan_darah',
+		'anak_ke',
+		'jum_saudara',
+		'Perwalian_nip_santri',
+		'Perwalian_status',
+		'Pemasukkan_santri_kode',
+		*/
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
 )); ?>

@@ -1,20 +1,57 @@
+<!--
 <?php
 /* @var $this MataPelajaranController */
 /* @var $dataProvider CActiveDataProvider */
+/*
+if (UserWeb::instance()->isKurikulum()) {
+    $this->menu=array(
+    	array('label'=>'Buat Mata Pelajaran', 'url'=>array('create')),
+    );
+}
+*/
 
-$this->breadcrumbs=array(
-	'Mata Pelajarans',
-);
-
-$this->menu=array(
-	array('label'=>'Create MataPelajaran', 'url'=>array('create')),
-	array('label'=>'Manage MataPelajaran', 'url'=>array('admin')),
-);
 ?>
+-->
+<h1>Mata Pelajaran</h1>
 
-<h1>Mata Pelajarans</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+
+<?php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id'=>'mata-pelajaran-grid',
+    'dataProvider'=>$model->search(),
+    'filter'=>$model,
+    'columns' => array(
+        array(
+            'header' => 'No',
+            'value' => '$this->grid->dataProvider->pagination->offset + $row+1',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+        array(
+            'name' => 'id',
+            'header' => 'ID',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+        
+        array(
+            'class' => 'CLinkColumn',
+            'labelExpression' => '$data->nama',
+            'urlExpression' => 'Yii::app()->createUrl("MataPelajaran/view",array("id"=>$data->id))',
+            'header' => 'Nama',
+            'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+        )
+        ,
+        array(
+            'name' => 'jenjang',
+            'header' => 'Jenjang',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+        array(
+            'header' => 'Action',
+			'class'=>'CButtonColumn',
+			'template'=>'{update}{delete}',
+			'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus mata pelajaran ini?'",
+		),
+    ),
+));
+?>

@@ -26,23 +26,33 @@ class SantriController extends Controller
 	 */
 	public function accessRules()
 	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
+		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
+                //'deniedCallback' => array($this,'gotoLogin'),             
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isAdmin();}
+			),
+
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('riwayatPenyakit', 'perizinan', 'pelanggaran', 'prestasi'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isKesiswaan();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+				'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 		);
+	}
+
+	public function gotoLogin()
+	{
+		$this->redirect('/site/index');
+
 	}
 
 	/**
@@ -63,19 +73,34 @@ class SantriController extends Controller
 	public function actionCreate()
 	{
 		$model=new Santri;
-
+		$modelwali=new Perwalian;
+		$model->scenario = 'create';
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Santri']))
 		{
 			$model->attributes=$_POST['Santri'];
-			if($model->save())
+			$modelwali->attributes=$_POST['Perwalian'];
+			$modelwali->nip_santri=$model->nip;
+			/*
+		
+			$fileSource = Yii::getPathOfAlias('webroot').'/img/';
+			$imgTem = CUploadedFile::getInstance($model,'foto_url');
+			$imgTem->saveAs($fileSource.$imgTem);
+			$model->foto_url = $imgTem;
+			*/		
+			if($model->validate() && $modelwali->validate() )
+				{
+				$model->save();
+				$modelwali->save();
 				$this->redirect(array('view','id'=>$model->nip));
+				}
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'modelwali'=>$modelwali,
 		));
 	}
 
@@ -87,19 +112,30 @@ class SantriController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$model->scenario = 'update';
+		$modelwali=Perwalian::model()->findByAttributes(array('nip_santri'=>$model->nip));
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Santri']))
 		{
+			 
 			$model->attributes=$_POST['Santri'];
-			if($model->save())
+			$modelwali->attributes=$_POST['Perwalian'];
+			$modelwali->nip_santri=$model->nip;
+			
+			
+			if($model->validate() && $modelwali->validate() )
+			{
+				$model->save();
+				$modelwali->save();
 				$this->redirect(array('view','id'=>$model->nip));
+			}
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+			'modelwali'=>$modelwali,
 		));
 	}
 
@@ -110,7 +146,11 @@ class SantriController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		//$this->loadModel($id)->delete();
+		$model=santri::model()->findByPk($id);
+		$modelwali = Perwalian::model()->findByAttributes(array('nip_santri'=>$model->nip));
+		$model->delete();
+		$modelwali->delete();		
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
@@ -123,8 +163,17 @@ class SantriController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Santri');
+
+		$model=new Santri('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Santri']))
+			$model->attributes=$_GET['Santri'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+
+
 		));
 	}
 
@@ -170,4 +219,136 @@ class SantriController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionRiwayatPenyakit($id)
+	{
+		$this->render('riwayat-penyakit',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionPerizinan($id)
+	{
+		$this->render('perizinan',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	public function actionPelanggaran($id)
+	{
+		$this->render('pelanggaran',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+	public function actionPrestasi($id)
+	{
+		$this->render('prestasi',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
+
+
+    public function actionStatistikSantri()
+	{
+		
+		$statistik = StatistikSantri::model()->findAll();
+		$statistikGender = StatistikGender::model()->findAll();
+
+		$this->render('statistiksantri',  array(
+			'statistik'=> $statistik, 'statistikGender'=> $statistikGender, 
+		));
+	}
+
+
+    public function actionStatistikGender()
+	{
+		
+		$statistik = StatistikGender::model()->findAll();
+
+		$this->render('statistikgender', array(
+			'statistik'=> $statistik,
+		));
+	}
+
+
+
+	public function actionUnduhDataSantri()
+	{
+		$model = new Santri;
+		$model->scenario = 'unduh-data-santri';
+
+		if(isset($_POST['Santri'])) {
+		
+			$tanggal_awal = $_POST['Santri']['tanggal_awal'];
+			$tanggal_akhir = $_POST['Santri']['tanggal_akhir'];
+			$jenjang = $_POST['Santri']['jenjang'];
+
+			$this->redirect(Yii::app()->createUrl('santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));
+		}
+
+		$this->render('/unduh/unduh-data-santri',array(
+			'model' => $model,
+		));
+	}
+
+
+
+	public function actionExcel($awal = null, $akhir = null, $jenjang = null){
+        
+        //Some data
+
+        $criteria = new CDbCriteria();
+        if ($awal != null){
+			$criteria->addCondition("timestamp >= :awal");
+			$criteria->params = array(':awal' => $awal);	
+		}
+
+		if ($akhir != null){
+			$criteria->addCondition("timestamp <= :akhir");	
+			$criteria->params = array(':akhir' => $akhir);
+		}
+		
+		if ($jenjang != null){
+			$criteria->addCondition("jenjang = :jenjang");	
+			$criteria->params = array(':jenjang' => $jenjang);
+		}
+		
+		$models = Santri::model()->findAll($criteria);
+		
+		foreach($models as $model) {
+		    $santri[$model->nip] = $model->attributes;
+		}
+
+        $report = new YiiReport(array('template'=> 'santri.xls'));
+        
+        $report->load(array(
+                array(
+                    'id' => 'judul',
+                    'data' => array(
+                        'name' => 'Data SANTRI POPNPES AL-LATHIFA MULIA'
+                    )
+                ),
+                array(
+                    'id'=>'kode',
+                    'repeat'=>true,
+                    'data'=>$santri,
+                    'minRows'=>2
+                ),
+            )
+        );
+        
+         echo $report->render('excel5', 'Students');
+        // echo $report->render('excel2007', 'Students');
+        // echo $report->render('pdf', 'daftar santri');
+        
+    }//actionExcel method end
 }

@@ -37,6 +37,13 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
+		/*
+		$error = Yii::app()->errorHandler->error;
+		if($error)
+			$this->render('error', array('error'=>$error));
+		else
+			throw new CHTTPException(404, 'Page not Found.');
+		*/
 		if($error=Yii::app()->errorHandler->error)
 		{
 			if(Yii::app()->request->isAjaxRequest)
@@ -44,6 +51,7 @@ class SiteController extends Controller
 			else
 				$this->render('error', $error);
 		}
+		
 	}
 
 	/**
@@ -65,7 +73,7 @@ class SiteController extends Controller
 					"Content-Type: text/plain; charset=UTF-8";
 
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				Yii::app()->user->setFlash('contact','Treima kasih telah menghubungi kami. Kami akan merespon masukkann anda secepatnya.');
 				$this->refresh();
 			}
 		}
@@ -77,15 +85,19 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+		if (!UserWeb::instance()->isGuest){
+			$this->redirect(array('index'));
+		}
+
 		$this->layout = 'login';
 		$model=new LoginForm;
 
 		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		/*if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
-		}
+		}*/
 
 		// collect user input data
 		if(isset($_POST['LoginForm']))
@@ -106,5 +118,58 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	public function actionExcel(){
+        
+        //Some data
+        $models = Santri::model()->findAll();
+		$students = array();
+		
+		foreach($models as $model) {
+		    $students[$model->nip] = $model->attributes;
+		}
+
+        $report = new YiiReport(array('template'=> 'students.xls'));
+        
+        $report->load(array(
+                array(
+                    'id' => 'ong',
+                    'data' => array(
+                        'name' => 'Data SANTRI POPNPES AL-LATHIFA MULIA'
+                    )
+                ),
+                array(
+                    'id'=>'estu',
+                    'repeat'=>true,
+                    'data'=>$students,
+                    'minRows'=>5
+                )
+            )
+        );
+        
+         // echo $report->render('excel5', 'Students');
+        // echo $report->render('excel2007', 'Students');
+        echo $report->render('pdf', 'santri');
+        
+    }//actionExcel method end
+
+    public function actionUnduhLaporanKeuangan()
+	{
+		$model = new TransaksiPengeluaran;
+		$model->scenario = 'unduh-laporan-keuangan';
+
+		if(isset($_POST['TransaksiPengeluaran'])) {
+		
+			$tanggal_awal = $_POST['TransaksiPengeluaran']['tanggal_awal'];
+			$tanggal_akhir = $_POST['TransaksiPengeluaran']['tanggal_akhir'];
+			$jenjang = $_POST['TransaksiPengeluaran']['jenis'];
+
+			/*$this->redirect(Yii::app()->createUrl('santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));*/
+		}
+
+		$this->render('/unduh/unduh-laporan-keuangan',array(
+			'model' => $model,
+		));
 	}
 }

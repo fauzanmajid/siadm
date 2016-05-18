@@ -27,20 +27,23 @@ class MataPelajaranController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+		/*	array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
+			),*/
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isKurikulum();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+				'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 		);
 	}
@@ -71,7 +74,7 @@ class MataPelajaranController extends Controller
 		{
 			$model->attributes=$_POST['MataPelajaran'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(
@@ -123,9 +126,26 @@ class MataPelajaranController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('MataPelajaran');
+		$model=new MataPelajaran('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['MataPelajaran']))
+			$model->attributes=$_GET['MataPelajaran'];
+			
+		$data=new MataPelajaran('search');
+		$data->unsetAttributes();  // clear any default values
+		if(isset($_GET['MataPelajaran']))
+			$data->attributes=$_GET['MataPelajaran'];
+
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+
 		));
+		
+
+
+
 	}
 
 	/**

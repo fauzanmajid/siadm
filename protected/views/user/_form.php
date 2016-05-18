@@ -15,13 +15,13 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>12,'maxlength'=>12)); ?>
+		<?php echo $form->textField($model,'username',array('size'=>25,'maxlength'=>12)); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
@@ -32,13 +32,19 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'repeat_password'); ?>
+		<?php echo $form->passwordField($model,'repeat_password',array('size'=>25,'maxlength'=>25)); ?>
+		<?php echo $form->error($model,'repeat_password'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'role'); ?>
-		<?php echo $form->textField($model,'role',array('size'=>12,'maxlength'=>12)); ?>
+		<?php echo $form->dropDownList($model,'role',array('Admin'=>'Admin', 'Kesiswaan'=>'Kesiswaan', 'Guru'=>'Guru', 'Bendahara'=>'Bendahara', 'Dewan Pembina'=>'Dewan Pembina', 'Kurikulum'=>'Kurikulum')); ?>
 		<?php echo $form->error($model,'role'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

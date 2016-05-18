@@ -27,7 +27,7 @@ class UserController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			/*array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
@@ -38,6 +38,12 @@ class UserController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
+			),*/
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isAdmin();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -122,9 +128,32 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
+
+		$model=new User;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			if($model->save())
+				$this->redirect(array('index','id'=>$model->id));
+		}
+
+		$data=new User('search');
+		$data->unsetAttributes();  // clear any default values
+		if(isset($_GET['User']))
+			$data->attributes=$_GET['User'];
+
+
+
+
 		$dataProvider=new CActiveDataProvider('User');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+			'data'=>$data,
 		));
 	}
 

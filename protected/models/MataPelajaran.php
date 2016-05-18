@@ -36,6 +36,7 @@ class MataPelajaran extends CActiveRecord
 			array('id', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>25),
 			array('jenjang', 'length', 'max'=>10),
+			array('id', 'unique', 'className'=>'MataPelajaran'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nama, jenjang', 'safe', 'on'=>'search'),
