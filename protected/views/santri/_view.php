@@ -29,6 +29,10 @@
 	<?php echo CHtml::encode($data->nama_kecil); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('jenis_kelamin')); ?>:</b>
+	<?php echo CHtml::encode($data->jenis_kelamin); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
 	<?php echo CHtml::encode($data->status); ?>
 	<br />

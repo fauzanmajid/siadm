@@ -54,7 +54,7 @@ class Santri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara', 'required'),
+			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara,jenis_kelamin', 'required'),
 			array('nip, nis, nik, nisn, anak_ke, jum_saudara', 'numerical', 'integerOnly'=>true),
 			array('nip, nis, nik, nisn, status, tempat_lahir', 'length', 'max'=>15),
 			/*array('tanggal_awal, tanggal_akhir, jenjang', 'required', 'on'=>'unduh'),*/
@@ -114,6 +114,7 @@ class Santri extends CActiveRecord
 			'foto_url' => 'foto_url',
 			'tanggal_awal' => 'Tanggal Awal',
 			'tanggal_akhir' => 'Tanggal Akhir',
+			'jenis_kelamin' => 'Jenis Kelamin',
 			);
 	}
 
@@ -151,7 +152,7 @@ class Santri extends CActiveRecord
 		$criteria->compare('jum_saudara',$this->jum_saudara);
 		$criteria->compare('timestamp',$this->timestamp);
 		$criteria->compare('foto_url',$this->timestamp);
-		
+		$criteria->compare('jenis_kelamin',$this->jenis_kelamin);
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

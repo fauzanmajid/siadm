@@ -29,7 +29,7 @@ class SantriController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
-                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -256,6 +256,31 @@ class SantriController extends Controller
 		));
 	}
 
+
+    public function actionStatistikSantri()
+	{
+		
+		$statistik = StatistikSantri::model()->findAll();
+		$statistikGender = StatistikGender::model()->findAll();
+
+		$this->render('statistiksantri',  array(
+			'statistik'=> $statistik, 'statistikGender'=> $statistikGender, 
+		));
+	}
+
+
+    public function actionStatistikGender()
+	{
+		
+		$statistik = StatistikGender::model()->findAll();
+
+		$this->render('statistikgender', array(
+			'statistik'=> $statistik,
+		));
+	}
+
+
+
 	public function actionUnduhDataSantri()
 	{
 		$model = new Santri;
@@ -274,6 +299,8 @@ class SantriController extends Controller
 			'model' => $model,
 		));
 	}
+
+
 
 	public function actionExcel($awal = null, $akhir = null, $jenjang = null){
         

@@ -10,8 +10,17 @@ $('.search-form form').submit(function(){
 });
 ");
 
+<<<<<<< HEAD
+$this->menu=array(
+	array('label'=>'Buat Pemasukkan Bos', 'url'=>array('create')),
+	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
+);
+
+=======
+>>>>>>> ef4fcbbfc6ca5e62fd0fbeb084ce966e1d8fcdb3
 
 ?>
+
 
 <h1>Pemasukkan Bos</h1>
 
@@ -20,6 +29,9 @@ $('.search-form form').submit(function(){
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
+
+
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'" value='click here'>
 
 <div class='search-result' style="display:none">
 
