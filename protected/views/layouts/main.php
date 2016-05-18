@@ -77,7 +77,11 @@
 			'items'=>array(
 				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Kelas', 'url'=>array('/Kelas'),'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Kelas', 'url'=>array('/Kelas'),
+					'items'=>array(
+					array('label'=>'Buat Kelas','url'=>array('/Kelas/create')),
+					),
+					'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 	
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
@@ -109,6 +113,13 @@
 				 	'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'),
+						'items'=>array(
+						array('label'=>'Buat Mata Pelajaran','url'=>array('/MataPelajaran/create')),
+						array('label'=>'Atur Mata Pelajaran','url'=>array('/MataPelajaran/admin')),
+
+					), 
+						'visible'=>UserWeb::instance()->isKurikulum()), 
+				array('label'=>'Unduh', 'url'=>array('/unduh'),
 						'items'=>array(
 						array('label'=>'Unduh Laporan Nilai Santri','url'=>array('/unduhNilai')),
 						array('label'=>'Unduh Rapor Santri','url'=>array('/unduhRapor')),
