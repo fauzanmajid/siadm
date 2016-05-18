@@ -27,6 +27,8 @@ $this->menu=array(
 		'id_bendahara',
 		'nip_santri',
 		'nominal',
+		'tanggal',
+		'keterangan',
 		'timestamp',
 	),
 )); ?>

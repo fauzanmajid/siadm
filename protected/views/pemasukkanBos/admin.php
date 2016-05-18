@@ -26,11 +26,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<<<<<<< HEAD
-<h1>Manage Pemasukkan Bos</h1>
-=======
+
 <h1>Atur Pemasukan BOS</h1>
->>>>>>> parput
+
 
 <!-- <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -52,6 +50,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'kode',
 		'id_bendahara',
 		'nominal',
+		'Tanggal',
+		'Keterangan',
 		'timestamp',
 		array(
 			'class'=>'CButtonColumn',

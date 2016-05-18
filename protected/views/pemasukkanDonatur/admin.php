@@ -48,6 +48,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'kode',
 		'id_bendahara',
 		'nominal',
+		'tanggal',
+		'keterangan',
 		'timestamp',
 		'id_donatur',
 		array(
