@@ -17,13 +17,7 @@ $('.search-form form').submit(function(){
 
 <h1>Donatur</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<div class='search-result' style="display:none">
+<input type=button onClick="location.href='http://localhost/siadm/index.php/Donatur/create'"value='Buat'>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'donatur-grid',
@@ -41,4 +35,3 @@ $('.search-form form').submit(function(){
 	),
 )); ?>
 
-<input type=button onClick="location.href='http://localhost/siadm/index.php/Donatur/create'"value='Buat'>

@@ -39,12 +39,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'no_telepon'); ?>
-		<?php echo $form->textField($model,'no_telepon',array('size'=>15,'maxlength'=>15)); ?>
+		<?php echo $form->textField($model,'no_telepon',array('size'=>25,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'no_telepon'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

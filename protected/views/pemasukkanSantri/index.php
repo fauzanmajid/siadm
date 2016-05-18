@@ -13,14 +13,8 @@ $('.search-form form').submit(function(){
 
 <h1>Pemasukkan Santri</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<div class='search-result' style="display:none">
-
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanSantri/create'"value='Buat'>
+<div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-santri-grid',
 	'dataProvider'=>$model->search(),
@@ -37,5 +31,6 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanSantri/create'"value='Buat'>
+</div>

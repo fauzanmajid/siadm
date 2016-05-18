@@ -15,7 +15,7 @@
 );*/
 ?>
 
-<h1>Lihat Perizinan Santri #<?php echo $model->pencatatan_perizinan; ?></h1>
+<h1>Lihat Perizinan Santri <?php echo $model->pencatatan_perizinan; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
