@@ -30,8 +30,8 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nominal, Tanggal', 'required'),
-			array('id_bendahara, nominal, Tanggal, Keterangan', 'numerical', 'integerOnly'=>true),
+			array('nominal, Tanggal, Keterangan', 'required'),
+			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('kode, id_bendahara, nominal, Tanggal, Keterangan, timestamp', 'safe', 'on'=>'search'),

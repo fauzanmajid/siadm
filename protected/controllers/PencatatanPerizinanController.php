@@ -83,7 +83,7 @@ class PencatatanPerizinanController extends Controller
 		{
 			$model->attributes=$_POST['PencatatanPerizinan'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->pencatatan_perizinan));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(

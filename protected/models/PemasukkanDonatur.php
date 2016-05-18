@@ -32,8 +32,8 @@ class PemasukkanDonatur extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nominal, id_donatur, tanggal', 'required'),
-			array('id_bendahara, nominal, id_donatur, tanggal, keterangan', 'numerical', 'integerOnly'=>true),
+			array('nominal, id_donatur, tanggal, keterangan', 'required'),
+			array('id_bendahara, nominal, id_donatur', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('kode, id_bendahara, nominal, tanggal, keterangan, timestamp, id_donatur', 'safe', 'on'=>'search'),

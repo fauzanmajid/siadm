@@ -32,7 +32,7 @@ class MataPelajaran extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, nama, jenjang', 'required'),
+			array('nama, jenjang', 'required'),
 			array('id', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>25),
 			array('jenjang', 'length', 'max'=>10),

@@ -34,6 +34,7 @@ class Donatur extends CActiveRecord
 			array('nama_lengkap, pekerjaan, alamat, no_telepon', 'required'),
 			//array('id', 'numerical', 'integerOnly'=>true),
 			array('nama_lengkap, pekerjaan', 'length', 'max'=>25),
+			array('nama_lengkap', 'match','pattern' => '/^[a-zA-Z\s]+$/'),
 			array('alamat', 'length', 'max'=>50),
 			array('no_telepon', 'length', 'max'=>15),
 			// The following rule is used by search().
@@ -107,4 +108,8 @@ class Donatur extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	public function getConcatened()
+    {
+	    return $this->id.' ('.$this->nama_lengkap.')';
+    }
 }
