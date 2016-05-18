@@ -14,7 +14,10 @@ $this->menu=array(
 	array('label'=>'Buat Pemasukkan Bos', 'url'=>array('create')),
 	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
 );
+
+
 ?>
+
 
 <h1>Pemasukkan Bos</h1>
 
@@ -23,6 +26,9 @@ $this->menu=array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
+
+
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'" value='click here'>
 
 <div class='search-result' style="display:none">
 
