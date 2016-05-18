@@ -9,5 +9,6 @@ return array(
 	'username' => 'root',
 	'password' => '',
 	'charset' => 'utf8',
+	'initSQLs'=> array("set time_zone='+07:00';"),
 	
 );

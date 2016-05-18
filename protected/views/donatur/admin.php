@@ -1,16 +1,16 @@
 <?php
-/* @var $this PemasukkanSantriController */
-/* @var $model PemasukkanSantri */
+/* @var $this DonaturController */
+/* @var $model Donatur */
 
-/*$this->breadcrumbs=array(
-	'Pemasukkan Santris'=>array('index'),
+$this->breadcrumbs=array(
+	'Donaturs'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List PemasukkanSantri', 'url'=>array('index')),
-	array('label'=>'Create PemasukkanSantri', 'url'=>array('create')),
-);*/
+	array('label'=>'List Donatur', 'url'=>array('index')),
+	array('label'=>'Create Donatur', 'url'=>array('create')),
+);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#pemasukkan-santri-grid').yiiGridView('update', {
+	$('#donatur-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,14 +26,14 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Atur Pemasukan Santri</h1>
+<h1>Manage Donaturs</h1>
 
-<!-- <p>
+<p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p> -->
+</p>
 
-<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -41,20 +41,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'pemasukkan-santri-grid',
+	'id'=>'donatur-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'kode',
-		'id_bendahara',
-		'nip_santri',
-		'nominal',
-		'tanggal',
-		'keterangan',
-		'timestamp',
+		'id',
+		'nama_lengkap',
+		'pekerjaan',
+		'alamat',
+		'no_telepon',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
-	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>

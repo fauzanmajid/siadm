@@ -10,11 +10,14 @@ $('.search-form form').submit(function(){
 });
 ");
 
+<<<<<<< HEAD
 $this->menu=array(
 	array('label'=>'Buat Pemasukkan Bos', 'url'=>array('create')),
 	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
 );
 
+=======
+>>>>>>> ef4fcbbfc6ca5e62fd0fbeb084ce966e1d8fcdb3
 
 ?>
 
@@ -41,10 +44,13 @@ $this->menu=array(
 		'kode',
 		'id_bendahara',
 		'nominal',
+		'Tanggal',
+		'Keterangan',
 		'timestamp',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
 )); ?>
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
 

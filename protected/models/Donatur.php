@@ -1,33 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "perwalian".
+ * This is the model class for table "donatur".
  *
- * The followings are the available columns in table 'perwalian':
+ * The followings are the available columns in table 'donatur':
  * @property integer $id
- * @property string $nip_santri
- * @property string $status
- * @property string $nama
- * @property string $tempat_lahir
- * @property string $tanggal_lahir
- * @property string $agama
+ * @property string $nama_lengkap
+ * @property string $pekerjaan
  * @property string $alamat
  * @property string $no_telepon
- * @property string $pekerjaan
- * @property string $pendidikan
- * @property integer $penghasilan
  *
  * The followings are the available model relations:
- * @property Santri $nipSantri
+ * @property PemasukkanDonatur[] $pemasukkanDonaturs
  */
-class Perwalian extends CActiveRecord
+class Donatur extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'perwalian';
+		return 'donatur';
 	}
 
 	/**
@@ -38,15 +31,14 @@ class Perwalian extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, status, nama, tempat_lahir, tanggal_lahir, agama, alamat, no_telepon, pekerjaan, pendidikan, penghasilan', 'required'),
-			array('penghasilan', 'numerical', 'integerOnly'=>true),
-			array('nip_santri, status, tempat_lahir, no_telepon, pekerjaan, pendidikan', 'length', 'max'=>15),
-			array('nama', 'length', 'max'=>25),
-			array('agama', 'length', 'max'=>10),
+			array('id, nama_lengkap, pekerjaan, alamat, no_telepon', 'required'),
+			array('id', 'numerical', 'integerOnly'=>true),
+			array('nama_lengkap, pekerjaan', 'length', 'max'=>25),
 			array('alamat', 'length', 'max'=>50),
+			array('no_telepon', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nip_santri, status, nama, tempat_lahir, tanggal_lahir, agama, alamat, no_telepon, pekerjaan, pendidikan, penghasilan', 'safe', 'on'=>'search'),
+			array('id, nama_lengkap, pekerjaan, alamat, no_telepon', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,7 +50,7 @@ class Perwalian extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'nipSantri' => array(self::BELONGS_TO, 'Santri', 'nip_santri'),
+			'pemasukkanDonaturs' => array(self::HAS_MANY, 'PemasukkanDonatur', 'id_donatur'),
 		);
 	}
 
@@ -69,17 +61,10 @@ class Perwalian extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nip_santri' => 'Nip Santri',
-			'status' => 'Status',
-			'nama' => 'Nama',
-			'tempat_lahir' => 'Tempat Lahir',
-			'tanggal_lahir' => 'Tanggal Lahir',
-			'agama' => 'Agama',
+			'nama_lengkap' => 'Nama Lengkap',
+			'pekerjaan' => 'Pekerjaan',
 			'alamat' => 'Alamat',
 			'no_telepon' => 'No Telepon',
-			'pekerjaan' => 'Pekerjaan',
-			'pendidikan' => 'Pendidikan',
-			'penghasilan' => 'Penghasilan',
 		);
 	}
 
@@ -102,17 +87,10 @@ class Perwalian extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('nip_santri',$this->nip_santri,true);
-		//$criteria->compare('status',$this->status,true);
-		$criteria->compare('nama',$this->nama,true);
-		//$criteria->compare('tempat_lahir',$this->tempat_lahir,true);
-		//$criteria->compare('tanggal_lahir',$this->tanggal_lahir,true);
-		//$criteria->compare('agama',$this->agama,true);
-		//$criteria->compare('alamat',$this->alamat,true);
-		//$criteria->compare('no_telepon',$this->no_telepon,true);
-		//$criteria->compare('pekerjaan',$this->pekerjaan,true);
-		//$criteria->compare('pendidikan',$this->pendidikan,true);
-		//$criteria->compare('penghasilan',$this->penghasilan);
+		$criteria->compare('nama_lengkap',$this->nama_lengkap,true);
+		$criteria->compare('pekerjaan',$this->pekerjaan,true);
+		$criteria->compare('alamat',$this->alamat,true);
+		$criteria->compare('no_telepon',$this->no_telepon,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -123,7 +101,7 @@ class Perwalian extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Perwalian the static model class
+	 * @return Donatur the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -76,6 +76,7 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/UnduhLaporanKeuangan
 HTTP_REFERER=http://localhost/siadm/index.php/site/index
 ---
+<<<<<<< HEAD
 2016/05/16 14:57:36 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'siadmdb' in C:\xampp\htdocs\yii\db\CDbConnection.php:399
 Stack trace:
 #0 C:\xampp\htdocs\yii\db\CDbConnection.php(347): CDbConnection->open()
@@ -4059,4 +4060,69 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/Santri/statistiksantri
 in C:\xampp\htdocs\siadm\protected\views\santri\statistiksantri.php (11)
 in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (251)
+=======
+2016/05/17 07:01:17 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:17 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:18 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:18 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:22 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:01:22 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:02:23 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 07:02:23 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 03:15:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "LaporanKeuangan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('LaporanKeuangan')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/LaporanKeuangan
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanDonatur/create
+---
+2016/05/18 03:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "LaporanKeuangan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('LaporanKeuangan')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/LaporanKeuangan
+HTTP_REFERER=http://localhost/siadm/index.php/pemasukkanDonatur/create
+---
+2016/05/18 03:26:17 [error] [php] Undefined variable: model (C:\xampp\htdocs\siadm\protected\views\donatur\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(869): DonaturController->renderFile()
+#1 C:\xampp\htdocs\yii\web\CController.php(782): DonaturController->renderPartial()
+#2 C:\xampp\htdocs\siadm\protected\controllers\DonaturController.php(130): DonaturController->render()
+#3 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): DonaturController->actionIndex()
+#4 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): DonaturController->runAction()
+#6 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): DonaturController->filterAccessControl()
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(265): DonaturController->runActionWithFilters()
+#12 C:\xampp\htdocs\yii\web\CWebApplication.php(282): DonaturController->run()
+#13 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\siadm\index.php(33): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/Donatur
+in C:\xampp\htdocs\siadm\protected\views\donatur\index.php (22)
+in C:\xampp\htdocs\siadm\protected\controllers\DonaturController.php (130)
+>>>>>>> ef4fcbbfc6ca5e62fd0fbeb084ce966e1d8fcdb3
 in C:\xampp\htdocs\siadm\index.php (33)

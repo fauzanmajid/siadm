@@ -30,11 +30,11 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nominal', 'required'),
-			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
+			array('nominal, Tanggal', 'required'),
+			array('id_bendahara, nominal, Tanggal, Keterangan', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nominal, timestamp', 'safe', 'on'=>'search'),
+			array('kode, id_bendahara, nominal, Tanggal, Keterangan, timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +59,8 @@ class PemasukkanBos extends CActiveRecord
 			'kode' => 'Kode',
 			'id_bendahara' => 'Id Bendahara',
 			'nominal' => 'Nominal',
+			'Tanggal' => 'Tanggal',
+			'Keterangan' => 'Keterangan',
 			'timestamp' => 'Timestamp',
 		);
 	}
@@ -84,6 +86,8 @@ class PemasukkanBos extends CActiveRecord
 		$criteria->compare('kode',$this->kode);
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nominal',$this->nominal);
+		$criteria->compare('Tanggal',$this->Tanggal);
+		$criteria->compare('Keterangan',$this->Keterangan);
 		$criteria->compare('timestamp',$this->timestamp,true);
 
 		return new CActiveDataProvider($this, array(
