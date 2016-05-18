@@ -32,12 +32,12 @@ class PemasukkanSantri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, nominal', 'required'),
-			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
+			array('nip_santri, nominal, tanggal', 'required'),
+			array('id_bendahara, nominal, tanggal, keterangan', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nip_santri, nominal, timestamp', 'safe', 'on'=>'search'),
+			array('kode, id_bendahara, nip_santri, nominal, tanggal, keterangan, timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +64,8 @@ class PemasukkanSantri extends CActiveRecord
 			'id_bendahara' => 'Id Bendahara',
 			'nip_santri' => 'Nip Santri',
 			'nominal' => 'Nominal',
+			'tanggal' => 'Tanggal',
+			'keterangan' => 'Keterangan',
 			'timestamp' => 'Timestamp',
 		);
 	}
@@ -90,6 +92,8 @@ class PemasukkanSantri extends CActiveRecord
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('nominal',$this->nominal);
+		$criteria->compare('tanggal',$this->tanggal);
+		$criteria->compare('keterangan',$this->keterangan);
 		$criteria->compare('timestamp',$this->timestamp,true);
 
 		return new CActiveDataProvider($this, array(

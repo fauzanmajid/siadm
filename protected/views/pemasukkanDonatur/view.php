@@ -24,6 +24,8 @@ $this->breadcrumbs=array(
 		'kode',
 		'id_bendahara',
 		'nominal',
+		'tanggal',
+		'keterangan',
 		'timestamp',
 		'id_donatur',
 	),

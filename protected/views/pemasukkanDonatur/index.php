@@ -9,10 +9,6 @@ $('.search-form form').submit(function(){
 });
 ");
 
-$this->menu=array(
-	array('label'=>'Buat Pemasukkan donatur', 'url'=>array('create')),
-	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
-);
 ?>
 <h1>Pemasukkan Donatur</h1>
 
@@ -33,6 +29,8 @@ $this->menu=array(
 		'kode',
 		'id_bendahara',
 		'nominal',
+		'tanggal',
+		'keterangan',
 		'timestamp',
 		'id_donatur',
 		array(
@@ -40,3 +38,4 @@ $this->menu=array(
 		),
 	),
 )); ?>
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanDonatur/create'"value='Buat'>

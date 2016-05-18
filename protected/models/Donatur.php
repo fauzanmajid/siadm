@@ -1,25 +1,26 @@
 <?php
 
 /**
- * This is the model class for table "pemasukkan_bos".
+ * This is the model class for table "donatur".
  *
- * The followings are the available columns in table 'pemasukkan_bos':
- * @property integer $kode
- * @property integer $id_bendahara
- * @property integer $nominal
- * @property string $timestamp
+ * The followings are the available columns in table 'donatur':
+ * @property integer $id
+ * @property string $nama_lengkap
+ * @property string $pekerjaan
+ * @property string $alamat
+ * @property string $no_telepon
  *
  * The followings are the available model relations:
- * @property User $idBendahara
+ * @property PemasukkanDonatur[] $pemasukkanDonaturs
  */
-class PemasukkanBos extends CActiveRecord
+class Donatur extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'pemasukkan_bos';
+		return 'donatur';
 	}
 
 	/**
@@ -30,11 +31,14 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nominal, Tanggal', 'required'),
-			array('id_bendahara, nominal, Tanggal, Keterangan', 'numerical', 'integerOnly'=>true),
+			array('id, nama_lengkap, pekerjaan, alamat, no_telepon', 'required'),
+			array('id', 'numerical', 'integerOnly'=>true),
+			array('nama_lengkap, pekerjaan', 'length', 'max'=>25),
+			array('alamat', 'length', 'max'=>50),
+			array('no_telepon', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nominal, Tanggal, Keterangan, timestamp', 'safe', 'on'=>'search'),
+			array('id, nama_lengkap, pekerjaan, alamat, no_telepon', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,7 +50,7 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idBendahara' => array(self::BELONGS_TO, 'User', 'id_bendahara'),
+			'pemasukkanDonaturs' => array(self::HAS_MANY, 'PemasukkanDonatur', 'id_donatur'),
 		);
 	}
 
@@ -56,12 +60,11 @@ class PemasukkanBos extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'kode' => 'Kode',
-			'id_bendahara' => 'Id Bendahara',
-			'nominal' => 'Nominal',
-			'Tanggal' => 'Tanggal',
-			'Keterangan' => 'Keterangan',
-			'timestamp' => 'Timestamp',
+			'id' => 'ID',
+			'nama_lengkap' => 'Nama Lengkap',
+			'pekerjaan' => 'Pekerjaan',
+			'alamat' => 'Alamat',
+			'no_telepon' => 'No Telepon',
 		);
 	}
 
@@ -83,12 +86,11 @@ class PemasukkanBos extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('kode',$this->kode);
-		$criteria->compare('id_bendahara',$this->id_bendahara);
-		$criteria->compare('nominal',$this->nominal);
-		$criteria->compare('Tanggal',$this->Tanggal);
-		$criteria->compare('Keterangan',$this->Keterangan);
-		$criteria->compare('timestamp',$this->timestamp,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('nama_lengkap',$this->nama_lengkap,true);
+		$criteria->compare('pekerjaan',$this->pekerjaan,true);
+		$criteria->compare('alamat',$this->alamat,true);
+		$criteria->compare('no_telepon',$this->no_telepon,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -99,23 +101,10 @@ class PemasukkanBos extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return PemasukkanBos the static model class
+	 * @return Donatur the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-
-	public function beforeSave ()
-	{
-		if(parent::beforeSave()){
-			if($this->isNewRecord){
-				$this->timestamp=date('Y-m-d H:i:s');
-				$this->id_bendahara = UserWeb::instance()->ID;
-			}
-			return true;
-		}
-		return false;
-
 	}
 }

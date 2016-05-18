@@ -23,6 +23,8 @@ $this->menu=array(
 	'attributes'=>array(
 		'kode',
 		'id_bendahara',
+		'Tanggal',
+		'Keterangan',
 		'nominal',
 		'timestamp',
 	),

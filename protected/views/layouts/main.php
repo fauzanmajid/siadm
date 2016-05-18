@@ -122,7 +122,8 @@
 						'items'=>array(
 
 
-					  	array('label'=>'Laporan Pemasukan','url'=>array(''),
+					  	array('label'=>'Donatur','url'=>array('/Donatur')),
+					  	array('label'=>'Pemasukan','url'=>array(''),
 
 					  		'items'=>array(
 						  	array('label'=>'Pemasukan Bos','url'=>array('/PemasukkanBos')),
@@ -131,7 +132,7 @@
 							array('label'=>'Unduh Laporan Pemasukan','url'=>array('/UnduhTransaksiPemasukan')),
 						  	)),
 
-					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
+					  	array('label'=>'Pengeluaran','url'=>array('/transaksiPengeluaran')),
 						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/UnduhTransaksiPengeluaran')),
 
 
