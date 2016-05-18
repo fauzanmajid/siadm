@@ -6,11 +6,12 @@ $this->breadcrumbs=array(
 	'Kelas'=>array('index'),
 	'Buat',
 );
-
+/*
 $this->menu=array(
 	array('label'=>'Daftar Kelas', 'url'=>array('index')),
 	array('label'=>'Sunting Kelas', 'url'=>array('admin')),
 );
+*/
 ?>
 
 <h1>Buat Kelas</h1>

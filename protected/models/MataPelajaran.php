@@ -107,4 +107,8 @@ class MataPelajaran extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	public function getConcatened()
+    {
+	    return $this->id.' ('.$this->nama.')';
+    }
 }

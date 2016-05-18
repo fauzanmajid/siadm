@@ -77,7 +77,14 @@
 			'items'=>array(
 				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Kelas', 'url'=>array('/Kelas'),'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Kelas', 'url'=>array('/Kelas'),
+					'items'=>array(
+					  	array('label'=>'Buat Kelas','url'=>array('kelas/create')),
+					  	array('label'=>'Atur Kelas','url'=>array('kelas/admin')),
+					  
+				  	),
+
+					'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
@@ -123,6 +130,14 @@
 				  		
 				  	),
 						'visible'=>UserWeb::instance()->isBendahara()),
+
+
+				array('label'=>'Alokasi Kelas',  'url'=>array('/alokasiKelas'),
+						'items'=>array(
+					  	array('label'=>'Buat Alokasi Kelas','url'=>array('/alokasiKelas/create')),
+					  	array('label'=>'Sunting Alokasi Kelas','url'=>array('')),			  	
+				  	),
+						'visible'=>UserWeb::instance()->isAdmin()),
 
 			),
 		)); ?>

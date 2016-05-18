@@ -6,11 +6,12 @@ $this->breadcrumbs=array(
 	'Kelas'=>array('index'),
 	'Sunting',
 );
-
+/*
 $this->menu=array(
 	array('label'=>'Daftar Kelas', 'url'=>array('index')),
 	array('label'=>'Buat Kelas', 'url'=>array('create')),
 );
+*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
