@@ -25,22 +25,10 @@
 		<?php echo $form->error($model,'nip_santri'); ?>
 	</div>
 
-	<!-- <div class="row">
-		<?php echo $form->labelEx($model,'id_kesiswaan'); ?>
-		<?php echo $form->textField($model,'id_kesiswaan'); ?>
-		<?php echo $form->error($model,'id_kesiswaan'); ?>
-	</div> -->
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'deskripsi'); ?>
 		<?php echo $form->textField($model,'deskripsi',array('size'=>25,'maxlength'=>25)); ?>
 		<?php echo $form->error($model,'deskripsi'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'durasi'); ?>
-		<?php echo $form->textField($model,'durasi'); ?>
-		<?php echo $form->error($model,'durasi'); ?>
 	</div>
 
 	<div class="row">
@@ -76,7 +64,7 @@
 	                'changeMonth' => true,
 	                'changeYear' => true,
 	                'yearRange' => '-200:+0',
-	                'maxDate' => '0',
+	                //'maxDate' => '0',
 	            ),
 	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
 	        ));

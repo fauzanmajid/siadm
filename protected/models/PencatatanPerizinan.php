@@ -39,7 +39,7 @@ class PencatatanPerizinan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori', 'required'),
+			array('nip_santri, deskripsi, tanggal_awal, tanggal_akhir, kategori', 'required'),
 			array('id_kesiswaan, durasi', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			array('deskripsi', 'length', 'max'=>25),
@@ -137,11 +137,12 @@ class PencatatanPerizinan extends CActiveRecord
 	}
 
 	public function beforeSave() {
-	    if ($this->isNewRecord) {
-	        $this->id_kesiswaan = UserWeb::instance()->ID;
-	    }
-	 
-	    return parent::beforeSave();
+		if(parent::beforeSave()){
+			$this->id_kesiswaan = UserWeb::instance()->ID;
+			$this->durasi = $this->getDuration();
+			return true;
+		}
+		return false;
 	}
 
 	/**
@@ -187,5 +188,13 @@ class PencatatanPerizinan extends CActiveRecord
 	        ),
 	    ),
 		));
+	}
+
+	public function getDuration(){
+		
+		$diff = strtotime($this->tanggal_akhir) - strtotime($this->tanggal_awal);
+		$days = ($diff / 60 / 60 / 24) + 1;
+
+		return $days;
 	}
 }

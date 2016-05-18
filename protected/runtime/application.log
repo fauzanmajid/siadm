@@ -100,3 +100,252 @@ in C:\xampp\htdocs\siadm\index.php (33)
 2016/05/17 07:02:23 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
 in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
 in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 08:25:16 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 08:25:16 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/17 08:29:49 [error] [exception.ParseError] ParseError: syntax error, unexpected 'public' (T_PUBLIC) in C:\xampp\htdocs\siadm\protected\models\PencatatanPerizinan.php:191
+Stack trace:
+#0 [internal function]: YiiBase::autoload('PencatatanPeriz...')
+#1 C:\xampp\htdocs\siadm\protected\views\santri\perizinan.php(2): spl_autoload_call('PencatatanPeriz...')
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('perizinan', Array, true)
+#6 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(241): CController->render('perizinan', Array)
+#7 [internal function]: SantriController->actionPerizinan('123')
+#8 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#9 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('perizinan')
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/perizina...')
+#20 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#22 {main}
+REQUEST_URI=/siadm/index.php/santri/perizinan/123
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/17 08:30:26 [error] [exception.ParseError] ParseError: syntax error, unexpected 'functiion' (T_STRING), expecting variable (T_VARIABLE) in C:\xampp\htdocs\siadm\protected\models\PencatatanPerizinan.php:192
+Stack trace:
+#0 [internal function]: YiiBase::autoload('PencatatanPeriz...')
+#1 C:\xampp\htdocs\siadm\protected\views\santri\perizinan.php(2): spl_autoload_call('PencatatanPeriz...')
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('perizinan', Array, true)
+#6 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(241): CController->render('perizinan', Array)
+#7 [internal function]: SantriController->actionPerizinan('123')
+#8 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#9 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('perizinan')
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/perizina...')
+#20 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#22 {main}
+REQUEST_URI=/siadm/index.php/santri/perizinan/123
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/17 08:33:23 [error] [exception.ParseError] ParseError: syntax error, unexpected ''duration'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\siadm\protected\views\santri\partial\perizinan-item.php:13
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\siadm\protected\views\santri\perizinan.php(16): CController->renderPartial('partial/perizin...', Array)
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('perizinan', Array, true)
+#7 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(241): CController->render('perizinan', Array)
+#8 [internal function]: SantriController->actionPerizinan('123')
+#9 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#10 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('perizinan')
+#20 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/perizina...')
+#21 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#23 {main}
+REQUEST_URI=/siadm/index.php/santri/perizinan/123
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/18 19:12:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE ((timestamp >= :awal) AND (timestamp <= :akhir)) AND (jenjang = :jenjang).
+in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (298)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 19:12:04 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE ((timestamp >= :awal) AND (timestamp <= :akhir)) AND (jenjang = :jenjang) in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(298): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: SantriController->actionExcel('2016-05-01', '2016-05-17', 'SMK')
+#5 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('excel')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/excel')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/santri/excel?awal=2016-05-01&akhir=2016-05-17&jenjang=SMK
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduhDataSantri
+---
+2016/05/18 19:13:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE (timestamp >= :awal) AND (jenjang = :jenjang).
+in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (298)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 19:13:35 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE (timestamp >= :awal) AND (jenjang = :jenjang) in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(298): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: SantriController->actionExcel('2016-05-01', '', 'SMP')
+#5 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('excel')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/excel')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/santri/excel?awal=2016-05-01&akhir=&jenjang=SMP
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduhDataSantri
+---
+2016/05/18 19:14:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE (timestamp <= :akhir) AND (jenjang = :jenjang).
+in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (298)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 19:14:36 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE (timestamp <= :akhir) AND (jenjang = :jenjang) in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(298): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: SantriController->actionExcel('', '2016-05-02', 'SMK')
+#5 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('excel')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/excel')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/santri/excel?awal=&akhir=2016-05-02&jenjang=SMK
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduhDataSantri
+---
+2016/05/18 19:18:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE (timestamp <= :akhir) AND (jenjang = :jenjang).
+in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (298)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 19:18:07 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE (timestamp <= :akhir) AND (jenjang = :jenjang) in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(298): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: SantriController->actionExcel('', '2016-05-02', 'SMK')
+#5 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('excel')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/excel')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/santri/excel?awal=&akhir=2016-05-02&jenjang=SMK
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduhDataSantri
+---
+2016/05/18 19:31:14 [error] [php] Undefined variable: santri (C:\xampp\htdocs\siadm\protected\controllers\SantriController.php:316)
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): SantriController->runAction()
+#3 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): SantriController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\web\CController.php(265): SantriController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(282): SantriController->run()
+#10 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\siadm\index.php(33): CWebApplication->run()
+REQUEST_URI=/siadm/index.php/santri/excel?awal=2016-05-02&akhir=&jenjang=
+in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (316)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 19:31:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE (timestamp >= :awal) AND (jenjang = :jenjang).
+in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (298)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 19:31:32 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `santri` `t` WHERE (timestamp >= :awal) AND (jenjang = :jenjang) in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\siadm\protected\controllers\SantriController.php(298): CActiveRecord->findAll(Object(CDbCriteria))
+#4 [internal function]: SantriController->actionExcel('2016-03-06', '', 'SMK')
+#5 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SantriController), Array)
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SantriController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('excel')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/excel')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/santri/excel?awal=2016-03-06&akhir=&jenjang=SMK
+HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduhDataSantri
+---

@@ -20,7 +20,7 @@
             ?>
             <br/>
                 <button style="float: right">
-                    <?php echo CHtml::link('Simpan', array('pencatatanPerizinan/create', 'id' => $model->nip)) ?>
+                    <?php echo CHtml::link('Tambah', array('pencatatanPerizinan/create', 'id' => $model->nip)) ?>
                 </button>
             <?php
         }
