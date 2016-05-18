@@ -80,7 +80,7 @@ class PrestasiController extends Controller
 		{
 			$model->attributes=$_POST['Prestasi'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->no_pencatatan));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(

@@ -16,7 +16,7 @@
 );*/
 ?>
 
-<h1>Lihat Prestasi Santri #<?php echo $model->no_pencatatan; ?></h1>
+<h1>Lihat Prestasi Santri <?php echo $model->no_pencatatan; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

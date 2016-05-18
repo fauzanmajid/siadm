@@ -10,22 +10,12 @@ $('.search-form form').submit(function(){
 });
 ");
 
-$this->menu=array(
-	array('label'=>'Buat Pemasukkan Bos', 'url'=>array('create')),
-	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
-);
 ?>
+
 
 <h1>Pemasukkan Bos</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<div class='search-result' style="display:none">
-
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-bos-grid',
@@ -35,10 +25,13 @@ $this->menu=array(
 		'kode',
 		'id_bendahara',
 		'nominal',
+		'Tanggal',
+		'Keterangan',
 		'timestamp',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
 
