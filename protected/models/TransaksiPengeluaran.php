@@ -19,6 +19,7 @@ class TransaksiPengeluaran extends CActiveRecord
 	public $tanggal_awal;
 	public $tanggal_akhir;
 	public $jenis;
+	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -67,6 +68,9 @@ class TransaksiPengeluaran extends CActiveRecord
 			'nominal' => 'Nominal',
 			'Deskripsi' => 'Deskripsi',
 			'tanggal_pengeluaran' => 'Tanggal Pengeluaran',
+			'tanggal_awal' => 'Tanggal Awal',
+			'tanggal_akhir' => 'Tanggal Akhir',
+			'jenis' => 'jenis',
 			'timestamp' => 'Timestamp',
 		);
 	}
@@ -115,8 +119,6 @@ class TransaksiPengeluaran extends CActiveRecord
 	public function beforeSave ()
 	{
 		if(parent::beforeSave()){
-
-
 			if($this->isNewRecord){
 				$this->timestamp=date('Y-m-d H:i:s');
 				$this->id_bendahara = UserWeb::instance()->ID;
