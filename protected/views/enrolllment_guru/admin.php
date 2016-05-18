@@ -2,7 +2,11 @@
 /* @var $this Enrolllment_GuruController */
 /* @var $model Enrolllment_Guru */
 
+<<<<<<< HEAD
 $this->breadcrumbs=array(
+=======
+/*$this->breadcrumbs=array(
+>>>>>>> master
 	'Enrollment  Guru'=>array('index'),
 	'Sunting',
 );
@@ -10,7 +14,11 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Daftar Enrolllment_Guru', 'url'=>array('index')),
 	array('label'=>'Buat Enrolllment_Guru', 'url'=>array('create')),
+<<<<<<< HEAD
 );
+=======
+);*/
+>>>>>>> master
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -26,9 +34,15 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
+<<<<<<< HEAD
 <h1>Sunting Enrollment  Guru</h1>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+=======
+<h1>Atur Alokasi Guru</h1>
+
+<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
+>>>>>>> master
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -47,4 +61,8 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
+<<<<<<< HEAD
+=======
+	'emptyText'=>'Tidak ada data yang ditemukan.'
+>>>>>>> master
 )); ?>

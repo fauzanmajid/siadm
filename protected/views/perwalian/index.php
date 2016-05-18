@@ -2,6 +2,7 @@
 /* @var $this PerwalianController */
 /* @var $dataProvider CActiveDataProvider */
 
+<<<<<<< HEAD
 $this->breadcrumbs=array(
 	'Perwalians',
 );
@@ -13,6 +14,10 @@ $this->menu=array(
 ?>
 
 <h1>Perwalian</h1>
+=======
+?>
+<h1>Wali Santri</h1>
+>>>>>>> master
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

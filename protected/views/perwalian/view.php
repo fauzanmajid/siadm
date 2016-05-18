@@ -1,6 +1,7 @@
 <?php
 /* @var $this PerwalianController */
 /* @var $model Perwalian */
+<<<<<<< HEAD
 
 $this->breadcrumbs=array(
 	'Perwalians'=>array('index'),
@@ -17,6 +18,11 @@ $this->menu=array(
 ?>
 
 <h1>View Perwalian #<?php echo $model->id; ?></h1>
+=======
+?>
+
+<h1>Lihat Wali Santri <?php echo $model->id; ?></h1>
+>>>>>>> master
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

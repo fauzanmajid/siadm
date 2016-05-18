@@ -15,16 +15,28 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
+<<<<<<< HEAD
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+=======
+	<p class="note"><span class="required">*</span> Wajib diisi.</p>
+
+	<?php echo $form->errorSummary($model); ?>
+
+	<!-- <div class="row">
+>>>>>>> master
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nip_santri'); ?>
 	</div>
+<<<<<<< HEAD
 
+=======
+ -->
+>>>>>>> master
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php echo $form->textField($model,'status',array('size'=>15,'maxlength'=>15)); ?>
@@ -86,7 +98,11 @@
 	</div>
 
 	<div class="row buttons">
+<<<<<<< HEAD
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+=======
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
+>>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>

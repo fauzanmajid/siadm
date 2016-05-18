@@ -2,7 +2,11 @@
 /* @var $this Enrollment_PelajaranController */
 /* @var $model Enrollment_Pelajaran */
 
+<<<<<<< HEAD
 $this->breadcrumbs=array(
+=======
+/*$this->breadcrumbs=array(
+>>>>>>> master
 	'Enrollment  Pelajarans'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
@@ -13,9 +17,16 @@ $this->menu=array(
 	array('label'=>'Create Enrollment_Pelajaran', 'url'=>array('create')),
 	array('label'=>'View Enrollment_Pelajaran', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Enrollment_Pelajaran', 'url'=>array('admin')),
+<<<<<<< HEAD
 );
 ?>
 
 <h1>Update Enrollment_Pelajaran <?php echo $model->id; ?></h1>
+=======
+);*/
+?>
+
+<h1>Atur Alokasi Pelajaran <?php echo $model->id; ?></h1>
+>>>>>>> master
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

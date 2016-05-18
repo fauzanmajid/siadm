@@ -125,8 +125,19 @@ class PemasukkanDonaturController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('PemasukkanDonatur');
+<<<<<<< HEAD
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+=======
+		$model=new PemasukkanDonatur('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['PemasukkanDonatur']))
+			$model->attributes=$_GET['PemasukkanDonatur'];
+
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+>>>>>>> master
 		));
 	}
 

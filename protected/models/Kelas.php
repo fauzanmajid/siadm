@@ -46,7 +46,7 @@ class Kelas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'enrollmentPelajarans' => array(self::HAS_MANY, 'EnrollmentPelajaran', 'id_kelas'),
+			//'enrollmentPelajarans' => array(self::HAS_MANY, 'EnrollmentPelajaran', 'id_kelas'),
 		);
 	}
 

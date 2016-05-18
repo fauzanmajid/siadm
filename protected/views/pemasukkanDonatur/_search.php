@@ -11,10 +11,17 @@
 	'method'=>'get',
 )); ?>
 
+<<<<<<< HEAD
 	<div class="row">
 		<?php echo $form->label($model,'kode'); ?>
 		<?php echo $form->textField($model,'kode'); ?>
 	</div>
+=======
+	<!-- <div class="row">
+		<?php echo $form->label($model,'kode'); ?>
+		<?php echo $form->textField($model,'kode'); ?>
+	</div> -->
+>>>>>>> master
 
 	<div class="row">
 		<?php echo $form->label($model,'id_bendahara'); ?>
@@ -27,9 +34,35 @@
 	</div>
 
 	<div class="row">
+<<<<<<< HEAD
 		<?php echo $form->label($model,'timestamp'); ?>
 		<?php echo $form->textField($model,'timestamp'); ?>
 	</div>
+=======
+		<?php echo $form->labelEx($model,'tanggal'); ?>
+		<?php
+	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+	            'model' => $model,
+	            'attribute' => 'tanggal',
+	            'options' => array(
+	                'showAnim' => 'fadeIn',
+	                'dateFormat' => 'yy-mm-dd',
+	                'changeMonth' => true,
+	                'changeYear' => true,
+	                'yearRange' => '-200:+0',
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	        ));
+        ?>
+		<?php echo $form->error($model,'tanggal'); ?>
+	</div>
+
+	<!-- <div class="row">
+		<?php echo $form->label($model,'timestamp'); ?>
+		<?php echo $form->textField($model,'timestamp'); ?>
+	</div> -->
+>>>>>>> master
 
 	<div class="row">
 		<?php echo $form->label($model,'id_donatur'); ?>
@@ -37,7 +70,11 @@
 	</div>
 
 	<div class="row buttons">
+<<<<<<< HEAD
 		<?php echo CHtml::submitButton('Search'); ?>
+=======
+		<?php echo CHtml::submitButton('Cari'); ?>
+>>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>

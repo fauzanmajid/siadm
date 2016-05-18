@@ -47,7 +47,11 @@
 	</div>
 
 	<div class="row buttons">
+<<<<<<< HEAD
 		<?php echo CHtml::submitButton('Search'); ?>
+=======
+		<?php echo CHtml::submitButton('Cari'); ?>
+>>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -30,11 +30,19 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+<<<<<<< HEAD
 			array('nominal, timestamp', 'required'),
 			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('kode, id_bendahara, nominal, timestamp', 'safe', 'on'=>'search'),
+=======
+			array('nominal, Tanggal', 'required'),
+			array('id_bendahara, nominal, Tanggal, Keterangan', 'numerical', 'integerOnly'=>true),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('kode, id_bendahara, nominal, Tanggal, Keterangan, timestamp', 'safe', 'on'=>'search'),
+>>>>>>> master
 		);
 	}
 
@@ -59,6 +67,11 @@ class PemasukkanBos extends CActiveRecord
 			'kode' => 'Kode',
 			'id_bendahara' => 'Id Bendahara',
 			'nominal' => 'Nominal',
+<<<<<<< HEAD
+=======
+			'Tanggal' => 'Tanggal',
+			'Keterangan' => 'Keterangan',
+>>>>>>> master
 			'timestamp' => 'Timestamp',
 		);
 	}
@@ -84,6 +97,11 @@ class PemasukkanBos extends CActiveRecord
 		$criteria->compare('kode',$this->kode);
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nominal',$this->nominal);
+<<<<<<< HEAD
+=======
+		$criteria->compare('Tanggal',$this->Tanggal);
+		$criteria->compare('Keterangan',$this->Keterangan);
+>>>>>>> master
 		$criteria->compare('timestamp',$this->timestamp,true);
 
 		return new CActiveDataProvider($this, array(
@@ -101,4 +119,20 @@ class PemasukkanBos extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+<<<<<<< HEAD
+=======
+
+	public function beforeSave ()
+	{
+		if(parent::beforeSave()){
+			if($this->isNewRecord){
+				$this->timestamp=date('Y-m-d H:i:s');
+				$this->id_bendahara = UserWeb::instance()->ID;
+			}
+			return true;
+		}
+		return false;
+
+	}
+>>>>>>> master
 }

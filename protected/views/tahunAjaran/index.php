@@ -6,10 +6,10 @@
 	'Tahun Ajarans',
 );*/
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Buat Tahun Ajaran', 'url'=>array('create')),
 	array('label'=>'Atur Tahun Ajaran', 'url'=>array('admin')),
-);
+);*/
 ?>
 
 <h1>Tahun Ajaran</h1>

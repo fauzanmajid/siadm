@@ -21,6 +21,17 @@
 	<?php echo CHtml::encode($data->nominal); ?>
 	<br />
 
+<<<<<<< HEAD
+=======
+	<b><?php echo CHtml::encode($data->getAttributeLabel('tanggal')); ?>:</b>
+	<?php echo CHtml::encode($data->tanggal); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('keterangan')); ?>:</b>
+	<?php echo CHtml::encode($data->keterangan); ?>
+	<br />
+
+>>>>>>> master
 	<b><?php echo CHtml::encode($data->getAttributeLabel('timestamp')); ?>:</b>
 	<?php echo CHtml::encode($data->timestamp); ?>
 	<br />

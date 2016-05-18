@@ -103,6 +103,7 @@ class Perwalian extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
+<<<<<<< HEAD
 		$criteria->compare('status',$this->status,true);
 		$criteria->compare('nama',$this->nama,true);
 		$criteria->compare('tempat_lahir',$this->tempat_lahir,true);
@@ -113,6 +114,18 @@ class Perwalian extends CActiveRecord
 		$criteria->compare('pekerjaan',$this->pekerjaan,true);
 		$criteria->compare('pendidikan',$this->pendidikan,true);
 		$criteria->compare('penghasilan',$this->penghasilan);
+=======
+		//$criteria->compare('status',$this->status,true);
+		$criteria->compare('nama',$this->nama,true);
+		//$criteria->compare('tempat_lahir',$this->tempat_lahir,true);
+		//$criteria->compare('tanggal_lahir',$this->tanggal_lahir,true);
+		//$criteria->compare('agama',$this->agama,true);
+		//$criteria->compare('alamat',$this->alamat,true);
+		//$criteria->compare('no_telepon',$this->no_telepon,true);
+		//$criteria->compare('pekerjaan',$this->pekerjaan,true);
+		//$criteria->compare('pendidikan',$this->pendidikan,true);
+		//$criteria->compare('penghasilan',$this->penghasilan);
+>>>>>>> master
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

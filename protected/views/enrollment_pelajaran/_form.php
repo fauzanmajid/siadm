@@ -15,7 +15,11 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
+<<<<<<< HEAD
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
+=======
+	<p class="note"><span class="required">*</span> Wajib diisi.</p>
+>>>>>>> master
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -32,7 +36,11 @@
 	</div>
 
 	<div class="row buttons">
+<<<<<<< HEAD
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+=======
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
+>>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>
