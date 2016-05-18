@@ -19,7 +19,7 @@ $('.search-form form').submit(function(){
 
 </div><!-- search-form -->
 
-<div class='search-result' style="display:none">
+<div class='search-result' style="display:none;">
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-donatur-grid',

@@ -29,8 +29,8 @@ class Kelas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, nama, jenjang', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
+			array('nama, jenjang', 'required'),
+			//array('id', 'numerical', 'integerOnly'=>true),
 			array('nama, jenjang', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -46,7 +46,7 @@ class Kelas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'enrollmentPelajarans' => array(self::HAS_MANY, 'EnrollmentPelajaran', 'id_kelas'),
+			//'enrollmentPelajarans' => array(self::HAS_MANY, 'EnrollmentPelajaran', 'id_kelas'),
 		);
 	}
 
