@@ -1,4 +1,5 @@
 <?php
+
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
 	$('#pemasukkan-bos-grid').yiiGridView('update', {
@@ -24,6 +25,7 @@ $this->menu=array(
 </div><!-- search-form -->
 
 <div class='search-result' style="display:none">
+
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-bos-grid',

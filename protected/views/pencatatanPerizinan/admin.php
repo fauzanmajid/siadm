@@ -7,12 +7,12 @@
 	'Manage',
 );*/
 
-$this->menu=array(
+/*$this->menu=array(
 
 	array('label'=>'Daftar Catatan Perizinan', 'url'=>array('index')),
 	array('label'=>'Buat Catatan Perizinan', 'url'=>array('create')),
 
-);
+);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -28,7 +28,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Atur Catatan Perizinan</h1>
+<h1>Atur Perizinan Santri</h1>
 
 <!-- <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -61,4 +61,5 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 			'class'=>'CButtonColumn',
 		),
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>

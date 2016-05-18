@@ -78,12 +78,14 @@
 				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Kelas', 'url'=>array('/Kelas'),'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 
+				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 	
 						'items'=>array(
 					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
 					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
-					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduh/index')),
+					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduhDataSantri')),
+						array('label'=>'Wali Santri','url'=>array('/perwalian/admin')),
 				  	),
+
 						'visible'=>UserWeb::instance()->isAdmin()),
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
 						'items'=>array(
@@ -99,7 +101,12 @@
 
 					'visible'=>UserWeb::instance()->isKesiswaan()),
 
-				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'),
+					'items'=>array(
+					  	array('label'=>'Buat Perizinan','url'=>array('/PencatatanPerizinan/create')),
+					  	array('label'=>'Cari Perizinan','url'=>array('/PencatatanPerizinan/absensi')),
+					),
+				 	'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'),
 						'items'=>array(
@@ -128,8 +135,8 @@
 						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/UnduhTransaksiPengeluaran')),
 
 
-					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanTotal')),
-						array('label'=>'Unduh Laporan Keuangan','url'=>array('/UnduhLaporanTotal')),
+					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanKeuangan')),
+						array('label'=>'Unduh Laporan Keuangan','url'=>array('Site/UnduhLaporanKeuangan')),
 				  	),
 						'visible'=>UserWeb::instance()->isBendahara()),
 			),

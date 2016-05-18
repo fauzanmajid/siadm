@@ -2,20 +2,21 @@
 /* @var $this TransaksiPengeluaranController */
 /* @var $model TransaksiPengeluaran */
 
-$this->breadcrumbs=array(
-	'Pengeluaran'=>array('index'),
+/*$this->breadcrumbs=array(
+	'Transaksi Pengeluarans'=>array('index'),
 	$model->kode=>array('view','id'=>$model->kode),
 	'Sunting',
 );
 
-// $this->menu=array(
-// 	array('label'=>'Daftar Pengeluaran', 'url'=>array('index')),
-// 	array('label'=>'Buat Pengeluaran', 'url'=>array('create')),
-// 	array('label'=>'Lihat Pengeluaran', 'url'=>array('view', 'id'=>$model->kode)),
-// 	array('label'=>'Kelola Pengeluaran', 'url'=>array('admin')),
-// );
+<h1>Sunting Pengeluaran <?php echo $model->kode; ?></h1>
+$this->menu=array(
+	array('label'=>'List TransaksiPengeluaran', 'url'=>array('index')),
+	array('label'=>'Create TransaksiPengeluaran', 'url'=>array('create')),
+	array('label'=>'View TransaksiPengeluaran', 'url'=>array('view', 'id'=>$model->kode)),
+	array('label'=>'Manage TransaksiPengeluaran', 'url'=>array('admin')),
+);*/
 ?>
 
-<h1>Sunting Pengeluaran <?php echo $model->kode; ?></h1>
+<h1>Atur Transaksi Pengeluaran #<?php echo $model->kode; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

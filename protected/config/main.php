@@ -10,6 +10,8 @@ return array(
 
 	'name'=>'Sistem Informasi Administrasi Al-Lathifah Mulia',
 
+	'timeZone'=>'GMT',
+
     'defaultController' => 'site/login',
 	//'theme'=>'hebo',
 	// preloading 'log' component

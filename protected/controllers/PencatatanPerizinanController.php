@@ -40,7 +40,7 @@ class PencatatanPerizinanController extends Controller
 				'users'=>array('admin'),
 			),*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update', 'absensi'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isKesiswaan();}
@@ -187,5 +187,24 @@ class PencatatanPerizinanController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	/**
+	 * Lists all models.
+	 */
+	public function actionAbsensi()
+	{
+		$dataProvider = new CActiveDataProvider('PencatatanPerizinan');
+		
+		$model = new PencatatanPerizinan('searchIzin');
+		$model->unsetAttributes();  // clear any default values
+		
+		if(isset($_GET['PencatatanPerizinan']))
+			$model->attributes=$_GET['PencatatanPerizinan'];
+
+		$this->render('cari-absensi',array(
+			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+		));
 	}
 }
