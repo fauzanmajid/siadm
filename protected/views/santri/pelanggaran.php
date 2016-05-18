@@ -1,6 +1,7 @@
 <?php
     $pelanggaran = PencatatanPelanggaran::model()->findAllByAttributes(array('nip_santri' => $model->nip));
     if (empty($pelanggaran)) {
+        /*echo 'Tidak ada pelanggaran santri';*/
         echo 'No Entry';
         ?>
         <?php /*if (UserWeb::instance()->isHRD() && UserWeb::instance()->ID != $model->ID ) { ?>
@@ -19,7 +20,7 @@
             ?>
             <br/>
                 <button style="float: right">
-                    <?php echo CHtml::link('Tambah', array('pencatatanPelanggaran/create', 'id' => $model->nip)) ?>
+                    <?php echo CHtml::link('Simpan', array('pencatatanPelanggaran/create', 'id' => $model->nip)) ?>
                 </button>
             <?php
         }

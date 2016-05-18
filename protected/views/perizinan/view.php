@@ -7,13 +7,13 @@
 	$model->no_izin,
 );*/
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Daftar Perizinan Santri', 'url'=>array('index')),
 	array('label'=>'Buat Perizinan Santri', 'url'=>array('create')),
 	array('label'=>'Atur Perizinan Santri', 'url'=>array('update', 'id'=>$model->no_izin)),
 	array('label'=>'Hapus Perizinan Santri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->no_izin),'confirm'=>'Apakah anda yakin ingin menghapus perizinan santri ini?')),
 	
-);
+);*/
 ?>
 
 <h1>Lihat Perizinan Santri #<?php echo $model->no_izin; ?></h1>

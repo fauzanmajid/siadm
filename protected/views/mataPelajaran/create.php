@@ -7,9 +7,9 @@
 	'Create',
 );
 */
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Daftar Mata Pelajaran', 'url'=>array('index')),
-);
+);*/
 ?>
 
 <h1>Buat Mata Pelajaran</h1>

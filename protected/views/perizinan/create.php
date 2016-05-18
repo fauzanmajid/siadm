@@ -7,10 +7,10 @@
 	'Create',
 );*/
 
-$this->menu=array(
+/*$this->menu=array(
 	array('label'=>'Daftar Perizinan Santri', 'url'=>array('index')),
 	
-);
+);*/
 ?>
 
 <h1>Buat Perizinan Santri</h1>

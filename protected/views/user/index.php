@@ -3,14 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 
-/*$this->breadcrumbs=array(
-	'Pengguna',
-);*/
-/*
-$this->menu=array(
-	array('label'=>'Buat Pengguna', 'url'=>array('create')),
-	array('label'=>'Atur Pengguna', 'url'=>array('admin')),
-);*/
+
 ?>
 
 <h1>Daftar Pengguna</h1>
@@ -33,3 +26,4 @@ $this->menu=array(
 		),
 	),
 )); ?>
+>>>>>>> master

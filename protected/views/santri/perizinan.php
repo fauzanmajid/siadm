@@ -1,7 +1,8 @@
 <?php
     $perizinan = PencatatanPerizinan::model()->findAllByAttributes(array('nip_santri' => $model->nip));
     if (empty($perizinan)) {
-        echo 'No Entry';
+        /*echo 'No Entry';*/
+        echo 'Tidak ada perizinan santri.';
         ?>
         <?php /*if (UserWeb::instance()->isHRD() && UserWeb::instance()->ID != $model->ID ) { ?>
             <br />
@@ -19,7 +20,7 @@
             ?>
             <br/>
                 <button style="float: right">
-                    <?php echo CHtml::link('Tambah', array('pencatatanPerizinan/create', 'id' => $model->nip)) ?>
+                    <?php echo CHtml::link('Simpan', array('pencatatanPerizinan/create', 'id' => $model->nip)) ?>
                 </button>
             <?php
         }
