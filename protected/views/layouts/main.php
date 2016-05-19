@@ -129,7 +129,13 @@
 					), 
 						'visible'=>UserWeb::instance()->isKurikulum()), 
 
-				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'),
+					'items'=>array(
+						array('label'=>'Buat Riwayat Penyakit','url'=>array('/RiwayatPenyakit/create')),
+						array('label'=>'Atur Riwayat Penyakit','url'=>array('/RiwayatPenyakit/index')),
+
+					), 
+				 'visible'=>UserWeb::instance()->isKesiswaan()),
 
 				array('label'=>'Keuangan ',  'url'=>array(''),
 						'items'=>array(
@@ -146,7 +152,7 @@
 						  	)),
 
 					  	array('label'=>'Pengeluaran','url'=>array('/transaksiPengeluaran')),
-						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/UnduhTransaksiPengeluaran')),
+						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/unduh/unduhtransaksipengeluaran')),
 
 
 					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanKeuangan')),
