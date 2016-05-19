@@ -20,7 +20,7 @@
  * The followings are the available model relations:
  * @property Santri $nipSantri
  */
-class Perwalian extends CActiveRecord
+class Perwalian extends Base
 {
 	/**
 	 * @return string the associated database table name

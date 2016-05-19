@@ -33,7 +33,7 @@
  * @property Prestasi[] $prestasis
  * @property RiwayatPenyakit[] $riwayatPenyakits
  */
-class Santri extends CActiveRecord
+class Santri extends Base
 {
 	public $tanggal_awal;
 	public $tanggal_akhir;

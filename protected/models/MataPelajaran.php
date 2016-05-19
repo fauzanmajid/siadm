@@ -14,7 +14,7 @@
  * @property Santri[] $santris
  * @property TahunAjaran[] $tahunAjarans
  */
-class MataPelajaran extends CActiveRecord
+class MataPelajaran extends Base
 {
 	/**
 	 * @return string the associated database table name

@@ -14,7 +14,7 @@
  * @property Pelanggaran $noPelanggaran
  * @property Santri $nipSantri
  */
-class alokasiKelas extends CActiveRecord
+class alokasiKelas extends Base
 {
 	public $nama_kelas;
 	public $nama_guru;

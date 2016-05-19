@@ -13,7 +13,7 @@
  * The followings are the available model relations:
  * @property PemasukkanDonatur[] $pemasukkanDonaturs
  */
-class Donatur extends CActiveRecord
+class Donatur extends Base
 {
 	/**
 	 * @return string the associated database table name

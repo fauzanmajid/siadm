@@ -13,7 +13,7 @@
  * The followings are the available model relations:
  * @property Santri $nipSantri
  */
-class Prestasi extends CActiveRecord
+class Prestasi extends Base
 {
 
 	public $nama_lengkap;
