@@ -277,3 +277,121 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/transaksiPengeluaran/create
 HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran/create
 ---
+2016/05/20 05:30:35 [error] [exception.CException] exception 'CException' with message 'Alias "chartjs.components.ChartJs" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\yii\YiiBase.php(196): YiiBase::import('chartjs.compone...', true)
+#1 C:\xampp\htdocs\yii\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yii\base\CModule.php(530): CModule->getComponent('chartjs')
+#3 C:\xampp\htdocs\yii\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\yii\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\siadm\index.php(17): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/siadm/index.php
+---
+2016/05/20 05:59:58 [error] [exception.CException] exception 'CException' with message 'Alias "chartjs.components.ChartJs" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\yii\YiiBase.php(196): YiiBase::import('chartjs.compone...', true)
+#1 C:\xampp\htdocs\yii\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yii\base\CModule.php(530): CModule->getComponent('chartjs')
+#3 C:\xampp\htdocs\yii\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\yii\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\siadm\index.php(17): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/siadm/index.php
+---
+2016/05/20 06:03:34 [error] [exception.CException] exception 'CException' with message 'Class name "Log" does not match class file "C:\xampp\htdocs\siadm\protected\models\Log.php".' in C:\xampp\htdocs\yii\YiiBase.php:423
+Stack trace:
+#0 [internal function]: YiiBase::autoload('Log')
+#1 C:\xampp\htdocs\siadm\protected\models\Base.php(14): spl_autoload_call('Log')
+#2 C:\xampp\htdocs\siadm\protected\models\Base.php(29): Base->log('Create User dat...')
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1100): Base->afterSave()
+#4 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#5 C:\xampp\htdocs\siadm\protected\controllers\UserController.php(141): CActiveRecord->save()
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('User')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/User
+HTTP_REFERER=http://localhost/siadm/index.php/User
+---
+2016/05/20 06:04:38 [error] [exception.CException] exception 'CException' with message 'Class name "Log" does not match class file "C:\xampp\htdocs\siadm\protected\models\Log.php".' in C:\xampp\htdocs\yii\YiiBase.php:423
+Stack trace:
+#0 [internal function]: YiiBase::autoload('Log')
+#1 C:\xampp\htdocs\siadm\protected\models\Base.php(14): spl_autoload_call('Log')
+#2 C:\xampp\htdocs\siadm\protected\models\Base.php(29): Base->log('Create User dat...')
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1100): Base->afterSave()
+#4 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#5 C:\xampp\htdocs\siadm\protected\controllers\UserController.php(141): CActiveRecord->save()
+#6 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#7 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('User')
+#17 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#19 {main}
+REQUEST_URI=/siadm/index.php/User
+HTTP_REFERER=http://localhost/siadm/index.php/User
+---
+2016/05/20 06:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduhNilai".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduhNilai')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduhNilai
+HTTP_REFERER=http://localhost/siadm/index.php/MataPelajaran
+---
+2016/05/20 06:34:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "unduhRapor".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('unduhRapor')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/unduhRapor
+HTTP_REFERER=http://localhost/siadm/index.php/MataPelajaran
+---
+2016/05/20 06:46:58 [error] [exception.CException] exception 'CException' with message 'Property "RiwayatPenyakit.id" is not defined.' in C:\xampp\htdocs\yii\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(145): CComponent->__get('id')
+#1 C:\xampp\htdocs\siadm\protected\models\Base.php(29): CActiveRecord->__get('id')
+#2 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1100): Base->afterSave()
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#4 C:\xampp\htdocs\siadm\protected\controllers\RiwayatPenyakitController.php(82): CActiveRecord->save()
+#5 [internal function]: RiwayatPenyakitController->actionCreate(NULL)
+#6 C:\xampp\htdocs\yii\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RiwayatPenyakitController), Array)
+#7 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RiwayatPenyakitController), Object(ReflectionMethod), Array)
+#8 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('create')
+#17 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('RiwayatPenyakit...')
+#18 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#20 {main}
+REQUEST_URI=/siadm/index.php/RiwayatPenyakit/create
+HTTP_REFERER=http://localhost/siadm/index.php/RiwayatPenyakit/create
+---
