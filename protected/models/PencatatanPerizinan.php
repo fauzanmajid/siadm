@@ -45,6 +45,7 @@ class PencatatanPerizinan extends Base
 			array('nip_santri', 'length', 'max'=>15),
 			array('deskripsi', 'length', 'max'=>25),
 			array('kategori', 'length', 'max'=>10),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nama_lengkap, pencatatan_perizinan, nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori, cari_tanggal_awal, cari_tanggal_akhir, jml_absen', 'safe', 'on'=>'search'),

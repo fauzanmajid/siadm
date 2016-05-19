@@ -36,6 +36,7 @@ class RiwayatPenyakit extends Base
 			array('nip_santri', 'length', 'max'=>15),
 			array('nama_penyakit', 'length', 'max'=>25),
 			array('tanggal', 'safe'),
+			array('no_pencatatan','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('no_pencatatan, nip_santri, nama_penyakit, tanggal, nama_lengkap', 'safe', 'on'=>'search'),

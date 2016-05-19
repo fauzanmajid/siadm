@@ -41,6 +41,7 @@ class Prestasi extends Base
 			array('nip_santri', 'length', 'max'=>15),
 			array('tanggal', 'safe'),
 			array('tanggal', 'required'),
+			array('no_pencatatan','unique','message'=>'{attribute}:{value} sudah ada!'),	
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('no_pencatatan, deskripsi, jenis, tanggal, nip_santri', 'safe', 'on'=>'search'),

@@ -62,9 +62,10 @@ class Santri extends Base
 			array('nama_kecil', 'length', 'max'=>10),
 			array('alamat', 'length', 'max'=>50),
 			array('jenjang, golongan_darah', 'length', 'max'=>5),
+			array('nip','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, timestamp,foto_url', 'safe', 'on'=>'search'),
+			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, timestamp,foto_url, jenis_kelamin', 'safe', 'on'=>'search'),
 			array('nama_lengkap,nama_kecil', 'match','pattern' => '/^[a-zA-Z\s]+$/'),
 			
 			 
