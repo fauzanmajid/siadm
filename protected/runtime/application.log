@@ -1,0 +1,18 @@
+2016/05/20 05:40:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "UnduhTransaksiPemasukan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('UnduhTransaksiP...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/UnduhTransaksiPemasukan
+HTTP_REFERER=http://localhost/siadm/index.php/transaksiPengeluaran
+---
+2016/05/20 05:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "UnduhTransaksiPemasukan".' in C:\xampp\htdocs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('UnduhTransaksiP...')
+#1 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#3 {main}
+REQUEST_URI=/siadm/index.php/UnduhTransaksiPemasukan
+HTTP_REFERER=http://localhost/siadm/index.php/Unduh/UnduhTransaksiPengeluaran
+---
