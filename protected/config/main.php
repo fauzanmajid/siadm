@@ -12,7 +12,7 @@ return array(
 
 	'name'=>'Sistem Informasi Administrasi Al-Lathifah Mulia',
 
-	'timeZone'=>'GMT',
+	'timeZone'=>'Asia/Jakarta',
 
     'defaultController' => 'site/login',
 	//'theme'=>'hebo',

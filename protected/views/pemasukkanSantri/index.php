@@ -13,7 +13,7 @@ $('.search-form form').submit(function(){
 
 <h1>Pemasukkan Santri</h1>
 
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanSantri/create'"value='Buat'>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkanDonatur/create') ?>' "value='Buat'>
 <div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-santri-grid',

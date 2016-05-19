@@ -19,7 +19,7 @@ $('.search-form form').submit(function(){
 
 <h1>Perizinan Santri</h1>
 
-
+<div class='search-result'>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-perizinan-grid',
 	'dataProvider'=>$model->search(),
