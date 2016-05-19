@@ -15,7 +15,7 @@
 class RiwayatPenyakit extends Base
 {
 	public $nama_lengkap;
-
+	public $id;
 	/**
 	 * @return string the associated database table name
 	 */

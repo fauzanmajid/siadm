@@ -15,7 +15,7 @@
  */
 class Prestasi extends Base
 {
-
+	public $id;
 	public $nama_lengkap;
 	/**
 	 * @return string the associated database table name

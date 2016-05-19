@@ -17,12 +17,13 @@
  * @property User $idKesiswaan
  * @property Santri $nipSantri
  */
-class PencatatanPerizinan extends Base
+class PencatatanPerizinan extends CActiveRecord
 {
 	public $nama_lengkap;
 	public $cari_tanggal_awal;
 	public $cari_tanggal_akhir;
 	public $jml_absen;
+
 
 	/**
 	 * @return string the associated database table name

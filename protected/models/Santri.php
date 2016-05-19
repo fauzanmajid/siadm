@@ -37,6 +37,7 @@ class Santri extends Base
 {
 	public $tanggal_awal;
 	public $tanggal_akhir;
+	public $id;
 
 	/**
 	 * @return string the associated database table name
@@ -62,7 +63,7 @@ class Santri extends Base
 			array('nama_kecil', 'length', 'max'=>10),
 			array('alamat', 'length', 'max'=>50),
 			array('jenjang, golongan_darah', 'length', 'max'=>5),
-			array('nip','unique','message'=>'{attribute}:{value} sudah ada!'),
+			array('nip, nis, nik, nisn','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, timestamp,foto_url, jenis_kelamin', 'safe', 'on'=>'search'),

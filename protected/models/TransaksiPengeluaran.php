@@ -19,6 +19,7 @@ class TransaksiPengeluaran extends Base
 	public $tanggal_awal;
 	public $tanggal_akhir;
 	public $jenis;
+	public $id;
 	/**
 	 * @return string the associated database table name
 	 */
