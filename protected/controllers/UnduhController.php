@@ -29,7 +29,7 @@ class UnduhController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
-                'actions' => array('unduhtransaksipengeluaran', 'excelpengeluaran'),
+                'actions' => array('unduhtransaksipengeluaran', 'excelpengeluaran', 'excelPemasukkan'),
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -58,6 +58,10 @@ class UnduhController extends Controller
 			if($jenis= "Pengeluaran"){
 			$this->redirect(Yii::app()->createUrl('unduh/excelPengeluaran', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir)));
 			}
+			if ($jenis= "Pemasukan"){
+			$this->redirect(Yii::app()->createUrl('unduh/excelPemasukkan', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir)));
+
+			}
 		}
 
 		$this->render('/unduh/unduh-laporan-keuangan',array(
@@ -67,8 +71,53 @@ class UnduhController extends Controller
 
 
 
-	public function actionExcelPengeluaran($awal = null, $akhir = null){
+	public function actionExcelPemasukkan($awal = null, $akhir = null){
         
+        //Some data
+
+        $criteria = new CDbCriteria();
+        if ($awal != null){
+			$criteria->compare('Tanggal','>='.$awal);	
+		}
+
+		if ($akhir != null){
+			$criteria->compare('Tanggal','<='.$akhir);
+		}
+		
+		$models = LaporanPemasukkan::model()->findAll($criteria);
+		
+		$transaksi = [];
+		foreach($models as $model) {
+		    $transaksi[$model->Kode] = $model->attributes;
+		}
+
+        $report = new YiiReport(array('template'=> 'pemasukkan.xls'));
+        
+        $report->load(array(
+                array(
+                    'id' => 'judul',
+                    'data' => array(
+                        'name' => 'LAPORAN PEMASUKKAN SANTRI POPNPES AL-LATHIFA MULIA'
+                    )
+                ),
+                array(
+                    'id'=>'kode',
+                    'repeat'=>true,
+                    'data'=>$transaksi,
+                    'minRows'=>2
+                ),
+            )
+        );
+        
+         echo $report->render('excel5', 'LaporanPemasukkan');
+        // echo $report->render('excel2007', 'Students');
+        // echo $report->render('pdf', 'daftar santri');
+        
+    }//actionExcel method end
+
+
+  
+    public function actionExcelPengeluaran($awal = null, $akhir = null){
         //Some data
 
         $criteria = new CDbCriteria();
@@ -109,5 +158,6 @@ class UnduhController extends Controller
         // echo $report->render('excel2007', 'Students');
         // echo $report->render('pdf', 'daftar santri');
         
-    }//actionExcel method end
+    }
 }
+
