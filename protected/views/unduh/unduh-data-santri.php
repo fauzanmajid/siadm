@@ -33,9 +33,9 @@
 	                'changeMonth' => true,
 	                'changeYear' => true,
 	                'yearRange' => '-200:+0',
-	                'maxDate' => '0',
+	                'onClose' => 'js:function (selectedDate) { $("#tanggal_akhir").datepicker("option", "minDate", selectedDate); }',
 	            ),
-	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	           'htmlOptions' => array('id' => 'tanggal_awal', 'readonly' => true, 'class' => "form-control")
 	        ));
         ?>
         <?php echo $form->error($model, 'tanggal_awal'); ?>
@@ -53,9 +53,9 @@
 	                'changeMonth' => true,
 	                'changeYear' => true,
 	                'yearRange' => '-200:+0',
-	                'maxDate' => '0',
+	                 'onClose' => 'js:function (selectedDate) { $("#tanggal_awal").datepicker("option", "maxDate", selectedDate); }',
 	            ),
-	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+	            'htmlOptions' => array('id' => 'tanggal_akhir','readonly' => true, 'class' => "form-control")
 	        ));
         ?>
         <?php echo $form->error($model, 'tanggal_akhir'); ?>
