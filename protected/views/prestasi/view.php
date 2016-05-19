@@ -16,7 +16,11 @@
 );*/
 ?>
 
+<<<<<<< HEAD
 <h1>Lihat Prestasi Santri #<?php echo $model->no_pencatatan; ?></h1>
+=======
+<h1>Lihat Prestasi Santri <?php echo $model->no_pencatatan; ?></h1>
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

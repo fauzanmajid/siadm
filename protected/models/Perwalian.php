@@ -47,6 +47,10 @@ class Perwalian extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nip_santri, status, nama, tempat_lahir, tanggal_lahir, agama, alamat, no_telepon, pekerjaan, pendidikan, penghasilan', 'safe', 'on'=>'search'),
+<<<<<<< HEAD
+=======
+			array('nama', 'match','pattern' => '/^[a-zA-Z\s]+$/'),
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 		);
 	}
 

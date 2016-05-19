@@ -31,6 +31,10 @@ class Kelas extends CActiveRecord
 		return array(
 			array('nama, jenjang', 'required'),
 			//array('id', 'numerical', 'integerOnly'=>true),
+<<<<<<< HEAD
+=======
+			
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 			array('nama, jenjang', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
