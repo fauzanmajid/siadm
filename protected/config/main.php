@@ -58,7 +58,6 @@ return array(
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			'urlRuleClass' => 'MyUrlRule',
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
@@ -79,7 +78,7 @@ return array(
 			// use 'site/error' action to display errors
 			'errorAction'=>YII_DEBUG ? null : 'site/error',
 		),
-
+		
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(

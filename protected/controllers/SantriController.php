@@ -29,15 +29,10 @@ class SantriController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
-<<<<<<< HEAD
                 //'deniedCallback' => array($this,'gotoLogin'),
                 
-                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
-                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh', 'excel'),
-                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduh', 'excel'),
-=======
                 'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
->>>>>>> master
+
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -80,8 +75,8 @@ class SantriController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Santri;
-		$modelwali=new Perwalian;
+		$model= new Santri;
+		$modelwali= new Perwalian;
 		$model->scenario = 'create';
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

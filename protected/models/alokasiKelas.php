@@ -40,7 +40,7 @@ class alokasiKelas extends CActiveRecord
 			//array('nip_santri', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id','idkelas, idmatpel, idguru', 'safe', 'on'=>'search'),
+			array('id, idkelas, idmatpel, idguru', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,7 +53,7 @@ class alokasiKelas extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idkelas' => array(self::BELONGS_TO, 'Kelas', 'id'),
-			'idmatpel' => array(self::BELONGS_TO, 'mata_pelajaran', 'id'),
+			'idmatpel' => array(self::BELONGS_TO, 'MataPelajaran', 'id'),
 			'idguru' => array(self::BELONGS_TO, 'User', 'id'),
 			
 		);

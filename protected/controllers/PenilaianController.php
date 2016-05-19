@@ -1,6 +1,6 @@
 <?php
 
-class KelasController extends Controller
+class PenilaianController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -27,25 +27,41 @@ class KelasController extends Controller
 	public function accessRules()
 	{
 		return array(
-		/*	array('allow',  // allow all users to perform 'index' and 'view' actions
+			
+			/*
+			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update'),
+				'users'=>array('@'),
+			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),*/
+				'users'=>array('@'),
+
+			),
+
+			*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                //'deniedCallback'=> array($this,'gotoLogin'),
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                /*
                 'expression' => function(UserWeb $user) {
-                /* @var $user UserWeb */
-                return $user->isAdmin();}
+                 @var $user UserWeb 
+                return $user->isKesiswaan();}
+                */
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+				'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 		);
 	}
+
+
+	
 
 	/**
 	 * Displays a particular model.
@@ -64,16 +80,16 @@ class KelasController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Kelas;
-
+		$model=new Penilaian;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Kelas']))
+		if(isset($_POST['Penilaian']))
 		{
-			$model->attributes=$_POST['Kelas'];
+			$model->attributes=$_POST['Penilaian'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
+			
 		}
 
 		$this->render('create',array(
@@ -81,23 +97,23 @@ class KelasController extends Controller
 		));
 	}
 
-	
-
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate($id=null)
 	{
 		$model=$this->loadModel($id);
+		if ($id!=null)
+			$model->nip_santri = $id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Kelas']))
+		if(isset($_POST['Penilaian']))
 		{
-			$model->attributes=$_POST['Kelas'];
+			$model->attributes=$_POST['Penilaian'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -126,21 +142,33 @@ class KelasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Kelas');
+		
+		$dataProvider=new CActiveDataProvider('Penilaian');
+		$model=new Penilaian('search');
+		$model->unsetAttributes();  // clear any default values
+
+		
+	
+		if(isset($_GET['Penilaian']))
+			$model->attributes=$_GET['Penilaian'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			//'dataProvider'=>$mode->search(),
+			'model'=>$model,
 		));
 	}
 
+	
 	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
-		$model=new Kelas('search');
+		$model=new Penilaian('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Kelas']))
-			$model->attributes=$_GET['Kelas'];
+		if(isset($_GET['Penilaian']))
+			$model->attributes=$_GET['Penilaian'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -151,12 +179,12 @@ class KelasController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Kelas the loaded model
+	 * @return Penilaian the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Kelas::model()->findByPk($id);
+		$model=Penilaian::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -164,11 +192,11 @@ class KelasController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Kelas $model the model to be validated
+	 * @param PencatatanPelanggaran $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='kelas-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='penilaian-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

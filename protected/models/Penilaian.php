@@ -1,25 +1,29 @@
 <?php
 
 /**
- * This is the model class for table "pemasukkan_bos".
+ * This is the model class for table "pencatatan_pelanggaran".
  *
- * The followings are the available columns in table 'pemasukkan_bos':
- * @property integer $kode
- * @property integer $id_bendahara
- * @property integer $nominal
- * @property string $timestamp
+ * The followings are the available columns in table 'pencatatan_pelanggaran':
+ * @property integer $id
+ * @property integer $No_pelanggaran
+ * @property string $nip_santri
+ * @property integer $id_kesiswaan
  *
  * The followings are the available model relations:
- * @property User $idBendahara
+ * @property User $idKesiswaan
+ * @property Pelanggaran $noPelanggaran
+ * @property Santri $nipSantri
  */
-class PemasukkanBos extends CActiveRecord
+class Penilaian extends CActiveRecord
 {
+	public $nama_lengkap;
+	
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'pemasukkan_bos';
+		return 'penilaian';
 	}
 
 	/**
@@ -30,11 +34,13 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nominal, Tanggal', 'required'),
-			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
+			array('nip_santri, idkelas, idmatpel,idguru,nilai_harian,nilai_uts,nilai_uas,nilai_akhir', 'required'),
+			//array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
+			//array('nip_santri', 'length', 'max'=>15),
+			//array('nip_santri', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nominal, Tanggal, Keterangan, timestamp', 'safe', 'on'=>'search'),
+			array('id, nip_santri, idkelas, idmatpel,idguru', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,7 +52,8 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idBendahara' => array(self::BELONGS_TO, 'User', 'id_bendahara'),
+			'idkelas,idmatpel,idguru' => array(self::BELONGS_TO, 'alokasi_kelas', 'idkelas,idmatpel,idguru'),
+			//'nipSantri' => array(self::BELONGS_TO, 'Santri', 'nip_santri'),
 		);
 	}
 
@@ -56,12 +63,16 @@ class PemasukkanBos extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'kode' => 'Kode',
-			'id_bendahara' => 'Id Bendahara',
-			'nominal' => 'Nominal',
-			'Tanggal' => 'Tanggal',
-			'Keterangan' => 'Keterangan',
-			'timestamp' => 'Timestamp',
+			'id' => 'ID',
+			'nip_santri' => 'NIP Santri',
+			'idkelas' => 'Kelas',
+			'idmatpel' => 'Mata Pelajaran',
+			'idguru' => 'Guru',
+			'nilai_harian' => 'Nilai Harian',
+			'nilai_uts' => 'Nilai UTS',
+			'nilai_uas' => 'Nilai UAS',
+			'nilai_akhir' => 'Nilai Akhir',
+				
 		);
 	}
 
@@ -83,12 +94,11 @@ class PemasukkanBos extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('kode',$this->kode);
-		$criteria->compare('id_bendahara',$this->id_bendahara);
-		$criteria->compare('nominal',$this->nominal);
-		$criteria->compare('Tanggal',$this->Tanggal);
-		$criteria->compare('Keterangan',$this->Keterangan);
-		$criteria->compare('timestamp',$this->timestamp,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('nip_santri',$this->nip_santri,true);
+		$criteria->compare('idkelas',$this->idkelas);
+		$criteria->compare('idmatpel',$this->idmatpel);
+		$criteria->compare('idguru',$this->idguru);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -99,23 +109,19 @@ class PemasukkanBos extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return PemasukkanBos the static model class
+	 * @return PencatatanPelanggaran the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-
-	public function beforeSave ()
-	{
-		if(parent::beforeSave()){
-			if($this->isNewRecord){
-				$this->timestamp=date('Y-m-d H:i:s');
-				$this->id_bendahara = UserWeb::instance()->ID;
-			}
-			return true;
-		}
-		return false;
-
+/*
+	public function beforeSave() {
+	    if ($this->isNewRecord) {
+	        $this->id_kesiswaan = UserWeb::instance()->ID;
+	    }
+	 
+	    return parent::beforeSave();
 	}
+*/
 }

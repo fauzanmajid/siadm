@@ -101,6 +101,6 @@ class Kelas extends CActiveRecord
 	}
 	public function getConcatened()
     {
-	    return $this->id.' ('.$this->jenjang.')';
+	    return $this->jenjang.'-- ('.$this->nama.') ';
     }
 }

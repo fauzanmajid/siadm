@@ -15,11 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-<<<<<<< HEAD
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-=======
 	<p class="note"><span class="required">*</span> Wajib diisi.</p>
->>>>>>> master
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -36,21 +32,6 @@
 	</div>
 
 	<div class="row">
-<<<<<<< HEAD
-		<?php echo $form->labelEx($model,'timestamp'); ?>
-		<?php echo $form->textField($model,'timestamp'); ?>
-		<?php echo $form->error($model,'timestamp'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'id_donatur'); ?>
-		<?php echo $form->textField($model,'id_donatur'); ?>
-		<?php echo $form->error($model,'id_donatur'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-=======
 		<?php echo $form->labelEx($model,'tanggal'); ?>
 		<?php
 	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -100,7 +81,6 @@
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
->>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>

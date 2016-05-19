@@ -7,11 +7,11 @@
 	'Pencatatan Pelanggaran',
 );*/
 
-
+/*
 $this->menu=array(
 	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
 );
-
+*/
 /*
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
@@ -27,7 +27,7 @@ $('.search-form form').submit(function(){
 
 
 <h1>Alokasi Kelas</h1>
-
+<!--
 <div class="search-form">
 <?php
  /*
@@ -35,13 +35,13 @@ $('.search-form form').submit(function(){
 'model'=>$model,
 )); */?>
 </div>
-
+-->
 <!-- search-form -->
 
-<div class='search-result' style="display:none">
+<div class='search-result'>
 
 <?php 
-/*
+
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'alokasi-kelas-grid',
 	'dataProvider'=>$model->search(),
@@ -51,20 +51,23 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		'idmatpel',
 		'idguru',
 		array(
-			       'header' => 'Menu',
-				'class'=>'CButtonColumn',
-				'template'=>'{update}{delete}',
-				'deleteConfirmation'=>"js:'Anda yakin?'",
-			),
-		),
-));
-*/
-?>
-	
-</div>
-<?php
-$userCategory = alokasiKelas::model()->findByAttributes(array('idkelas'=>1,'idmatpel'=>2,'idguru'=>2));
-// if user does not exist, you need to create it
-echo $userCategory; //you will see the difference if it does exist or not exist
+		    'class'=>'CButtonColumn',
+		    	'template'=>'{view}{update}',
+		    	'buttons'=>array(
+		        	'view' => array(
+		            	'label'=>'Lihat',
+		            	//'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+		            	'url'=>'Yii::app()->createUrl("alokasikelas/view", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
+		        	),
+		        	'update' => array(
+		            	'label'=>'[-]',
+		            	'url'=>'Yii::app()->createUrl("alokasikelas/view", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
 
+		        	),
+		    	),
+		),
+	)));
 ?>
+<input type=button onClick="location.href='http://localhost/siadm/index.php/alokasikelas/create'"value='Buat'>
+
+</div>

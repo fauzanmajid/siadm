@@ -18,7 +18,7 @@
 	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-<<<<<<< HEAD
+
 	<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'id'); ?>
@@ -26,11 +26,6 @@
 		<?php echo $form->error($model,'id'); ?>
 	</div> 
 	-->
-=======
-
-	
-
->>>>>>> master
 	<div class="row">
 		<?php echo $form->labelEx($model,'nama'); ?>
 		<?php echo $form->textField($model,'nama',array('size'=>10,'maxlength'=>15)); ?>
@@ -39,7 +34,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMA'), array('empty'=>'--Pilih Jenjang--')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 

@@ -2,11 +2,10 @@
 /* @var $this KelasController */
 /* @var $model Kelas */
 
-/*$this->breadcrumbs=array(
+$this->breadcrumbs=array(
 	'Kelas'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
-<<<<<<< HEAD
 );
 /*
 $this->menu=array(
@@ -22,9 +21,7 @@ $this->menu=array(
 <<<<<<< HEAD
 );
 */
-=======
-);*/
->>>>>>> master
+
 ?>
 
 <h1>Atur Kelas <?php echo $model->id; ?></h1>

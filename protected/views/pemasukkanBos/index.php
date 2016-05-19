@@ -1,26 +1,4 @@
 <?php
-<<<<<<< HEAD
-/* @var $this PemasukkanBosController */
-/* @var $dataProvider CActiveDataProvider */
-
-$this->breadcrumbs=array(
-	'Pemasukkan Boses',
-);
-
-$this->menu=array(
-	array('label'=>'Create PemasukkanBos', 'url'=>array('create')),
-	array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
-);
-?>
-
-<h1>Pemasukkan Boses</h1>
-
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
-=======
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
 	$('#pemasukkan-bos-grid').yiiGridView('update', {
@@ -30,16 +8,6 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
-
-<<<<<<< HEAD
-$this->menu=array(
-	array('label'=>'Buat Pemasukkan Bos', 'url'=>array('create')),
-	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
-);
-
-=======
->>>>>>> ef4fcbbfc6ca5e62fd0fbeb084ce966e1d8fcdb3
-
 ?>
 
 
@@ -52,7 +20,6 @@ $this->menu=array(
 </div><!-- search-form -->
 
 
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'" value='click here'>
 
 <div class='search-result' style="display:none">
 
@@ -75,4 +42,3 @@ $this->menu=array(
 )); ?>
 <input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
 
->>>>>>> master

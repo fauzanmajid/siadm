@@ -2,16 +2,13 @@
 /* @var $this KelasController */
 /* @var $model Kelas */
 
-<<<<<<< HEAD
+
 $this->breadcrumbs=array(
 	'Kelas'=>array('index'),
-	'Sunting',
-=======
-/*$this->breadcrumbs=array(
-	'Kelas'=>array('index'),
 	'Atur',
->>>>>>> master
+
 );
+
 /*
 $this->menu=array(
 	array('label'=>'Daftar Kelas', 'url'=>array('index')),
@@ -19,9 +16,7 @@ $this->menu=array(
 <<<<<<< HEAD
 );
 */
-=======
-);*/
->>>>>>> master
+
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -37,11 +32,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<<<<<<< HEAD
-<h1>Sunting Kelas</h1>
-=======
 <h1>Atur Kelas</h1>
->>>>>>> master
 
 
 <?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
