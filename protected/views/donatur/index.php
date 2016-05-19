@@ -8,11 +8,6 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
-
-// $this->menu=array(
-// 	array('label'=>'Create Donatur', 'url'=>array('create')),
-// 	array('label'=>'Manage Donatur', 'url'=>array('admin')),
-// );
 ?>
 
 <h1>Donatur</h1>

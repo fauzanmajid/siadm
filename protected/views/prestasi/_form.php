@@ -18,13 +18,7 @@
 	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-	<!--
-	<div class="row">
-		<?php echo $form->labelEx($model,'nip_santri'); ?>
-		<?php echo $form->textField($model,'nip_santri',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'nip_santri'); ?>
-	</div>
-	-->
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
 		<br><p style='font-size: 75%'>Nomor Induk Pesantren</p>
@@ -35,8 +29,6 @@
 
 		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>
 	</div>
-
-
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'deskripsi'); ?>
@@ -69,8 +61,6 @@
         ?>
 		<?php echo $form->error($model,'tanggal'); ?>
 	</div>
-
-	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>

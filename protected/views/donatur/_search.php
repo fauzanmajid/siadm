@@ -21,21 +21,6 @@
 		<?php echo $form->textField($model,'nama_lengkap'); ?>
 	</div>
 
-	<!-- <div class="row">
-		<?php echo $form->label($model,'pekerjaan'); ?>
-		<?php echo $form->textField($model,'pekerjaan',array('size'=>25,'maxlength'=>25)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'alamat'); ?>
-		<?php echo $form->textField($model,'alamat',array('size'=>50,'maxlength'=>50)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'no_telepon'); ?>
-		<?php echo $form->textField($model,'no_telepon',array('size'=>15,'maxlength'=>15)); ?>
-	</div> -->
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Cari'); ?>
 	</div>

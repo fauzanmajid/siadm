@@ -7,10 +7,6 @@ $this->breadcrumbs=array(
 	'Create',
 );
 
-// $this->menu=array(
-// 	array('label'=>'List Donatur', 'url'=>array('index')),
-// 	array('label'=>'Manage Donatur', 'url'=>array('admin')),
-// );
 ?>
 
 <h1>Buat Donatur</h1>

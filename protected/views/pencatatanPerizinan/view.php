@@ -15,11 +15,7 @@
 );*/
 ?>
 
-<<<<<<< HEAD
-<h1>Lihat Perizinan Santri #<?php echo $model->pencatatan_perizinan; ?></h1>
-=======
 <h1>Lihat Perizinan Santri <?php echo $model->pencatatan_perizinan; ?></h1>
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

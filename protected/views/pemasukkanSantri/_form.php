@@ -15,33 +15,11 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-=======
 	<p class="note"><span class="required">*</span> Wajib diisi.</p>
->>>>>>> master
-=======
-	<p class="note"><span class="required">*</span> Wajib diisi.</p>
->>>>>>> master
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<!-- <div class="row">
-		<?php echo $form->labelEx($model,'id_bendahara'); ?>
-		<?php echo $form->textField($model,'id_bendahara'); ?>
-		<?php echo $form->error($model,'id_bendahara'); ?>
-	</div> -->
-
 	<div class="row">
-		<?php echo $form->labelEx($model,'nip_santri'); ?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'nip_santri'); ?>
-=======
-=======
->>>>>>> master
 		<br><p style='font-size: 75%'>Nomor Induk Santri</p>
 		<?php
 			$dropDownSantri = CHtml::listData(Santri::model()->findAll(),'nip','concatened');
@@ -49,10 +27,6 @@
 		?>
 
 		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
 	</div>
 
 	<div class="row">
@@ -62,18 +36,6 @@
 	</div>
 
 	<div class="row">
-<<<<<<< HEAD
-<<<<<<< HEAD
-		<?php echo $form->labelEx($model,'timestamp'); ?>
-		<?php echo $form->textField($model,'timestamp'); ?>
-		<?php echo $form->error($model,'timestamp'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-=======
-=======
->>>>>>> master
 		<?php echo $form->labelEx($model,'tanggal'); ?>
 		<?php
 	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -99,22 +61,8 @@
 		<?php echo $form->error($model,'keterangan'); ?>
 	</div>
 
-	<!-- <div class="row">
-		<?php echo $form->labelEx($model,'timestamp'); ?>
-		<?php echo $form->textField($model,'timestamp'); ?>
-		<?php echo $form->error($model,'timestamp'); ?>
-	</div> -->
-
 	<div class="row buttons">
-<<<<<<< HEAD
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
-<<<<<<< HEAD
->>>>>>> master
-=======
-=======
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
->>>>>>> master
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

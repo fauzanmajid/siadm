@@ -160,10 +160,6 @@
 	</div>
 	</div>
 	
-	
-
-
-
 	<div class="scroll" id="newbar2">
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

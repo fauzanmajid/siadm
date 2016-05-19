@@ -2,15 +2,6 @@
 /* @var $this PencatatanPelanggaranController */
 /* @var $dataProvider CActiveDataProvider */
 
-/*$this->breadcrumbs=array(
-	'Pencatatan Pelanggaran',
-);*/
-
-/*
-$this->menu=array(
-	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
-);
-*/
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
 	$('#pencatatan-pelanggaran-grid').yiiGridView('update', {
@@ -21,7 +12,6 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-
 
 <h1>Pelanggaran Santri</h1>
 

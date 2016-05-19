@@ -21,11 +21,6 @@
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
 
-	<!-- <div class="row">
-		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>15,'maxlength'=>15)); ?>
-	</div>
- -->
 	<div class="row">
 		<?php echo $form->label($model,'nama'); ?>
 		<?php echo $form->textField($model,'nama',array('size'=>25,'maxlength'=>25)); ?>

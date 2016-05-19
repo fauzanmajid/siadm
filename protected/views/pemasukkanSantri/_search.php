@@ -11,24 +11,6 @@
 	'method'=>'get',
 )); ?>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<div class="row">
-		<?php echo $form->label($model,'kode'); ?>
-		<?php echo $form->textField($model,'kode'); ?>
-	</div>
-=======
-=======
->>>>>>> master
-	<!-- <div class="row">
-		<?php echo $form->label($model,'kode'); ?>
-		<?php echo $form->textField($model,'kode'); ?>
-	</div> -->
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-
 	<div class="row">
 		<?php echo $form->label($model,'id_bendahara'); ?>
 		<?php echo $form->textField($model,'id_bendahara'); ?>
@@ -38,28 +20,6 @@
 		<?php echo $form->label($model,'nip_santri'); ?>
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<div class="row">
-		<?php echo $form->label($model,'nominal'); ?>
-		<?php echo $form->textField($model,'nominal'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'timestamp'); ?>
-		<?php echo $form->textField($model,'timestamp'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
-=======
-=======
->>>>>>> master
-	<!-- <div class="row">
-		<?php echo $form->label($model,'nominal'); ?>
-		<?php echo $form->textField($model,'nominal'); ?>
-	</div> -->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tanggal'); ?>
@@ -81,17 +41,8 @@
 		<?php echo $form->error($model,'tanggal'); ?>
 	</div>
 
-	<!-- <div class="row">
-		<?php echo $form->label($model,'timestamp'); ?>
-		<?php echo $form->textField($model,'timestamp'); ?>
-	</div> -->
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Cari'); ?>
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>

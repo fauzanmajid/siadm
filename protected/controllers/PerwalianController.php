@@ -118,11 +118,6 @@ class PerwalianController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Perwalian');
-<<<<<<< HEAD
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-=======
-
 		$model=new Perwalian('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Perwalian']))
@@ -131,9 +126,6 @@ class PerwalianController extends Controller
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			'model'=>$model,
-
-
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 		));
 	}
 

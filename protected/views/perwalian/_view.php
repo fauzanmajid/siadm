@@ -33,27 +33,4 @@
 	<?php echo CHtml::encode($data->agama); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('alamat')); ?>:</b>
-	<?php echo CHtml::encode($data->alamat); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('no_telepon')); ?>:</b>
-	<?php echo CHtml::encode($data->no_telepon); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('pekerjaan')); ?>:</b>
-	<?php echo CHtml::encode($data->pekerjaan); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('pendidikan')); ?>:</b>
-	<?php echo CHtml::encode($data->pendidikan); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('penghasilan')); ?>:</b>
-	<?php echo CHtml::encode($data->penghasilan); ?>
-	<br />
-
-	*/ ?>
-
 </div>

@@ -22,7 +22,6 @@
 <div class="form">
 <?php echo $form->errorSummary($model); ?>
 
-
 	<div class="row">
 		<?php echo 'Jenjang'; ?>
 		<?php echo $form->dropDownList($model,'jenis',array('SMP'=>'SMP', 'SMK'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>

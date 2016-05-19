@@ -2,16 +2,6 @@
 /* @var $this PerwalianController */
 /* @var $model Perwalian */
 
-$this->breadcrumbs=array(
-	'Perwalians'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List Perwalian', 'url'=>array('index')),
-	array('label'=>'Create Perwalian', 'url'=>array('create')),
-);
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();

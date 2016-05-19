@@ -31,16 +31,7 @@
 		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>
 	</div>
 
-
-
-
-	<!-- <div class="row">
-		<?php echo $form->labelEx($model,'id_kesiswaan'); ?>
-		<?php echo $form->textField($model,'id_kesiswaan'); ?>
-		<?php echo $form->error($model,'id_kesiswaan'); ?>
-	</div> -->
-
-<div class="row">
+	<div class="row">
 		<?php echo $form->labelEx($model,'deskripsi'); ?>
 		<?php echo $form->textField($model,'deskripsi'); ?>
 		<?php echo $form->error($model,'deskripsi'); ?>

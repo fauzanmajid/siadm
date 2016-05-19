@@ -33,11 +33,4 @@
 	<?php echo CHtml::encode($data->tanggal_akhir); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('kategori')); ?>:</b>
-	<?php echo CHtml::encode($data->kategori); ?>
-	<br />
-
-	*/ ?>
-
 </div>

@@ -7,20 +7,6 @@ $this->breadcrumbs=array(
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
 );
-/*
-$this->menu=array(
-=======
-);*/
-
-/*$this->menu=array(
->>>>>>> master
-	array('label'=>'List Kelas', 'url'=>array('index')),
-	array('label'=>'Create Kelas', 'url'=>array('create')),
-	array('label'=>'View Kelas', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Kelas', 'url'=>array('admin')),
-<<<<<<< HEAD
-);
-*/
 
 ?>
 
