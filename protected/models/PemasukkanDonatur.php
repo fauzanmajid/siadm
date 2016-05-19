@@ -39,6 +39,7 @@ class PemasukkanDonatur extends Base
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('kode, id_bendahara, nominal, tanggal, keterangan, timestamp, id_donatur', 'safe', 'on'=>'search'),
+			array('kode','unique','message'=>'{attribute}:{value} sudah ada!'),
 		);
 	}
 
@@ -67,7 +68,7 @@ class PemasukkanDonatur extends Base
 			'tanggal' => 'Tanggal',
 			'keterangan' => 'Keterangan',
 			'timestamp' => 'Timestamp',
-			'id_donatur' => 'Id Donatur',
+			'id_donatur' => 'Donatur',
 		);
 	}
 

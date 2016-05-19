@@ -33,7 +33,9 @@
 		return array(
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nominal, Tanggal, Keterangan, timestamp', 'safe', 'on'=>'search'),
+			array('nominal,Tanggal, Keterangan', 'required'),
+			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
+			array('kode, id_bendahara, nominal, Tanggal, Keterangan, timestamp, deskripsi', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -88,7 +90,6 @@
 		$criteria->compare('Tanggal',$this->Tanggal);
 		$criteria->compare('Keterangan',$this->Keterangan);
 		$criteria->compare('timestamp',$this->timestamp,true);
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

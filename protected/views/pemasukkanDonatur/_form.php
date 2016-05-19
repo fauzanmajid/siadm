@@ -24,7 +24,16 @@
 		<?php echo $form->textField($model,'id_bendahara'); ?>
 		<?php echo $form->error($model,'id_bendahara'); ?>
 	</div> -->
+	<div class="row">
+	<?php echo $form->labelEx($model,'id_donatur'); ?>
+		<?php
+			$dropDownDonatur = CHtml::listData(Donatur::model()->findAll(),'id','concatened');
+			echo $form->dropDownList($model, 'id_donatur', $dropDownDonatur,array('empty'=>'--Pilih Donatur--'));			      
+		?>
 
+		<?php echo $form->error($model,'id_donatur', $dropDownDonatur); ?>
+	</div>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'nominal'); ?>
 		<?php echo $form->textField($model,'nominal'); ?>
@@ -69,15 +78,7 @@
 		<?php echo $form->error($model,'id_donatur'); ?>
  -->
 
-		<?php echo $form->labelEx($model,'id_donatur'); ?>
-		<br><p style='font-size: 75%'>Nomor Id Donatur</p>
-		<?php
-			$dropDownDonatur = CHtml::listData(Donatur::model()->findAll(),'id','concatened');
-			echo $form->dropDownList($model, 'id_donatur', $dropDownDonatur);			      
-		?>
-
-		<?php echo $form->error($model,'id_donatur', $dropDownDonatur); ?>
-	</div>
+		
 
 	<div class="row buttons">
 	<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
