@@ -14,6 +14,7 @@
  */
 	class PemasukkanBos extends Base
 	{
+		public $id;
 	/**
 	 * @return string the associated database table name
 	 */

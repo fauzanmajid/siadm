@@ -40,4 +40,7 @@ $('.search-form form').submit(function(){
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?> 
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanDonatur/create'"value='Buat'>
+
+</div>
+</div>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('create')?>'" value='Buat'>

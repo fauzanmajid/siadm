@@ -38,7 +38,7 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
-)); ?>
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
+</div>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('create')?>'" value='Buat'>

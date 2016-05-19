@@ -12,6 +12,8 @@
  * @property EnrollmentPelajaran[] $enrollmentPelajarans
  */
 class StatistikSantri extends Base
+{	
+	public $id;
 	/**
 	 * @return string the associated database table name
 	 */
