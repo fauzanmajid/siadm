@@ -25,10 +25,11 @@ $('.search-form form').submit(function(){
 
 <h1>Pelanggaran Santri</h1>
 
-
+<div class='search-result'>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-pelanggaran-grid',
 	'dataProvider'=>$model->search(),
+	'filter'=>$model,
 	'columns'=>array(
 		'nip_santri',
 		array(
