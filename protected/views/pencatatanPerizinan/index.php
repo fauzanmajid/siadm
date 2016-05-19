@@ -31,22 +31,21 @@ $('.search-form form').submit(function(){
 =======
 >>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 
-
+<div class='search-result'>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-perizinan-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
 	'columns'=>array(
 			'nip_santri',
 			array(
-	            //'class' => 'CLinkColumn',
-
-	            'value' => '$data->nipSantri->nama_lengkap',
-	            //'urlExpression' => 'Yii::app()->createUrl("santri/prestasi",array("id"=>$data->nip_santri))',
+	            'class' => 'CLinkColumn',
+	            'labelExpression' => '$data->nipSantri->nama_lengkap',
+	            'urlExpression' => 'Yii::app()->createUrl("/santri/prestasi",array("id"=>$data->nip_santri))',
 	            'header' => 'Nama Santri',
-	            //'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+	            'htmlOptions' => array('style' => 'text-align: left; color : #6cac70;')
 	        ),
 			'deskripsi',
+			'durasi',
 			'tanggal_awal',
 			'tanggal_akhir',
 			'kategori',

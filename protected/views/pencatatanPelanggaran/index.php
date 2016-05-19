@@ -25,15 +25,12 @@ $('.search-form form').submit(function(){
 
 <h1>Pelanggaran Santri</h1>
 
-
-<<<<<<< HEAD
 <div class='search-result' style="display:none">
 
-=======
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-pelanggaran-grid',
 	'dataProvider'=>$model->search(),
+	'filter'=>$model,
 	'columns'=>array(
 		'nip_santri',
 		array(
@@ -47,15 +44,11 @@ $('.search-form form').submit(function(){
 		'id_kesiswaan',
 		'deskripsi',
 		array(
-<<<<<<< HEAD
-			       'header' => 'Menu',
+			    'header' => 'Menu',
 				'class'=>'CButtonColumn',
 				'template'=>'{update}{delete}',
 				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus pelanggaran santri ini?'",
 			),
-=======
-			'class'=>'CButtonColumn',
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 		),
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'

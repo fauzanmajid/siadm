@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 2016/05/18 12:44:45 [error] [exception.CException] exception 'CException' with message 'Alias "chartjs.components.ChartJs" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\YiiBase.php:323
@@ -1667,3 +1668,5 @@ in C:\xampp\htdocs\siadm\protected\controllers\SantriController.php (341)
 >>>>>>> fauzan
 in C:\xampp\htdocs\siadm\index.php (33)
 >>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
+=======
+>>>>>>> ac458f4437f145d4e8d7edbfc0cbdb58891ffa33

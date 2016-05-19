@@ -21,8 +21,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nip_santri'); ?>
-		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
-		<?php echo $form->error($model,'nip_santri'); ?>
+		<br><p style='font-size: 75%'>Nomor Induk Pesantren</p>
+		<?php
+			$dropDownSantri = CHtml::listData(Santri::model()->findAll(),'nip','concatened');
+			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);			      
+		?>
+
+		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>
 	</div>
 
 	<div class="row">

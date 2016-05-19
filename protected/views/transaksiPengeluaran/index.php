@@ -14,36 +14,7 @@ $('.search-form form').submit(function(){
 
 <h1>Transaksi Pengeluaran</h1>
 
-<<<<<<< HEAD
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<div class='search-result' style="display:none">
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'transaksi-pengeluaran-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'kode',
-		'id_bendahara',
-		'nominal',
-		'Deskripsi',
-		'tanggal_pengeluaran',
-		'timestamp',
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>
-</div>
-
-<input type=button onClick="location.href='http://localhost/siadm/index.php/transaksiPengeluaran/create'"value='Buat'>
-=======
-<input type=button onClick="location.href='http://localhost/siadm/index.php/transaksiPengeluaran/create'"value='Buat'>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('transaksiPengeluaran/create') ?>' "value='Buat'>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'transaksi-pengeluaran-grid',
@@ -63,6 +34,3 @@ $('.search-form form').submit(function(){
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
 </div>
-
-
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5

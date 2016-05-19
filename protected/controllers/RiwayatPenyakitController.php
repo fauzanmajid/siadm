@@ -80,7 +80,7 @@ class RiwayatPenyakitController extends Controller
 		{
 			$model->attributes=$_POST['RiwayatPenyakit'];
 			if($model->save())
-				$this->redirect(array('santri/riwayatpenyakit','id'=>$model->nip_santri));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(
