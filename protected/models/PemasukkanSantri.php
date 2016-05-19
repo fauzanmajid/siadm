@@ -32,31 +32,14 @@ class PemasukkanSantri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-<<<<<<< HEAD
-<<<<<<< HEAD
-			array('id_bendahara, nip_santri, nominal, timestamp', 'required'),
-			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
-			array('nip_santri', 'length', 'max'=>15),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nip_santri, nominal, timestamp', 'safe', 'on'=>'search'),
-=======
-=======
->>>>>>> master
 			array('nip_santri, nominal, tanggal', 'required'),
 			array('id_bendahara, nominal, tanggal, keterangan', 'numerical', 'integerOnly'=>true),
-=======
 			array('nip_santri, nominal, tanggal, keterangan', 'required'),
 			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 			array('nip_santri', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('kode, id_bendahara, nip_santri, nominal, tanggal, keterangan, timestamp', 'safe', 'on'=>'search'),
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
 		);
 	}
 
@@ -83,16 +66,8 @@ class PemasukkanSantri extends CActiveRecord
 			'id_bendahara' => 'Id Bendahara',
 			'nip_santri' => 'Nip Santri',
 			'nominal' => 'Nominal',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 			'tanggal' => 'Tanggal',
 			'keterangan' => 'Keterangan',
->>>>>>> master
-=======
-			'tanggal' => 'Tanggal',
-			'keterangan' => 'Keterangan',
->>>>>>> master
 			'timestamp' => 'Timestamp',
 		);
 	}
@@ -119,16 +94,8 @@ class PemasukkanSantri extends CActiveRecord
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('nominal',$this->nominal);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 		$criteria->compare('tanggal',$this->tanggal);
 		$criteria->compare('keterangan',$this->keterangan);
->>>>>>> master
-=======
-		$criteria->compare('tanggal',$this->tanggal);
-		$criteria->compare('keterangan',$this->keterangan);
->>>>>>> master
 		$criteria->compare('timestamp',$this->timestamp,true);
 
 		return new CActiveDataProvider($this, array(
@@ -146,12 +113,7 @@ class PemasukkanSantri extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> master
-	
+
 	public function beforeSave ()
 	{
 		if(parent::beforeSave()){
@@ -164,8 +126,4 @@ class PemasukkanSantri extends CActiveRecord
 		return false;
 
 	}
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
 }

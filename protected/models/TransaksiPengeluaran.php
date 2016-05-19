@@ -19,10 +19,6 @@ class TransaksiPengeluaran extends CActiveRecord
 	public $tanggal_awal;
 	public $tanggal_akhir;
 	public $jenis;
-<<<<<<< HEAD
-=======
-	
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 	/**
 	 * @return string the associated database table name
 	 */
