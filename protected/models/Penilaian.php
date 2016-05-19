@@ -35,6 +35,7 @@ class Penilaian extends Base
 		// will receive user inputs.
 		return array(
 			array('nip_santri, idkelas, idmatpel,idguru,nilai_harian,nilai_uts,nilai_uas,nilai_akhir', 'required'),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			//array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
 			//array('nip_santri', 'length', 'max'=>15),
 			//array('nip_santri', 'length', 'max'=>45),

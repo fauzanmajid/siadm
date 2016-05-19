@@ -16,6 +16,8 @@
  */
 class PemasukkanSantri extends Base
 {
+	public $id;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -33,14 +35,16 @@ class PemasukkanSantri extends Base
 		// will receive user inputs.
 		return array(
 			array('nip_santri, nominal, tanggal', 'required'),
-			array('id_bendahara, nominal, tanggal, keterangan', 'numerical', 'integerOnly'=>true),
+			array('id_bendahara, nominal,', 'numerical', 'integerOnly'=>true),
 			array('nip_santri, nominal, tanggal, keterangan', 'required'),
 			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('kode, id_bendahara, nip_santri, nominal, tanggal, keterangan, timestamp', 'safe', 'on'=>'search'),
+			array('kode','unique','message'=>'{attribute}:{value} sudah ada!'),
 		);
+		
 	}
 
 	/**
@@ -64,7 +68,7 @@ class PemasukkanSantri extends Base
 		return array(
 			'kode' => 'Kode',
 			'id_bendahara' => 'Id Bendahara',
-			'nip_santri' => 'Nip Santri',
+			'nip_santri' => 'Santri',
 			'nominal' => 'Nominal',
 			'tanggal' => 'Tanggal',
 			'keterangan' => 'Keterangan',

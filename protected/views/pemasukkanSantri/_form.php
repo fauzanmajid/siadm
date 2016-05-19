@@ -20,10 +20,10 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<br><p style='font-size: 75%'>Nomor Induk Santri</p>
+		<?php echo $form->labelEx($model,'nip_santri'); ?>
 		<?php
 			$dropDownSantri = CHtml::listData(Santri::model()->findAll(),'nip','concatened');
-			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri);			      
+			echo $form->dropDownList($model, 'nip_santri', $dropDownSantri,array('empty'=>'--Pilih Santri--'));			      
 		?>
 
 		<?php echo $form->error($model,'nip_santri', $dropDownSantri); ?>

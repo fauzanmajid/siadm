@@ -173,21 +173,25 @@ class SiteController extends Controller
 		));
 	}
 	 public function actionLog() {
-        $this->layout = 'column1';
+        // $this->layout = 'column1';
         $model = new Log('search');
         $model->unsetAttributes();  // clear any default values
+        
         $criteria = new CDbCriteria();
-        $criteria->order = 'ID ASC';
+        $criteria->order = 'id ASC';
+        
         $item_count = $model->count($criteria);
+        
         $page_size = 10;
         $pages = new CPagination($item_count);
         $pages->setPageSize($page_size);
         $pages->applyLimit($criteria);
         // simulate the effect of LIMIT in a sql query
+        
         if (isset($_GET['Log']))
             $model->attributes = $_GET['Log'];
 
-        $this->render('Log', array(
+        $this->render('log', array(
             'model' => $model,
             'item_count' => $item_count,
             'page_size' => $page_size,
@@ -195,6 +199,4 @@ class SiteController extends Controller
             'criteria' => $criteria,
         ));
     }
-
-	
 }

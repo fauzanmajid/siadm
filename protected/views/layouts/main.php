@@ -142,11 +142,11 @@
 							  	array('label'=>'Pemasukan Bos','url'=>array('/PemasukkanBos')),
 							  	array('label'=>'Pemasukan Donatur','url'=>array('/PemasukkanDonatur')),
 							  	array('label'=>'Pemasukan Santri','url'=>array('/PemasukkanSantri')),
-								array('label'=>'Unduh Laporan Pemasukan','url'=>array('/UnduhTransaksiPemasukan')),
+								// array('label'=>'Unduh Laporan Pemasukan','url'=>array('/UnduhTransaksiPemasukan')),
 							  		)
 					  			),
 			  			array('label'=>'Pengeluaran','url'=>array('/transaksiPengeluaran')),
-						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('Unduh/UnduhTransaksiPengeluaran')),
+						array('label'=>'Unduh Laporan Keuangan','url'=>array('Unduh/UnduhTransaksiPengeluaran')),
 			  			
 				  	),
 					'visible'=>UserWeb::instance()->isBendahara()),

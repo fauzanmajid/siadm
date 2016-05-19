@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2016/05/20 09:17:17 [error] [exception.ParseError] ParseError: syntax error, unexpected 'public' (T_PUBLIC), expecting '{' in C:\xampp\htdocs\siadm\protected\models\PemasukkanBos.php:19
 Stack trace:
 #0 [internal function]: YiiBase::autoload('PemasukkanBos')
@@ -395,3 +396,5 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/RiwayatPenyakit/create
 HTTP_REFERER=http://localhost/siadm/index.php/RiwayatPenyakit/create
 ---
+=======
+>>>>>>> e283c1018289942129056fb71a391b5298f04942

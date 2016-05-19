@@ -19,6 +19,7 @@ class TransaksiPengeluaran extends Base
 	public $tanggal_awal;
 	public $tanggal_akhir;
 	public $jenis;
+	public $id;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -38,6 +39,7 @@ class TransaksiPengeluaran extends Base
 			array('nominal, Deskripsi, tanggal_pengeluaran, ', 'required'),
 			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			array('Deskripsi', 'length', 'max'=>100),
+			array('kode','unique','message'=>'{attribute}:{value} sudah ada!'),	
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('kode, id_bendahara, nominal, Deskripsi, tanggal_pengeluaran, timestamp', 'safe', 'on'=>'search'),
