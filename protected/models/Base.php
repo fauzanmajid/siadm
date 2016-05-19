@@ -38,12 +38,6 @@ class Base extends CActiveRecord {
         if ($this->id != null){
             return $this->id;
         }
-        elseif ($this->nip != null){
-            return $this->nip;
-        }
-        elseif ($this->kode != null){
-            return $this->kode;
-        }
         else
             return '';
     }

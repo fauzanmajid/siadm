@@ -74,7 +74,7 @@ class PemasukkanDonaturController extends Controller
 		{
 			$model->attributes=$_POST['PemasukkanDonatur'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->kode));
+				$this->redirect('index');
 		}
 
 		$this->render('create',array(

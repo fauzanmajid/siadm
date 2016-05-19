@@ -12,14 +12,7 @@ $('.search-form form').submit(function(){
 ?>
 <h1>Pemasukkan Donatur</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
 
-</div><!-- search-form -->
-
-<div class='search-result' style="display:none;">
 
 <div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -32,7 +25,6 @@ $('.search-form form').submit(function(){
 		'nominal',
 		'tanggal',
 		'keterangan',
-		'timestamp',
 		'id_donatur',
 		array(
 			'class'=>'CButtonColumn',
@@ -42,5 +34,5 @@ $('.search-form form').submit(function(){
 )); ?> 
 
 </div>
-</div>
-<input type=button onClick="location.href='<?= Yii::app()->createUrl('create')?>'" value='Buat'>
+
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkandonatur/create')?>'" value='Buat'>
