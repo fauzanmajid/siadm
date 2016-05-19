@@ -47,11 +47,11 @@ class PenilaianController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 //'deniedCallback'=> array($this,'gotoLogin'),
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
-                /*
+                
                 'expression' => function(UserWeb $user) {
-                 @var $user UserWeb 
-                return $user->isKesiswaan();}
-                */
+                // @var $user UserWeb 
+                return $user->isGuru();}
+                
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
