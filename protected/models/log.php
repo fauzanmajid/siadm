@@ -48,7 +48,7 @@ class Log extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'user' => array(self::BELONGS_TO, 'User', 'id'),
+			'users' => array(self::BELONGS_TO, 'User', 'id'),
 		);
 	}
 
@@ -61,7 +61,7 @@ class Log extends CActiveRecord
 			'id' => 'id',
 			'time' => 'Time',
 			'action' => 'Action',
-			'user_id' => 'Employee',
+			'user_id' => 'User',
 		);
 	}
 

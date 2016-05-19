@@ -65,6 +65,7 @@ class User extends Base
 			'pencatatanPelanggarans' => array(self::HAS_MANY, 'PencatatanPelanggaran', 'id_kesiswaan'),
 			'pencatatanPerizinans' => array(self::HAS_MANY, 'PencatatanPerizinan', 'id_kesiswaan'),
 			'transaksiPengeluarans' => array(self::HAS_MANY, 'TransaksiPengeluaran', 'id_bendahara'),
+			'logs' => array(self::HAS_MANY, 'Log', 'user_id'),	
 		);
 	}
 
