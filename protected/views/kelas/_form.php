@@ -34,7 +34,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMA'), array('empty'=>'--Pilih Jenjang--')); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMK'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 

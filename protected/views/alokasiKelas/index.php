@@ -61,7 +61,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		        	),
 		        	'update' => array(
 		            	'label'=>'[-]',
-		            	'url'=>'Yii::app()->createUrl("alokasikelas/view", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
+		            	'url'=>'Yii::app()->createUrl("alokasikelas/update", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
 
 		        	),
 		    	),

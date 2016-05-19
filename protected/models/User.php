@@ -122,10 +122,10 @@ class User extends Base
 	}
 	public function getConcatened()
     {
-	    return $this->id.' ('.$this->username.')';
+	    return $this->id.' '.$this->username.' ('.$this->role.')';
     }
     public function getJabatan()
     {
-	    return $this->id.' ('.$this->role.')';
+	    return $this->id.' '.$this->username.' ('.$this->role.')';
     }
 }
