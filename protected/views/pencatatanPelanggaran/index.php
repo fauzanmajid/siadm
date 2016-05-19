@@ -25,34 +25,39 @@ $('.search-form form').submit(function(){
 
 <h1>Pelanggaran Santri</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
+<<<<<<< HEAD
 <div class='search-result' style="display:none">
 
+=======
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-pelanggaran-grid',
 	'dataProvider'=>$model->search(),
 	'columns'=>array(
 		'nip_santri',
 		array(
-	            'class' => 'CLinkColumn',
-	            'labelExpression' => '$data->nipSantri->nama_lengkap',
-	            'urlExpression' => 'Yii::app()->createUrl("santri/pelanggaran",array("id"=>$data->nip_santri))',
+	            //'class' => 'CLinkColumn',
+
+	            'value' => '$data->nipSantri->nama_lengkap',
+	            //'urlExpression' => 'Yii::app()->createUrl("santri/prestasi",array("id"=>$data->nip_santri))',
 	            'header' => 'Nama Santri',
-	            'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+	            //'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
 	        ),
 		'id_kesiswaan',
 		'deskripsi',
 		array(
+<<<<<<< HEAD
 			       'header' => 'Menu',
 				'class'=>'CButtonColumn',
 				'template'=>'{update}{delete}',
 				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus pelanggaran santri ini?'",
 			),
+=======
+			'class'=>'CButtonColumn',
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 		),
-	)); ?>
+	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
+)); ?>
 </div>

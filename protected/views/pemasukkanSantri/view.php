@@ -3,13 +3,20 @@
 /* @var $model PemasukkanSantri */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
 	'Pemasukkan Santris'=>array('index'),
 =======
+=======
+>>>>>>> master
 
+<<<<<<< HEAD
 /*$this->breadcrumbs=array(
 	'Pemasukkan Santris'=>array('index'),
 >>>>>>> parput
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 	$model->kode,
 );
@@ -21,15 +28,31 @@ $this->menu=array(
 	array('label'=>'Delete PemasukkanSantri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->kode),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage PemasukkanSantri', 'url'=>array('admin')),
 <<<<<<< HEAD
-);
-?>
-
-<h1>View PemasukkanSantri #<?php echo $model->kode; ?></h1>
+<<<<<<< HEAD
 =======
 );*/
+=======
+$this->breadcrumbs=array(
+	'Pemasukkan Santri'=>array('index'),
+
+	$model->kode,
+>>>>>>> master
+);
+
+// $this->menu=array(
+// 	array('label'=>'List PemasukkanSantri', 'url'=>array('index')),
+// 	array('label'=>'Create PemasukkanSantri', 'url'=>array('create')),
+// 	array('label'=>'Update PemasukkanSantri', 'url'=>array('update', 'id'=>$model->kode)),
+// 	array('label'=>'Delete PemasukkanSantri', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->kode),'confirm'=>'Are you sure you want to delete this item?')),
+// 	array('label'=>'Manage PemasukkanSantri', 'url'=>array('admin')),
+// );
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 ?>
 
 <h1>Lihat Pemasukan Santri #<?php echo $model->kode; ?></h1>
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 <?php $this->widget('zii.widgets.CDetailView', array(
@@ -40,6 +63,11 @@ $this->menu=array(
 		'nip_santri',
 		'nominal',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		'tanggal',
+		'keterangan',
+>>>>>>> master
 =======
 		'tanggal',
 		'keterangan',

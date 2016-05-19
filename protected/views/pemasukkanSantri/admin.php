@@ -3,7 +3,11 @@
 /* @var $model PemasukkanSantri */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
+=======
+/*$this->breadcrumbs=array(
+>>>>>>> master
 =======
 /*$this->breadcrumbs=array(
 >>>>>>> master
@@ -15,7 +19,11 @@ $this->menu=array(
 	array('label'=>'List PemasukkanSantri', 'url'=>array('index')),
 	array('label'=>'Create PemasukkanSantri', 'url'=>array('create')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
+=======
+);*/
+>>>>>>> master
 =======
 );*/
 >>>>>>> master
@@ -35,6 +43,7 @@ $('.search-form form').submit(function(){
 ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <h1>Manage Pemasukkan Santris</h1>
 
 <p>
@@ -44,6 +53,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 =======
+=======
+>>>>>>> master
 <h1>Atur Pemasukan Santri</h1>
 
 <!-- <p>
@@ -52,6 +63,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </p> -->
 
 <?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
@@ -69,6 +83,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'nip_santri',
 		'nominal',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		'tanggal',
+		'keterangan',
+>>>>>>> master
 =======
 		'tanggal',
 		'keterangan',
@@ -79,6 +98,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	'emptyText'=>'Tidak ada data yang ditemukan.'
+>>>>>>> master
 =======
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 >>>>>>> master
