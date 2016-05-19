@@ -11,10 +11,23 @@
 	'method'=>'get',
 )); ?>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+	<div class="row">
+		<?php echo $form->label($model,'kode'); ?>
+		<?php echo $form->textField($model,'kode'); ?>
+	</div>
+=======
+=======
+>>>>>>> master
 	<!-- <div class="row">
 		<?php echo $form->label($model,'kode'); ?>
 		<?php echo $form->textField($model,'kode'); ?>
 	</div> -->
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
 
 	<div class="row">
 		<?php echo $form->label($model,'id_bendahara'); ?>
@@ -27,6 +40,14 @@
 	</div>
 
 	<div class="row">
+<<<<<<< HEAD
+<<<<<<< HEAD
+		<?php echo $form->label($model,'timestamp'); ?>
+		<?php echo $form->textField($model,'timestamp'); ?>
+	</div>
+=======
+=======
+>>>>>>> master
 		<?php echo $form->labelEx($model,'tanggal'); ?>
 		<?php
 	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -50,6 +71,10 @@
 		<?php echo $form->label($model,'timestamp'); ?>
 		<?php echo $form->textField($model,'timestamp'); ?>
 	</div> -->
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
 
 	<div class="row">
 		<?php echo $form->label($model,'id_donatur'); ?>
@@ -57,7 +82,15 @@
 	</div>
 
 	<div class="row buttons">
+<<<<<<< HEAD
+<<<<<<< HEAD
+		<?php echo CHtml::submitButton('Search'); ?>
+=======
 		<?php echo CHtml::submitButton('Cari'); ?>
+>>>>>>> master
+=======
+		<?php echo CHtml::submitButton('Cari'); ?>
+>>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -38,8 +38,6 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
-)); ?>
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanDonatur/create'"value='Buat'>
 	'emptyText'=>'Tidak ada data yang ditemukan.'
-)); ?>
-</div>
+)); ?> 
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanDonatur/create'"value='Buat'>

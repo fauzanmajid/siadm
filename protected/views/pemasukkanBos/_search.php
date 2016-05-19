@@ -11,6 +11,13 @@
 	'method'=>'get',
 )); ?>
 
+<<<<<<< HEAD
+	<div class="row">
+		<?php echo $form->label($model,'kode'); ?>
+		<?php echo $form->textField($model,'kode'); ?>
+	</div>
+=======
+>>>>>>> master
 	<!-- <div class="row">
 		<?php echo $form->label($model,'kode'); ?>
 		<?php echo $form->textField($model,'kode'); ?>
@@ -27,6 +34,13 @@
 	</div>
 
 	<div class="row">
+<<<<<<< HEAD
+		<?php echo $form->label($model,'timestamp'); ?>
+		<?php echo $form->textField($model,'timestamp'); ?>
+	</div>
+
+=======
+>>>>>>> master
 		<?php echo $form->labelEx($model,'Tanggal'); ?>
 		<?php
 	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -44,7 +58,6 @@
 	        ));
         ?>
 		<?php echo $form->error($model,'Tanggal'); ?>
-	</div>
 
 
 	<!-- <div class="row">

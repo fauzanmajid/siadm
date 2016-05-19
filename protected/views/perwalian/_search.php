@@ -21,22 +21,63 @@
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	<div class="row">
+		<?php echo $form->label($model,'status'); ?>
+		<?php echo $form->textField($model,'status',array('size'=>15,'maxlength'=>15)); ?>
+	</div>
+
+=======
+=======
+>>>>>>> master
+=======
+>>>>>>> master
 	<!-- <div class="row">
 		<?php echo $form->label($model,'status'); ?>
 		<?php echo $form->textField($model,'status',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
  -->
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
+=======
+>>>>>>> master
 	<div class="row">
 		<?php echo $form->label($model,'nama'); ?>
 		<?php echo $form->textField($model,'nama',array('size'=>25,'maxlength'=>25)); ?>
 	</div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	<div class="row">
+		<?php echo $form->label($model,'tempat_lahir'); ?>
+		<?php echo $form->textField($model,'tempat_lahir',array('size'=>15,'maxlength'=>15)); ?>
+	</div>
+
+	<div class="row">
+=======
+=======
+>>>>>>> master
+=======
+>>>>>>> master
 	<!-- <div class="row">
 		<?php echo $form->label($model,'tempat_lahir'); ?>
 		<?php echo $form->textField($model,'tempat_lahir',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
  -->
 <!-- 	<div class="row">
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
+=======
+>>>>>>> master
 		<?php echo $form->label($model,'tanggal_lahir'); ?>
 		<?php echo $form->textField($model,'tanggal_lahir'); ?>
 	</div>
@@ -70,9 +111,27 @@
 		<?php echo $form->label($model,'penghasilan'); ?>
 		<?php echo $form->textField($model,'penghasilan'); ?>
 	</div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Search'); ?>
+=======
  -->
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Cari'); ?>
+>>>>>>> master
+=======
+ -->
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Cari'); ?>
+>>>>>>> master
+=======
+ -->
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Cari'); ?>
+>>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>

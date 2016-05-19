@@ -72,8 +72,8 @@ class SantriController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Santri;
-		$modelwali=new Perwalian;
+		$model= new Santri;
+		$modelwali= new Perwalian;
 		$model->scenario = 'create';
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

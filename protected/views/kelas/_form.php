@@ -19,8 +19,13 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	
-
+	<!--
+	<div class="row">
+		<?php echo $form->labelEx($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+		<?php echo $form->error($model,'id'); ?>
+	</div> 
+	-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'nama'); ?>
 		<?php echo $form->textField($model,'nama',array('size'=>10,'maxlength'=>15)); ?>
@@ -29,7 +34,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMA'), array('empty'=>'--Pilih Jenjang--')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 

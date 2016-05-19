@@ -57,10 +57,12 @@ class TransaksiPengeluaran extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idBendahara' => array(self::BELONGS_TO, 'User', 'id_bendahara'),
+			
 		);
 	}
 
-	/**
+
+		/**
 	 * @return array customized attribute labels (name=>label)
 	 */
 	public function attributeLabels()

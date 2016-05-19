@@ -18,7 +18,6 @@ $('.search-form form').submit(function(){
 ?>
 
 <h1>Perizinan Santri</h1>
-<<<<<<< HEAD
 
 <div class="search-form">
 <?php $this->renderPartial('_search',array(
@@ -28,8 +27,6 @@ $('.search-form form').submit(function(){
 
 
 <div class='search-result' style="display:none">
-=======
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 
 <div class='search-result'>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -50,15 +47,11 @@ $('.search-form form').submit(function(){
 			'tanggal_akhir',
 			'kategori',
 			array(
-<<<<<<< HEAD
 	            'header' => 'Menu',
 				'class'=>'CButtonColumn',
 				'template'=>'{update}{delete}',
 				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus perizinan santri ini?'",
 			),
-=======
-			'class'=>'CButtonColumn',
->>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 		),
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'

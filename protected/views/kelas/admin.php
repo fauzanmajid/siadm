@@ -2,15 +2,31 @@
 /* @var $this KelasController */
 /* @var $model Kelas */
 
+<<<<<<< HEAD
+
+$this->breadcrumbs=array(
+	'Kelas'=>array('index'),
+	'Atur',
+
+=======
 /*$this->breadcrumbs=array(
 	'Kelas'=>array('index'),
 	'Atur',
+>>>>>>> master
 );
 
+/*
 $this->menu=array(
 	array('label'=>'Daftar Kelas', 'url'=>array('index')),
 	array('label'=>'Buat Kelas', 'url'=>array('create')),
+<<<<<<< HEAD
+<<<<<<< HEAD
+);
+*/
+
+=======
 );*/
+>>>>>>> master
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

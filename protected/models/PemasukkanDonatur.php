@@ -33,6 +33,15 @@ class PemasukkanDonatur extends CActiveRecord
 		// will receive user inputs.
 		return array(
 <<<<<<< HEAD
+<<<<<<< HEAD
+			array('nominal, timestamp, id_donatur', 'required'),
+			array('id_bendahara, nominal, id_donatur', 'numerical', 'integerOnly'=>true),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('kode, id_bendahara, nominal, timestamp, id_donatur', 'safe', 'on'=>'search'),
+=======
+=======
+>>>>>>> master
 			array('nominal, id_donatur, tanggal', 'required'),
 			array('id_bendahara, nominal, id_donatur, tanggal, keterangan', 'numerical', 'integerOnly'=>true),
 =======
@@ -42,6 +51,10 @@ class PemasukkanDonatur extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('kode, id_bendahara, nominal, tanggal, keterangan, timestamp, id_donatur', 'safe', 'on'=>'search'),
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
 		);
 	}
 
@@ -67,8 +80,16 @@ class PemasukkanDonatur extends CActiveRecord
 			'kode' => 'Kode',
 			'id_bendahara' => 'Id Bendahara',
 			'nominal' => 'Nominal',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 			'tanggal' => 'Tanggal',
 			'keterangan' => 'Keterangan',
+>>>>>>> master
+=======
+			'tanggal' => 'Tanggal',
+			'keterangan' => 'Keterangan',
+>>>>>>> master
 			'timestamp' => 'Timestamp',
 			'id_donatur' => 'Id Donatur',
 		);
@@ -95,8 +116,16 @@ class PemasukkanDonatur extends CActiveRecord
 		$criteria->compare('kode',$this->kode);
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nominal',$this->nominal);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 		$criteria->compare('tanggal',$this->tanggal);
 		$criteria->compare('keterangan',$this->keterangan);
+>>>>>>> master
+=======
+		$criteria->compare('tanggal',$this->tanggal);
+		$criteria->compare('keterangan',$this->keterangan);
+>>>>>>> master
 		$criteria->compare('timestamp',$this->timestamp,true);
 		$criteria->compare('id_donatur',$this->id_donatur);
 
@@ -115,6 +144,11 @@ class PemasukkanDonatur extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> master
 
 	public function beforeSave ()
 	{
@@ -128,4 +162,8 @@ class PemasukkanDonatur extends CActiveRecord
 		return false;
 
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
 }

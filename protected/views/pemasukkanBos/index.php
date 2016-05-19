@@ -1,5 +1,4 @@
 <?php
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
 	$('#pemasukkan-bos-grid').yiiGridView('update', {
@@ -9,12 +8,6 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
-
-$this->menu=array(
-	array('label'=>'Buat Pemasukkan Bos', 'url'=>array('create')),
-	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
-);
-
 ?>
 
 
@@ -27,7 +20,6 @@ $this->menu=array(
 </div><!-- search-form -->
 
 
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'" value='click here'>
 
 <div class='search-result' style="display:none">
 
@@ -50,4 +42,3 @@ $this->menu=array(
 <input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
-
