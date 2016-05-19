@@ -16,7 +16,11 @@
  */
 class alokasiKelas extends CActiveRecord
 {
+	public $nama_kelas;
+	public $nama_guru;
+	public $nama_matpel;
 	public $nama;
+	
 	
 	/**
 	 * @return string the associated database table name
@@ -52,10 +56,10 @@ class alokasiKelas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idkelas' => array(self::BELONGS_TO, 'Kelas', 'id'),
-			'idmatpel' => array(self::BELONGS_TO, 'MataPelajaran', 'id'),
-			'idguru' => array(self::BELONGS_TO, 'User', 'id'),
-			
+			// 'Kelas' => array(self::BELONGS_TO, 'Kelas', 'id'),
+			// 'Matpel' => array(self::BELONGS_TO, 'MataPelajaran', 'id'),
+			// 'Guru' => array(self::BELONGS_TO, 'User', 'id'),
+			'Kombinasi' => array(self::HAS_MANY, 'alokasiKelas', 'idkelas,idmatpel,idguru'),
 		);
 	}
 
@@ -68,9 +72,7 @@ class alokasiKelas extends CActiveRecord
 			
 			'idkelas' => 'Kelas',
 			'idmatpel' => 'Nama Mata Pelajaran',
-			'idguru' => 'Nama Guru',
-			
-				
+			'idguru' => 'Nama Guru',		
 		);
 	}
 
@@ -91,12 +93,16 @@ class alokasiKelas extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		// $criteria->with = array( 'Kelas','Matpel','Guru' );
+		
 		
 		$criteria->compare('idkelas',$this->idkelas);
 		$criteria->compare('idmatpel',$this->idmatpel,true);
 		$criteria->compare('idguru',$this->idguru);
-		
+		/*$criteria->compare('Kelas.nama',$this->nama_kelas, true);
+		$criteria->compare('Matpel.nama',$this->nama_matpel, true);
+		$criteria->compare('Guru.nama_lengkap',$this->nama_guru, true);
+		*/
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

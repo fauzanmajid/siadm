@@ -37,21 +37,40 @@ $('.search-form form').submit(function(){
 <div class='search-result'>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'penilaian-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+	'id'=>'alokasi-grid',
+	'dataProvider'=>$dataProvider,
+	//'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'idkelas',
+		/*array(     
+            'header' => 'Nama Kelas',
+	        'type'=>'raw',
+            'value' => '$data->Kelas->nama',
+            //'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+       		
+       	),*/
+       	'idkelas',		
 		'idmatpel',
-		'nip_santri',
-		//'idguru',
+		'idguru',
+		
 		array(
-			 'header' => 'Action',
-			'class'=>'CButtonColumn',
+		    'class'=>'CButtonColumn',
+		    	'template'=>'{update}',
+		    	'buttons'=>array(
+		        	'update' => array(
+		            	'label'=>'Lihat',
+		            	//'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+		            	'url'=>'Yii::app()->createUrl("Penilaian/create", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
+		        	),
+		        	/*'update' => array(
+		            	'label'=>'[-]',
+		            	'url'=>'Yii::app()->createUrl("alokasikelas/view", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
+
+		        	),*/
+		    	),
 		),
 		),
 	)); 
 ?>
 </div>
-<input type=button onClick="location.href='http://localhost/siadm/index.php/penilaian/create'"value='Buat'>
+<!-- <input type=button onClick="location.href='http://localhost/siadm/index.php/penilaian/create'"value='Buat'>-->

@@ -1,26 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "donatur".
+ * This is the model class for table "log".
  *
- * The followings are the available columns in table 'donatur':
- * @property integer $id
- * @property string $nama_lengkap
- * @property string $pekerjaan
- * @property string $alamat
- * @property string $no_telepon
+ * The followings are the available columns in table 'log':
+ * @property integer $ID
+ * @property string $time
+ * @property string $action
+ * @property integer $Employee_ID
  *
  * The followings are the available model relations:
- * @property PemasukkanDonatur[] $pemasukkanDonaturs
+ * @property Employee $employee
  */
-class Donatur extends CActiveRecord
+class Log extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'donatur';
+		return 'log';
 	}
 
 	/**
@@ -31,15 +30,13 @@ class Donatur extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama_lengkap, pekerjaan, alamat, no_telepon', 'required'),
-			//array('id', 'numerical', 'integerOnly'=>true),
-			array('nama_lengkap, pekerjaan', 'length', 'max'=>25),
-			array('nama_lengkap', 'match','pattern' => '/^[a-zA-Z\s]+$/'),
-			array('alamat', 'length', 'max'=>50),
-			array('no_telepon', 'length', 'max'=>15),
+			array('Employee_ID', 'required'),
+			array('Employee_ID', 'numerical', 'integerOnly'=>true),
+			array('action', 'length', 'max'=>45),
+			array('time', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama_lengkap, pekerjaan, alamat, no_telepon', 'safe', 'on'=>'search'),
+			array('ID, time, action, Employee_ID', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,7 +48,7 @@ class Donatur extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pemasukkanDonaturs' => array(self::HAS_MANY, 'PemasukkanDonatur', 'id_donatur'),
+			'employee' => array(self::BELONGS_TO, 'Employee', 'Employee_ID'),
 		);
 	}
 
@@ -61,11 +58,10 @@ class Donatur extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			//'id' => 'ID',
-			'nama_lengkap' => 'Nama Lengkap',
-			'pekerjaan' => 'Pekerjaan',
-			'alamat' => 'Alamat',
-			'no_telepon' => 'No Telepon',
+			'ID' => 'ID',
+			'time' => 'Time',
+			'action' => 'Action',
+			'Employee_ID' => 'Employee',
 		);
 	}
 
@@ -87,14 +83,16 @@ class Donatur extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('nama_lengkap',$this->nama_lengkap,true);
-		$criteria->compare('pekerjaan',$this->pekerjaan,true);
-		$criteria->compare('alamat',$this->alamat,true);
-		$criteria->compare('no_telepon',$this->no_telepon,true);
+		$criteria->compare('ID',$this->ID);
+		$criteria->compare('time',$this->time,true);
+		$criteria->compare('action',$this->action,true);
+		$criteria->compare('Employee_ID',$this->Employee_ID);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+                        'sort'=>array(
+                            'defaultOrder'=>'time DESC',
+                        )
 		));
 	}
 
@@ -102,14 +100,10 @@ class Donatur extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Donatur the static model class
+	 * @return Log the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	public function getConcatened()
-    {
-	    return $this->id.' ('.$this->nama_lengkap.')';
-    }
 }

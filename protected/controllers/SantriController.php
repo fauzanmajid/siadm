@@ -29,14 +29,7 @@ class SantriController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
-<<<<<<< HEAD
-                //'deniedCallback' => array($this,'gotoLogin'),
-                
                 'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
-
-=======
-                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
->>>>>>> master
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */

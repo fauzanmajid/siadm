@@ -36,7 +36,7 @@
 		<?php echo $form->labelEx($model,'idkelas'); ?>
 		<?php
 			$dropDownSantri = CHtml::listData(Kelas::model()->findAll(),'id','concatened');
-			echo $form->dropDownList($model, 'idkelas', $dropDownSantri,array('empty'=>'--Pilih Kelas--'))
+			echo $form->dropDownList($model, 'idkelas', $dropDownSantri,array("disabled"=>"disabled"))
 			;			      
 		?>
 
@@ -47,7 +47,7 @@
 		<?php echo $form->labelEx($model,'idmatpel'); ?>
 		<?php
 			$dropDownSantri = CHtml::listData(MataPelajaran::model()->findAll(),'id','concatened');
-			echo $form->dropDownList($model, 'idmatpel', $dropDownSantri,array('empty'=>'--Pilih Mata Pelajaran--'))
+			echo $form->dropDownList($model, 'idmatpel', $dropDownSantri,array("disabled"=>"disabled"))
 			;			      
 		?>
 
@@ -59,7 +59,7 @@
 		<?php echo $form->labelEx($model,'idguru'); ?>
 		<?php
 			$dropDownSantri = CHtml::listData(User::model()->findAll(),'id','jabatan');
-			echo $form->dropDownList($model, 'idguru', $dropDownSantri,array('empty'=>'--Pilih Guru--'))
+			echo $form->dropDownList($model, 'idguru', $dropDownSantri,array("disabled"=>"disabled"))
 			;			      
 		?>
 		

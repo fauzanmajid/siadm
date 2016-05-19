@@ -2,8 +2,6 @@
 /* @var $this PerwalianController */
 /* @var $model Perwalian */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 $this->breadcrumbs=array(
 	'Perwalians'=>array('index'),
 	'Manage',
@@ -14,10 +12,6 @@ $this->menu=array(
 	array('label'=>'Create Perwalian', 'url'=>array('create')),
 );
 
-=======
->>>>>>> master
-=======
->>>>>>> master
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -53,31 +47,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'nip_santri',
-<<<<<<< HEAD
-<<<<<<< HEAD
 		'status',
 		'nama',
 		'tempat_lahir',
 		'tanggal_lahir',
-=======
-=======
->>>>>>> master
-		// 'status',
-		'nama',
-		// 'tempat_lahir',
-		// 'tanggal_lahir',
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
-		/*
 		'agama',
 		'alamat',
 		'no_telepon',
 		'pekerjaan',
 		'pendidikan',
 		'penghasilan',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
 			 'template'=>'{view}{update}',
@@ -85,11 +65,3 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<!--  -->
->>>>>>> master
-=======
-<!--  -->
->>>>>>> master

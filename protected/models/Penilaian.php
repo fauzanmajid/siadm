@@ -52,7 +52,7 @@ class Penilaian extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idkelas,idmatpel,idguru' => array(self::BELONGS_TO, 'alokasi_kelas', 'idkelas,idmatpel,idguru'),
+			'kombinasi' => array(self::BELONGS_TO, 'alokasi_kelas', 'idkelas,idmatpel,idguru'),
 			//'nipSantri' => array(self::BELONGS_TO, 'Santri', 'nip_santri'),
 		);
 	}

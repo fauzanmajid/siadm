@@ -78,11 +78,14 @@ class PenilaianController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id=null,$id2=null,$id3=null)
 	{
 		$model=new Penilaian;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
+		$model->idkelas =$id;
+		$model->idmatpel =$id2;
+		$model->idguru =$id3;
 
 		if(isset($_POST['Penilaian']))
 		{
@@ -140,6 +143,7 @@ class PenilaianController extends Controller
 	/**
 	 * Lists all models.
 	 */
+	/*
 	public function actionIndex()
 	{
 		
@@ -159,7 +163,31 @@ class PenilaianController extends Controller
 		));
 	}
 
+	*/
+
+	public function actionIndex()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->compare('idguru','='.UserWeb::instance()->ID);	
+		
+		$dataProvider=new CActiveDataProvider('alokasiKelas',array(
+			'criteria'=>$criteria));
+
+		$model=new alokasiKelas('search');
+		$model->unsetAttributes();  // clear any default values
+
+		if(isset($_GET['alokasiKelas']))
+			$model->attributes=$_GET['alokasiKelas'];
+
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+		));
+	}
+
+
 	
+
 	/**
 	 * Manages all models.
 	 */

@@ -65,11 +65,8 @@ class Santri extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara, timestamp,foto_url', 'safe', 'on'=>'search'),
-<<<<<<< HEAD
-=======
 			array('nama_lengkap,nama_kecil', 'match','pattern' => '/^[a-zA-Z\s]+$/'),
 			
->>>>>>> master
 			 
 			// this will allow empty field when page is update (remember here i create scenario update)
 
@@ -118,10 +115,7 @@ class Santri extends CActiveRecord
 			'foto_url' => 'foto_url',
 			'tanggal_awal' => 'Tanggal Awal',
 			'tanggal_akhir' => 'Tanggal Akhir',
-<<<<<<< HEAD
-=======
 			'jenis_kelamin' => 'Jenis Kelamin',
->>>>>>> master
 			);
 	}
 
@@ -159,11 +153,7 @@ class Santri extends CActiveRecord
 		$criteria->compare('jum_saudara',$this->jum_saudara);
 		$criteria->compare('timestamp',$this->timestamp);
 		$criteria->compare('foto_url',$this->timestamp);
-<<<<<<< HEAD
-		
-=======
 		$criteria->compare('jenis_kelamin',$this->jenis_kelamin);
->>>>>>> master
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
