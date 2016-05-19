@@ -11,6 +11,7 @@ $('.search-form form').submit(function(){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
 	'Pengeluaran',
 );
@@ -25,11 +26,16 @@ $this->menu=array(
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 
 ?>
 
 <h1>Transaksi Pengeluaran</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master

@@ -29,10 +29,14 @@ class SantriController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
+<<<<<<< HEAD
                 //'deniedCallback' => array($this,'gotoLogin'),
                 
                 'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
 
+=======
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
+>>>>>>> master
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -311,22 +315,21 @@ class SantriController extends Controller
 
         $criteria = new CDbCriteria();
         if ($awal != null){
-			$criteria->addCondition("timestamp >= :awal");
-			$criteria->params = array(':awal' => $awal);	
+			$criteria->compare('timestamp','>='.$awal);
 		}
 
 		if ($akhir != null){
-			$criteria->addCondition("timestamp <= :akhir");	
-			$criteria->params = array(':akhir' => $akhir);
+		$criteria->compare('timestamp','<='.$akhir);
 		}
 		
 		if ($jenjang != null){
-			$criteria->addCondition("jenjang = :jenjang");	
-			$criteria->params = array(':jenjang' => $jenjang);
+		
+			$criteria->compare('jenjang','='.$jenjang);
 		}
 		
 		$models = Santri::model()->findAll($criteria);
 		
+		$santri = [];
 		foreach($models as $model) {
 		    $santri[$model->nip] = $model->attributes;
 		}

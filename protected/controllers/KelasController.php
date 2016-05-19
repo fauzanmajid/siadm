@@ -73,7 +73,8 @@ class KelasController extends Controller
 		{
 			$model->attributes=$_POST['Kelas'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				//$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(
@@ -127,8 +128,21 @@ class KelasController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Kelas');
+		$model=new Kelas('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Kelas']))
+			$model->attributes=$_GET['Kelas'];
+			
+		$data=new Kelas('search');
+		$data->unsetAttributes();  // clear any default values
+		if(isset($_GET['Kelas']))
+			$data->attributes=$_GET['Kelas'];
+
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+
 		));
 	}
 

@@ -3,7 +3,11 @@
 /* @var $model Enrolllment_Guru */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
+=======
+/*$this->breadcrumbs=array(
+>>>>>>> master
 =======
 /*$this->breadcrumbs=array(
 >>>>>>> master
@@ -18,15 +22,21 @@ $this->menu=array(
 	array('label'=>'View Enrolllment_Guru', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Enrolllment_Guru', 'url'=>array('admin')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 ?>
 
 <h1>Update Enrolllment_Guru <?php echo $model->id; ?></h1>
 =======
+=======
+>>>>>>> master
 );*/
 ?>
 
 <h1>Atur Alokasi Guru <?php echo $model->id; ?></h1>
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

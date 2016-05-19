@@ -3,7 +3,11 @@
 /* @var $model Enrolllment_Guru */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
+=======
+/*$this->breadcrumbs=array(
+>>>>>>> master
 =======
 /*$this->breadcrumbs=array(
 >>>>>>> master
@@ -15,7 +19,11 @@ $this->menu=array(
 	array('label'=>'Daftar Enrolllment_Guru', 'url'=>array('index')),
 	array('label'=>'Buat Enrolllment_Guru', 'url'=>array('create')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
+=======
+);*/
+>>>>>>> master
 =======
 );*/
 >>>>>>> master
@@ -35,9 +43,15 @@ $('.search-form form').submit(function(){
 ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <h1>Sunting Enrollment  Guru</h1>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+=======
+<h1>Atur Alokasi Guru</h1>
+
+<?php echo CHtml::link('Pencarian Lanjutan','#',array('class'=>'search-button')); ?>
+>>>>>>> master
 =======
 <h1>Atur Alokasi Guru</h1>
 
@@ -62,6 +76,10 @@ $('.search-form form').submit(function(){
 		),
 	),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	'emptyText'=>'Tidak ada data yang ditemukan.'
+>>>>>>> master
 =======
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 >>>>>>> master

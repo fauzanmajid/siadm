@@ -1,6 +1,7 @@
 <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* @var $this PemasukkanSantriController */
 /* @var $dataProvider CActiveDataProvider */
 
@@ -21,6 +22,8 @@ $this->menu=array(
 	'itemView'=>'_view',
 )); ?>
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 Yii::app()->clientScript->registerScript('search', "
@@ -70,11 +73,17 @@ $('.search-form form').submit(function(){
 )); ?>
 <input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanSantri/create'"value='Buat'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> master
 =======
+=======
+>>>>>>> master
 =======
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
 </div>
 >>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

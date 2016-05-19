@@ -3,6 +3,7 @@
 /* @var $model Perwalian */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 $this->breadcrumbs=array(
 	'Perwalians'=>array('index'),
@@ -19,6 +20,11 @@ $this->menu=array(
 ?>
 
 <h1>View Perwalian #<?php echo $model->id; ?></h1>
+=======
+?>
+
+<h1>Lihat Wali Santri <?php echo $model->id; ?></h1>
+>>>>>>> master
 =======
 ?>
 

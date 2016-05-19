@@ -4,9 +4,12 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
 	'Pemasukkan Santris'=>array('index'),
 =======
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 
@@ -15,6 +18,9 @@ $this->breadcrumbs=array(
 	'Pemasukkan Santris'=>array('index'),
 >>>>>>> parput
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -29,13 +35,19 @@ $this->menu=array(
 	array('label'=>'Manage PemasukkanSantri', 'url'=>array('admin')),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 );*/
 =======
 $this->breadcrumbs=array(
 	'Pemasukkan Santri'=>array('index'),
 
 	$model->kode,
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 );
 
@@ -51,6 +63,9 @@ $this->breadcrumbs=array(
 
 <h1>Lihat Pemasukan Santri #<?php echo $model->kode; ?></h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -64,6 +79,11 @@ $this->breadcrumbs=array(
 		'nominal',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		'tanggal',
+		'keterangan',
+>>>>>>> master
 =======
 		'tanggal',
 		'keterangan',

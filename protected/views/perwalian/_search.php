@@ -23,6 +23,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<div class="row">
 		<?php echo $form->label($model,'status'); ?>
 		<?php echo $form->textField($model,'status',array('size'=>15,'maxlength'=>15)); ?>
@@ -31,12 +32,17 @@
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 	<!-- <div class="row">
 		<?php echo $form->label($model,'status'); ?>
 		<?php echo $form->textField($model,'status',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
  -->
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -47,6 +53,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<div class="row">
 		<?php echo $form->label($model,'tempat_lahir'); ?>
 		<?php echo $form->textField($model,'tempat_lahir',array('size'=>15,'maxlength'=>15)); ?>
@@ -56,6 +63,8 @@
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 	<!-- <div class="row">
 		<?php echo $form->label($model,'tempat_lahir'); ?>
 		<?php echo $form->textField($model,'tempat_lahir',array('size'=>15,'maxlength'=>15)); ?>
@@ -63,6 +72,9 @@
  -->
 <!-- 	<div class="row">
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -101,9 +113,15 @@
 	</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
+=======
+ -->
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Cari'); ?>
+>>>>>>> master
 =======
  -->
 	<div class="row buttons">

@@ -39,7 +39,11 @@
 	</div>
 
 	<div class="row buttons">
+<<<<<<< HEAD
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
+=======
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 	</div>
 
 <?php $this->endWidget(); ?>

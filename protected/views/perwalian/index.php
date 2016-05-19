@@ -3,6 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
 	'Perwalian',
 );
@@ -14,6 +15,8 @@ $this->menu=array(
 ?>
 
 =======
+=======
+>>>>>>> master
 ?>
 >>>>>>> master
 <h1>Wali Santri</h1>

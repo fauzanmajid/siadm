@@ -4,8 +4,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
 	'Pemasukkan Santris'=>array('index'),
+=======
+/*$this->breadcrumbs=array(
+	'Pemasukkan Santris'=>array('index'),
+>>>>>>> parput
+>>>>>>> master
 =======
 /*$this->breadcrumbs=array(
 	'Pemasukkan Santris'=>array('index'),
@@ -27,6 +33,7 @@ $this->menu=array(
 	array('label'=>'Manage PemasukkanSantri', 'url'=>array('admin')),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 ?>
 
@@ -34,11 +41,16 @@ $this->menu=array(
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 );*/
 ?>
 
 <h1>Atur Pemasukan Santri <?php echo $model->kode; ?></h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master

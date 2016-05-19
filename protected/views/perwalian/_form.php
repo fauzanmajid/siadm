@@ -17,6 +17,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
@@ -25,12 +26,17 @@
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<!-- <div class="row">
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master
@@ -40,7 +46,11 @@
 	</div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ -->
+>>>>>>> master
 =======
  -->
 >>>>>>> master
@@ -110,7 +120,11 @@
 	<div class="row buttons">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+=======
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
+>>>>>>> master
 =======
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
 >>>>>>> master

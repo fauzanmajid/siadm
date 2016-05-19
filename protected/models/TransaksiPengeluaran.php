@@ -19,6 +19,10 @@ class TransaksiPengeluaran extends CActiveRecord
 	public $tanggal_awal;
 	public $tanggal_akhir;
 	public $jenis;
+<<<<<<< HEAD
+=======
+	
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 	/**
 	 * @return string the associated database table name
 	 */
@@ -69,6 +73,9 @@ class TransaksiPengeluaran extends CActiveRecord
 			'nominal' => 'Nominal',
 			'Deskripsi' => 'Deskripsi',
 			'tanggal_pengeluaran' => 'Tanggal Pengeluaran',
+			'tanggal_awal' => 'Tanggal Awal',
+			'tanggal_akhir' => 'Tanggal Akhir',
+			'jenis' => 'jenis',
 			'timestamp' => 'Timestamp',
 		);
 	}

@@ -12,15 +12,21 @@
 )); ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<div class="row">
 		<?php echo $form->label($model,'kode'); ?>
 		<?php echo $form->textField($model,'kode'); ?>
 	</div>
 =======
+=======
+>>>>>>> master
 	<!-- <div class="row">
 		<?php echo $form->label($model,'kode'); ?>
 		<?php echo $form->textField($model,'kode'); ?>
 	</div> -->
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 	<div class="row">
@@ -33,6 +39,7 @@
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
 	</div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	<div class="row">
 		<?php echo $form->label($model,'nominal'); ?>
@@ -47,6 +54,8 @@
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 =======
+=======
+>>>>>>> master
 	<!-- <div class="row">
 		<?php echo $form->label($model,'nominal'); ?>
 		<?php echo $form->textField($model,'nominal'); ?>
@@ -79,6 +88,9 @@
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Cari'); ?>
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 	</div>
 

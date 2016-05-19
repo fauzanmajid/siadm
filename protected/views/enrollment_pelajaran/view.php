@@ -3,7 +3,11 @@
 /* @var $model Enrollment_Pelajaran */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
+=======
+/*$this->breadcrumbs=array(
+>>>>>>> master
 =======
 /*$this->breadcrumbs=array(
 >>>>>>> master
@@ -18,15 +22,21 @@ $this->menu=array(
 	array('label'=>'Delete Enrollment Pelajaran', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Enrollment Pelajaran', 'url'=>array('admin')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 ?>
 
 <h1>Lihat Enrollment Pelajaran <?php echo $model->id; ?></h1>
 =======
+=======
+>>>>>>> master
 );*/
 ?>
 
 <h1>Lihat Alokasi Pelajaran <?php echo $model->id; ?></h1>
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 <?php $this->widget('zii.widgets.CDetailView', array(

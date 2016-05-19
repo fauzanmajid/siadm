@@ -3,7 +3,11 @@
 /* @var $model EnrollmentSantri */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
+=======
+/*$this->breadcrumbs=array(
+>>>>>>> master
 =======
 /*$this->breadcrumbs=array(
 >>>>>>> master
@@ -18,15 +22,21 @@ $this->menu=array(
 	array('label'=>'View EnrollmentSantri', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage EnrollmentSantri', 'url'=>array('admin')),
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 ?>
 
 <h1>Update EnrollmentSantri <?php echo $model->id; ?></h1>
 =======
+=======
+>>>>>>> master
 );*/
 ?>
 
 <h1>Atur Alokasi Santri <?php echo $model->id; ?></h1>
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

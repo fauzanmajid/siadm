@@ -16,7 +16,11 @@
 )); ?>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
+=======
+	<p class="note"><span class="required">*</span> Wajib diisi.</p>
+>>>>>>> master
 =======
 	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 >>>>>>> master
@@ -37,7 +41,11 @@
 
 	<div class="row buttons">
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+=======
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
+>>>>>>> master
 =======
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
 >>>>>>> master

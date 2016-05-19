@@ -1,27 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "mata_pelajaran".
+ * This is the model class for table "kelas".
  *
- * The followings are the available columns in table 'mata_pelajaran':
+ * The followings are the available columns in table 'kelas':
  * @property integer $id
  * @property string $nama
  * @property string $jenjang
  *
  * The followings are the available model relations:
- * @property User[] $users
- * @property Kelas[] $kelases
- * @property Santri[] $santris
- * @property TahunAjaran[] $tahunAjarans
+ * @property EnrollmentPelajaran[] $enrollmentPelajarans
  */
-class MataPelajaran extends CActiveRecord
+class LaporanPengeluaran extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'mata_pelajaran';
+		return 'transaksi_pengeluaran';
 	}
 
 	/**
@@ -32,14 +29,9 @@ class MataPelajaran extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, jenjang', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
-			array('nama', 'length', 'max'=>25),
-			array('jenjang', 'length', 'max'=>10),
-			array('id', 'unique', 'className'=>'MataPelajaran'),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, jenjang', 'safe', 'on'=>'search'),
+			array('jenis_kelamin', 'required'),
+			array('jumlah', 'integerOnly'=>true),
+			
 		);
 	}
 
@@ -51,10 +43,7 @@ class MataPelajaran extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'users' => array(self::MANY_MANY, 'User', 'enrolllment_guru(id_matpel, id_guru)'),
-			'kelases' => array(self::MANY_MANY, 'Kelas', 'enrollment_pelajaran(id_matpel, id_kelas)'),
-			'santris' => array(self::MANY_MANY, 'Santri', 'enrollment_santri(id_matpel, nip_santri)'),
-			'tahunAjarans' => array(self::HAS_MANY, 'TahunAjaran', 'id_matpel'),
+			
 		);
 	}
 
@@ -64,9 +53,8 @@ class MataPelajaran extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'nama' => 'Nama',
-			'jenjang' => 'Jenjang',
+			'jenis_kelamin' => 'jenis_kelamin',
+			'jumlah' => 'jumlah'
 		);
 	}
 
@@ -88,9 +76,8 @@ class MataPelajaran extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('nama',$this->nama,true);
-		$criteria->compare('jenjang',$this->jenjang,true);
+		$criteria->compare('jenis_kelamin',$this->jenis_kelamin,true);
+		$criteria->compare('jumlah',$this->jumlah,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -101,14 +88,15 @@ class MataPelajaran extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return MataPelajaran the static model class
+	 * @return Kelas the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	public function getConcatened()
-    {
-	    return $this->id.' ('.$this->nama.')';
+
+	public function getJumlahInteger() {
+        return intval($this->jumlah);
     }
+    
 }

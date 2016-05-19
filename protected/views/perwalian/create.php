@@ -4,7 +4,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $this->breadcrumbs=array(
+=======
+/*$this->breadcrumbs=array(
+>>>>>>> master
 =======
 /*$this->breadcrumbs=array(
 >>>>>>> master
@@ -20,6 +24,7 @@ $this->menu=array(
 	array('label'=>'Manage Perwalian', 'url'=>array('admin')),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 ?>
 
@@ -27,11 +32,16 @@ $this->menu=array(
 =======
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 );*/
 ?>
 
 <h1>Buat Perwalian Santri</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 =======
 >>>>>>> master

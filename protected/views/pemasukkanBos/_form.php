@@ -31,7 +31,11 @@
 		<?php echo $form->error($model,'nominal'); ?>
 	</div>
 
+<<<<<<< HEAD
 	
+=======
+	<div class="row">
+>>>>>>> master
 		<?php echo $form->labelEx($model,'Tanggal'); ?>
 		<?php
 	        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -64,7 +68,14 @@
 	</div> -->
 
 	<div class="row buttons">
+<<<<<<< HEAD
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
+<<<<<<< HEAD
+=======
+=======
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
+>>>>>>> master
 	</div>
 
 <?php $this->endWidget(); ?>
