@@ -32,8 +32,8 @@ class PemasukkanSantri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, nominal, tanggal', 'required'),
-			array('id_bendahara, nominal, tanggal, keterangan', 'numerical', 'integerOnly'=>true),
+			array('nip_santri, nominal, tanggal, keterangan', 'required'),
+			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

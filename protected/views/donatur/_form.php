@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-		<?php echo $form->error($model,'id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'nama_lengkap'); ?>
 		<?php echo $form->textField($model,'nama_lengkap',array('size'=>25,'maxlength'=>25)); ?>
 		<?php echo $form->error($model,'nama_lengkap'); ?>
@@ -45,12 +39,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'no_telepon'); ?>
-		<?php echo $form->textField($model,'no_telepon',array('size'=>15,'maxlength'=>15)); ?>
+		<?php echo $form->textField($model,'no_telepon',array('size'=>25,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'no_telepon'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

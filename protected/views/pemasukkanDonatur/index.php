@@ -12,15 +12,8 @@ $('.search-form form').submit(function(){
 ?>
 <h1>Pemasukkan Donatur</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-
-</div><!-- search-form -->
-
-<div class='search-result' style="display:none">
-
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanDonatur/create'"value='Buat'>
+<div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-donatur-grid',
 	'dataProvider'=>$model->search(),
@@ -37,5 +30,7 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanDonatur/create'"value='Buat'>
+</div>
+

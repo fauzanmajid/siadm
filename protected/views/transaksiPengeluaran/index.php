@@ -14,13 +14,7 @@ $('.search-form form').submit(function(){
 
 <h1>Transaksi Pengeluaran</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<div class='search-result' style="display:none">
+<input type=button onClick="location.href='http://localhost/siadm/index.php/transaksiPengeluaran/create'"value='Buat'>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'transaksi-pengeluaran-grid',
@@ -37,7 +31,8 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
 </div>
 
-<input type=button onClick="location.href='http://localhost/siadm/index.php/transaksiPengeluaran/create'"value='Buat'>
+
