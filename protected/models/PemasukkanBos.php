@@ -12,8 +12,10 @@
  * The followings are the available model relations:
  * @property User $idBendahara
  */
-class PemasukkanBos extends CActiveRecord
-{
+
+class PemasukkanBos extends Base
+	{
+		public $id;
 	/**
 	 * @return string the associated database table name
 	 */

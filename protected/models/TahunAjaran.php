@@ -32,6 +32,7 @@ class TahunAjaran extends CActiveRecord
 			array('id, tahun_ajaran, id_matpel', 'required'),
 			array('id, id_matpel', 'numerical', 'integerOnly'=>true),
 			array('tahun_ajaran', 'length', 'max'=>10),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, tahun_ajaran, id_matpel', 'safe', 'on'=>'search'),

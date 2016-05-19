@@ -38,6 +38,7 @@ class PencatatanPelanggaran extends Base
 			array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			array('nip_santri', 'length', 'max'=>45),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, deskripsi, nip_santri, id_kesiswaan', 'safe', 'on'=>'search'),

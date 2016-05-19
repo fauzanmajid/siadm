@@ -37,6 +37,7 @@ class Donatur extends Base
 			array('nama_lengkap', 'match','pattern' => '/^[a-zA-Z\s]+$/'),
 			array('alamat', 'length', 'max'=>50),
 			array('no_telepon', 'length', 'max'=>15),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nama_lengkap, pekerjaan, alamat, no_telepon', 'safe', 'on'=>'search'),
