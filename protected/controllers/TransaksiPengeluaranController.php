@@ -36,7 +36,7 @@ class TransaksiPengeluaranController extends Controller
 				'users'=>array('admin'),
 			),*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('index','view','admin', 'delete', 'create', 'update', 'statistikpengeluaran'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update', 'statistikpengeluaran', 'unduhtransaksipengeluaran'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isBendahara();}
@@ -175,6 +175,77 @@ class TransaksiPengeluaranController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
+
+	public function actionUnduhTransaksiPengeluaran()
+	{
+		/*$model = new TransaksiPengeluaran;
+		$model->scenario = 'unduh-laporan-keuangan';
+
+		if(isset($_POST['TransaksiPengeluaran'])) {
+		
+			$tanggal_awal = $_POST['Santri']['tanggal_awal'];
+			$tanggal_akhir = $_POST['Santri']['tanggal_akhir'];
+			$jenjang = $_POST['Santri']['jenjang'];
+
+			$this->redirect(Yii::app()->createUrl('santri/excel', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir, 'jenjang' => $jenjang)));
+		}
+*/
+		$this->render('/unduh/unduh-laporan-keuangan',array(
+			
+		));
+	}
+
+
+
+	/*public function actionExcel($awal = null, $akhir = null, $jenjang = null){
+        
+        //Some data
+
+        $criteria = new CDbCriteria();
+        if ($awal != null){
+			$criteria->addCondition("timestamp >= :awal");
+			$criteria->params = array(':awal' => $awal);	
+		}
+
+		if ($akhir != null){
+			$criteria->addCondition("timestamp <= :akhir");	
+			$criteria->params = array(':akhir' => $akhir);
+		}
+		
+		if ($jenjang != null){
+			$criteria->addCondition("jenjang = :jenjang");	
+			$criteria->params = array(':jenjang' => $jenjang);
+		}
+		
+		$models = Santri::model()->findAll($criteria);
+		
+		foreach($models as $model) {
+		    $santri[$model->nip] = $model->attributes;
+		}
+
+        $report = new YiiReport(array('template'=> 'santri.xls'));
+        
+        $report->load(array(
+                array(
+                    'id' => 'judul',
+                    'data' => array(
+                        'name' => 'Data SANTRI POPNPES AL-LATHIFA MULIA'
+                    )
+                ),
+                array(
+                    'id'=>'kode',
+                    'repeat'=>true,
+                    'data'=>$santri,
+                    'minRows'=>2
+                ),
+            )
+        );
+        
+         echo $report->render('excel5', 'Students');
+        // echo $report->render('excel2007', 'Students');
+        // echo $report->render('pdf', 'daftar santri');
+        
+    }*///actionExcel method end
 
 	/**
 	 * Performs the AJAX validation.
