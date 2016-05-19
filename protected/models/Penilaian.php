@@ -14,7 +14,7 @@
  * @property Pelanggaran $noPelanggaran
  * @property Santri $nipSantri
  */
-class Penilaian extends CActiveRecord
+class Penilaian extends Base
 {
 	public $nama_lengkap;
 	

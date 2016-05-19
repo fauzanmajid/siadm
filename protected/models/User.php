@@ -18,7 +18,7 @@
  * @property PencatatanPerizinan[] $pencatatanPerizinans
  * @property TransaksiPengeluaran[] $transaksiPengeluarans
  */
-class User extends CActiveRecord
+class User extends Base
 {
 	/**
 	 * @return string the associated database table name

@@ -14,7 +14,7 @@
  * The followings are the available model relations:
  * @property User $idBendahara
  */
-class TransaksiPengeluaran extends CActiveRecord
+class TransaksiPengeluaran extends Base
 {
 	public $tanggal_awal;
 	public $tanggal_akhir;

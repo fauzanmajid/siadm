@@ -14,7 +14,7 @@
  * @property Donatur $idDonatur
  * @property User $idBendahara
  */
-class PemasukkanDonatur extends CActiveRecord
+class PemasukkanDonatur extends Base
 {
 	/**
 	 * @return string the associated database table name

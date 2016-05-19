@@ -12,7 +12,7 @@
  * @property User $idGuru
  * @property MataPelajaran $idMatpel
  */
-class Enrolllment_Guru extends CActiveRecord
+class Enrolllment_Guru extends Base
 {
 	/**
 	 * @return string the associated database table name

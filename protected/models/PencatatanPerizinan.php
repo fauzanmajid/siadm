@@ -17,7 +17,7 @@
  * @property User $idKesiswaan
  * @property Santri $nipSantri
  */
-class PencatatanPerizinan extends CActiveRecord
+class PencatatanPerizinan extends Base
 {
 	public $nama_lengkap;
 	public $cari_tanggal_awal;

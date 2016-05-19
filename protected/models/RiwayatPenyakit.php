@@ -12,7 +12,7 @@
  * The followings are the available model relations:
  * @property Santri $nipSantri
  */
-class RiwayatPenyakit extends CActiveRecord
+class RiwayatPenyakit extends Base
 {
 	public $nama_lengkap;
 

@@ -11,7 +11,7 @@
  * The followings are the available model relations:
  * @property EnrollmentPelajaran[] $enrollmentPelajarans
  */
-class SummaryPemasukan extends CActiveRecord
+class SummaryPemasukan extends Base
 {
 	/**
 	 * @return string the associated database table name

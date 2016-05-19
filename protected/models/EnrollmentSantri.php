@@ -16,7 +16,7 @@
  * @property MataPelajaran $idMatpel
  * @property Santri $nipSantri
  */
-class EnrollmentSantri extends CActiveRecord
+class EnrollmentSantri extends Base
 {
 	/**
 	 * @return string the associated database table name

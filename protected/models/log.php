@@ -7,7 +7,7 @@
  * @property integer $ID
  * @property string $time
  * @property string $action
- * @property integer $Employee_ID
+ * @property integer $user_id
  *
  * The followings are the available model relations:
  * @property Employee $employee
@@ -30,13 +30,13 @@ class Log extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Employee_ID', 'required'),
-			array('Employee_ID', 'numerical', 'integerOnly'=>true),
+			array('user_id', 'required'),
+			array('user_id', 'numerical', 'integerOnly'=>true),
 			array('action', 'length', 'max'=>45),
 			array('time', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID, time, action, Employee_ID', 'safe', 'on'=>'search'),
+			array('id, time, action, user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,7 +48,7 @@ class Log extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'employee' => array(self::BELONGS_TO, 'Employee', 'Employee_ID'),
+			'user' => array(self::BELONGS_TO, 'User', 'id'),
 		);
 	}
 
@@ -58,10 +58,10 @@ class Log extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ID' => 'ID',
+			'id' => 'id',
 			'time' => 'Time',
 			'action' => 'Action',
-			'Employee_ID' => 'Employee',
+			'user_id' => 'Employee',
 		);
 	}
 
@@ -83,10 +83,10 @@ class Log extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('ID',$this->ID);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('time',$this->time,true);
 		$criteria->compare('action',$this->action,true);
-		$criteria->compare('Employee_ID',$this->Employee_ID);
+		$criteria->compare('user_id',$this->user_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
