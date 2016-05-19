@@ -12,7 +12,8 @@
  * The followings are the available model relations:
  * @property User $idBendahara
  */
-	class PemasukkanBos extends Base
+
+class PemasukkanBos extends Base
 	{
 		public $id;
 	/**
@@ -31,6 +32,8 @@
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('nominal, Tanggal, Keterangan', 'required'),
+			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('nominal,Tanggal, Keterangan', 'required'),
@@ -110,6 +113,7 @@
 	{
 		if(parent::beforeSave()){
 			if($this->isNewRecord){
+				$this->timestamp=date('Y-m-d H:i:s');
 				$this->timestamp=date('Y-m-d H:i:s');
 				$this->id_bendahara = UserWeb::instance()->ID;
 			}
