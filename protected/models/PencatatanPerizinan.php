@@ -22,6 +22,7 @@ class PencatatanPerizinan extends CActiveRecord
 	public $nama_lengkap;
 	public $cari_tanggal_awal;
 	public $cari_tanggal_akhir;
+	public $jml_absen;
 
 	/**
 	 * @return string the associated database table name
@@ -46,7 +47,7 @@ class PencatatanPerizinan extends CActiveRecord
 			array('kategori', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('nama_lengkap, pencatatan_perizinan, nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori, cari_tanggal_awal, cari_tanggal_akhir', 'safe', 'on'=>'search'),
+			array('nama_lengkap, pencatatan_perizinan, nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori, cari_tanggal_awal, cari_tanggal_akhir, jml_absen', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,6 +79,7 @@ class PencatatanPerizinan extends CActiveRecord
 			'tanggal_akhir' => 'Tanggal Akhir',
 			'kategori' => 'Kategori',
 			'nama_lengkap' => 'Nama Santri',
+			'jml_absen' => 'Jumlah Sakit',
 		);
 	}
 
@@ -110,7 +112,6 @@ class PencatatanPerizinan extends CActiveRecord
 		$criteria->compare('kategori',$this->kategori,true);
 		$criteria->compare('nipSantri.nama_lengkap',$this->nama_lengkap, true);
 		
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'sort'=>array(
@@ -161,20 +162,16 @@ class PencatatanPerizinan extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
+		//select sum(duration) from pencatatan_perizinan where kategori = :kategori AND tanggal_awal >= :tanggal_awal AND tanggal_akhir <= :tanggal_akhir
 		$criteria=new CDbCriteria;
-		$criteria->with = array( 'nipSantri' );
-		
-		$criteria->compare('pencatatan_perizinan',$this->pencatatan_perizinan);
+		$criteria->select = 'nip_santri, sum(durasi) as jml_absen, kategori';
+        $criteria->with = array( 'nipSantri' );
+        $criteria->group = 'nip_santri, kategori';
+
 		$criteria->compare('nip_santri',$this->nip_santri,true);
-		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
-		$criteria->compare('deskripsi',$this->deskripsi,true);
-		$criteria->compare('durasi',$this->durasi);
+		$criteria->compare('nipSantri.nama_lengkap',$this->nama_lengkap, true);
 		$criteria->compare('tanggal_awal',$this->tanggal_awal,true);
 		$criteria->compare('tanggal_akhir',$this->tanggal_akhir,true);
-		$criteria->compare('kategori',$this->kategori,true);
-		$criteria->compare('nipSantri.nama_lengkap',$this->nama_lengkap, true);
-		$criteria->compare('cari_tanggal_awal',$this->cari_tanggal_awal,true);
-		$criteria->compare('cari_tanggal_akhir',$this->cari_tanggal_akhir,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -196,5 +193,19 @@ class PencatatanPerizinan extends CActiveRecord
 		$days = ($diff / 60 / 60 / 24) + 1;
 
 		return $days;
+	}
+
+	public function getSakit(){
+		$criteria=new CDbCriteria;
+        
+        $criteria->select = 'sum('.$this->durasi.') as jml_absen';
+        $criteria->group = 'nip_santri';
+        return new CActiveDataProvider($this, array(
+            'criteria'=>$criteria,
+        ));     
+	}
+
+	public function getUmum(){
+		
 	}
 }

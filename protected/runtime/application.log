@@ -2015,3 +2015,834 @@ Stack trace:
 REQUEST_URI=/siadm/index.php/santri/excel?awal=2016-05-01&akhir=2016-05-18&jenjang=
 HTTP_REFERER=http://localhost/siadm/index.php/Santri/unduhDataSantri
 ---
+2016/05/18 20:54:39 [error] [exception.CException] CException: The "dataProvider" property cannot be empty. in C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#1 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\index.php(45): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(145): CController->render('index', Array)
+#9 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionIndex()
+#10 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#19 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#20 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#22 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan
+HTTP_REFERER=http://localhost/siadm/index.php/RiwayatPenyakit
+---
+2016/05/18 20:57:16 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 20:57:16 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 21:29:23 [error] [exception.ParseError] ParseError: syntax error, unexpected 'return' (T_RETURN) in C:\xampp\htdocs\siadm\protected\models\PencatatanPerizinan.php:116
+Stack trace:
+#0 [internal function]: YiiBase::autoload('PencatatanPeriz...')
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(395): spl_autoload_call('PencatatanPeriz...')
+#2 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(165): CActiveRecord::model('PencatatanPeriz...')
+#3 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel('PencatatanPeriz...')
+#4 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(197): CActiveDataProvider->__construct('PencatatanPeriz...')
+#5 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#6 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#16 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/18 21:30:09 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 21:30:09 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 21:31:09 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 21:31:09 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 21:39:26 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq.
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php (33)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (207)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/18 21:39:26 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(745): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1610): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\xampp\htdocs\yii\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#9 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#17 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#18 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#19 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#28 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#29 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#31 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 03:53:29 [error] [exception.ParseError] ParseError: syntax error, unexpected '') as jml_sakit'' (T_CONSTANT_ENCAPSED_STRING) in C:\xampp\htdocs\siadm\protected\models\PencatatanPerizinan.php:206
+Stack trace:
+#0 [internal function]: YiiBase::autoload('PencatatanPeriz...')
+#1 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(395): spl_autoload_call('PencatatanPeriz...')
+#2 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(165): CActiveRecord::model('PencatatanPeriz...')
+#3 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel('PencatatanPeriz...')
+#4 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(197): CActiveDataProvider->__construct('PencatatanPeriz...')
+#5 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#6 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#15 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#16 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#18 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 03:53:53 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq.
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php (33)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (207)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 03:53:53 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(745): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1610): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\xampp\htdocs\yii\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#9 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#17 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#18 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#19 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#28 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#29 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#31 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 03:54:36 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq.
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php (33)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (207)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 03:54:36 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(745): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1610): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\xampp\htdocs\yii\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#9 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#17 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#18 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#19 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#28 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#29 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#31 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 03:55:04 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq.
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php (33)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (207)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 03:55:04 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(745): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1610): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\xampp\htdocs\yii\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#9 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#17 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#18 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#19 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#28 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#29 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#31 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 03:55:05 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq.
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php (33)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (207)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 03:55:05 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (durasi=:ycp0) GROUP BY nip_santri) sq in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(745): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1610): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\xampp\htdocs\yii\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#9 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#17 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#18 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#19 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#28 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#29 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#31 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 03:55:24 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (duration=:ycp0) GROUP BY nip_santri) sq.
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php (33)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (207)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 03:55:24 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (duration=:ycp0) GROUP BY nip_santri) sq in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(745): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1610): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\xampp\htdocs\yii\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#9 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#17 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#18 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#19 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#28 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#29 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#31 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 03:55:27 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (duration=:ycp0) GROUP BY nip_santri) sq.
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php (33)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (207)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 03:55:27 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (duration=:ycp0) GROUP BY nip_santri) sq in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(745): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1610): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\xampp\htdocs\yii\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#9 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#17 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#18 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#19 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#28 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#29 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#31 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 03:55:28 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (duration=:ycp0) GROUP BY nip_santri) sq.
+in C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php (33)
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (207)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 03:55:28 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'duration' in 'field list'. The SQL statement executed was: SELECT COUNT(*) FROM (SELECT sum(duration) as jml_sakit, `t`.`pencatatan_perizinan` AS `t0_c0`, `nipSantri`.`nip` AS `t1_c0`, `nipSantri`.`nis` AS `t1_c1`, `nipSantri`.`nik` AS `t1_c2`, `nipSantri`.`nisn` AS `t1_c3`, `nipSantri`.`nama_lengkap` AS `t1_c4`, `nipSantri`.`nama_kecil` AS `t1_c5`, `nipSantri`.`status` AS `t1_c6`, `nipSantri`.`alamat` AS `t1_c7`, `nipSantri`.`jenjang` AS `t1_c8`, `nipSantri`.`tempat_lahir` AS `t1_c9`, `nipSantri`.`tanggal_lahir` AS `t1_c10`, `nipSantri`.`golongan_darah` AS `t1_c11`, `nipSantri`.`anak_ke` AS `t1_c12`, `nipSantri`.`jum_saudara` AS `t1_c13`, `nipSantri`.`timestamp` AS `t1_c14` FROM `pencatatan_perizinan` `t`  LEFT OUTER JOIN `santri` `nipSantri` ON (`t`.`nip_santri`=`nipSantri`.`nip`) WHERE (duration=:ycp0) GROUP BY nip_santri) sq in C:\xampp\htdocs\yii\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(745): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yii\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\db\ar\CActiveRecord.php(1610): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yii\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\xampp\htdocs\yii\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 C:\xampp\htdocs\yii\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 C:\xampp\htdocs\yii\zii\widgets\CBaseListView.php(125): CDataProvider->getData()
+#9 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#11 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#14 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#16 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#17 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#18 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#19 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#28 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#29 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#31 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/index
+---
+2016/05/19 07:15:39 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:15:39 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:16:25 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:16:25 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:16:33 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yii\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('perizinan')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/perizina...')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/santri/perizinan/
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/19 07:16:52 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:16:52 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:16:53 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "pencatatanperizinan". in C:\xampp\htdocs\yii\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(270): CController->missingAction('pencatatanperiz...')
+#1 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('pencatatanperiz...')
+#2 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/pencatat...')
+#3 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#5 {main}
+REQUEST_URI=/siadm/index.php/santri/pencatatanperizinan/
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/19 07:17:28 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:17:28 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:17:30 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yii\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('perizinan')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/perizina...')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/santri/perizinan/
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/19 07:18:12 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yii\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('perizinan')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/perizina...')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/santri/perizinan/
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/19 07:18:16 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:18:16 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:19:24 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:19:24 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:19:25 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yii\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yii\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('perizinan')
+#9 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('santri/perizina...')
+#10 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#12 {main}
+REQUEST_URI=/siadm/index.php/santri/perizinan/
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/19 07:20:22 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:20:22 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:20:22 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:20:22 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:39:29 [error] [exception.CException] CException: Property "CDataColumn.labelExpression" is not defined. in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\YiiBase.php(220): CComponent->__set('labelExpression', '$data->nipSantr...')
+#1 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#10 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#11 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#12 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#21 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#22 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#24 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan
+---
+2016/05/19 07:43:28 [error] [exception.CException] CException: Property "CDataColumn.nama" is not defined. in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\YiiBase.php(220): CComponent->__set('nama', 'Total Absen')
+#1 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(33): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#10 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#11 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#12 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#21 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#22 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#24 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan
+---
+2016/05/19 07:46:04 [error] [exception.CException] CException: Property "CLinkColumn.value" is not defined. in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\YiiBase.php(220): CComponent->__set('value', '$data->nipSantr...')
+#1 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\xampp\htdocs\yii\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\yii\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\index.php(44): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(145): CController->render('index', Array)
+#11 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionIndex()
+#12 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#22 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#24 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan/absensi
+---
+2016/05/19 07:48:33 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:33 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:34 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:34 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:39 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:39 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:46 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:46 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:50 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:50 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:55 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:48:55 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:50:27 [error] [exception.CException] CException: Property "CDbCriteria.where" is not defined. in C:\xampp\htdocs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\siadm\protected\models\PencatatanPerizinan.php(169): CComponent->__set('where', 'cari_tanggal_aw...')
+#1 C:\xampp\htdocs\siadm\protected\views\pencatatanPerizinan\cari-absensi.php(34): PencatatanPerizinan->searchIzin()
+#2 C:\xampp\htdocs\yii\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\web\CController.php(782): CController->renderPartial('cari-absensi', Array, true)
+#6 C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php(207): CController->render('cari-absensi', Array)
+#7 C:\xampp\htdocs\yii\web\actions\CInlineAction.php(49): PencatatanPerizinanController->actionAbsensi()
+#8 C:\xampp\htdocs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yii\web\CWebApplication.php(282): CController->run('absensi')
+#17 C:\xampp\htdocs\yii\web\CWebApplication.php(141): CWebApplication->runController('PencatatanPeriz...')
+#18 C:\xampp\htdocs\yii\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\siadm\index.php(33): CApplication->run()
+#20 {main}
+REQUEST_URI=/siadm/index.php/PencatatanPerizinan/absensi
+HTTP_REFERER=http://localhost/siadm/index.php/PencatatanPerizinan
+---
+2016/05/19 07:56:47 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:56:47 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:56:52 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 07:56:52 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:00:45 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:00:45 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:00:51 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:00:51 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:00:52 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:00:52 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:01:02 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:01:02 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:02:14 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:02:14 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:02:29 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:02:29 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:04:49 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:04:49 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:04:55 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:04:55 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:04:59 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:04:59 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:05:17 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:05:17 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:06:37 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:06:37 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:06:42 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:06:42 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:06:43 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:06:43 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:11:37 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:11:37 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:11:45 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:11:45 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:11:57 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:11:57 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:11:58 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:11:58 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:12:06 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:12:06 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:17:36 [warning] [application] Failed to set unsafe attribute "cari_tanggal_awal" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)
+2016/05/19 08:17:36 [warning] [application] Failed to set unsafe attribute "cari_tanggal_akhir" of "PencatatanPerizinan".
+in C:\xampp\htdocs\siadm\protected\controllers\PencatatanPerizinanController.php (203)
+in C:\xampp\htdocs\siadm\index.php (33)

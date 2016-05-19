@@ -110,7 +110,7 @@
 				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'),
 					'items'=>array(
 					  	array('label'=>'Buat Perizinan','url'=>array('/PencatatanPerizinan/create')),
-					  	array('label'=>'Atur Perizinan','url'=>array('/PencatatanPerizinan/index')),
+					  	array('label'=>'Cari Absensi','url'=>array('/PencatatanPerizinan/absensi')),
 					),
 				 	'visible'=>UserWeb::instance()->isKesiswaan()),
 				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
