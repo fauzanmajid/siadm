@@ -40,7 +40,7 @@ $('.search-form form').submit(function(){
 				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus pelanggaran santri ini?'",
 			),
 		),
-	),
-	'emptyText'=>'Tidak ada data yang ditemukan.'
-)); ?>
+	)
+	//'emptyText'=>'Tidak ada data yang ditemukan.'
+); ?>
 </div>
