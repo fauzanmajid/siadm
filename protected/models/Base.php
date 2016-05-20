@@ -14,19 +14,19 @@ class Base extends CActiveRecord {
             $log = new Log;
             $log->action = $dump;
             $log->time = date('Y-m-d H:i:s');
-            $log->user_id = UserWeb::instance()->user()->ID;
+            $log->user_id = UserWeb::instance()->user()->id;
             $status &= $log->save();
         }
         return $status;
     }
 
     protected function afterDelete() {
-        $this->log(sprintf('Delete %s data: %s ref#%s', CHtml::modelName($this), $this->getIdentifierName(), $this->ID));
+        $this->log(sprintf('Delete %s data: %s ref#%s', CHtml::modelName($this), $this->getIdentifierName(), $this->id));
         return parent::afterDelete();
     }
 
     protected function afterSave() {
-        $this->log(sprintf('%s %s data: %s ref#%s', $this->isNewRecord ? 'Create' : 'Update', CHtml::modelName($this), $this->getIdentifierName(), $this->ID));
+        $this->log(sprintf('%s %s data: %s ref#%s', $this->isNewRecord ? 'Create' : 'Update', CHtml::modelName($this), $this->getIdentifierName(), $this->id));
         return parent::afterSave();
     }
 

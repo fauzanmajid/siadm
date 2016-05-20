@@ -12,6 +12,7 @@
  * @property EnrollmentPelajaran[] $enrollmentPelajarans
  */
 class LaporanPemasukkan extends Base
+{
 	/**
 	 * @return string the associated database table name
 	 */

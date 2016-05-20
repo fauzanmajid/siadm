@@ -124,7 +124,7 @@ class TransaksiPengeluaran extends Base
 
 			if($this->isNewRecord){
 				$this->timestamp=date('Y-m-d H:i:s');
-				$this->id_bendahara = UserWeb::instance()->ID;
+				$this->id_bendahara = UserWeb::instance()->id;
 			}
 			return true;
 		}

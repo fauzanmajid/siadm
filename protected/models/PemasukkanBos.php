@@ -12,7 +12,8 @@
  * The followings are the available model relations:
  * @property User $idBendahara
  */
-class PemasukkanBos extends Base
+	class PemasukkanBos extends Base
+	{
 	/**
 	 * @return string the associated database table name
 	 */

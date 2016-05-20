@@ -146,9 +146,8 @@
 							  		)
 					  			),
 			  			array('label'=>'Pengeluaran','url'=>array('/transaksiPengeluaran')),
-						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/UnduhTransaksiPengeluaran')),
-			  			array('label'=>'Laporan Keuangan','url'=>array('/LaporanKeuangan')),
-						array('label'=>'Unduh Laporan Keuangan','url'=>array('Site/UnduhLaporanKeuangan')),
+						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('Unduh/UnduhTransaksiPengeluaran')),
+			  			
 				  	),
 					'visible'=>UserWeb::instance()->isBendahara()),
 				array('label'=>'Penilaian', 'url'=>array('/Penilaian'), 
