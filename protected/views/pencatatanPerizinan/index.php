@@ -19,27 +19,39 @@ $('.search-form form').submit(function(){
 
 <h1>Perizinan Santri</h1>
 
+<div class="search-form">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
+
+
+<div class='search-result' style="display:none">
+
 <div class='search-result'>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-perizinan-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
 	'columns'=>array(
 			'nip_santri',
 			array(
-	            //'class' => 'CLinkColumn',
-
-	            'value' => '$data->nipSantri->nama_lengkap',
-	            //'urlExpression' => 'Yii::app()->createUrl("santri/prestasi",array("id"=>$data->nip_santri))',
+	            'class' => 'CLinkColumn',
+	            'labelExpression' => '$data->nipSantri->nama_lengkap',
+	            'urlExpression' => 'Yii::app()->createUrl("/santri/prestasi",array("id"=>$data->nip_santri))',
 	            'header' => 'Nama Santri',
-	            //'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+	            'htmlOptions' => array('style' => 'text-align: left; color : #6cac70;')
 	        ),
 			'deskripsi',
+			'durasi',
 			'tanggal_awal',
 			'tanggal_akhir',
 			'kategori',
 			array(
-			'class'=>'CButtonColumn',
+	            'header' => 'Menu',
+				'class'=>'CButtonColumn',
+				'template'=>'{update}{delete}',
+				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus perizinan santri ini?'",
+			),
 		),
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'

@@ -43,7 +43,15 @@ $('.search-form form').submit(function(){
 		'tanggal',
 		
 		array(
+<<<<<<< HEAD
+	            'header' => 'Menu',
+				'class'=>'CButtonColumn',
+				'template'=>'{update}{delete}',
+				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus prestasi santri ini?'",
+			),
+=======
 			'class'=>'CButtonColumn',
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 		),
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'

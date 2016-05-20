@@ -19,8 +19,13 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	
-
+	<!--
+	<div class="row">
+		<?php echo $form->labelEx($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+		<?php echo $form->error($model,'id'); ?>
+	</div> 
+	-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'nama'); ?>
 		<?php echo $form->textField($model,'nama',array('size'=>10,'maxlength'=>15)); ?>
@@ -29,12 +34,16 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMA'), array('empty'=>'--Pilih Jenjang--')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 
 	<div class="row buttons">
+<<<<<<< HEAD
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
+=======
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 	</div>
 
 <?php $this->endWidget(); ?>

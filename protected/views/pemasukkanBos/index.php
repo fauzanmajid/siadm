@@ -1,5 +1,4 @@
 <?php
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
 	$('#pemasukkan-bos-grid').yiiGridView('update', {
@@ -9,13 +8,20 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
-
 ?>
 
 
 <h1>Pemasukkan Bos</h1>
 
-<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkanBos/create') ?>' "value='Buat'>
+<div class="search-form">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
+
+
+
+<div class='search-result' style="display:none">
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-bos-grid',
@@ -32,6 +38,7 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
+)); ?>
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
-

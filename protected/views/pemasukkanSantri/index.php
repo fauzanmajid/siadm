@@ -13,7 +13,14 @@ $('.search-form form').submit(function(){
 
 <h1>Pemasukkan Santri</h1>
 
-<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkanDonatur/create') ?>' "value='Buat'>
+<div class="search-form">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
+</div><!-- search-form -->
+
+<div class='search-result' style="display:none">
+
 <div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-santri-grid',
@@ -33,4 +40,4 @@ $('.search-form form').submit(function(){
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
-</div>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('create')?>'" value='Buat'>

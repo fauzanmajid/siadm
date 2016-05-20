@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 
-<div class='search-result' style="display:none">
+<div class='search-result'>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -37,22 +37,24 @@ $('.search-form form').submit(function(){
 			array(
 	            'class' => 'CLinkColumn',
 	            'labelExpression' => '$data->nipSantri->nama_lengkap',
-	            'urlExpression' => 'Yii::app()->createUrl("santri/perizinan",array("id"=>$data->nip_santri))',
+	            'urlExpression' => 'Yii::app()->createUrl("/santri/perizinan",array("id"=>$data->nip_santri))',
 	            'header' => 'Nama Santri',
-	            'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
+	            'htmlOptions' => array('style' => 'text-align: left; color : #6cac70;')
 	        ),
-			'deskripsi',
-			'tanggal_awal',
-			'tanggal_akhir',
-			'kategori',
 			array(
+				'name' => "Total Absen",
+				'header' => "Total Absen",
+				'type' => 'raw',
+				'value' => '$data->jml_absen." hari"',
+			),
+			'kategori',
+			/*array(
 	            'header' => 'Menu',
 				'class'=>'CButtonColumn',
 				'template'=>'{update}{delete}',
 				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus perizinan santri ini?'",
-			),
+			),*/
 		),
-	
-
+		'template' => '{items},{pager}'
 )); ?>
 </div>

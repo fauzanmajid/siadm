@@ -33,9 +33,15 @@
 	                'changeMonth' => true,
 	                'changeYear' => true,
 	                'yearRange' => '-200:+0',
+<<<<<<< HEAD
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+=======
 	                'onClose' => 'js:function (selectedDate) { $("#tanggal_akhir").datepicker("option", "minDate", selectedDate); }',
 	            ),
 	            'htmlOptions' => array('id' => 'tanggal_awal', 'readonly' => true, 'class' => "form-control")
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 	        ));
         ?>
         <?php echo $form->error($model, 'tanggal_awal'); ?>
@@ -53,9 +59,15 @@
 	                'changeMonth' => true,
 	                'changeYear' => true,
 	                'yearRange' => '-200:+0',
+<<<<<<< HEAD
+	                'maxDate' => '0',
+	            ),
+	            'htmlOptions' => array('readonly' => true, 'class' => "form-control")
+=======
 	                'onClose' => 'js:function (selectedDate) { $("#tanggal_awal").datepicker("option", "maxDate", selectedDate); }',
 	            ),
 	            'htmlOptions' => array('id' => 'tanggal_akhir','readonly' => true, 'class' => "form-control")
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 	        ));
         ?>
         <?php echo $form->error($model, 'tanggal_akhir'); ?>

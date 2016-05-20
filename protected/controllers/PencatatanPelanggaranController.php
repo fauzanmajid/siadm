@@ -43,8 +43,7 @@ class PencatatanPelanggaranController extends Controller
 
 			),
 
-
-			),*/
+			*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 //'deniedCallback'=> array($this,'gotoLogin'),
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),

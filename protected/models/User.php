@@ -120,4 +120,12 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	public function getConcatened()
+    {
+	    return $this->id.' ('.$this->username.')';
+    }
+    public function getJabatan()
+    {
+	    return $this->id.' ('.$this->role.')';
+    }
 }

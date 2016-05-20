@@ -36,7 +36,11 @@ class TransaksiPengeluaranController extends Controller
 				'users'=>array('admin'),
 			),*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+<<<<<<< HEAD
+                'actions' => array('index','view','admin', 'delete', 'create', 'update', 'statistikpengeluaran'),
+=======
                 'actions' => array('index','view','admin', 'delete', 'create', 'update', 'statistikpengeluaran', 'unduhtransaksipengeluaran'),
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isBendahara();}
@@ -104,6 +108,9 @@ class TransaksiPengeluaranController extends Controller
 			'model'=>$model,
 		));
 	}
+
+
+	
 
 	/**
 	 * Deletes a particular model.

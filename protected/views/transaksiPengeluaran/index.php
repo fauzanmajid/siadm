@@ -9,7 +9,6 @@ $('.search-form form').submit(function(){
 });
 ");
 
-
 ?>
 
 <h1>Transaksi Pengeluaran</h1>
@@ -34,5 +33,3 @@ $('.search-form form').submit(function(){
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
 </div>
-
-

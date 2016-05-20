@@ -19,7 +19,10 @@ class TransaksiPengeluaran extends CActiveRecord
 	public $tanggal_awal;
 	public $tanggal_akhir;
 	public $jenis;
+<<<<<<< HEAD
+=======
 	
+>>>>>>> f5cfa5377e90676ea0786fe8dfe6ae4e173e19d5
 	/**
 	 * @return string the associated database table name
 	 */
@@ -54,10 +57,12 @@ class TransaksiPengeluaran extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idBendahara' => array(self::BELONGS_TO, 'User', 'id_bendahara'),
+			
 		);
 	}
 
-	/**
+
+		/**
 	 * @return array customized attribute labels (name=>label)
 	 */
 	public function attributeLabels()
@@ -119,6 +124,8 @@ class TransaksiPengeluaran extends CActiveRecord
 	public function beforeSave ()
 	{
 		if(parent::beforeSave()){
+
+
 			if($this->isNewRecord){
 				$this->timestamp=date('Y-m-d H:i:s');
 				$this->id_bendahara = UserWeb::instance()->ID;

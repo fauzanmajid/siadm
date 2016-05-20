@@ -25,7 +25,8 @@ $('.search-form form').submit(function(){
 
 <h1>Pelanggaran Santri</h1>
 
-<div class='search-result'>
+<div class='search-result' style="display:none">
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pencatatan-pelanggaran-grid',
 	'dataProvider'=>$model->search(),
@@ -43,7 +44,11 @@ $('.search-form form').submit(function(){
 		'id_kesiswaan',
 		'deskripsi',
 		array(
-			'class'=>'CButtonColumn',
+			    'header' => 'Menu',
+				'class'=>'CButtonColumn',
+				'template'=>'{update}{delete}',
+				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus pelanggaran santri ini?'",
+			),
 		),
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'

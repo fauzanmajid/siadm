@@ -2,14 +2,25 @@
 /* @var $this KelasController */
 /* @var $dataProvider CActiveDataProvider */
 
+<<<<<<< HEAD
+
+$this->breadcrumbs=array(
+=======
 /*$this->breadcrumbs=array(
+>>>>>>> master
 	'Kelas',
 );
-
+/*
 $this->menu=array(
 	array('label'=>'Buat Kelas', 'url'=>array('create')),
 	array('label'=>'Sunting Kelas', 'url'=>array('admin')),
+<<<<<<< HEAD
+);
+*/
+
+=======
 );*/
+>>>>>>> master
 ?>
 
 <h1>Kelas</h1>
