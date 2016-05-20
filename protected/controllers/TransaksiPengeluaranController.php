@@ -74,7 +74,7 @@ class TransaksiPengeluaranController extends Controller
 		{
 			$model->attributes=$_POST['TransaksiPengeluaran'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->kode));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(

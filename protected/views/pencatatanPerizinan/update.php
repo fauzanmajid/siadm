@@ -16,6 +16,6 @@
 );*/
 ?>
 
-<h1>Atur Perizinan Santri <?php echo $model->pencatatan_perizinan; ?></h1>
+<h1>Atur Perizinan Santri </h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

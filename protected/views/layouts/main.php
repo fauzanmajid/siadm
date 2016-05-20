@@ -95,6 +95,8 @@
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
 					'items'=>array(
 						array('label'=>'Buat Prestasi','url'=>array('/Prestasi/create')),
+						
+						array('label'=>'Atur Prestasi','url'=>array('/Prestasi/admin')),
 						),
 						'visible'=>UserWeb::instance()->isKesiswaan()),
 			
