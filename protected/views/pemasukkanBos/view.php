@@ -16,5 +16,6 @@
 		'Keterangan',
 		'nominal',
 		'timestamp',
+		
 	),
 )); ?>

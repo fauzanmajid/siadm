@@ -12,11 +12,15 @@ $('.search-form form').submit(function(){
 ?>
 <h1>Pemasukkan Donatur</h1>
 
+<<<<<<< HEAD
 
 
 </div><!-- search-form -->
 
 <div class='search-result'>
+=======
+
+>>>>>>> e283c1018289942129056fb71a391b5298f04942
 
 <div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -29,7 +33,6 @@ $('.search-form form').submit(function(){
 		'nominal',
 		'tanggal',
 		'keterangan',
-		'timestamp',
 		'id_donatur',
 		array(
 			'class'=>'CButtonColumn',
@@ -37,4 +40,7 @@ $('.search-form form').submit(function(){
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?> 
-<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanDonatur/create'"value='Buat'>
+
+</div>
+
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkandonatur/create')?>'" value='Buat'>

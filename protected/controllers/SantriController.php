@@ -100,7 +100,7 @@ class SantriController extends Controller
 				{
 				$model->save();
 				$modelwali->save();
-				$this->redirect(array('view','id'=>$model->nip));
+					$this->redirect(array('view','id'=>$model->nip));
 				}
 		}
 

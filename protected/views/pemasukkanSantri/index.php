@@ -13,9 +13,12 @@ $('.search-form form').submit(function(){
 
 <h1>Pemasukkan Santri</h1>
 
+<<<<<<< HEAD
 
 
 <div class='search-result' >
+=======
+>>>>>>> e283c1018289942129056fb71a391b5298f04942
 
 <div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -29,11 +32,10 @@ $('.search-form form').submit(function(){
 		'nominal',
 		'tanggal',
 		'keterangan',
-		'timestamp',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
-<input type=button onClick="location.href='<?= Yii::app()->createUrl('create')?>'" value='Buat'>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkansantri/create')?>'" value='Buat'>

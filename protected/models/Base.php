@@ -21,17 +21,25 @@ class Base extends CActiveRecord {
     }
 
     protected function afterDelete() {
-        $this->log(sprintf('Delete %s data: %s ref#%s', CHtml::modelName($this), $this->getIdentifierName(), $this->id));
+        $this->log(sprintf('Delete %s data: %s ref#%s', CHtml::modelName($this), $this->getIdentifierName(), $this->getPK()));
         return parent::afterDelete();
     }
 
     protected function afterSave() {
-        $this->log(sprintf('%s %s data: %s ref#%s', $this->isNewRecord ? 'Create' : 'Update', CHtml::modelName($this), $this->getIdentifierName(), $this->id));
+        $this->log(sprintf('%s %s data: %s ref#%s', $this->isNewRecord ? 'Create' : 'Update', CHtml::modelName($this), $this->getIdentifierName(), $this->getPK()));
         return parent::afterSave();
     }
 
     public function getIdentifierName() {
         return '';
+    }
+
+    public function getPK(){
+        if ($this->id != null){
+            return $this->id;
+        }
+        else
+            return '';
     }
 
 }

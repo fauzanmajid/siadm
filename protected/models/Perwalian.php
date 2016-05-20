@@ -44,6 +44,7 @@ class Perwalian extends Base
 			array('nama', 'length', 'max'=>25),
 			array('agama', 'length', 'max'=>10),
 			array('alamat', 'length', 'max'=>50),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nip_santri, status, nama, tempat_lahir, tanggal_lahir, agama, alamat, no_telepon, pekerjaan, pendidikan, penghasilan', 'safe', 'on'=>'search'),

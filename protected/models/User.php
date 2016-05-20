@@ -65,6 +65,7 @@ class User extends Base
 			'pencatatanPelanggarans' => array(self::HAS_MANY, 'PencatatanPelanggaran', 'id_kesiswaan'),
 			'pencatatanPerizinans' => array(self::HAS_MANY, 'PencatatanPerizinan', 'id_kesiswaan'),
 			'transaksiPengeluarans' => array(self::HAS_MANY, 'TransaksiPengeluaran', 'id_bendahara'),
+			'logs' => array(self::HAS_MANY, 'Log', 'user_id'),	
 		);
 	}
 
@@ -122,10 +123,10 @@ class User extends Base
 	}
 	public function getConcatened()
     {
-	    return $this->id.' ('.$this->username.')';
+	    return $this->id.' '.$this->username.' ('.$this->role.')';
     }
     public function getJabatan()
     {
-	    return $this->id.' ('.$this->role.')';
+	    return $this->id.' '.$this->username.' ('.$this->role.')';
     }
 }
