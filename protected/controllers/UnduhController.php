@@ -35,6 +35,26 @@ class UnduhController extends Controller
                 /* @var $user UserWeb */
                 return $user->isBendahara();}
 			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+
+                'actions' => array('unduhtransaksipengeluaran', 'excelpengeluaran', 'excelPemasukkan', 'excelSummary'),
+                //'deniedCallback' => array($this,'gotoLogin'),             
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isDewanPembina();}
+			),
+
+
+				
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+
+                'actions' => array('unduhlaporannilai'),
+                //'deniedCallback' => array($this,'gotoLogin'),             
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isKesiswaan();}
+			),
+
 
 			
 			array('deny',  // deny all users
@@ -224,5 +244,34 @@ class UnduhController extends Controller
         // echo $report->render('pdf', 'daftar santri');
         
     }
+
+
+
+	public function actionUnduhLaporanNilai()
+	{
+		$model = new LaporanNilaiSantri;
+		$model->scenario = 'unduh-rapor-Santri';
+
+		/*if(isset($_POST['LaporanNilaiSantri'])) {
+		
+			$tanggal_awal = $_POST['LaporanNilaiSantri']['tanggal_awal'];
+			$tanggal_akhir = $_POST['LaporanNilaiSantri']['tanggal_akhir'];
+			$jenis = $_POST['LaporanNilaiSantri']['jenis'];
+			if($jenis== "Pengeluaran"){
+			$this->redirect(Yii::app()->createUrl('unduh/excelPengeluaran', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir)));
+			}
+			if ($jenis== "Pemasukan"){
+			$this->redirect(Yii::app()->createUrl('unduh/excelPemasukkan', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir)));
+
+			}
+			if ($jenis== "Total"){
+			$this->redirect(Yii::app()->createUrl('unduh/excelSummary', array('awal' => $tanggal_awal, 'akhir' => $tanggal_akhir)));
+
+			}*/
+
+		$this->render('/unduh/unduh-rapor-santri',array(
+			'model' => $model,
+		));
+	}
 }
 

@@ -13,15 +13,11 @@ $('.search-form form').submit(function(){
 
 <h1>Pemasukkan Bos</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
 
 
-<div class='search-result' style="display:none">
+
+<div class='search-result' >
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-bos-grid',
@@ -40,5 +36,4 @@ $('.search-form form').submit(function(){
 	),
 )); ?>
 <input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
-	'emptyText'=>'Tidak ada data yang ditemukan.'
-)); ?>
+	

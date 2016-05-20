@@ -12,14 +12,11 @@ $('.search-form form').submit(function(){
 ?>
 <h1>Pemasukkan Donatur</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
+
 
 </div><!-- search-form -->
 
-<div class='search-result' style="display:none;">
+<div class='search-result'>
 
 <div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(

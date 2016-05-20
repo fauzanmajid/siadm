@@ -29,7 +29,7 @@ class SantriController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
-                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel',  'statistikgender'),
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -41,6 +41,12 @@ class SantriController extends Controller
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isKesiswaan();}
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('statistiksantri'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isDewanPembina();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),

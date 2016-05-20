@@ -17,6 +17,6 @@ $this->menu=array(
 */
 ?>
 
-<h1>Atur Pengguna <?php echo $model->username; ?> (<?php echo $model->role; ?>)</h1>
+<h1>Sunting Pengguna <?php echo $model->username; ?> (<?php echo $model->role; ?>)</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

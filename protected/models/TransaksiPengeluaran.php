@@ -4,7 +4,7 @@
  * This is the model class for table "transaksi_pengeluaran".
  *
  * The followings are the available columns in table 'transaksi_pengeluaran':
- * @property integer $kode
+ * @property integer $id
  * @property integer $id_bendahara
  * @property integer $nominal
  * @property string $Deskripsi
@@ -40,7 +40,7 @@ class TransaksiPengeluaran extends Base
 			array('Deskripsi', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nominal, Deskripsi, tanggal_pengeluaran, timestamp', 'safe', 'on'=>'search'),
+			array('id, id_bendahara, nominal, Deskripsi, tanggal_pengeluaran, timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,7 +64,7 @@ class TransaksiPengeluaran extends Base
 	public function attributeLabels()
 	{
 		return array(
-			'kode' => 'Kode',
+			'id' => 'id',
 			'id_bendahara' => 'Id Bendahara',
 			'nominal' => 'Nominal',
 			'Deskripsi' => 'Deskripsi',
@@ -94,7 +94,7 @@ class TransaksiPengeluaran extends Base
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('kode',$this->kode);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nominal',$this->nominal);
 		$criteria->compare('Deskripsi',$this->Deskripsi,true);

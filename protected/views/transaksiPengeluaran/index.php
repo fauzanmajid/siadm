@@ -20,7 +20,7 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'kode',
+		'id',
 		'id_bendahara',
 		'nominal',
 		'Deskripsi',
