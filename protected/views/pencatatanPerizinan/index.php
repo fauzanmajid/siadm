@@ -54,6 +54,6 @@ $('.search-form form').submit(function(){
 			),
 		),
 	),
-	'emptyText'=>'Tidak ada data yang ditemukan.'
+	'emptyText'=>'Tidak ada data yang ditemukan.',
 )); ?>
 </div>

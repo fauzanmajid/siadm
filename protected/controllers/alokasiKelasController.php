@@ -141,12 +141,18 @@ class alokasiKelasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('alokasiKelas');
 		$model=new alokasiKelas('search');
-		$model->unsetAttributes();  // clear any default values
+		// $model->unsetAttributes();  // clear any default values
 
+		$criteria = new CDbCriteria;
+		$criteria->addCondition(':role LIKE Guru');
+		$criteria->params = array(
+		    ':role' => $model->role,
+		);
+
+		$dataProvider=new CActiveDataProvider('alokasiKelas', array(
+			'criteria'=>$criteria));
 		
-	
 		if(isset($_GET['alokasiKelas']))
 			$model->attributes=$_GET['alokasiKelas'];
 

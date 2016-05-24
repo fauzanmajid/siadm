@@ -3,40 +3,11 @@
 /* @var $this PencatatanPelanggaranController */
 /* @var $dataProvider CActiveDataProvider */
 
-/*$this->breadcrumbs=array(
-	'Pencatatan Pelanggaran',
-);*/
-
-/*
-$this->menu=array(
-	array('label'=>'Tambah Pelanggaran Santri', 'url'=>array('create')),
-);
-*/
-/*
-Yii::app()->clientScript->registerScript('search', "
-$('.search-form form').submit(function(){
-	$('#alokasi-kelas-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	$('.search-result').show();
-	return false;
-});
-");
-*/
 ?>
 
 
 <h1>Alokasi Kelas</h1>
-<!--
-<div class="search-form">
-<?php
- /*
- $this->renderPartial('_search',array(
-'model'=>$model,
-)); */?>
-</div>
--->
-<!-- search-form -->
+
 
 <div class='search-result'>
 
@@ -44,12 +15,24 @@ $('.search-form form').submit(function(){
 
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'alokasi-kelas-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$dataProvider,
 	'columns'=>array(
 		'id',
-		'idkelas',		
-		'idmatpel',
-		'idguru',
+		array(
+            'header' => 'Username Guru',
+            'value' => 'User::model()->findByPk($data->idguru)->username',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+		array(
+            'header' => 'Kelas',
+            'value' => 'Kelas::model()->findByPk($data->idkelas)->nama',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+        array(
+            'header' => 'Mata Pelajaran',
+            'value' => 'MataPelajaran::model()->findByPk($data->idmatpel)->nama',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
 		array(
 		    'class'=>'CButtonColumn',
 		    	'template'=>'{view}{update}',
@@ -68,6 +51,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 	)));
 ?>
-<input type=button onClick="location.href='http://localhost/siadm/index.php/alokasikelas/create'"value='Buat'>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('alokasikelas/create')?>'" value='Buat'>
 
 </div>

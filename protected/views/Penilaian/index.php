@@ -42,17 +42,21 @@ $('.search-form form').submit(function(){
 	//'filter'=>$model,
 	'columns'=>array(
 		'id',
-		/*array(     
-            'header' => 'Nama Kelas',
-	        'type'=>'raw',
-            'value' => '$data->Kelas->nama',
-            //'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
-       		
-       	),*/
-       	'idkelas',		
-		'idmatpel',
-		'idguru',
-		
+       	array(
+            'header' => 'Username Guru',
+            'value' => 'User::model()->findByPk($data->idguru)->username',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+		array(
+            'header' => 'Kelas',
+            'value' => 'Kelas::model()->findByPk($data->idkelas)->nama',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+        array(
+            'header' => 'Mata Pelajaran',
+            'value' => 'MataPelajaran::model()->findByPk($data->idmatpel)->nama',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
 		array(
 		    'class'=>'CButtonColumn',
 		    	'template'=>'{update}',

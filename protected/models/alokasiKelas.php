@@ -20,6 +20,7 @@ class alokasiKelas extends Base
 	public $nama_guru;
 	public $nama_matpel;
 	public $nama;
+	public $role;
 	
 	
 	/**
@@ -56,10 +57,10 @@ class alokasiKelas extends Base
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			// 'Kelas' => array(self::BELONGS_TO, 'Kelas', 'id'),
-			// 'Matpel' => array(self::BELONGS_TO, 'MataPelajaran', 'id'),
-			// 'Guru' => array(self::BELONGS_TO, 'User', 'id'),
-			'Kombinasi' => array(self::HAS_MANY, 'alokasiKelas', 'idkelas,idmatpel,idguru'),
+			'kelass' => array(self::BELONGS_TO, 'Kelas', 'id'),
+			'matapelajarans' => array(self::BELONGS_TO, 'MataPelajaran', 'id'),
+			'gurus' => array(self::BELONGS_TO, 'User', 'id'),
+			'kombinasi' => array(self::HAS_MANY, 'Penilaian', array('idkelas','idmatpel','idguru')),
 		);
 	}
 
@@ -69,7 +70,6 @@ class alokasiKelas extends Base
 	public function attributeLabels()
 	{
 		return array(
-			
 			'idkelas' => 'Kelas',
 			'idmatpel' => 'Nama Mata Pelajaran',
 			'idguru' => 'Nama Guru',		
@@ -93,16 +93,13 @@ class alokasiKelas extends Base
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-		// $criteria->with = array( 'Kelas','Matpel','Guru' );
+		$criteria->with = array('gurus');
 		
 		
 		$criteria->compare('idkelas',$this->idkelas);
 		$criteria->compare('idmatpel',$this->idmatpel,true);
 		$criteria->compare('idguru',$this->idguru);
-		/*$criteria->compare('Kelas.nama',$this->nama_kelas, true);
-		$criteria->compare('Matpel.nama',$this->nama_matpel, true);
-		$criteria->compare('Guru.nama_lengkap',$this->nama_guru, true);
-		*/
+		$criteria->compare('gurus.role',$this->role, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -127,5 +124,4 @@ class alokasiKelas extends Base
 	 
 	    return parent::beforeSave();
 	}
-	
 }
