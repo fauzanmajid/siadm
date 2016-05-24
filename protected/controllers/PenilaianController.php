@@ -193,12 +193,23 @@ class PenilaianController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		
+		$criteria=new CDbCriteria;
+		$criteria->compare('idguru','='.UserWeb::instance()->ID);	
+		
+		$dataProvider=new CActiveDataProvider('Penilaian',array(
+			'criteria'=>$criteria));
+	
+
+		
 		$model=new Penilaian('search');
 		$model->unsetAttributes();  // clear any default values
+	
 		if(isset($_GET['Penilaian']))
 			$model->attributes=$_GET['Penilaian'];
 
 		$this->render('admin',array(
+			'dataProvider'=>$dataProvider,
 			'model'=>$model,
 		));
 	}

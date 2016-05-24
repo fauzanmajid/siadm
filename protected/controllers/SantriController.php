@@ -29,7 +29,7 @@ class SantriController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
-                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel', 'statistiksantri', 'statistikgender'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel',  'statistikgender'),
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -41,6 +41,12 @@ class SantriController extends Controller
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isKesiswaan();}
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('statistiksantri'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isDewanPembina();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -146,15 +152,17 @@ class SantriController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		//$this->loadModel($id)->delete();
-		$model=santri::model()->findByPk($id);
+		$this->loadModel($id)->delete();
+		/*$model=santri::model()->findByPk($id);
 		$modelwali = Perwalian::model()->findByAttributes(array('nip_santri'=>$model->nip));
 		$model->delete();
-		$modelwali->delete();		
+		$modelwali->delete();		*/
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+
+
 	}
 
 	/**

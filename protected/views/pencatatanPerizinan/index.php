@@ -30,6 +30,7 @@ $('.search-form form').submit(function(){
 
 <div class='search-result'>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
+
 	'id'=>'pencatatan-perizinan-grid',
 	'dataProvider'=>$model->search(),
 	'columns'=>array(
@@ -49,7 +50,7 @@ $('.search-form form').submit(function(){
 			array(
 	            'header' => 'Menu',
 				'class'=>'CButtonColumn',
-				'template'=>'{update}{delete}',
+				'template'=>'{view}{update}{delete}',
 				'deleteConfirmation'=>"js:'Apakah anda yakin ingin menghapus perizinan santri ini?'",
 			),
 		),

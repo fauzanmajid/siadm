@@ -98,7 +98,7 @@ class PemasukkanBosController extends Controller
 		{
 			$model->attributes=$_POST['PemasukkanBos'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->kode));
+				$this->redirect(array('view','kode'=>$model->kode));
 		}
 
 		$this->render('update',array(

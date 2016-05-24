@@ -1,29 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "pencatatan_pelanggaran".
+ * This is the model class for table "kelas".
  *
- * The followings are the available columns in table 'pencatatan_pelanggaran':
+ * The followings are the available columns in table 'kelas':
  * @property integer $id
- * @property integer $No_pelanggaran
- * @property string $nip_santri
- * @property integer $id_kesiswaan
+ * @property string $nama
+ * @property string $jenjang
  *
  * The followings are the available model relations:
- * @property User $idKesiswaan
- * @property Pelanggaran $noPelanggaran
- * @property Santri $nipSantri
+ * @property EnrollmentPelajaran[] $enrollmentPelajarans
  */
-class PencatatanPelanggaran extends Base
+class LaporanNilaiSantri extends Base
 {
-	public $nama_lengkap;
-	
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'pencatatan_pelanggaran';
+		return 'laporan_nilai_santri';
 	}
 
 	/**
@@ -34,14 +29,7 @@ class PencatatanPelanggaran extends Base
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, deskripsi,tanggal', 'required'),
-			array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
-			array('nip_santri', 'length', 'max'=>15),
-			array('nip_santri', 'length', 'max'=>45),
-			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, deskripsi, nip_santri, id_kesiswaan', 'safe', 'on'=>'search'),
+			array('kode, nip_santri', 'required'),
 		);
 	}
 
@@ -53,8 +41,7 @@ class PencatatanPelanggaran extends Base
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idKesiswaan' => array(self::BELONGS_TO, 'User', 'id_kesiswaan'),
-			'nipSantri' => array(self::BELONGS_TO, 'Santri', 'nip_santri'),
+			
 		);
 	}
 
@@ -64,19 +51,23 @@ class PencatatanPelanggaran extends Base
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'deskripsi' => 'Deskripsi',
-			'nip_santri' => 'NIP',
-			'id_kesiswaan' => 'ID Kesiswaan',
-			'deskripsi' => 'deskripsi',
-			'nama_lengkap' => 'Nama Santri',
-			'tanggal' => 'Tanggal',	
+			'kode' => 'kode',
+			'nip_santri' => 'nip_santri',
+			'nama_lengkap' => 'nama_lengkap',
+			'idmatpel' => 'idmatpel',
+			'nama' => 'nama',
+			'nilai_harian' => 'nilai_harian',
+			'nilai_uts' => 'nilai_uts',
+			'nilai_uas' => 'nilai_uas',
+			'nilai_akhir' => 'nilai_akhir',
+
 		);
 	}
 
 	/**
+,
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
+	 * Retrieves a list of models ,
 	 * Typical usecase:
 	 * - Initialize the model fields with values from filter form.
 	 * - Execute this method to get CActiveDataProvider instance which will filter
@@ -91,13 +82,16 @@ class PencatatanPelanggaran extends Base
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('deskripsi',$this->deskripsi);
+		$criteria->compare('kode',$this->kode,true);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
-		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
-		$criteria->compare('tanggal',$this->tanggal);
-				
+		$criteria->compare('nama_lengkap',$this->nama_lengkap,true);
+		$criteria->compare('idmatpel',$this->idmatpel, true);
+		$criteria->compare('nama',$this->nama, true);
+		$criteria->compare('nilai_harian',$this->nilai_harian,true);
+		$criteria->compare('nilai_uts',$this->nilai_uts,true);
+		$criteria->compare('nilai_uas',$this->nilai_uas,true);
+		$criteria->compare('nilai_akhir',$this->nilai_akhir,true);
+
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -108,18 +102,13 @@ class PencatatanPelanggaran extends Base
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return PencatatanPelanggaran the static model class
+	 * @return Kelas the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
 
-	public function beforeSave() {
-	    if ($this->isNewRecord) {
-	        $this->id_kesiswaan = UserWeb::instance()->ID;
-	    }
-	 
-	    return parent::beforeSave();
-	}
+	
+    
 }

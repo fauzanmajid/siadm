@@ -13,6 +13,12 @@ $('.search-form form').submit(function(){
 
 <h1>Pemasukkan Santri</h1>
 
+<<<<<<< HEAD
+
+
+<div class='search-result' >
+=======
+>>>>>>> e283c1018289942129056fb71a391b5298f04942
 
 <div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(

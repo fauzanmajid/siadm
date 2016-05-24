@@ -168,7 +168,7 @@ class alokasiKelasController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new PencatatanPelanggaran('search');
+		$model=new alokasiKelas('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['alokasiKelas']))
 			$model->attributes=$_GET['alokasiKelas'];

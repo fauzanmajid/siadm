@@ -34,6 +34,7 @@ $('.search-form form').submit(function(){
 		'nip_santri',
 		'id_kesiswaan',
 		'deskripsi',
+		'tanggal',
 		array(
 			'class'=>'CButtonColumn',
 		),

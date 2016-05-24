@@ -59,18 +59,18 @@ $('.search-form form').submit(function(){
         ),
 		array(
 		    'class'=>'CButtonColumn',
-		    	'template'=>'{update}',
+		    	'template'=>'{update}{view}',
 		    	'buttons'=>array(
-		        	'update' => array(
+		        	'view' => array(
 		            	'label'=>'Lihat',
 		            	//'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
 		            	'url'=>'Yii::app()->createUrl("Penilaian/create", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
 		        	),
-		        	/*'update' => array(
+		        	'update' => array(
 		            	'label'=>'[-]',
-		            	'url'=>'Yii::app()->createUrl("alokasikelas/view", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
+		            	'url'=>'Yii::app()->createUrl("penilaian/update", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
 
-		        	),*/
+		        	),
 		    	),
 		),
 		),

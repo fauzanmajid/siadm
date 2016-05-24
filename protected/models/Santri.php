@@ -57,7 +57,7 @@ class Santri extends CActiveRecord
 		return array(
 			array('nip, nis, nik, nisn, nama_lengkap, nama_kecil, status, alamat, jenjang, tempat_lahir, tanggal_lahir, golongan_darah, anak_ke, jum_saudara,jenis_kelamin', 'required'),
 			array('nip, nis, nik, nisn, anak_ke, jum_saudara', 'numerical', 'integerOnly'=>true),
-			array('nip, nis, nik, nisn, status, tempat_lahir', 'length', 'max'=>15),
+			array('nip, nis, nik, nisn, status, tempat_lahir', 'length', 'max'=>16),
 			/*array('tanggal_awal, tanggal_akhir, jenjang', 'required', 'on'=>'unduh'),*/
 			array('nama_lengkap', 'length', 'max'=>25),
 			array('nama_kecil', 'length', 'max'=>10),

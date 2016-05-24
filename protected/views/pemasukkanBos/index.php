@@ -13,6 +13,13 @@ $('.search-form form').submit(function(){
 
 <h1>Pemasukkan Bos</h1>
 
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> e283c1018289942129056fb71a391b5298f04942
 <div class='search-result' >
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -31,7 +38,13 @@ $('.search-form form').submit(function(){
 			'class'=>'CButtonColumn',
 		),
 	),
+<<<<<<< HEAD
+)); ?>
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
+	
+=======
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
 </div>
 <input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkanbos/create')?>'" value='Buat'>
+>>>>>>> e283c1018289942129056fb71a391b5298f04942

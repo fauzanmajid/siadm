@@ -45,8 +45,11 @@
 		<?php echo $form->labelEx($model,'idguru'); ?>
 		<?php
 			$dropDownSantri = CHtml::listData(User::model()->findAll(),'id','jabatan');
-			echo $form->dropDownList($model, 'idguru', $dropDownSantri,array('empty'=>'--Pilih Guru--'))
-			;			      
+			echo $form->dropDownList($model, 'idguru', $dropDownSantri,array(
+				'empty'=>'--Pilih Guru--',
+				'options' => array('Guru'=>array('selected'=>true),
+				)
+			))		;			      
 		?>
 		
 

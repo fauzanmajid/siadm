@@ -28,6 +28,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => 'Kelas::model()->findByPk($data->idkelas)->nama',
             'htmlOptions' => array('style' => 'text-align: center;')
         ),
+		// 'idkelas',
         array(
             'header' => 'Mata Pelajaran',
             'value' => 'MataPelajaran::model()->findByPk($data->idmatpel)->nama',
@@ -43,10 +44,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		            	'url'=>'Yii::app()->createUrl("alokasikelas/view", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
 		        	),
 		        	'update' => array(
-		            	'label'=>'[-]',
+		            	'label'=>'Perbarui',
 		            	'url'=>'Yii::app()->createUrl("alokasikelas/update", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
 
 		        	),
+
 		    	),
 		),
 	)));
