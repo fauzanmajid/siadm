@@ -12,8 +12,10 @@
  * The followings are the available model relations:
  * @property User $idBendahara
  */
-class PemasukkanBos extends CActiveRecord
-{
+
+class PemasukkanBos extends Base
+	{
+		public $id;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -30,11 +32,13 @@ class PemasukkanBos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nominal', 'required'),
+			array('nominal, Tanggal, Keterangan', 'required'),
 			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nominal, timestamp', 'safe', 'on'=>'search'),
+			array('nominal,Tanggal, Keterangan', 'required'),
+			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
+			array('kode, id_bendahara, nominal, Tanggal, Keterangan, timestamp, deskripsi', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +63,8 @@ class PemasukkanBos extends CActiveRecord
 			'kode' => 'Kode',
 			'id_bendahara' => 'Id Bendahara',
 			'nominal' => 'Nominal',
+			'Tanggal' => 'Tanggal',
+			'Keterangan' => 'Keterangan',
 			'timestamp' => 'Timestamp',
 		);
 	}
@@ -84,8 +90,9 @@ class PemasukkanBos extends CActiveRecord
 		$criteria->compare('kode',$this->kode);
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nominal',$this->nominal);
+		$criteria->compare('Tanggal',$this->Tanggal);
+		$criteria->compare('Keterangan',$this->Keterangan);
 		$criteria->compare('timestamp',$this->timestamp,true);
-
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -106,6 +113,7 @@ class PemasukkanBos extends CActiveRecord
 	{
 		if(parent::beforeSave()){
 			if($this->isNewRecord){
+				$this->timestamp=date('Y-m-d H:i:s');
 				$this->timestamp=date('Y-m-d H:i:s');
 				$this->id_bendahara = UserWeb::instance()->ID;
 			}

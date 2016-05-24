@@ -4,7 +4,7 @@
  * This is the model class for table "transaksi_pengeluaran".
  *
  * The followings are the available columns in table 'transaksi_pengeluaran':
- * @property integer $kode
+ * @property integer $id
  * @property integer $id_bendahara
  * @property integer $nominal
  * @property string $Deskripsi
@@ -14,11 +14,12 @@
  * The followings are the available model relations:
  * @property User $idBendahara
  */
-class TransaksiPengeluaran extends CActiveRecord
+class TransaksiPengeluaran extends Base
 {
 	public $tanggal_awal;
 	public $tanggal_akhir;
 	public $jenis;
+	public $id;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -38,9 +39,10 @@ class TransaksiPengeluaran extends CActiveRecord
 			array('nominal, Deskripsi, tanggal_pengeluaran, ', 'required'),
 			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			array('Deskripsi', 'length', 'max'=>100),
+			array('kode','unique','message'=>'{attribute}:{value} sudah ada!'),	
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nominal, Deskripsi, tanggal_pengeluaran, timestamp', 'safe', 'on'=>'search'),
+			array('id, id_bendahara, nominal, Deskripsi, tanggal_pengeluaran, timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,20 +55,25 @@ class TransaksiPengeluaran extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idBendahara' => array(self::BELONGS_TO, 'User', 'id_bendahara'),
+			
 		);
 	}
 
-	/**
+
+		/**
 	 * @return array customized attribute labels (name=>label)
 	 */
 	public function attributeLabels()
 	{
 		return array(
-			'kode' => 'Kode',
+			'id' => 'id',
 			'id_bendahara' => 'Id Bendahara',
 			'nominal' => 'Nominal',
 			'Deskripsi' => 'Deskripsi',
 			'tanggal_pengeluaran' => 'Tanggal Pengeluaran',
+			'tanggal_awal' => 'Tanggal Awal',
+			'tanggal_akhir' => 'Tanggal Akhir',
+			'jenis' => 'jenis',
 			'timestamp' => 'Timestamp',
 		);
 	}
@@ -89,7 +96,7 @@ class TransaksiPengeluaran extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('kode',$this->kode);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nominal',$this->nominal);
 		$criteria->compare('Deskripsi',$this->Deskripsi,true);
@@ -119,7 +126,7 @@ class TransaksiPengeluaran extends CActiveRecord
 
 			if($this->isNewRecord){
 				$this->timestamp=date('Y-m-d H:i:s');
-				$this->id_bendahara = UserWeb::instance()->ID;
+				$this->id_bendahara = UserWeb::instance()->id;
 			}
 			return true;
 		}

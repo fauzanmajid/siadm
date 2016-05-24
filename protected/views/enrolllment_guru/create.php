@@ -10,7 +10,9 @@
 $this->menu=array(
 	array('label'=>'Daftar Enrollment Guru', 'url'=>array('index')),
 	array('label'=>'Sunting Enrollment Guru', 'url'=>array('admin')),
-);*/
+);
+?>
+*/
 ?>
 
 <h1>Buat Alokasi Guru</h1>

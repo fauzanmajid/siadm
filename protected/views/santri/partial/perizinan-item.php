@@ -9,7 +9,8 @@ $this->widget('zii.widgets.CDetailView', array(
         'deskripsi',
         'tanggal_awal',
         'tanggal_akhir',
-        'kategori'
+        'kategori',
+        'duration'
     ),
 ));
 if (UserWeb::instance()->isKesiswaan()) {

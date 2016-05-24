@@ -15,6 +15,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
+
 	<p class="note"><span class="required">*</span> Wajib diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
@@ -32,7 +33,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

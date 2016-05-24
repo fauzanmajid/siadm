@@ -14,7 +14,7 @@
  * @property Pelanggaran $noPelanggaran
  * @property Santri $nipSantri
  */
-class PencatatanPelanggaran extends CActiveRecord
+class PencatatanPelanggaran extends Base
 {
 	public $nama_lengkap;
 	
@@ -34,10 +34,11 @@ class PencatatanPelanggaran extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, deskripsi', 'required'),
+			array('nip_santri, deskripsi,tanggal', 'required'),
 			array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			array('nip_santri', 'length', 'max'=>45),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, deskripsi, nip_santri, id_kesiswaan', 'safe', 'on'=>'search'),
@@ -69,7 +70,7 @@ class PencatatanPelanggaran extends CActiveRecord
 			'id_kesiswaan' => 'ID Kesiswaan',
 			'deskripsi' => 'deskripsi',
 			'nama_lengkap' => 'Nama Santri',
-				
+			'tanggal' => 'Tanggal',	
 		);
 	}
 
@@ -95,7 +96,8 @@ class PencatatanPelanggaran extends CActiveRecord
 		$criteria->compare('deskripsi',$this->deskripsi);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
-		
+		$criteria->compare('tanggal',$this->tanggal);
+				
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

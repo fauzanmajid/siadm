@@ -37,18 +37,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'nip_santri',
-		// 'status',
+		'status',
 		'nama',
-		// 'tempat_lahir',
-		// 'tanggal_lahir',
-		/*
+		'tempat_lahir',
+		'tanggal_lahir',
 		'agama',
 		'alamat',
 		'no_telepon',
 		'pekerjaan',
 		'pendidikan',
 		'penghasilan',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
 			 'template'=>'{view}{update}',
@@ -56,4 +55,3 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	),
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
-<!--  -->

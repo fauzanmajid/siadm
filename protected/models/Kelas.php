@@ -11,7 +11,7 @@
  * The followings are the available model relations:
  * @property EnrollmentPelajaran[] $enrollmentPelajarans
  */
-class Kelas extends CActiveRecord
+class Kelas extends Base
 {
 	/**
 	 * @return string the associated database table name
@@ -29,9 +29,10 @@ class Kelas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, nama, jenjang', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
+			array('nama, jenjang', 'required'),
+			//array('id', 'numerical', 'integerOnly'=>true),
 			array('nama, jenjang', 'length', 'max'=>10),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nama, jenjang', 'safe', 'on'=>'search'),
@@ -46,7 +47,7 @@ class Kelas extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'enrollmentPelajarans' => array(self::HAS_MANY, 'EnrollmentPelajaran', 'id_kelas'),
+			'Kelas' => array(self::HAS_MANY, 'alokasiKelas', 'idkelas'),
 		);
 	}
 
@@ -99,4 +100,8 @@ class Kelas extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	public function getConcatened()
+    {
+	    return $this->jenjang.'-- ('.$this->nama.') ';
+    }
 }

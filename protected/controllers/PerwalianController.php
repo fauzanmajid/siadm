@@ -27,20 +27,16 @@ class PerwalianController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+                //'deniedCallback'=> array($this,'gotoLogin'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isAdmin();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+				'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 		);
 	}
@@ -123,8 +119,14 @@ class PerwalianController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Perwalian');
+		$model=new Perwalian('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Perwalian']))
+			$model->attributes=$_GET['Perwalian'];
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 

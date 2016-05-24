@@ -18,7 +18,7 @@
  * @property PencatatanPerizinan[] $pencatatanPerizinans
  * @property TransaksiPengeluaran[] $transaksiPengeluarans
  */
-class User extends CActiveRecord
+class User extends Base
 {
 	/**
 	 * @return string the associated database table name
@@ -65,6 +65,7 @@ class User extends CActiveRecord
 			'pencatatanPelanggarans' => array(self::HAS_MANY, 'PencatatanPelanggaran', 'id_kesiswaan'),
 			'pencatatanPerizinans' => array(self::HAS_MANY, 'PencatatanPerizinan', 'id_kesiswaan'),
 			'transaksiPengeluarans' => array(self::HAS_MANY, 'TransaksiPengeluaran', 'id_bendahara'),
+			'logs' => array(self::HAS_MANY, 'Log', 'user_id'),	
 		);
 	}
 
@@ -120,4 +121,12 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	public function getConcatened()
+    {
+	    return $this->id.' '.$this->username.' ('.$this->role.')';
+    }
+    public function getJabatan()
+    {
+	    return $this->id.' '.$this->username.' ('.$this->role.')';
+    }
 }

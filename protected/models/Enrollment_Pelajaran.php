@@ -12,9 +12,7 @@
  * @property Kelas $idKelas
  * @property MataPelajaran $idMatpel
  */
-class Enrollment_Pelajaran extends CActiveRecord
-{
-	/**
+class Enrollment_Pelajaran extends Base
 	 * @return string the associated database table name
 	 */
 	public function tableName()

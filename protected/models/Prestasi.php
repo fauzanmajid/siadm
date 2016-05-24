@@ -13,9 +13,9 @@
  * The followings are the available model relations:
  * @property Santri $nipSantri
  */
-class Prestasi extends CActiveRecord
+class Prestasi extends Base
 {
-
+	public $id;
 	public $nama_lengkap;
 	/**
 	 * @return string the associated database table name
@@ -41,6 +41,7 @@ class Prestasi extends CActiveRecord
 			array('nip_santri', 'length', 'max'=>15),
 			array('tanggal', 'safe'),
 			array('tanggal', 'required'),
+			array('no_pencatatan','unique','message'=>'{attribute}:{value} sudah ada!'),	
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('no_pencatatan, deskripsi, jenis, tanggal, nip_santri', 'safe', 'on'=>'search'),

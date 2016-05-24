@@ -5,8 +5,8 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('pencatatan_perizinan')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->pencatatan_perizinan), array('view', 'id'=>$data->pencatatan_perizinan)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nip_santri')); ?>:</b>
@@ -32,12 +32,5 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tanggal_akhir')); ?>:</b>
 	<?php echo CHtml::encode($data->tanggal_akhir); ?>
 	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('kategori')); ?>:</b>
-	<?php echo CHtml::encode($data->kategori); ?>
-	<br />
-
-	*/ ?>
 
 </div>

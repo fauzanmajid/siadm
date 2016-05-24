@@ -8,11 +8,6 @@
 	'Update',
 );
 
-$this->menu=array(
-	array('label'=>'List Enrolllment_Guru', 'url'=>array('index')),
-	array('label'=>'Create Enrolllment_Guru', 'url'=>array('create')),
-	array('label'=>'View Enrolllment_Guru', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Enrolllment_Guru', 'url'=>array('admin')),
 );*/
 ?>
 

@@ -24,6 +24,7 @@ $this->menu=array(
 		'nisn',
 		'nama_lengkap',
 		'nama_kecil',
+		'jenis_kelamin',
 		'status',
 		'alamat',
 		'jenjang',

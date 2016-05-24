@@ -11,8 +11,6 @@
 	'method'=>'get',
 )); ?>
 
-	
-
 		<div class="row">
 		<?php echo $form->label($model,'nip_santri'); ?>
 		<?php echo $form->textField($model,'nip_santri',array('size'=>15,'maxlength'=>15)); ?>
@@ -22,9 +20,6 @@
 		<?php echo $form->label($model,'nama_lengkap'); ?>
 		<?php echo $form->textField($model,'nama_lengkap'); ?>
 	</div>
-
-	
-
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Cari'); ?>

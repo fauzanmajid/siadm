@@ -17,6 +17,14 @@
 	<?php echo CHtml::encode($data->nominal); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Tanggal')); ?>:</b>
+	<?php echo CHtml::encode($data->Tanggal); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Keterangan')); ?>:</b>
+	<?php echo CHtml::encode($data->Keterangan); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('timestamp')); ?>:</b>
 	<?php echo CHtml::encode($data->timestamp); ?>
 	<br />

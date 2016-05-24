@@ -5,17 +5,22 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+Yii::setPathOfAlias('chartjs', dirname(__FILE__).'/../extensions/yii-chartjs');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 
 	'name'=>'Sistem Informasi Administrasi Al-Lathifah Mulia',
 
-	'timeZone'=>'GMT',
+	'timeZone'=>'Asia/Jakarta',
 
     'defaultController' => 'site/login',
 	//'theme'=>'hebo',
 	// preloading 'log' component
-	'preload'=>array('log'),
+	'preload'=>array(
+		'log',
+	    'chartjs'
+	),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -58,7 +63,12 @@ return array(
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
+
+
+
 		),
+
+		'chartjs' => array('class' => 'chartjs.components.ChartJs'),
 		
 
 		// database settings are configured in database.php
@@ -68,7 +78,7 @@ return array(
 			// use 'site/error' action to display errors
 			'errorAction'=>YII_DEBUG ? null : 'site/error',
 		),
-
+		
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -93,4 +103,5 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+
 );

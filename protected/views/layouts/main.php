@@ -77,77 +77,103 @@
 			'items'=>array(
 				array('encodeLabel'=>false,'label'=>'<img id="sizehome" src="'.Yii::app()->request->baseUrl.'/img/home.png" />', 'url'=>array('/site/index')),
 				array('label'=>'Pengguna', 'url'=>array('/User'),'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Kelas', 'url'=>array('/Kelas'),'visible'=>UserWeb::instance()->isAdmin()),
-				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 	
-						'items'=>array(
-					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
-					  	array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
-					  	array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduhDataSantri')),
-						array('label'=>'Wali Santri','url'=>array('/perwalian/admin')),
-				  	),
-
+				array('label'=>'Kelas', 'url'=>array('/Kelas'),
+					'items'=>array(
+						array('label'=>'Buat Kelas','url'=>array('/Kelas/create')),
+						array('label'=>'Alokasi Kelas','url'=>array('/alokasikelas')),
+						),
 						'visible'=>UserWeb::instance()->isAdmin()),
+				array('label'=>'Data Santri ', 'url'=>array('/Santri'), 	
+					'items'=>array(
+					  	array('label'=>'Buat Data Santri','url'=>array('/Santri/create')),
+						array('label'=>'Atur Data Santri','url'=>array('/Santri/admin')),
+						array('label'=>'Unduh Data Santri','url'=>array('/Santri/unduhDataSantri')),
+						array('label'=>'Wali Santri','url'=>array('/perwalian/admin')),
+	  					),
+						'visible'=>UserWeb::instance()->isAdmin()),
+			
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
-						'items'=>array(
-					  	array('label'=>'Buat Prestasi','url'=>array('/Prestasi/create')),
-					  	),
+					'items'=>array(
+						array('label'=>'Buat Prestasi','url'=>array('/Prestasi/create')),
+						
+						array('label'=>'Atur Prestasi','url'=>array('/Prestasi/admin')),
+						),
 						'visible'=>UserWeb::instance()->isKesiswaan()),
+			
 				array('label'=>'Pelanggaran', 'url'=>array('/PencatatanPelanggaran'), 
 					'items'=>array(
-					  	array('label'=>'Buat Pelanggaran','url'=>array('/PencatatanPelanggaran/create')),
+						array('label'=>'Buat Pelanggaran','url'=>array('/PencatatanPelanggaran/create')),
 					  	array('label'=>'Atur Pelanggaran','url'=>array('/PencatatanPelanggaran/admin')),
-					  	
 					  	),
-
-					'visible'=>UserWeb::instance()->isKesiswaan()),
+						'visible'=>UserWeb::instance()->isKesiswaan()),
 
 				array('label'=>'Perizinan', 'url'=>array('/PencatatanPerizinan'),
 					'items'=>array(
 					  	array('label'=>'Buat Perizinan','url'=>array('/PencatatanPerizinan/create')),
 					  	array('label'=>'Cari Perizinan','url'=>array('/PencatatanPerizinan/absensi')),
+					  	array('label'=>'Atur Perizinan','url'=>array('/PencatatanPerizinan/index')),
+					  	array('label'=>'Cari Absensi','url'=>array('/PencatatanPerizinan/absensi')),
 					),
 				 	'visible'=>UserWeb::instance()->isKesiswaan()),
-				//array('label'=>'Tahun Ajaran', 'url'=>array('/TahunAjaran'), 'visible'=>UserWeb::instance()->isKurikulum()),
+			
 				array('label'=>'Mata Pelajaran', 'url'=>array('/MataPelajaran'),
-						'items'=>array(
+					'items'=>array(
+						array('label'=>'Buat Mata Pelajaran','url'=>array('/MataPelajaran/create')),
+						array('label'=>'Atur Mata Pelajaran','url'=>array('/MataPelajaran/admin')),
+					), 
+					'visible'=>UserWeb::instance()->isKurikulum()), 
+				array('label'=>'Unduh', 'url'=>array('/unduh'),
+					'items'=>array(
 						array('label'=>'Unduh Laporan Nilai Santri','url'=>array('/unduhNilai')),
 						array('label'=>'Unduh Rapor Santri','url'=>array('/unduhRapor')),
+					), 
+					'visible'=>UserWeb::instance()->isKurikulum()), 
+
+				array('label'=>'statistik', 'url'=>array(''),
+					'items'=>array(
+						array('label'=>'Statistik Santri','url'=>array('/santri/statistiksantri')),
+						array('label'=>'Statistik Pengeluaran','url'=>array('transaksiPengeluaran/statistikpengeluaran')),
+					), 
+					'visible'=>UserWeb::instance()->isDewanPembina()), 
+
+				array('label'=>'Laporan', 'url'=>array('/unduh'),
+					'items'=>array(
+						array('label'=>'Unduh Laporan','url'=>array('Unduh/UnduhTransaksiPengeluaran')),
+					), 
+					'visible'=>UserWeb::instance()->isDewanPembina()), 
+				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'),
+					'items'=>array(
+						array('label'=>'Buat Riwayat Penyakit','url'=>array('/RiwayatPenyakit/create')),
+						array('label'=>'Atur Riwayat Penyakit','url'=>array('/RiwayatPenyakit/index')),
 
 					), 
-						'visible'=>UserWeb::instance()->isKurikulum()), 
-
-				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'), 'visible'=>UserWeb::instance()->isKesiswaan()),
+				 'visible'=>UserWeb::instance()->isKesiswaan()),
 
 				array('label'=>'Keuangan ',  'url'=>array(''),
-						'items'=>array(
-
-
-					  	array('label'=>'Laporan Pemasukan','url'=>array(''),
-
+					'items'=>array(
+					  	array('label'=>'Donatur','url'=>array('/Donatur')),
+					  	array('label'=>'Pemasukan','url'=>array(''),
 					  		'items'=>array(
-						  	array('label'=>'Pemasukan Bos','url'=>array('/PemasukkanBos')),
-						  	array('label'=>'Pemasukan Donatur','url'=>array('/PemasukkanDonatur')),
-						  	array('label'=>'Pemasukan Santri','url'=>array('/PemasukkanSantri')),
-							array('label'=>'Unduh Laporan Pemasukan','url'=>array('/UnduhTransaksiPemasukan')),
-						  	)),
-
-					  	array('label'=>'Lapoaran Pengeluaran','url'=>array('/transaksiPengeluaran')),
-						array('label'=>'Unduh Laporan Pengeluaran','url'=>array('/UnduhTransaksiPengeluaran')),
-
-
-					  	array('label'=>'Laporan Keuangan','url'=>array('/LaporanKeuangan')),
-						array('label'=>'Unduh Laporan Keuangan','url'=>array('Site/UnduhLaporanKeuangan')),
+							  	array('label'=>'Pemasukan Bos','url'=>array('/PemasukkanBos')),
+							  	array('label'=>'Pemasukan Donatur','url'=>array('/PemasukkanDonatur')),
+							  	array('label'=>'Pemasukan Santri','url'=>array('/PemasukkanSantri')),
+								// array('label'=>'Unduh Laporan Pemasukan','url'=>array('/UnduhTransaksiPemasukan')),
+							  		)
+					  			),
+			  			array('label'=>'Pengeluaran','url'=>array('/transaksiPengeluaran')),
+						array('label'=>'Unduh Laporan Keuangan','url'=>array('Unduh/UnduhTransaksiPengeluaran')),
+			  			
 				  	),
-						'visible'=>UserWeb::instance()->isBendahara()),
+					'visible'=>UserWeb::instance()->isBendahara()),
+				array('label'=>'Penilaian', 'url'=>array('/Penilaian'), 
+					'visible'=>UserWeb::instance()->isGuru()),
+
+
 			),
 		)); ?>
 	</div>
 	</div>
 	
-	
-
-
-
 	<div class="scroll" id="newbar2">
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

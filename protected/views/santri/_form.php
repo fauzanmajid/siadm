@@ -54,13 +54,19 @@
 		<?php echo $form->textField($model,'nama_kecil',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'nama_kecil'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'jenis_kelamin'); ?>
+		<?php echo $form->dropDownList($model,'jenis_kelamin',array( 'Laki-Laki'=>'Laki-Laki','Perempuan'=>'Perempuan')); ?>
+		<?php echo $form->error($model,'jenis_kelamin'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php echo $form->dropDownList($model,'status',array( 'Yatim'=>'Yatim','Piatu'=>'Piatu','Yatimpiatu'=>'Yatim Piatu','Duafa'=>'Dhuafa','Mampu'=>'Mampu',)); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'alamat'); ?>
 		<?php echo $form->textField($model,'alamat',array('size'=>50,'maxlength'=>100)); ?>
@@ -116,16 +122,9 @@
 		<?php echo $form->textField($model,'jum_saudara',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'jum_saudara'); ?>
 	</div>
-<!--
-	<div class="row">
-        <?php echo $form->labelEx($model,'foto_url'); ?>
-        <?php echo CHtml::activeFileField($model, 'foto_url'); ?>  
-        //by this we can upload image 
-        <?php echo $form->error($model,'foto_url'); ?>
-	</div>
--->
+
 	<h2>Buat Data Wali</h2>
-<?php echo $form->errorSummary($modelwali); ?>
+	<?php echo $form->errorSummary($modelwali); ?>
 	
 	
 	<div class="row">
@@ -203,7 +202,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Simpan'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

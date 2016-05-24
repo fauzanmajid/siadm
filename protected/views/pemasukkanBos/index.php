@@ -1,5 +1,4 @@
 <?php
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-form form').submit(function(){
 	$('#pemasukkan-bos-grid').yiiGridView('update', {
@@ -9,23 +8,19 @@ $('.search-form form').submit(function(){
 	return false;
 });
 ");
-
-$this->menu=array(
-	array('label'=>'Buat Pemasukkan Bos', 'url'=>array('create')),
-	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
-);
 ?>
+
 
 <h1>Pemasukkan Bos</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+<<<<<<< HEAD
 
-<div class='search-result' style="display:none">
 
+
+
+=======
+>>>>>>> e283c1018289942129056fb71a391b5298f04942
+<div class='search-result' >
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-bos-grid',
@@ -35,10 +30,21 @@ $this->menu=array(
 		'kode',
 		'id_bendahara',
 		'nominal',
+		'Tanggal',
+		'Keterangan',
+		'deskripsi',
 		'timestamp',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
+<<<<<<< HEAD
 )); ?>
-
+<input type=button onClick="location.href='http://localhost/siadm/index.php/pemasukkanBos/create'"value='Buat'>
+	
+=======
+	'emptyText'=>'Tidak ada data yang ditemukan.'
+)); ?>
+</div>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkanbos/create')?>'" value='Buat'>
+>>>>>>> e283c1018289942129056fb71a391b5298f04942

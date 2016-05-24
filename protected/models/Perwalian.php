@@ -20,7 +20,7 @@
  * The followings are the available model relations:
  * @property Santri $nipSantri
  */
-class Perwalian extends CActiveRecord
+class Perwalian extends Base
 {
 	/**
 	 * @return string the associated database table name
@@ -44,9 +44,11 @@ class Perwalian extends CActiveRecord
 			array('nama', 'length', 'max'=>25),
 			array('agama', 'length', 'max'=>10),
 			array('alamat', 'length', 'max'=>50),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nip_santri, status, nama, tempat_lahir, tanggal_lahir, agama, alamat, no_telepon, pekerjaan, pendidikan, penghasilan', 'safe', 'on'=>'search'),
+			array('nama', 'match','pattern' => '/^[a-zA-Z\s]+$/'),
 		);
 	}
 
@@ -103,6 +105,16 @@ class Perwalian extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
+		$criteria->compare('status',$this->status,true);
+		$criteria->compare('nama',$this->nama,true);
+		$criteria->compare('tempat_lahir',$this->tempat_lahir,true);
+		$criteria->compare('tanggal_lahir',$this->tanggal_lahir,true);
+		$criteria->compare('agama',$this->agama,true);
+		$criteria->compare('alamat',$this->alamat,true);
+		$criteria->compare('no_telepon',$this->no_telepon,true);
+		$criteria->compare('pekerjaan',$this->pekerjaan,true);
+		$criteria->compare('pendidikan',$this->pendidikan,true);
+		$criteria->compare('penghasilan',$this->penghasilan);
 		//$criteria->compare('status',$this->status,true);
 		$criteria->compare('nama',$this->nama,true);
 		//$criteria->compare('tempat_lahir',$this->tempat_lahir,true);

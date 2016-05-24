@@ -19,26 +19,27 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+	<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'id'); ?>
 		<?php echo $form->textField($model,'id'); ?>
 		<?php echo $form->error($model,'id'); ?>
 	</div> 
-
+	-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'nama'); ?>
-		<?php echo $form->textField($model,'nama',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'nama',array('size'=>10,'maxlength'=>15)); ?>
 		<?php echo $form->error($model,'nama'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'jenjang'); ?>
-		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMA'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
+		<?php echo $form->dropDownList($model,'jenjang',array( 'SMP'=>'SMP','SMK'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
 		<?php echo $form->error($model,'jenjang'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -14,7 +14,7 @@
  * @property Santri[] $santris
  * @property TahunAjaran[] $tahunAjarans
  */
-class MataPelajaran extends CActiveRecord
+class MataPelajaran extends Base
 {
 	/**
 	 * @return string the associated database table name
@@ -32,11 +32,11 @@ class MataPelajaran extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, nama, jenjang', 'required'),
+			array('nama, jenjang', 'required'),
 			array('id', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>25),
 			array('jenjang', 'length', 'max'=>10),
-			array('id', 'unique', 'className'=>'MataPelajaran'),
+			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nama, jenjang', 'safe', 'on'=>'search'),
@@ -107,4 +107,8 @@ class MataPelajaran extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	public function getConcatened()
+    {
+	    return $this->id.' ('.$this->nama.')';
+    }
 }

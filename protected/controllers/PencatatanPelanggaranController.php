@@ -43,8 +43,7 @@ class PencatatanPelanggaranController extends Controller
 
 			),
 
-
-			),*/
+			*/
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 //'deniedCallback'=> array($this,'gotoLogin'),
                 'actions' => array('index','view','admin', 'delete', 'create', 'update'),
@@ -88,7 +87,7 @@ class PencatatanPelanggaranController extends Controller
 		{
 			$model->attributes=$_POST['PencatatanPelanggaran'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(

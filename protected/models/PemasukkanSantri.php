@@ -14,8 +14,10 @@
  * @property Santri $nipSantri
  * @property User $idBendahara
  */
-class PemasukkanSantri extends CActiveRecord
+class PemasukkanSantri extends Base
 {
+	public $id;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -32,13 +34,17 @@ class PemasukkanSantri extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, nominal', 'required'),
+			array('nip_santri, nominal, tanggal', 'required'),
+			array('id_bendahara, nominal,', 'numerical', 'integerOnly'=>true),
+			array('nip_santri, nominal, tanggal, keterangan', 'required'),
 			array('id_bendahara, nominal', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, id_bendahara, nip_santri, nominal, timestamp', 'safe', 'on'=>'search'),
+			array('kode, id_bendahara, nip_santri, nominal, tanggal, keterangan, timestamp', 'safe', 'on'=>'search'),
+			array('kode','unique','message'=>'{attribute}:{value} sudah ada!'),
 		);
+		
 	}
 
 	/**
@@ -62,8 +68,10 @@ class PemasukkanSantri extends CActiveRecord
 		return array(
 			'kode' => 'Kode',
 			'id_bendahara' => 'Id Bendahara',
-			'nip_santri' => 'Nip Santri',
+			'nip_santri' => 'Santri',
 			'nominal' => 'Nominal',
+			'tanggal' => 'Tanggal',
+			'keterangan' => 'Keterangan',
 			'timestamp' => 'Timestamp',
 		);
 	}
@@ -90,6 +98,8 @@ class PemasukkanSantri extends CActiveRecord
 		$criteria->compare('id_bendahara',$this->id_bendahara);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('nominal',$this->nominal);
+		$criteria->compare('tanggal',$this->tanggal);
+		$criteria->compare('keterangan',$this->keterangan);
 		$criteria->compare('timestamp',$this->timestamp,true);
 
 		return new CActiveDataProvider($this, array(
@@ -107,7 +117,7 @@ class PemasukkanSantri extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
 	public function beforeSave ()
 	{
 		if(parent::beforeSave()){

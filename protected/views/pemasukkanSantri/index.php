@@ -9,22 +9,18 @@ $('.search-form form').submit(function(){
 });
 ");
 
-$this->menu=array(
-	array('label'=>'Buat Pemasukkan Santri', 'url'=>array('create')),
-	// array('label'=>'Manage PemasukkanSantri', 'url'=>array('admin')),
-);
 ?>
 
 <h1>Pemasukkan Santri</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+<<<<<<< HEAD
 
-<div class='search-result' style="display:none">
 
+<div class='search-result' >
+=======
+>>>>>>> e283c1018289942129056fb71a391b5298f04942
+
+<div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-santri-grid',
 	'dataProvider'=>$model->search(),
@@ -34,9 +30,12 @@ $this->menu=array(
 		'id_bendahara',
 		'nip_santri',
 		'nominal',
-		'timestamp',
+		'tanggal',
+		'keterangan',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkansantri/create')?>'" value='Buat'>

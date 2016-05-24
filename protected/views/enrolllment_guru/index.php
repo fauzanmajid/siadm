@@ -9,6 +9,9 @@
 $this->menu=array(
 	array('label'=>'Buat Enrollment Guru', 'url'=>array('create')),
 	array('label'=>'Sunting Enrollment Guru', 'url'=>array('admin')),
+);
+?>
+
 );*/
 ?>
 

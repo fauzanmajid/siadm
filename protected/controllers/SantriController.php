@@ -29,7 +29,7 @@ class SantriController extends Controller
 		return array(	
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 
-                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel'),
+                'actions' => array('index','view','admin', 'delete', 'create', 'update','unduhDataSantri', 'excel',  'statistikgender'),
                 //'deniedCallback' => array($this,'gotoLogin'),             
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
@@ -41,6 +41,12 @@ class SantriController extends Controller
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isKesiswaan();}
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('statistiksantri'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isDewanPembina();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -72,8 +78,8 @@ class SantriController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Santri;
-		$modelwali=new Perwalian;
+		$model= new Santri;
+		$modelwali= new Perwalian;
 		$model->scenario = 'create';
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -94,7 +100,7 @@ class SantriController extends Controller
 				{
 				$model->save();
 				$modelwali->save();
-				$this->redirect(array('view','id'=>$model->nip));
+					$this->redirect(array('view','id'=>$model->nip));
 				}
 		}
 
@@ -256,6 +262,31 @@ class SantriController extends Controller
 		));
 	}
 
+
+    public function actionStatistikSantri()
+	{
+		
+		$statistik = StatistikSantri::model()->findAll();
+		$statistikGender = StatistikGender::model()->findAll();
+
+		$this->render('statistiksantri',  array(
+			'statistik'=> $statistik, 'statistikGender'=> $statistikGender, 
+		));
+	}
+
+
+    public function actionStatistikGender()
+	{
+		
+		$statistik = StatistikGender::model()->findAll();
+
+		$this->render('statistikgender', array(
+			'statistik'=> $statistik,
+		));
+	}
+
+
+
 	public function actionUnduhDataSantri()
 	{
 		$model = new Santri;
@@ -275,28 +306,29 @@ class SantriController extends Controller
 		));
 	}
 
+
+
 	public function actionExcel($awal = null, $akhir = null, $jenjang = null){
         
         //Some data
 
         $criteria = new CDbCriteria();
         if ($awal != null){
-			$criteria->addCondition("timestamp >= :awal");
-			$criteria->params = array(':awal' => $awal);	
+			$criteria->compare('timestamp','>='.$awal);
 		}
 
 		if ($akhir != null){
-			$criteria->addCondition("timestamp <= :akhir");	
-			$criteria->params = array(':akhir' => $akhir);
+		$criteria->compare('timestamp','<='.$akhir);
 		}
 		
 		if ($jenjang != null){
-			$criteria->addCondition("jenjang = :jenjang");	
-			$criteria->params = array(':jenjang' => $jenjang);
+		
+			$criteria->compare('jenjang','='.$jenjang);
 		}
 		
 		$models = Santri::model()->findAll($criteria);
 		
+		$santri = [];
 		foreach($models as $model) {
 		    $santri[$model->nip] = $model->attributes;
 		}

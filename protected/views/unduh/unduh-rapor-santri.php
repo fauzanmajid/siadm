@@ -22,19 +22,7 @@
 <div class="form">
 <?php echo $form->errorSummary($model); ?>
 
-
-	<div class="row">
-		<?php echo 'Jenjang'; ?>
-		<?php echo $form->dropDownList($model,'jenis',array('SMP'=>'SMP', 'SMK'=>'SMK'), array('empty'=>'--Pilih Jenjang--')); ?>
-		<?php echo $form->error($model,'jenjang'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo 'Kelas'; ?>
-		<?php echo $form->dropDownList($model,'kelas',array('A'=>'A', 'B'=>'B', 'C'=>'C'), array('empty'=>'--Pilih Kelas--')); ?>
-		<?php echo $form->error($model,'kelas'); ?>
-	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'nama_lengkap'); ?>
 		<?php echo $form->textField($model,'nama_lengkap',array('size'=>50,'maxlength'=>50)); ?>

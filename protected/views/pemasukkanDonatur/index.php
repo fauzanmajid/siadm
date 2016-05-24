@@ -9,22 +9,20 @@ $('.search-form form').submit(function(){
 });
 ");
 
-$this->menu=array(
-	array('label'=>'Buat Pemasukkan donatur', 'url'=>array('create')),
-	// array('label'=>'Manage PemasukkanBos', 'url'=>array('admin')),
-);
 ?>
 <h1>Pemasukkan Donatur</h1>
 
-<div class="search-form">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
+<<<<<<< HEAD
+
 
 </div><!-- search-form -->
 
-<div class='search-result' style="display:none">
+<div class='search-result'>
+=======
 
+>>>>>>> e283c1018289942129056fb71a391b5298f04942
+
+<div class="search-result" >
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pemasukkan-donatur-grid',
 	'dataProvider'=>$model->search(),
@@ -33,10 +31,16 @@ $this->menu=array(
 		'kode',
 		'id_bendahara',
 		'nominal',
-		'timestamp',
+		'tanggal',
+		'keterangan',
 		'id_donatur',
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
-)); ?>
+	'emptyText'=>'Tidak ada data yang ditemukan.'
+)); ?> 
+
+</div>
+
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('pemasukkandonatur/create')?>'" value='Buat'>

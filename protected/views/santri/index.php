@@ -9,22 +9,22 @@ $this->menu=array(
 */
 ?>
 
-<div class="search-form" >
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+<h1>Data Santri</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'santri-grid',
 	'dataProvider'=>$model->search(),
+	'filter'=>$model,
 	'columns'=>array(
-		'nip',
+
+		'nis',
+	
 		'nama_lengkap',
-		'jenjang',
+	
 		/*
 		'status',
 		'alamat',
+		'jenjang',
 		'tempat_lahir',
 		'tanggal_lahir',
 		'golongan_darah',
@@ -37,5 +37,7 @@ $this->menu=array(
 		array(
 			'class'=>'CButtonColumn',
 		),
+	
 	),
+	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
