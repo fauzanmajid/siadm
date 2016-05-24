@@ -35,7 +35,8 @@ class Penilaian extends Base
 		// will receive user inputs.
 		return array(
 			array('nip_santri, idkelas, idmatpel,idguru,nilai_harian,nilai_uts,nilai_uas,nilai_akhir', 'required'),
-			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
+			//array('nip_santri,idkelas,idmatpel,idguru','unique','message'=>'{attribute}:{value} sudah ada!'),
+			array('nip_santri+idkelas+idmatpel+idguru', 'application.extensions.uniqueMultiColumnValidator'),
 			//array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
 			//array('nip_santri', 'length', 'max'=>15),
 			//array('nip_santri', 'length', 'max'=>45),
@@ -95,7 +96,7 @@ class Penilaian extends Base
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		//$criteria->compare('id',$this->id);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('idkelas',$this->idkelas);
 		$criteria->compare('idmatpel',$this->idmatpel);
@@ -105,6 +106,9 @@ class Penilaian extends Base
 			'criteria'=>$criteria,
 		));
 	}
+
+
+
 
 	/**
 	 * Returns the static model of the specified AR class.

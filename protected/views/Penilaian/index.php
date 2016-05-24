@@ -49,24 +49,39 @@ $('.search-form form').submit(function(){
             //'htmlOptions' => array('style' => 'text-align: center; color : #6cac70;')
        		
        	),*/
-       	'idkelas',		
+       	/*'idkelas',		
 		'idmatpel',
 		'idguru',
-		
+		*/ 	array(
+            'header' => 'Username Guru',
+            'value' => 'User::model()->findByPk($data->idguru)->username',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+		array(
+            'header' => 'Kelas',
+            'value' => 'Kelas::model()->findByPk($data->idkelas)->nama',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+        array(
+            'header' => 'Mata Pelajaran',
+            'value' => 'MataPelajaran::model()->findByPk($data->idmatpel)->nama',
+            'htmlOptions' => array('style' => 'text-align: center;')
+        ),
+	
 		array(
 		    'class'=>'CButtonColumn',
-		    	'template'=>'{update}',
+		    	'template'=>'{update}{view}',
 		    	'buttons'=>array(
-		        	'update' => array(
+		        	'view' => array(
 		            	'label'=>'Lihat',
 		            	//'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
 		            	'url'=>'Yii::app()->createUrl("Penilaian/create", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
 		        	),
-		        	/*'update' => array(
+		        	'update' => array(
 		            	'label'=>'[-]',
-		            	'url'=>'Yii::app()->createUrl("alokasikelas/view", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
+		            	'url'=>'Yii::app()->createUrl("penilaian/update", array("id"=>$data->idkelas,"id2"=>$data->idmatpel,"id3"=>$data->idguru))',
 
-		        	),*/
+		        	),
 		    	),
 		),
 		),

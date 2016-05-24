@@ -57,7 +57,7 @@ class Kelas extends Base
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
+			'id' => 'id',
 			'nama' => 'Nama',
 			'jenjang' => 'Jenjang',
 		);
