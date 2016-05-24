@@ -11,19 +11,14 @@
  * The followings are the available model relations:
  * @property EnrollmentPelajaran[] $enrollmentPelajarans
  */
-class StatistikSantri extends Base
-<<<<<<< HEAD
+class LaporanNilaiSantri extends Base
 {
-=======
-{	
-	public $id;
->>>>>>> e283c1018289942129056fb71a391b5298f04942
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'statistik_final';
+		return 'laporan_nilai_santri';
 	}
 
 	/**
@@ -34,9 +29,7 @@ class StatistikSantri extends Base
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('jenjang', 'required'),
-			array('jumlah_santri', 'integerOnly'=>true),
-			
+			array('kode, nip_santri', 'required'),
 		);
 	}
 
@@ -58,14 +51,23 @@ class StatistikSantri extends Base
 	public function attributeLabels()
 	{
 		return array(
-			'jenjang' => 'Jenjang',
-			'jumlah_santri' => 'jumlah_santri'
+			'kode' => 'kode',
+			'nip_santri' => 'nip_santri',
+			'nama_lengkap' => 'nama_lengkap',
+			'idmatpel' => 'idmatpel',
+			'nama' => 'nama',
+			'nilai_harian' => 'nilai_harian',
+			'nilai_uts' => 'nilai_uts',
+			'nilai_uas' => 'nilai_uas',
+			'nilai_akhir' => 'nilai_akhir',
+
 		);
 	}
 
 	/**
+,
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
+	 * Retrieves a list of models ,
 	 * Typical usecase:
 	 * - Initialize the model fields with values from filter form.
 	 * - Execute this method to get CActiveDataProvider instance which will filter
@@ -80,9 +82,16 @@ class StatistikSantri extends Base
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
+		$criteria->compare('kode',$this->kode,true);
+		$criteria->compare('nip_santri',$this->nip_santri,true);
+		$criteria->compare('nama_lengkap',$this->nama_lengkap,true);
+		$criteria->compare('idmatpel',$this->idmatpel, true);
+		$criteria->compare('nama',$this->nama, true);
+		$criteria->compare('nilai_harian',$this->nilai_harian,true);
+		$criteria->compare('nilai_uts',$this->nilai_uts,true);
+		$criteria->compare('nilai_uas',$this->nilai_uas,true);
+		$criteria->compare('nilai_akhir',$this->nilai_akhir,true);
 
-		$criteria->compare('jumlah_santri',$this->jumlah_santri,true);
-		$criteria->compare('jenjang',$this->jenjang,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -100,8 +109,6 @@ class StatistikSantri extends Base
 		return parent::model($className);
 	}
 
-	public function getJumlahSantriInteger() {
-        return intval($this->jumlah_santri);
-    }
+	
     
 }

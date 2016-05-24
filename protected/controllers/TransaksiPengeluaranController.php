@@ -27,19 +27,22 @@ class TransaksiPengeluaranController extends Controller
 	public function accessRules()
 	{
 		return array(
-		/*	array('allow',  // allow all users to perform 'index' and 'view' actions
+			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),*/
+			
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('index','view','admin', 'delete', 'create', 'update', 'statistikpengeluaran', 'unduhtransaksipengeluaran'),
                 'expression' => function(UserWeb $user) {
                 /* @var $user UserWeb */
                 return $user->isBendahara();}
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('statistikpengeluaran', 'unduhtransaksipengeluaran'),
+                'expression' => function(UserWeb $user) {
+                /* @var $user UserWeb */
+                return $user->isDewanPembina();}
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -74,7 +77,7 @@ class TransaksiPengeluaranController extends Controller
 		{
 			$model->attributes=$_POST['TransaksiPengeluaran'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->kode));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(

@@ -13,14 +13,13 @@ $('.search-form form').submit(function(){
 
 <h1>Transaksi Pengeluaran</h1>
 
-<input type=button onClick="location.href='<?= Yii::app()->createUrl('transaksiPengeluaran/create') ?>' "value='Buat'>
-
+<div id="search-result">
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'transaksi-pengeluaran-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'kode',
+		'id',
 		'id_bendahara',
 		'nominal',
 		'Deskripsi',
@@ -33,3 +32,4 @@ $('.search-form form').submit(function(){
 	'emptyText'=>'Tidak ada data yang ditemukan.'
 )); ?>
 </div>
+<input type=button onClick="location.href='<?= Yii::app()->createUrl('transaksiPengeluaran/create') ?>' "value='Buat'>

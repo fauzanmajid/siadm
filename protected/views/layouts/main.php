@@ -95,6 +95,8 @@
 				array('label'=>'Prestasi', 'url'=>array('/prestasi'), 
 					'items'=>array(
 						array('label'=>'Buat Prestasi','url'=>array('/Prestasi/create')),
+						
+						array('label'=>'Atur Prestasi','url'=>array('/Prestasi/admin')),
 						),
 						'visible'=>UserWeb::instance()->isKesiswaan()),
 			
@@ -126,6 +128,19 @@
 						array('label'=>'Unduh Rapor Santri','url'=>array('/unduhRapor')),
 					), 
 					'visible'=>UserWeb::instance()->isKurikulum()), 
+
+				array('label'=>'statistik', 'url'=>array(''),
+					'items'=>array(
+						array('label'=>'Statistik Santri','url'=>array('/santri/statistiksantri')),
+						array('label'=>'Statistik Pengeluaran','url'=>array('transaksiPengeluaran/statistikpengeluaran')),
+					), 
+					'visible'=>UserWeb::instance()->isDewanPembina()), 
+
+				array('label'=>'Laporan', 'url'=>array('/unduh'),
+					'items'=>array(
+						array('label'=>'Unduh Laporan','url'=>array('Unduh/UnduhTransaksiPengeluaran')),
+					), 
+					'visible'=>UserWeb::instance()->isDewanPembina()), 
 				array('label'=>'Riwayat Penyakit', 'url'=>array('/RiwayatPenyakit'),
 					'items'=>array(
 						array('label'=>'Buat Riwayat Penyakit','url'=>array('/RiwayatPenyakit/create')),

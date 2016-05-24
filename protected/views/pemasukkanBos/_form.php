@@ -49,7 +49,7 @@
 	        ));
         ?>
 		<?php echo $form->error($model,'Tanggal'); ?>
-
+		</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Keterangan'); ?>

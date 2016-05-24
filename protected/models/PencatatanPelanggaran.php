@@ -34,7 +34,7 @@ class PencatatanPelanggaran extends Base
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nip_santri, deskripsi', 'required'),
+			array('nip_santri, deskripsi,tanggal', 'required'),
 			array('id_kesiswaan', 'numerical', 'integerOnly'=>true),
 			array('nip_santri', 'length', 'max'=>15),
 			array('nip_santri', 'length', 'max'=>45),
@@ -70,7 +70,7 @@ class PencatatanPelanggaran extends Base
 			'id_kesiswaan' => 'ID Kesiswaan',
 			'deskripsi' => 'deskripsi',
 			'nama_lengkap' => 'Nama Santri',
-				
+			'tanggal' => 'Tanggal',	
 		);
 	}
 
@@ -96,7 +96,8 @@ class PencatatanPelanggaran extends Base
 		$criteria->compare('deskripsi',$this->deskripsi);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
-		
+		$criteria->compare('tanggal',$this->tanggal);
+				
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

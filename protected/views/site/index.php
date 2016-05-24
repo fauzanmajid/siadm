@@ -9,7 +9,7 @@ $this->pageTitle=Yii::app()->name;
 
 <h1>Selamat datang di <?php echo CHtml::encode(Yii::app()->name); ?>, <?php echo CHtml::encode(Yii::app()->user->name) ?>!</h1>
 
-<p>Aplkasi ini dikhususkan untuk dewan pembina, guru, kurikulum, kesiswaan, dan bendahara Pesantren Al-Lathifah Mulia.</p>
+<p>Aplikasi ini dikhususkan untuk dewan pembina, guru, kurikulum, kesiswaan, dan bendahara Pesantren Al-Lathifah Mulia.</p>
 
 <!-- <p>You may change the content of this page by modifying the following two files:</p>
 <ul>

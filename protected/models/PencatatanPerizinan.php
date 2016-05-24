@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is the model class for table "pencatatan_perizinan".
+ * This is the model class for table "id".
  *
  * The followings are the available columns in table 'pencatatan_perizinan':
  * @property integer $pencatatan_perizinan
@@ -49,7 +49,7 @@ class PencatatanPerizinan extends CActiveRecord
 			array('id','unique','message'=>'{attribute}:{value} sudah ada!'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('nama_lengkap, pencatatan_perizinan, nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori, cari_tanggal_awal, cari_tanggal_akhir, jml_absen', 'safe', 'on'=>'search'),
+			array('nama_lengkap, id, nip_santri, id_kesiswaan, deskripsi, durasi, tanggal_awal, tanggal_akhir, kategori, cari_tanggal_awal, cari_tanggal_akhir, jml_absen', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,7 +72,7 @@ class PencatatanPerizinan extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'pencatatan_perizinan' => 'Pencatatan Perizinan',
+			'id' => 'id',
 			'nip_santri' => 'Nip Santri',
 			'id_kesiswaan' => 'Id Kesiswaan',
 			'deskripsi' => 'Deskripsi',
@@ -104,7 +104,7 @@ class PencatatanPerizinan extends CActiveRecord
 		$criteria=new CDbCriteria;
 		$criteria->with = array( 'nipSantri' );
 		
-		$criteria->compare('pencatatan_perizinan',$this->pencatatan_perizinan);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('nip_santri',$this->nip_santri,true);
 		$criteria->compare('id_kesiswaan',$this->id_kesiswaan);
 		$criteria->compare('deskripsi',$this->deskripsi,true);
@@ -164,7 +164,7 @@ class PencatatanPerizinan extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		//select sum(duration) from pencatatan_perizinan where kategori = :kategori AND tanggal_awal >= :tanggal_awal AND tanggal_akhir <= :tanggal_akhir
+		//select sum(duration) from id where kategori = :kategori AND tanggal_awal >= :tanggal_awal AND tanggal_akhir <= :tanggal_akhir
 		$criteria=new CDbCriteria;
 		$criteria->select = 'nip_santri, sum(durasi) as jml_absen, kategori';
         $criteria->with = array( 'nipSantri' );
